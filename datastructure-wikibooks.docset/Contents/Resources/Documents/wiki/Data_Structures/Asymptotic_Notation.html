@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Asymptotic Notation - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Asymptotic_Notation" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Asymptotic_Notation","wgTitle":"Data Structures/Asymptotic Notation","wgCurRevisionId":2594727,"wgRevisionId":2594727,"wgArticleId":20089,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Asymptotic_Notation","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2582297,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Asymptotic_Notation skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Asymptotic Notation</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />The <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Data_Structures/Asymptotic_Notation">checked</a> on <i>17 November 2013</i>. There is <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;oldid=2582297&amp;diff=cur&amp;diffonly=0">1 pending change</a> awaiting review.</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <strong class="selflink">Asymptotic Notation</strong> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Asymptotic_Notation"><span class="tocnumber">1</span> <span class="toctext">Asymptotic Notation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Definition"><span class="tocnumber">1.1.1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Theory_Examples"><span class="tocnumber">1.1.2</span> <span class="toctext">Theory Examples</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Practical_Examples"><span class="tocnumber">1.1.3</span> <span class="toctext">Practical Examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Big-Omega_Notation"><span class="tocnumber">1.2</span> <span class="toctext"><i>Big-Omega Notation</i></span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Theta_Notation"><span class="tocnumber">1.2.1</span> <span class="toctext">Theta Notation</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Little-O_Notation"><span class="tocnumber">1.2.2</span> <span class="toctext">Little-O Notation</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Little_Omega_Notation"><span class="tocnumber">1.2.3</span> <span class="toctext">Little Omega Notation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#How_asymptotic_notation_relates_to_analyzing_complexity"><span class="tocnumber">1.3</span> <span class="toctext">How asymptotic notation relates to analyzing complexity</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#A_few_examples_of_asymptotic_notation"><span class="tocnumber">1.4</span> <span class="toctext">A few examples of asymptotic notation</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Asymptotic_Notation">Asymptotic Notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=1" title="Edit section: Asymptotic Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=2" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A problem may have numerous algorithmic solutions. In order to choose the best algorithm for a particular task, you need to be able to judge how long a particular solution will take to run. Or, more accurately, you need to be able to judge how long two solutions will take to run, and choose the better of the two. You don't need to know how many minutes and seconds they will take, but you do need some way to compare algorithms against one another.</p>
+<p><i>Asymptotic complexity</i> is a way of expressing the <i>main component</i> of the cost of an algorithm, using idealized units of computational work. Consider, for example, the algorithm for sorting a deck of cards, which proceeds by repeatedly searching through the deck for the lowest card. The asymptotic complexity of this algorithm is the <i>square</i> of the number of cards in the deck. This quadratic behavior is the main term in the complexity formula, it says, e.g., if you double the size of the deck, then the work is roughly quadrupled.</p>
+<p>The exact formula for the cost is more complex, and contains more details than are needed to understand the essential complexity of the algorithm. With our deck of cards, in the worst case, the deck would start out reverse-sorted, so our scans would have to go all the way to the end. The first scan would involve scanning 52 cards, the next would take 51, etc. So the cost formula is 52 + 51 + ..... + 2. generally, letting N be the number of cards, the formula is 2 + ... + N, which equals <img class="tex" alt="((N) \times (N + 1) / 2) - 1 = ((N^2 + N) / 2) - 1 = (1/2)N^2 + (1/2)N - 1" src="//upload.wikimedia.org/math/8/e/8/8e8605d013b1bb772dffbbc04682d184.png" />. But the <img class="tex" alt="N^2" src="//upload.wikimedia.org/math/6/8/2/6828feb224035a25980fcbdb76126b02.png" /> term dominates the expression, and this is what is key for comparing algorithm costs. (This is in fact an <i>expensive</i> algorithm; the best sorting algorithms run in sub-quadratic time.)</p>
+<p>Asymptotically speaking, in the limit as N tends towards infinity, 2 + 3 + .,,,.. + N gets closer and closer to the pure quadratic function (1/2)N^2. And what difference does the constant factor of 1/2 make, at this level of abstraction? So the behavior is said to be <img class="tex" alt="O(n^2)" src="//upload.wikimedia.org/math/1/8/9/189317b4b935a745fcfaf95940d2b4f0.png" />.</p>
+<p>Now let us consider how we would go about <i>comparing</i> the complexity of two algorithms. Let f(n) be the cost, in the worst case, of one algorithm, expressed as a function of the input size n, and g(n) be the cost function for the other algorithm. E.g., for sorting algorithms, f(10) and g(10) would be the maximum number of steps that the algorithms would take on a list of 10 items. If, for all values of n&#160;&gt;=&#160;0, f(n) is less than or equal to g(n), then the algorithm with complexity function f is strictly faster. But, generally speaking, our concern for computational cost is for the cases with large inputs; so the comparison of f(n) and g(n) for small values of n is less significant than the "long term" comparison of f(n) and g(n), for n larger than some threshold.</p>
+<p>Note that we have been speaking about <i>bounds</i> on the performance of algorithms, rather than giving exact speeds. The actual number of steps required to sort our deck of cards (with our naive quadratic algorithm) will depend upon the order in which the cards begin. The actual time to perform each of our steps will depend upon our processor speed, the condition of our processor cache, etc., etc. It's all very complicated in the concrete details, and moreover not relevant to the essence of the algorithm.</p>
+<hr />
+<p>←=== The O Notation ===</p>
+<h4><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=3" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The O(<i>pronounced as: big-oh</i>) is the formal method of expressing the upper bound of an algorithm's running time. It's a measure of the longest amount of time it could possibly take for the algorithm to complete.</p>
+<p>More formally, for non-negative functions, <i>f(n)</i> and <i>g(n)</i>, if there exists an integer <img class="tex" alt="n_{0}" src="//upload.wikimedia.org/math/a/3/9/a39353c589fbad6357213e4568a9c977.png" /> and a constant <i>c</i>&#160;&gt;&#160;0 such that for all integers <img class="tex" alt="n&gt;n_{0}" src="//upload.wikimedia.org/math/0/2/7/02763b779b4a6fedabeb72c5b09b9c85.png" />, <i>f(n)</i>&#160;≤&#160;<i>cg(n)</i>, then <i>f(n)</i> is Big O of <i>g(n)</i>. This is denoted as "<i>f(n)</i>&#160;=&#160;<i>O(g(n))</i>". If graphed, <i>g(n)</i> serves as an upper bound to the curve you are analyzing, <i>f(n)</i>.</p>
+<p>Note that if <i>f</i> can take on finite values only (as it should happen normally) then this definition implies that there exists some constant <i>C</i> (potentially larger than <i>c</i>) such that for all values of <i>n</i>, <i>f(n)</i>&#160;≤&#160;<i>Cg(n)</i>. An appropriate value for <i>C</i> is the maximum of <i>c</i> and <img class="tex" alt=" \max_{1\le n\le n_0} f(n)/g(n)" src="//upload.wikimedia.org/math/1/9/9/199dc8d59ccceb082b98087e6d1783f6.png" />.</p>
+<h4><span class="mw-headline" id="Theory_Examples">Theory Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=4" title="Edit section: Theory Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>So, let's take an example of Big-O. Say that f(n) = 2n + 8, and g(n) = <img class="tex" alt="n^2" src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />. Can we find a constant <img class="tex" alt="n_{0}" src="//upload.wikimedia.org/math/a/3/9/a39353c589fbad6357213e4568a9c977.png" />, so that 2n + 8 &lt;= <img class="tex" alt="n^2" src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />? The number 4 works here, giving us 16 &lt;= 16. For any number n greater than 4, this will still work. Since we're trying to generalize this for large values of n, and small values (1, 2, 3) aren't that important, we can say that f(n) is generally faster than g(n); that is, f(n) is bound by g(n), and will always be less than it.</p>
+<p>It could then be said that f(n) runs in O(<img class="tex" alt="n^2" src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />) time: "f-of-n runs in Big-O of n-squared time".</p>
+<p>To find the upper bound - the Big-O time - assuming we know that f(n) is equal to (exactly) 2n + 8, we can take a few shortcuts. For example, we can remove all constants from the runtime; eventually, at some value of c, they become irrelevant. This makes f(n) = 2n. Also, for convenience of comparison, we remove constant multipliers; in this case, the 2. This makes f(n) = n. It could also be said that f(n) runs in O(n) time; that lets us put a tighter (closer) upper bound onto the estimate.</p>
+<h4><span class="mw-headline" id="Practical_Examples">Practical Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=5" title="Edit section: Practical Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>O(n): printing a list of n items to the screen, looking at each item once.</p>
+<p>O(ln n): also "log n", taking a list of items, cutting it in half repeatedly until there's only one item left.</p>
+<p>O(<img class="tex" alt="n^2" src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />): taking a list of n items, and comparing every item to every other item.</p>
+<hr />
+<h3><span class="mw-headline" id="Big-Omega_Notation"><i>Big-Omega Notation</i></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=6" title="Edit section: Big-Omega Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For non-negative functions, <i>f(n)</i> and <i>g(n)</i>, if there exists an integer <img class="tex" alt="n_{0}" src="//upload.wikimedia.org/math/a/3/9/a39353c589fbad6357213e4568a9c977.png" /> and a constant <i>c</i>&#160;&gt;&#160;0 such that for all integers <img class="tex" alt="n&gt;n_{0}" src="//upload.wikimedia.org/math/0/2/7/02763b779b4a6fedabeb72c5b09b9c85.png" />, <i>f(n)</i>&#160;≥&#160;<i>cg(n)</i>, then <i>f(n)</i> is omega of <i>g(n)</i>. This is denoted as "<i>f(n)</i>&#160;=&#160;<i>Ω(g(n))</i>".</p>
+<p>This is almost the same definition as Big Oh, except that "<i>f(n)</i>&#160;≥&#160;<i>cg(n)</i>", this makes <i>g(n)</i> a lower bound function, instead of an upper bound function. It describes the <b>best that can happen</b> for a given data size.</p>
+<hr />
+<h4><span class="mw-headline" id="Theta_Notation">Theta Notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=7" title="Edit section: Theta Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For non-negative functions, <i>f(n)</i> and <i>g(n)</i>, <i>f(n)</i> is theta of <i>g(n)</i> if and only if <i>f(n)</i>&#160;=&#160;<i>O(g(n))</i> and <i>f(n)</i>&#160;=&#160;<i>Ω(g(n))</i>. This is denoted as "<i>f(n)</i>&#160;=&#160;<i>Θ(g(n))</i>".</p>
+<p>This is basically saying that the function, <i>f(n)</i> is bounded both from the top and bottom by the same function, <i>g(n)</i>.</p>
+<hr />
+<p>The theta notation is denoted by Q.</p>
+<h4><span class="mw-headline" id="Little-O_Notation">Little-O Notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=8" title="Edit section: Little-O Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For non-negative functions, <i>f(n)</i> and <i>g(n)</i>, <i>f(n)</i> is little o of <i>g(n)</i> if and only if <i>f(n)</i>&#160;=&#160;<i>O(g(n))</i>, but <i>f(n)</i>&#160;≠&#160;<i>Θ(g(n))</i>. This is denoted as "<i>f(n)</i>&#160;=&#160;<i>o(g(n))</i>".</p>
+<p>This represents a loose bounding version of Big O. <i>g(n)</i> bounds from the top, but it does not bound the bottom.</p>
+<hr />
+<h4><span class="mw-headline" id="Little_Omega_Notation">Little Omega Notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=9" title="Edit section: Little Omega Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For non-negative functions, <i>f(n)</i> and <i>g(n)</i>, <i>f(n)</i> is little omega of <i>g(n)</i> if and only if <i>f(n)</i>&#160;=&#160;<i>Ω(g(n))</i>, but <i>f(n)</i>&#160;≠&#160;<i>Θ(g(n))</i>. This is denoted as "<i>f(n)</i>&#160;=&#160;<i>ω(g(n))</i>".</p>
+<p>Much like Little Oh, this is the equivalent for Big Omega. <i>g(n)</i> is a loose lower boundary of the function <i>f(n)</i>; it bounds from the bottom, but not from the top.</p>
+<hr />
+<h3><span class="mw-headline" id="How_asymptotic_notation_relates_to_analyzing_complexity">How asymptotic notation relates to analyzing complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=10" title="Edit section: How asymptotic notation relates to analyzing complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Temporal comparison is not the only issue in algorithms. There are space issues as well. Generally, a trade off between time and space is noticed in algorithms. Asymptotic notation empowers you to make that trade off. If you think of the amount of time and space your algorithm uses as a function of your data over time or space (time and space are usually analyzed separately), you can analyze how the time and space is handled when you introduce more data to your program.</p>
+<p>This is important in data structures because you want a structure that behaves efficiently as you increase the amount of data it handles. Keep in mind though that algorithms that are efficient with large amounts of data are not always simple and efficient for small amounts of data. So if you know you are working with only a small amount of data and you have concerns for speed and code space, a trade off can be made for a function that does not behave well for large amounts of data.</p>
+<h3><span class="mw-headline" id="A_few_examples_of_asymptotic_notation">A few examples of asymptotic notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit&amp;section=11" title="Edit section: A few examples of asymptotic notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Generally, we use asymptotic notation as a convenient way to examine what can happen in a function in the worst case or in the best case. For example, if you want to write a function that searches through an array of numbers and returns the smallest one:</p>
+<pre>
+function <b>find-min</b>(array <i>a</i>[1..<i>n</i>])
+  let <i>j</i> := <img class="tex" alt="\infty" src="//upload.wikimedia.org/math/d/2/4/d245777abca64ece2d5d7ca0d19fddb6.png" />
+  for <i>i</i> := 1 to <i>n</i>:
+    <i>j</i> := min(<i>j</i>, <i>a</i>[<i>i</i>])
+  repeat
+  return <i>j</i>
+end
+</pre>
+<p>Regardless of how big or small the array is, every time we run <b>find-min</b>, we have to initialize the <i>i</i> and <i>j</i> integer variables and return <i>j</i> at the end. Therefore, we can just think of those parts of the function as constant and ignore them.</p>
+<p>So, how can we use asymptotic notation to discuss the <b>find-min</b> function? If we search through an array with 87 elements, then the <i>for</i> loop iterates 87 times, even if the very first element we hit turns out to be the minimum. Likewise, for <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements, the for loop iterates <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> times. Therefore we say the function runs in time <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />.</p>
+<p>What about this function:</p>
+<pre>
+function <b>find-min-plus-max</b>(array <i>a</i>[1..<i>n</i>])
+  <i>// First, find the smallest element in the array</i>
+  let <i>j</i> := <img class="tex" alt="\infty" src="//upload.wikimedia.org/math/d/2/4/d245777abca64ece2d5d7ca0d19fddb6.png" />;
+  for <i>i</i> := 1 to <i>n</i>:
+    <i>j</i> := min(<i>j</i>, <i>a</i>[<i>i</i>])
+  repeat
+  let <i>minim</i> := <i>j</i>
+  
+  <i>// Now, find the biggest element, add it to the smallest and</i>
+  j := <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />;
+  for <i>i</i> := 1 to <i>n</i>:
+    <i>j</i> := max(<i>j</i>, <i>a</i>[<i>i</i>])
+  repeat
+  let <i>maxim</i> := <i>j</i>
+  
+  <i>// return the sum of the two</i>
+  return <i>minim</i> + <i>maxim</i>;
+end
+</pre>
+<p>What's the running time for <b>find-min-plus-max</b>? There are two <i>for</i> loops, that each iterate <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> times, so the running time is clearly <img class="tex" alt="O(2n)" src="//upload.wikimedia.org/math/1/6/0/160ac93d06be5f477817712a4d3431fc.png" />. Because 2 is a constant, we throw it away and write the running time as <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />. Why can you do this? If you recall the definition of Big-O notation, the function whose bound you're testing can be multiplied by some constant. If <i>f(x)</i>&#160;=&#160;<i>2x</i>, we can see that if <i>g(x)</i>&#160;=&#160;<i>x</i>, then the Big-O condition holds. Thus <img class="tex" alt="O(2n) = O(n)" src="//upload.wikimedia.org/math/f/3/6/f3645bb291d6c2db911c19d8c81dd22b.png" />. This rule is general for the various asymptotic notations.</p>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <strong class="selflink">Asymptotic Notation</strong> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1084
+CPU time usage: 0.188 seconds
+Real time usage: 0.209 seconds
+Preprocessor visited node count: 221/1000000
+Preprocessor generated node count: 988/1500000
+Post‐expand include size: 1766/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20089-0!0!0!!en!*!* and timestamp 20131219140127
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;oldid=2594727">http://en.wikibooks.org/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;oldid=2594727</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FAsymptotic+Notation&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FAsymptotic+Notation" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Asymptotic_Notation"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Asymptotic_Notation"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;stable=1" >Read</a></span></li>
+					<li id="ca-current" class="collapsible collapsible selected"><span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;stable=0&amp;redirect=no"  title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Asymptotic_Notation" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Asymptotic_Notation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;oldid=2594727" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FAsymptotic_Notation&amp;id=2594727" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FAsymptotic+Notation">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FAsymptotic+Notation&amp;oldid=2594727&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Asymptotic_Notation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 December 2013, at 14:01.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Asymptotic_Notation" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1026 in 0.212 secs. -->
+	</body>
+</html>

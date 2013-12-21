@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Introduction - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Introduction" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Introduction","wgTitle":"Data Structures/Introduction","wgCurRevisionId":2553039,"wgRevisionId":2553039,"wgArticleId":20057,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Introduction","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2449450,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Introduction skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Introduction</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />The <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Introduction&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Data_Structures/Introduction">checked</a> on <i>6 March 2013</i>. There is <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Introduction&amp;oldid=2449450&amp;diff=cur&amp;diffonly=0">1 pending change</a> awaiting review.</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<strong class="selflink">Introduction</strong> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p>Computers can store and process vast amounts of data. Formal data structures enable a programmer to mentally structure large amounts of data into conceptually manageable relationships.</p>
+<p>Sometimes we use data structures to allow us to do more: for example, to accomplish fast searching or sorting of data. Other times, we use data structures so that we can do <i>less</i>: for example, the concept of the stack is a limited form of a more general data structure. These limitations provide us with guarantees that allow us to reason about our programs more easily. Data structures also provide guarantees about algorithmic complexity — choosing an appropriate data structure for a job is crucial for writing good software.</p>
+<p>Because data structures are higher-level abstractions, they present to us operations on groups of data, such as adding an item to a list, or looking up the highest-priority item in a queue. When a data structure provides operations, we can call the data structure an <b>abstract data type</b> (sometimes abbreviated as ADT). Abstract data types can minimize dependencies in your code, which is important when your code needs to be changed. Because you are abstracted away from lower-level details, some of the higher-level commonalities one data structure shares with a different data structure can be used to replace one with the other.</p>
+<p>Our programming languages come equipped with a set of built-in types, such as integers and floating-point numbers, that allow us to work with data objects for which the machine's processor has native support. These built-in types are abstractions of what the processor actually provides because built-in types hide details both about their execution and limitations.</p>
+<p>For example, when we use a floating-point number we are primarily concerned with its value and the operations that can be applied to it. Consider computing the length of a hypotenuse:</p>
+<pre>
+  let <i>c</i> := sqrt(<i>a</i> * <i>a</i> + <i>b</i> * <i>b</i>)
+</pre>
+<p>The machine code generated from the above would use common patterns for computing these values and accumulating the result. In fact, these patterns are so repetitious that high-level languages were created to avoid this redundancy and to allow programmers to think about <i>what</i> value was computed instead of <i>how</i> it was computed.</p>
+<p>Two useful and related concepts are at play here:</p>
+<ul>
+<li><b>Encapsulation</b> is when common patterns are grouped together under a single name and then parameterized, in order to achieve a higher-level understanding of that pattern. For example, the multiplication operation requires two source values and writes the product of those two values to a given destination. The operation is parameterized by both the two sources and the single destination.</li>
+<li><b>Abstraction</b> is a mechanism to hide the implementation details of an abstraction away from the users of the abstraction. When we multiply numbers, for example, we don't need to know the technique actually used by the processor, we just need to know its properties.</li>
+</ul>
+<p>A programming language is both an abstraction of a machine and a tool to encapsulate-away the machine's inner details. For example, a program written in a programming language can be compiled to several different machine architectures when that programming language sufficiently encapsulates the user away from any one machine.</p>
+<p>In this book, we take the abstraction and encapsulation that our programming languages provide a step further: When applications get to be more complex, the abstractions programming languages become too low-level to effectively manage. Thus, we build our own abstractions on top of these lower-level constructs. We can even build further abstractions on top of those abstractions. Each time we build upwards, we lose access to the lower-level implementation details. While losing such access might sound like a bad trade off, it is actually quite a bargain: We are primarily concerned with solving the problem at hand rather than with any trivial decisions that could have just as arbitrarily been replaced with a different decision. When we can think on higher levels, we relieve ourselves of these burdens.</p>
+<p>Each data structure that we cover in this book can be thought of as a single unit that has a set of values and a set of operations that can be performed to either access or change these values. The data structure itself can be understood as a set of the data structure's operations together with each operation's properties (i.e., what the operation does and how long we could expect it to take).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#The_Node"><span class="tocnumber">1</span> <span class="toctext">The Node</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Building_a_Chain_from_Nodes"><span class="tocnumber">2</span> <span class="toctext">Building a Chain from Nodes</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_Principle_of_Induction"><span class="tocnumber">3</span> <span class="toctext">The Principle of Induction</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Induction_on_a_Summation"><span class="tocnumber">4</span> <span class="toctext">Induction on a Summation</span></a></li>
+</ul>
+</div>
+<p></p>
+<h3><span class="mw-headline" id="The_Node">The Node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit&amp;section=1" title="Edit section: The Node">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The first data structure we look at is the node structure. A node is simply a container for a value, plus a pointer to a "next" node (which may be <code>null</code>).</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 8px; width:85%" title="Node&lt;Element&gt; Operations">
+<p><b>Node&lt;Element&gt; Operations</b><br /></p>
+<p><tt><b>make-node</b>(Element <i>v</i>, Node <i>next</i>): Node</tt></p>
+<dl>
+<dd>Create a new node, with <i>v</i> as its contained value and <i>next</i> as the value of the next pointer</dd>
+</dl>
+<p><tt><b>get-value</b>(Node <i>n</i>): Element</tt></p>
+<dl>
+<dd>Returns the value contained in node <i>n</i></dd>
+</dl>
+<p><tt><b>get-next</b>(Node <i>n</i>): Node</tt></p>
+<dl>
+<dd>Returns the value of node <i>n</i>'s next pointer</dd>
+</dl>
+<p><tt><b>set-value</b>(Node <i>n</i>, Element <i>v</i>)</tt></p>
+<dl>
+<dd>Sets the contained value of <i>n</i> to be <i>v</i></dd>
+</dl>
+<p><tt><b>set-next</b>(Node <i>n</i>, Node <i>new-next</i>): Node</tt></p>
+<dl>
+<dd>Sets the value of node <i>n</i>'s next pointer to be <i>new-next</i></dd>
+</dl>
+<p>All operations can be performed in time that is <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />.</p>
+<p>Examples of the "Element" type can be: numbers, strings, objects, functions, or even other nodes. Essentially, any type that has values at all in the language.</p>
+</div>
+<p>The above is an abstraction of a <i>structure</i>:</p>
+<pre>
+  structure <b>node</b> {
+    element value     <i>// holds the value</i>
+    node next         <i>// pointer to the next node; possibly null</i>
+  }
+</pre>
+<p>In some languages, structures are called <i>records</i> or <i>classes</i>. Some other languages provide no direct support for structures, but instead allow them to be built from other constructs (such as <i>tuples</i> or <i>lists</i>).</p>
+<p>Here, we are only concerned that nodes contain values of some form, so we simply say its type is "element" because the type is not important. In some programming languages no type ever needs to be specified (as in dynamically typed languages, like Scheme, Smalltalk or Python). In other languages the type might need to be restricted to integer or string (as in statically typed languages like C). In still other languages, the decision of the type of the contained element can be delayed until the type is actually used (as in languages that support generic types, like C++ and Java). In any of these cases, translating the pseudocode into your own language should be relatively simple.</p>
+<p>Each of the node operations specified can be implemented quite easily:</p>
+<pre>
+<i>// Create a new node, with v as its contained value and next as</i>
+// the value of the next pointer
+function <b>make-node</b>(<i>v</i>, node <i>next</i>): node
+  let <i>result</i> := new node {<i>v</i>, <i>next</i>}
+  return <i>result</i>
+end
+
+<i>// Returns the value contained in node n</i>
+function <b>get-value</b>(node <i>n</i>): element
+  return <i>n</i>.value
+end
+
+<i>// Returns the value of node n's next pointer</i>
+function <b>get-next</b>(node <i>n</i>): node
+  return <i>n</i>.next
+end
+
+<i>// Sets the contained value of n to be v</i>
+function <b>set-value</b>(node <i>n</i>, <i>v</i>)
+  <i>n</i>.value := <i>v</i>
+end
+
+<i>// Sets the value of node n's next pointer to be new-next</i>
+function <b>set-next</b>(node <i>n</i>, <i>new-next</i>)
+  <i>n</i>.next := <i>new-next</i>
+end
+</pre>
+<p>Principally, we are more concerned with the operations and the implementation strategy than we are with the structure itself and the low-level implementation. For example, we are more concerned about the time requirement specified, which states that all operations take time that is <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />. The above implementation meets this criteria, because the length of time each operation takes is constant. Another way to think of constant time operations is to think of them as operations whose analysis is not dependent on any variable. (The notation <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> is mathematically defined in the next chapter. For now, it is safe to assume it just means constant time.)</p>
+<p>Because a node is just a container both for a value and container to a pointer to another node, it shouldn't be surprising how trivial the node data structure itself (and its implementation) is.</p>
+<h3><span class="mw-headline" id="Building_a_Chain_from_Nodes">Building a Chain from Nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit&amp;section=2" title="Edit section: Building a Chain from Nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Although the node structure is simple, it actually allows us to compute things that we couldn't have computed with just fixed-size integers alone.</p>
+<p>But first, we'll look at a program that doesn't need to use nodes. The following program will read in (from an input stream; which can either be from the user or a file) a series of numbers until the end-of-file is reached and then output what the largest number is and the average of all numbers:</p>
+<pre>
+program(input-stream <i>in</i>, output-stream <i>out</i>)
+  let <i>total</i> := 0
+  let <i>count</i> := 0
+  let <i>largest</i> := <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />
+  
+  while has-next-integer(<i>in</i>):
+    let <i>i</i> := read-integer(<i>in</i>)
+    <i>total</i> := <i>total</i> + <i>i</i>
+    <i>count</i> := <i>count</i> + 1
+    <i>largest</i> := max(<i>largest</i>, <i>i</i>)
+  repeat
+   
+  println <i>out</i> "Maximum: " <i>largest</i>
+  
+  if <i>count</i> != 0:
+    println <i>out</i> "Average: " (<i>total</i> / <i>count</i>)
+  fi
+end
+</pre>
+<p>But now consider solving a similar task: read in a series of numbers until the end-of-file is reached, and output the largest number and the average of all numbers that evenly divide the largest number. This problem is different because it's possible the largest number will be the last one entered: if we are to compute the average of all numbers that divide that number, we'll need to somehow remember all of them. We could use variables to remember the previous numbers, but variables would only help us solve the problem when there aren't too many numbers entered.</p>
+<p>For example, suppose we were to give ourselves 200 variables to hold the state input by the user. And further suppose that each of the 200 variables had 64-bits. Even if we were very clever with our program, it could only compute results for <img class="tex" alt="2^{64\cdot 200}" src="//upload.wikimedia.org/math/1/2/9/1290f404db5a752233fcc6be50ff58a4.png" /> different types of input. While this is a very large number of combinations, a list of 300 64-bit numbers would require even more combinations to be properly encoded. (In general, the problem is said to require <i>linear space</i>. All programs that need only a finite number of variables can be solved in <i>constant space</i>.)</p>
+<p>Instead of building-in limitations that complicate coding (such as having only a constant number of variables), we can use the properties of the node abstraction to allow us to remember as many numbers as our computer can hold:</p>
+<pre>
+program(input-stream <i>in</i>, output-stream <i>out</i>)
+  let <i>largest</i> := <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />
+  let <i>nodes</i> := null
+  
+  while has-next-integer(<i>in</i>):
+    let <i>i</i> := read-integer(<i>in</i>)
+    <i>nodes</i> := <b>make-node</b>(<i>i</i>, <i>nodes</i>) <i>// contain the value i,</i>
+                                 <i>// and remember the previous numbers too</i>
+    <i>largest</i> := max(<i>largest</i>, <i>i</i>)
+  repeat
+  println <i>out</i> "Maximum: " <i>largest</i>
+
+  <i>// now compute the averages of all factors of largest</i>
+  let <i>total</i> := 0
+  let <i>count</i> := 0
+  while <i>nodes</i> != null:
+    let <i>j</i> := <b>get-value</b>(<i>nodes</i>)
+    if <i>j</i> divides <i>largest</i>:
+      <i>total</i> := <i>total</i> + <i>j</i>
+      <i>count</i> := <i>count</i> + 1
+    fi
+    <i>nodes</i> := <b>get-next</b>(<i>nodes</i>)
+  repeat
+  if <i>count</i> != 0:
+    println <i>out</i> "Average: " (<i>total</i> / <i>count</i>)
+  fi
+end
+</pre>
+<p>Above, if <i>n</i> integers are successfully read there will be <i>n</i> calls made to <b>make-node</b>. This will require <i>n</i> nodes to be made (which require enough space to hold the <i>value</i> and <i>next</i> fields of each node, plus internal memory management overhead), so the memory requirements will be on the order of <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />. Similarly, we construct this chain of nodes and then iterate over the chain again, which will require <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> steps to make the chain, and then another <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> steps to iterate over it.</p>
+<p>Note that when we iterate the numbers in the chain, we are actually looking at them in reverse order. For example, assume the numbers input to our program are 4, 7, 6, 30, and 15. After EOF is reached, the <i>nodes</i> chain will look like this:</p>
+<center><a href="/wiki/File:DataStructuresLinkedListofN.png" class="image"><img alt="DataStructuresLinkedListofN.png" src="//upload.wikimedia.org/wikibooks/en/d/d6/DataStructuresLinkedListofN.png" width="455" height="117" /></a></center>
+<p>Such chains are more commonly referred to as <i>linked-lists</i>. However, we generally prefer to think in terms of <i>lists</i> or <i>sequences</i>, which aren't as low-level: the linking concept is just an implementation detail. While a list can be made with a chain, in this book we cover several other ways to make a list. For the moment, we care more about the abstraction capabilities of the node than we do about one of the ways it is used.</p>
+<p>The above algorithm only uses the make-node, get-value, and get-next functions. If we use set-next we can change the algorithm to generate the chain so that it keeps the original ordering (instead of reversing it).</p>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+pseudocode to do so; also TODO; should probably think of compelling, but not too-advanced, use of set-value.</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<pre>
+program (input-stream <i>in</i>, output-stream <i>out</i>)
+  let <i>largest</i> := <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />
+  let <i>nodes</i> := null
+  
+  while has-next-integer (<i>in</i>):
+    let <i>i</i> := read-integer (<i>in</i>)
+    if (<i>nodes</i> == null)
+      <i>nodes</i> := <b>make-node</b>(<i>i</i>, null) <i>// construct first node in the list</i>
+    else
+      <i>nodes</i> := <b>set-next</b> (<i>nodes</i>, <b>make-node</b> (<i>i</i>, null)) <i>// append new node to the end of the list</i>
+    <i>largest</i> := max(<i>largest</i>, <i>i</i>)
+  repeat
+  println <i>out</i> "Maximum: " <i>largest</i>
+
+  <i>// now compute the averages of all factors of largest</i>
+  let <i>total</i> := 0
+  let <i>count</i> := 0
+  while <i>nodes</i> != null:
+    let <i>j</i> := <b>get-value</b>(<i>nodes</i>)
+    if <i>j</i> divides <i>largest</i>:
+      <i>total</i> := <i>total</i> + <i>j</i>
+      <i>count</i> := <i>count</i> + 1
+    fi
+    <i>nodes</i> := <b>get-next</b>(<i>nodes</i>)
+  repeat
+  if <i>count</i> != 0:
+    println <i>out</i> "Average: " (<i>total</i> / <i>count</i>)
+  fi
+end
+</pre>
+<h3><span class="mw-headline" id="The_Principle_of_Induction">The Principle of Induction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit&amp;section=3" title="Edit section: The Principle of Induction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The chains we can build from nodes are a demonstration of the principle of mathematical induction:</p>
+<table width="80%">
+<tr>
+<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top"><b>Mathematical Induction</b><br />
+<ol>
+<li>Suppose you have some property of numbers <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /></li>
+<li>If you can prove that when <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> holds that <img class="tex" alt="P(n+1)" src="//upload.wikimedia.org/math/d/9/f/d9f259a973d4ed34fb181011e34da3b9.png" /> must also hold, then</li>
+<li>All you need to do is prove that <img class="tex" alt="P(1)" src="//upload.wikimedia.org/math/2/6/d/26d4e0bfb74c9e35e3da2bd2c88b8235.png" /> holds to show that <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> holds for all natural <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /></li>
+</ol>
+</td>
+</tr>
+</table>
+<p>For example, let the property <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> be the statement that "you can make a chain that holds <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> numbers". This is a property of natural numbers, because the sentence makes sense for specific values of <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />:</p>
+<ul>
+<li>you can make a chain that holds 5 numbers</li>
+<li>you can make a chain that holds 100 numbers</li>
+<li>you can make a chain that holds 1,000,000 numbers</li>
+</ul>
+<p>Instead of proving that we can make chains of length 5, 100, and one million, we'd rather prove the general statement <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> instead. Step 2 above is called the <b>Inductive Hypothesis</b>; let's show that we can prove it:</p>
+<ul>
+<li>Assume that <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> holds. That is, that we can make a chain of <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements. Now we must show that <img class="tex" alt="P(n+1)" src="//upload.wikimedia.org/math/d/9/f/d9f259a973d4ed34fb181011e34da3b9.png" /> holds.</li>
+<li>Assume <code><i>chain</i></code> is the first node of the <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />-element chain. Assume <code><i>i</i></code> is some number that we'd like to add to the chain to make an <img class="tex" alt="n+1" src="//upload.wikimedia.org/math/4/0/b/40b85027598d87611b1c8d5d11e46812.png" /> length chain.</li>
+<li>The following code can accomplish this for us:</li>
+</ul>
+<pre>
+let <i>bigger-chain</i> := <b>make-node</b>(<i>i</i>, <i>chain</i>)
+</pre>
+<ul>
+<li>Here, we have the new number <code><i>i</i></code> that is now the contained value of the first link of the <code><i>bigger-chain</i></code>. If <code><i>chain</i></code> had <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements, then <code><i>bigger-chain</i></code> must have <img class="tex" alt="n+1" src="//upload.wikimedia.org/math/4/0/b/40b85027598d87611b1c8d5d11e46812.png" /> elements.</li>
+</ul>
+<p>Step 3 above is called the <b>Base Case</b>, let's show that we can prove it:</p>
+<ul>
+<li>We must show that <img class="tex" alt="P(1)" src="//upload.wikimedia.org/math/2/6/d/26d4e0bfb74c9e35e3da2bd2c88b8235.png" /> holds. That is, that we can make a chain of one element.</li>
+<li>The following code can accomplish this for us:</li>
+</ul>
+<pre>
+let <i>chain</i> := <b>make-node</b>(<i>i</i>, null)
+</pre>
+<p>The principle of induction says, then, that we have proven that we can make a chain of <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements for all value of <img class="tex" alt="n\ge 1" src="//upload.wikimedia.org/math/f/e/3/fe37f48a6bb040c06c5e7ccaac63bc66.png" />. How is this so? Probably the best way to think of induction is that it's actually a way of creating a formula to describe an infinite number of proofs. After we prove that the statement is true for <img class="tex" alt="P(1)" src="//upload.wikimedia.org/math/2/6/d/26d4e0bfb74c9e35e3da2bd2c88b8235.png" />, the base case, we can apply the inductive hypothesis to that fact to show that <img class="tex" alt="P(2)" src="//upload.wikimedia.org/math/f/3/2/f32a7ad52c42fc33f66908de508010b6.png" /> holds. Since we now know that <img class="tex" alt="P(2)" src="//upload.wikimedia.org/math/f/3/2/f32a7ad52c42fc33f66908de508010b6.png" /> holds, we can apply the inductive hypothesis again to show that <img class="tex" alt="P(3)" src="//upload.wikimedia.org/math/4/7/7/477587847940b260791246d61d3923fd.png" /> must hold. The principle says that there is nothing to stop us from doing this repeatedly, so we should assume it holds for all cases.</p>
+<p>Induction may sound like a strange way to prove things, but it's a very useful technique. What makes the technique so useful is that it can take a hard sounding statement like "prove <img class="tex" alt="P(n)" src="//upload.wikimedia.org/math/8/1/a/81ae00dae536d425ed9f277d678f9f3c.png" /> holds for all <img class="tex" alt="n\ge 1" src="//upload.wikimedia.org/math/f/e/3/fe37f48a6bb040c06c5e7ccaac63bc66.png" />" and break it into two smaller, easier to prove statements. Typically base cases are easy to prove because they are not general statements at all. Most of the proof work is usually in the inductive hypothesis, which can often require clever ways of reformulating the statement to "attach on" a proof of the <img class="tex" alt="n+1" src="//upload.wikimedia.org/math/4/0/b/40b85027598d87611b1c8d5d11e46812.png" /> case.</p>
+<p>You can think of the contained value of a node as a base case, while the next pointer of the node as the inductive hypothesis. Just as in mathematical induction, we can break the hard problem of storing an arbitrary number of elements into an easier problem of just storing one element and then having a mechanism to attach on further elements.</p>
+<h3><span class="mw-headline" id="Induction_on_a_Summation">Induction on a Summation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit&amp;section=4" title="Edit section: Induction on a Summation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The next example of induction we consider is more algebraic in nature:</p>
+<p>Let's say we are given the formula <img class="tex" alt="\frac{(n)(n+1)}{2}" src="//upload.wikimedia.org/math/6/7/0/670496f5340562a3b40addeeb672e0e8.png" /> and we want to prove that this formula gives us the sum of the first <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> numbers. As a first attempt, we might try to just show that this is true for 1</p>
+<dl>
+<dd><img class="tex" alt="\frac{(1)(1+1)}{2} = 1 = 1" src="//upload.wikimedia.org/math/7/e/2/7e225b2c5422c3524168ff012e6a82f0.png" />,</dd>
+</dl>
+<p>for 2</p>
+<dl>
+<dd><img class="tex" alt="\frac{(2)(2+1)}{2} = 3 = 1 + 2" src="//upload.wikimedia.org/math/d/3/a/d3affa47cd8fa2c741f52d21d4ec6140.png" />,</dd>
+</dl>
+<p>for 3</p>
+<dl>
+<dd><img class="tex" alt="\frac{(3)(3+1)}{2} = 6 = 1 + 2 + 3" src="//upload.wikimedia.org/math/b/5/4/b543cc4383418e21198b0c5ce970a36f.png" /></dd>
+</dl>
+<p>and so on, however we'd quickly realize that our so called proof would take infinitely long to write out! Even if you carried out this proof and showed it to be true for the first billion numbers, that doesn't nescessarily mean that it would be true for one billion and one or even a hundred billion. This is a strong hint that maybe induction would be useful here.</p>
+<p>Let's say we want to prove that the given formula really does give the sum of the first n numbers using induction. The first step is to prove the base case; i.e. we have to show that it is true when n = 1. This is relatively easy; we just substitute 1 for the variable n and we get (<img class="tex" alt="\frac{(1)(1+1)}{2} = 1" src="//upload.wikimedia.org/math/c/c/a/cca982654e819b5d3c437c69cbab0976.png" />), which shows that the formula is correct when n = 1.</p>
+<p>Now for the inductive step. We have to show that if the formula is true for j, it is also true for j + 1. To phrase it another way, assuming we've already proven that the sum from 1 to (j) is <img class="tex" alt="\frac{((j))((j)+1)}{2}" src="//upload.wikimedia.org/math/d/7/c/d7ccc252f4758a7205e94a3aaca1a905.png" />, we want to prove that the sum from 1 to (j+1) is <img class="tex" alt="\frac{((j+1))((j+1)+1)}{2}" src="//upload.wikimedia.org/math/c/2/2/c22267ca0699b942fcd7c98daa4db26a.png" />. Note that those two formulas came about just by replacing n with (j) and (j+1) respectively.</p>
+<p>To prove this inductive step, first note that to calculate the sum from 1 to j+1, you can just calculate the sum from 1 to j, then add j+1 to it. We already have a formula for the sum from 1 to j, and when we add j+1 to that formula, we get this new formula: <img class="tex" alt="\frac{((j))((j)+1)}{2}+(j+1)" src="//upload.wikimedia.org/math/1/2/c/12ccbcb5e26468af11fbf55d4945ecdc.png" />. So to actually complete the proof, all we'd need to do is show that <img class="tex" alt="\frac{((j))((j)+1)}{2}+(j+1) = \frac{((j+1))((j+1)+1)}{2}" src="//upload.wikimedia.org/math/f/e/f/fef84fc327b13a111394390327c52208.png" />.</p>
+<p>We can show the above equation is true via a few simplification steps:</p>
+<p><br />
+<img class="tex" alt="\frac{((j))((j)+1)}{2}+(j+1) = \frac{((j+1))((j+1)+1)}{2}" src="//upload.wikimedia.org/math/f/e/f/fef84fc327b13a111394390327c52208.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{(j)(j+1)}{2}+j+1 = \frac{(j+1)(j+1+1)}{2}" src="//upload.wikimedia.org/math/2/8/3/283c130eb9ea48858a86f1c72e5d54f1.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{(j)(j+1)}{2}+\frac{2(j+1)}{2} = \frac{(j+1)(j+2)}{2}" src="//upload.wikimedia.org/math/4/1/c/41c7d25c11f9a8e8a62631579c2fb8e9.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{(j)(j+1)+2(j+1)}{2} = \frac{(j+1)(j+2)}{2}" src="//upload.wikimedia.org/math/3/2/3/3238712721bc2469f93a686560e3d660.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{j^2+j+2j+2}{2} = \frac{(j+1)(j+2)}{2}" src="//upload.wikimedia.org/math/c/b/0/cb0c41359e16c8f146a70d4ae293f5b7.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{j^2+3j+2}{2} = \frac{(j+1)(j+2)}{2}" src="//upload.wikimedia.org/math/8/b/a/8ba95b8ae2a92341c31196205436b552.png" /></p>
+<p><br />
+<img class="tex" alt="\frac{(j+1)(j+2)}{2} = \frac{(j+1)(j+2)}{2}" src="//upload.wikimedia.org/math/d/b/4/db4c8287c18b04b284abc3191d1f45d7.png" /></p>
+<p><br /></p>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<strong class="selflink">Introduction</strong> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1070
+CPU time usage: 0.220 seconds
+Real time usage: 1.880 seconds
+Preprocessor visited node count: 471/1000000
+Preprocessor generated node count: 1764/1500000
+Post‐expand include size: 3312/2048000 bytes
+Template argument size: 1051/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20057-0!0!0!!en!4!* and timestamp 20131130215456
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Introduction&amp;oldid=2553039">http://en.wikibooks.org/w/index.php?title=Data_Structures/Introduction&amp;oldid=2553039</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FIntroduction&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FIntroduction" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Introduction"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Introduction"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Introduction&amp;stable=1" >Read</a></span></li>
+					<li id="ca-current" class="collapsible collapsible selected"><span><a href="/w/index.php?title=Data_Structures/Introduction&amp;stable=0&amp;redirect=no"  title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Introduction" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Introduction" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Introduction&amp;oldid=2553039" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Introduction&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FIntroduction&amp;id=2553039" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FIntroduction">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FIntroduction&amp;oldid=2553039&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Introduction&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 1 September 2013, at 10:01.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Introduction" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1070 in 0.191 secs. -->
+	</body>
+</html>

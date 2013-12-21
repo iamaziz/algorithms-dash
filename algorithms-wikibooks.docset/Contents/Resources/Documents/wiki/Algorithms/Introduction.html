@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Introduction - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Introduction&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Introduction&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Introduction" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Introduction","wgTitle":"Algorithms/Introduction","wgCurRevisionId":2483741,"wgRevisionId":2483741,"wgArticleId":14998,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Introduction","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2483741,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Introduction skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Introduction</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <strong class="selflink">1</strong>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p>This book covers techniques for the design and analysis of algorithms. The algorithmic techniques covered include: divide and conquer, backtracking, dynamic programming, greedy algorithms, and hill-climbing.</p>
+<p>Any solvable problem generally has at least one algorithm of each of the following types:</p>
+<ol>
+<li>the obvious way;</li>
+<li>the methodical way;</li>
+<li>the clever way; and</li>
+<li>the miraculous way.</li>
+</ol>
+<p>On the first and most basic level, the "obvious" solution might try to exhaustively search for the answer. Intuitively, the obvious solution is the one that comes easily if you're familiar with a programming language and the basic problem solving techniques.</p>
+<p>The second level is the methodical level and is the heart of this book: after understanding the material presented here you should be able to methodically turn most obvious algorithms into better performing algorithms.</p>
+<p>The third level, the clever level, requires more understanding of the elements involved in the problem and their properties or even a reformulation of the algorithm (e.g., numerical algorithms exploit mathematical properties that are not obvious). A clever algorithm may be hard to understand by being non-obvious that it is correct, or it may be hard to understand that it actually runs faster than what it would seem to require.</p>
+<p>The fourth and final level of an algorithmic solution is the miraculous level: this is reserved for the rare cases where a breakthrough results in a highly non-intuitive solution.</p>
+<p>Naturally, all of these four levels are relative, and some clever algorithms are covered in this book as well, in addition to the methodical techniques. Let's begin.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Prerequisites"><span class="tocnumber">1</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#When_is_Efficiency_Important.3F"><span class="tocnumber">2</span> <span class="toctext">When is Efficiency Important?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Inventing_an_Algorithm"><span class="tocnumber">3</span> <span class="toctext">Inventing an Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Understanding_an_Algorithm"><span class="tocnumber">4</span> <span class="toctext">Understanding an Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Overview_of_the_Techniques"><span class="tocnumber">5</span> <span class="toctext">Overview of the Techniques</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Algorithm_and_code_example"><span class="tocnumber">6</span> <span class="toctext">Algorithm and code example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Level_1_.28easiest.29"><span class="tocnumber">6.1</span> <span class="toctext">Level 1 (easiest)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Level_2"><span class="tocnumber">6.2</span> <span class="toctext">Level 2</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Level_3"><span class="tocnumber">6.3</span> <span class="toctext">Level 3</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Level_4"><span class="tocnumber">6.4</span> <span class="toctext">Level 4</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Level_5"><span class="tocnumber">6.5</span> <span class="toctext">Level 5</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Prerequisites">Prerequisites</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=1" title="Edit section: Prerequisites">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>To understand the material presented in this book you need to know a programming language well enough to translate the pseudocode in this book into a working solution. You also need to know the basics about the following data structures: arrays, stacks, queues, linked-lists, trees, heaps (also called priority queues), disjoint sets, and graphs.</p>
+<p>Additionally, you should know some basic algorithms like binary search, a sorting algorithm (merge sort, heap sort, insertion sort, or others), and breadth-first or depth-first search.</p>
+<p>If you are unfamiliar with any of these prerequisites you should review the material in the <i><a href="/wiki/Computer_Science:Data_Structures" title="Computer Science:Data Structures" class="mw-redirect">Data Structures</a></i> book first.</p>
+<h2><span class="mw-headline" id="When_is_Efficiency_Important.3F">When is Efficiency Important?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=2" title="Edit section: When is Efficiency Important?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Not every problem requires the most efficient solution available. For our purposes, the term efficient is concerned with the time and/or space needed to perform the task. When either time or space is abundant and cheap, it may not be worth it to pay a programmer to spend a day or so working to make a program faster.</p>
+<p>However, here are some cases where efficiency matters:</p>
+<ul>
+<li>When resources are limited, a change in algorithms could create great savings and allow limited machines (like cell phones, embedded systems, and sensor networks) to be stretched to the frontier of possibility.</li>
+</ul>
+<ul>
+<li>When the data is large a more efficient solution can mean the difference between a task finishing in two days versus two weeks. Examples include physics, genetics, web searches, massive online stores, and network traffic analysis.</li>
+</ul>
+<ul>
+<li>Real time applications: the term "real time applications" actually refers to computations that give time guarantees, versus meaning "fast." However, the quality can be increased further by choosing the appropriate algorithm.</li>
+</ul>
+<ul>
+<li>Computationally expensive jobs, like fluid dynamics, partial differential equations, VLSI design, and cryptanalysis can sometimes only be considered when the solution is found efficiently enough.</li>
+</ul>
+<ul>
+<li>When a subroutine is common and frequently used, time spent on a more efficient implementation can result in benefits for every application that uses the subroutine. Examples include sorting, searching, pseudorandom number generation, kernel operations (not to be confused with the operating system kernel), database queries, and graphics.</li>
+</ul>
+<p>In short, it's important to save time when you do not have any time to spare.</p>
+<p>When is efficiency unimportant? Examples of these cases include prototypes that are used only a few times, cases where the input is small, when simplicity and ease of maintenance is more important, when the area concerned is not the bottle neck, or when there's another process or area in the code that would benefit far more from efficient design and attention to the algorithm(s).</p>
+<h2><span class="mw-headline" id="Inventing_an_Algorithm">Inventing an Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=3" title="Edit section: Inventing an Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Because we assume you have some knowledge of a programming language, let's start with how we translate an idea into an algorithm. Suppose you want to write a function that will take a string as input and output the string in lowercase:</p>
+<pre>
+// <i>tolower -- translates all alphabetic, uppercase characters in str to lowercase</i>
+function <b>tolower</b>(string <i>str</i>): string
+</pre>
+<p>What first comes to your mind when you think about solving this problem? Perhaps these two considerations crossed your mind:</p>
+<ol>
+<li>Every character in <i>str</i> needs to be looked at</li>
+<li>A routine for converting a single character to lower case is required</li>
+</ol>
+<p>The first point is "obvious" because a character that needs to be converted might appear anywhere in the string. The second point follows from the first because, once we consider each character, we need to do something with it. There are many ways of writing the <b>tolower</b> function for characters:</p>
+<pre>
+function <b>tolower</b>(character <i>c</i>): character
+</pre>
+<p>There are several ways to implement this function, including:</p>
+<ul>
+<li>look <i>c</i> up in a table -- a character indexed array of characters that holds the lowercase version of each character.</li>
+</ul>
+<ul>
+<li>check if <i>c</i> is in the range 'A' ≤ <i>c</i> ≤ 'Z', and then add a numerical offset to it.</li>
+</ul>
+<p>These techniques depend upon the character encoding. (As an issue of separation of concerns, perhaps the table solution is stronger because it's clearer you only need to change one part of the code.)</p>
+<p>However such a subroutine is implemented, once we have it, the implementation of our original problem comes immediately:</p>
+<pre>
+// <i>tolower -- translates all alphabetic, uppercase characters in str to lowercase</i>
+function <b>tolower</b>(string <i>str</i>): string
+  let <i>result</i> := ""
+  for-each <i>c</i> in <i>str</i>:
+    <i>result</i>.append(<b>tolower</b>(<i>c</i>))
+  repeat
+  return <i>result</i>
+end
+</pre>
+<div id="toc"><small>This code sample is also available in <a href="/wiki/Ada_Programming/Algorithms#To_Lower" title="Ada Programming/Algorithms">Ada</a>.</small></div>
+<p>The loop is the result of our ability to translate "every character needs to be looked at" into our native programming language. It became obvious that the <b>tolower</b> subroutine call should be in the loop's body. The final step required to bring the high-level task into an implementation was deciding how to build the resulting string. Here, we chose to start with the empty string and append characters to the end of it.</p>
+<p>Now suppose you want to write a function for comparing two strings that tests if they are equal, ignoring case:</p>
+<pre>
+// <i>equal-ignore-case -- returns true if s and t are equal, ignoring case</i>
+function <b>equal-ignore-case</b>(string <i>s</i>, string <i>t</i>): boolean
+</pre>
+<p>These ideas might come to mind:</p>
+<ol>
+<li>Every character in strings <i>s</i> and <i>t</i> will have to be looked at</li>
+<li>A single loop iterating through both might accomplish this</li>
+<li>But such a loop should be careful that the strings are of equal length first</li>
+<li>If the strings aren't the same length, then they cannot be equal because the consideration of ignoring case doesn't affect how long the string is</li>
+<li>A tolower subroutine for characters can be used again, and only the lowercase versions will be compared</li>
+</ol>
+<p>These ideas come from familiarity both with strings and with the looping and conditional constructs in your language. The function you thought of may have looked something like this:</p>
+<pre>
+// <i>equal-ignore-case -- returns true if s or t are equal, ignoring case</i>
+function <b>equal-ignore-case</b>(string <i>s</i>[1..<i>n</i>], string <i>t</i>[1..<i>m</i>]): boolean
+  if <i>n</i> != <i>m</i>:
+    return false               <i>\if they aren't the same length, they aren't equal\</i>
+  fi
+  
+  for <i>i</i> := 1 to <i>n</i>:
+    if <b>tolower</b>(<i>s</i>[<i>i</i>]) != <b>tolower</b>(<i>t</i>[<i>i</i>]):
+      return false
+    fi
+  repeat
+  return true
+end
+</pre>
+<div id="toc"><small>This code sample is also available in <a href="/wiki/Ada_Programming/Algorithms#Equal_Ignore_Case" title="Ada Programming/Algorithms">Ada</a>.</small></div>
+<p>Or, if you thought of the problem in terms of functional decomposition instead of iterations, you might have thought of a function more like this:</p>
+<pre>
+// <i>equal-ignore-case -- returns true if s or t are equal, ignoring case</i>
+function <b>equal-ignore-case</b>(string <i>s</i>, string <i>t</i>): boolean
+  return <b>tolower</b>(<i>s</i>).equals(<b>tolower</b>(<i>t</i>))
+end
+</pre>
+<p>Alternatively, you may feel neither of these solutions is efficient enough, and you would prefer an algorithm that only ever made one pass of <i>s</i> or <i>t</i>. The above two implementations each require two-passes: the first version computes the lengths and then compares each character, while the second version computes the lowercase versions of the string and then compares the results to each other. (Note that for a pair of strings, it is also possible to have the length precomputed to avoid the second pass, but that can have its own drawbacks at times.) You could imagine how similar routines can be written to test string equality that not only ignore case, but also ignore accents.</p>
+<p>Already you might be getting the spirit of the pseudocode in this book. The pseudocode language is not meant to be a real programming language: it abstracts away details that you would have to contend with in any language. For example, the language doesn't assume generic types or dynamic versus static types: the idea is that it should be clear what is intended and it should not be too hard to convert it to your native language. (However, in doing so, you might have to make some design decisions that limit the implementation to one particular type or form of data.)</p>
+<p>There was nothing special about the techniques we used so far to solve these simple string problems: such techniques are perhaps already in your toolbox, and you may have found better or more elegant ways of expressing the solutions in your programming language of choice. In this book, we explore general algorithmic techniques to expand your toolbox even further. Taking a naive algorithm and making it more efficient might not come so immediately, but after understanding the material in this book you should be able to methodically apply different solutions, and, most importantly, you will be able to ask yourself more questions about your programs. Asking questions can be just as important as answering questions, because asking the right question can help you reformulate the problem and think outside of the box.</p>
+<h2><span class="mw-headline" id="Understanding_an_Algorithm">Understanding an Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=4" title="Edit section: Understanding an Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Computer programmers need an excellent ability to reason with multiple-layered abstractions. For example, consider the following code:</p>
+<pre>
+function <b>foo</b>(integer <i>a</i>):
+  if (<i>a</i> / 2) * 2 == <i>a</i>:
+     print "The value " <i>a</i> " is even."
+  fi
+end
+</pre>
+<p>To understand this example, you need to know that integer division uses truncation and therefore when the if-condition is true then the least-significant bit in <i>a</i> is zero (which means that <i>a</i> must be even). Additionally, the code uses a string printing API and is itself the definition of a function to be used by different modules. Depending on the programming task, you may think on the layer of hardware, on down to the level of processor branch-prediction or the cache.</p>
+<p>Often an understanding of binary is crucial, but many modern languages have abstractions far enough away "from the hardware" that these lower-levels are not necessary. Somewhere the abstraction stops: most programmers don't need to think about logic gates, nor is the physics of electronics necessary. Nevertheless, an essential part of programming is multiple-layer thinking.</p>
+<p>But stepping away from computer programs toward algorithms requires another layer: mathematics. A program may exploit properties of binary representations. An algorithm can exploit properties of set theory or other mathematical constructs. Just as binary itself is not explicit in a program, the mathematical properties used in an algorithm are not explicit.</p>
+<p>Typically, when an algorithm is introduced, a discussion (separate from the code) is needed to explain the mathematics used by the algorithm. For example, to really understand a greedy algorithm (such as Dijkstra's algorithm) you should understand the mathematical properties that show how the greedy strategy is valid for all cases. In a way, you can think of the mathematics as its own kind of subroutine that the algorithm invokes. But this "subroutine" is not present in the code because there's nothing to call. As you read this book try to think about mathematics as an implicit subroutine.</p>
+<h2><span class="mw-headline" id="Overview_of_the_Techniques">Overview of the Techniques</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=5" title="Edit section: Overview of the Techniques">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The techniques this book covers are highlighted in the following overview.</p>
+<ul>
+<li><b>Divide and Conquer</b>: Many problems, particularly when the input is given in an array, can be solved by cutting the problem into smaller pieces (<i>divide</i>), solving the smaller parts recursively (<i>conquer</i>), and then combining the solutions into a single result. Examples include the merge sort and quicksort algorithms.</li>
+</ul>
+<ul>
+<li><b>Randomization</b>: Increasingly, randomization techniques are important for many applications. This chapter presents some classical algorithms that make use of random numbers.</li>
+</ul>
+<ul>
+<li><b>Backtracking</b>: Almost any problem can be cast in some form as a backtracking algorithm. In backtracking, you consider all possible choices to solve a problem and recursively solve subproblems under the assumption that the choice is taken. The set of recursive calls generates a tree in which each set of choices in the tree is considered consecutively. Consequently, if a solution exists, it will eventually be found.
+<p>Backtracking is generally an inefficient, brute-force technique, but there are optimizations that can be performed to reduce both the depth of the tree and the number of branches. The technique is called backtracking because after one leaf of the tree is visited, the algorithm will go back up the call stack (undoing choices that didn't lead to success), and then proceed down some other branch. To be solved with backtracking techniques, a problem needs to have some form of "self-similarity," that is, smaller instances of the problem (after a choice has been made) must resemble the original problem. Usually, problems can be generalized to become self-similar.</p>
+</li>
+</ul>
+<ul>
+<li><b>Dynamic Programming</b>: Dynamic programming is an optimization technique for backtracking algorithms. When subproblems need to be solved repeatedly (i.e., when there are many duplicate branches in the backtracking algorithm) time can be saved by solving all of the subproblems first (bottom-up, from smallest to largest) and storing the solution to each subproblem in a table. Thus, each subproblem is only visited and solved once instead of repeatedly. The "programming" in this technique's name comes from programming in the sense of writing things down in a table; for example, television programming is making a table of what shows will be broadcast when.</li>
+</ul>
+<ul>
+<li><b>Greedy Algorithms</b>: A greedy algorithm can be useful when enough information is known about possible choices that "the best" choice can be determined without considering all possible choices. Typically, greedy algorithms are not challenging to write, but they are difficult to prove correct.</li>
+</ul>
+<ul>
+<li><b>Hill Climbing</b>: The final technique we explore is hill climbing. The basic idea is to start with a poor solution to a problem, and then repeatedly apply optimizations to that solution until it becomes optimal or meets some other requirement. An important case of hill climbing is network flow. Despite the name, network flow is useful for many problems that describe relationships, so it's not just for computer networks. Many matching problems can be solved using network flow.</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <strong class="selflink">1</strong>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<h2><span class="mw-headline" id="Algorithm_and_code_example">Algorithm and code example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=6" title="Edit section: Algorithm and code example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Level_1_.28easiest.29">Level 1 (easiest)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=7" title="Edit section: Level 1 (easiest)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1. <i><a href="/wiki/Algorithms/Find_maximum" title="Algorithms/Find maximum">Find maximum</a></i> With algorithm and several different programming languages</p>
+<p>2. <i><a href="/w/index.php?title=Algorithms/Find_minimum&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Find minimum (does not exist)">Find minimum</a></i> With algorithm and several different programming languages</p>
+<p>3. <i><a href="/w/index.php?title=Algorithms/Find_average&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Find average (does not exist)">Find average</a></i> With algorithm and several different programming languages</p>
+<p>4. <i><a href="/w/index.php?title=Algorithms/Find_mode&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Find mode (does not exist)">Find mode</a></i> With algorithm and several different programming languages</p>
+<p>5. <i><a href="/w/index.php?title=Algorithms/Find_total&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Find total (does not exist)">Find total</a></i> With algorithm and several different programming languages</p>
+<p>6. <i><a href="/w/index.php?title=Algorithms/Counting&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Counting (does not exist)">Counting</a></i> With algorithm and several different programming languages</p>
+<h3><span class="mw-headline" id="Level_2">Level 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=8" title="Edit section: Level 2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1. <i><a href="/w/index.php?title=Algorithms/Talking_to_computer_Lv_1&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Talking to computer Lv 1 (does not exist)">Talking to computer Lv 1</a></i> With algorithm and several different programming languages</p>
+<p>2. <i><a href="/wiki/Algorithms/Sorting-bubble_sort" title="Algorithms/Sorting-bubble sort">Sorting-bubble sort</a></i> With algorithm and several different programming languages</p>
+<p>3.</p>
+<h3><span class="mw-headline" id="Level_3">Level 3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=9" title="Edit section: Level 3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1. <i><a href="/w/index.php?title=Algorithms/Talking_to_computer_Lv_2&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Talking to computer Lv 2 (does not exist)">Talking to computer Lv 2</a></i> With algorithm and several different programming languages</p>
+<h3><span class="mw-headline" id="Level_4">Level 4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=10" title="Edit section: Level 4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1. <i><a href="/w/index.php?title=Algorithms/Talking_to_computer_Lv_3&amp;action=edit&amp;redlink=1" class="new" title="Algorithms/Talking to computer Lv 3 (does not exist)">Talking to computer Lv 3</a></i> With algorithm and several different programming languages</p>
+<p>2. <i><a href="/wiki/Algorithms/Find_approximate_maximum" title="Algorithms/Find approximate maximum">Find approximate maximum</a></i> With algorithm and several different programming languages</p>
+<h3><span class="mw-headline" id="Level_5">Level 5</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit&amp;section=11" title="Edit section: Level 5">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1. <i><a href="/wiki/Algorithm_Implementation/Sorting/Quicksort" title="Algorithm Implementation/Sorting/Quicksort">Quicksort</a></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1216
+CPU time usage: 0.060 seconds
+Real time usage: 0.100 seconds
+Preprocessor visited node count: 93/1000000
+Preprocessor generated node count: 588/1500000
+Post‐expand include size: 1298/2048000 bytes
+Template argument size: 95/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:14998-0!*!0!!en!*!* and timestamp 20131201090508
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Introduction&amp;oldid=2483741">http://en.wikibooks.org/w/index.php?title=Algorithms/Introduction&amp;oldid=2483741</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FIntroduction&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FIntroduction" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Introduction"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms/Introduction"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Introduction" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Introduction&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Introduction" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Introduction" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Introduction&amp;oldid=2483741" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Introduction&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FIntroduction&amp;id=2483741" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FIntroduction">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FIntroduction&amp;oldid=2483741&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Introduction&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 1 February 2013, at 22:26.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Introduction" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1050 in 0.170 secs. -->
+	</body>
+</html>

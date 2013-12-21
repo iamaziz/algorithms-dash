@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Divide and Conquer - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Divide_and_Conquer" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Divide_and_Conquer","wgTitle":"Algorithms/Divide and Conquer","wgCurRevisionId":2513759,"wgRevisionId":2513759,"wgArticleId":15000,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Divide_and_Conquer","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2513759,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Divide_and_Conquer skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Divide and Conquer</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <strong class="selflink">3</strong>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p>The first major algorithmic technique we cover is <b>divide and conquer</b>. Part of the trick of making a good divide and conquer algorithm is determining how a given problem could be separated into two or more similar, but smaller, subproblems. More generally, when we are creating a divide and conquer algorithm we will take the following steps:</p>
+<table width="80%">
+<tr>
+<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top"><b>Divide and Conquer Methodology</b><br />
+<ol>
+<li>Given a problem, identify a small number of significantly smaller subproblems of the same type</li>
+<li>Solve each subproblem recursively (the smallest possible size of a subproblem is a base-case)</li>
+<li>Combine these solutions into a solution for the main problem</li>
+</ol>
+</td>
+</tr>
+</table>
+<p>The first algorithm we'll present using this methodology is the merge sort.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Merge_Sort"><span class="tocnumber">1</span> <span class="toctext">Merge Sort</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Analysis"><span class="tocnumber">1.1</span> <span class="toctext">Analysis</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Iterative_Version"><span class="tocnumber">1.2</span> <span class="toctext">Iterative Version</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#space_inefficiency"><span class="tocnumber">1.3</span> <span class="toctext">space inefficiency</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Binary_Search"><span class="tocnumber">2</span> <span class="toctext">Binary Search</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#difficulty_in_initially_correct_binary_search_implementations"><span class="tocnumber">2.1</span> <span class="toctext">difficulty in initially correct binary search implementations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Integer_Multiplication"><span class="tocnumber">3</span> <span class="toctext">Integer Multiplication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Grade_School_Multiplication"><span class="tocnumber">3.1</span> <span class="toctext">Grade School Multiplication</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Divide_and_Conquer_Multiplication"><span class="tocnumber">3.2</span> <span class="toctext">Divide and Conquer Multiplication</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Base_Conversion"><span class="tocnumber">4</span> <span class="toctext">Base Conversion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Recursive_Implementation"><span class="tocnumber">4.1</span> <span class="toctext">Recursive Implementation</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Iterative_Implementation"><span class="tocnumber">4.2</span> <span class="toctext">Iterative Implementation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Closest_Pair_of_Points"><span class="tocnumber">5</span> <span class="toctext">Closest Pair of Points</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Closest_Pair:_A_Divide-and-Conquer_Approach"><span class="tocnumber">6</span> <span class="toctext">Closest Pair: A Divide-and-Conquer Approach</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Introduction"><span class="tocnumber">6.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Closest_Pair_in_the_Plane"><span class="tocnumber">6.2</span> <span class="toctext">Closest Pair in the Plane</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Summary_and_Analysis_of_the_2-D_Algorithm"><span class="tocnumber">6.3</span> <span class="toctext">Summary and Analysis of the 2-D Algorithm</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Improving_the_Algorithm"><span class="tocnumber">6.4</span> <span class="toctext">Improving the Algorithm</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Towers_Of_Hanoi_Problem"><span class="tocnumber">7</span> <span class="toctext">Towers Of Hanoi Problem</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Rules"><span class="tocnumber">7.1</span> <span class="toctext">Rules</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Solution"><span class="tocnumber">7.2</span> <span class="toctext">Solution</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Intuitive_Idea"><span class="tocnumber">7.2.1</span> <span class="toctext">Intuitive Idea</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Recurrence"><span class="tocnumber">7.2.2</span> <span class="toctext">Recurrence</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Pseudocode"><span class="tocnumber">7.2.3</span> <span class="toctext">Pseudocode</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Analysis_2"><span class="tocnumber">7.2.4</span> <span class="toctext">Analysis</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Merge_Sort">Merge Sort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=1" title="Edit section: Merge Sort">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The problem that <b>merge sort</b> solves is general sorting: given an unordered array of elements that have a total ordering, create an array that has the same elements sorted. More precisely, for an array <i>a</i> with indexes 1 through <i>n</i>, if the condition</p>
+<dl>
+<dd>for all <i>i</i>, <i>j</i> such that 1 ≤ <i>i</i> &lt; <i>j</i> ≤ <i>n</i> then <i>a</i>[<i>i</i>] ≤ <i>a</i>[<i>j</i>]</dd>
+</dl>
+<p>holds, then <i>a</i> is said to be <b>sorted</b>. Here is the interface:</p>
+<pre>
+<i>// sort -- returns a sorted copy of array a</i>
+function <b>sort</b>(array <i>a</i>): array
+</pre>
+<p>Following the divide and conquer methodology, how can <i>a</i> be broken up into smaller subproblems? Because <i>a</i> is an array of <i>n</i> elements, we might want to start by breaking the array into two arrays of size <i>n</i>/2 elements. These smaller arrays will also be unsorted and it is meaningful to sort these smaller problems; thus we can consider these smaller arrays "similar". Ignoring the base case for a moment, this reduces the problem into a different one: Given two sorted arrays, how can they be combined to form a single sorted array that contains all the elements of both given arrays:</p>
+<pre>
+<i>// merge -- given a and b (assumed to be sorted) returns a merged array that</i>
+// preserves order
+function <b>merge</b>(array <i>a</i>, array <i>b</i>): array
+</pre>
+<p>So far, following the methodology has led us to this point, but what about the base case? The base case is the part of the algorithm concerned with what happens when the problem cannot be broken into smaller subproblems. Here, the base case is when the array only has one element. The following is a sorting algorithm that faithfully sorts arrays of only zero or one elements:</p>
+<pre>
+<i>// base-sort -- given an array of one element (or empty), return a copy of the</i>
+// array sorted
+function <b>base-sort</b>(array <i>a</i>[1..<i>n</i>]): array
+  assert (<i>n</i> &lt;= 1)
+  return <i>a</i>.copy()
+end
+</pre>
+<p>Putting this together, here is what the methodology has told us to write so far:</p>
+<pre>
+<i>// sort -- returns a sorted copy of array a</i>
+function <b>sort</b>(array <i>a</i>[1..<i>n</i>]): array
+  if <i>n</i> &lt;= 1: return <i>a</i>.copy()
+  else:
+    let <i>sub_size</i> := <i>n</i> / 2
+    let <i>first_half</i> := <b>sort</b>(<i>a</i>[1,..,<i>sub_size</i>])
+    let <i>second_half</i> := <b>sort</b>(<i>a</i>[<i>sub_size</i> + 1,..,<i>n</i>])
+    
+    return <b>merge</b>(<i>first_half</i>, <i>second_half</i>)
+  fi
+end
+</pre>
+<p>And, other than the unimplemented merge subroutine, this sorting algorithm is done! Before we cover how this algorithm works, here is how merge can be written:</p>
+<pre>
+<i>// merge -- given a and b (assumed to be sorted) returns a merged array that</i>
+// preserves order
+function <b>merge</b>(array <i>a</i>[1..<i>n</i>], array <i>b</i>[1..<i>m</i>]): array
+  let <i>result</i> := new array[<i>n</i> + <i>m</i>]
+  let <i>i</i>, <i>j</i> := 1
+  
+  for <i>k</i> := 1 to <i>n</i> + <i>m</i>:
+    if <i>i</i> &gt;= <i>n</i>: <i>result</i>[<i>k</i>] := <i>b</i>[<i>j</i>]; <i>j</i> += 1
+    else-if <i>j</i> &gt;= <i>m</i>: <i>result</i>[<i>k</i>] := <i>a</i>[<i>i</i>]; <i>i</i> += 1
+    else:
+      if <i>a</i>[<i>i</i>] &lt; <i>b</i>[<i>j</i>]:
+        <i>result</i>[<i>k</i>] := <i>a</i>[<i>i</i>]; <i>i</i> += 1
+      else:
+        <i>result</i>[<i>k</i>] := <i>b</i>[<i>j</i>]; <i>j</i> += 1
+      fi
+    fi
+  repeat
+end
+</pre>
+<p>[TODO: how it works; including correctness proof] This algorithm uses the fact that, given two sorted arrays, the smallest element is always in one of two places. It's either at the head of the first array, or the head of the second.</p>
+<h3><span class="mw-headline" id="Analysis">Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=2" title="Edit section: Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Let <img class="tex" alt="T(n)" src="//upload.wikimedia.org/math/5/1/4/514884be093e9ab7909b0d394e7b74d2.png" /> be the number of steps the algorithm takes to run on input of size <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />.</p>
+<p>Merging takes linear time and we recurse each time on two sub-problems of half the original size, so</p>
+<dl>
+<dd><img class="tex" alt="T(n) = 2\cdot T\left(\frac{n}{2}\right) + O(n)." src="//upload.wikimedia.org/math/f/7/2/f72a53c8f8f6d3035c197a35096a0c4e.png" /></dd>
+</dl>
+<p>By the master theorem, we see that this recurrence has a "steady state" tree. Thus, the runtime is:</p>
+<dl>
+<dd><img class="tex" alt="T(n) = O(n \cdot \log n)." src="//upload.wikimedia.org/math/f/9/6/f96289c2cbde730474573330629fb8df.png" /></dd>
+</dl>
+<p>This can be seen intuitivey by asking how may times does n need to be divided by 2 before the size of the array for sorting is 1? Why m times of course&#160;!</p>
+<p>More directly, 2<sup>m</sup> = n , equivalent to log 2<sup>m</sup> = log n, equivalent to m x log<sub>2</sub>2 = log <sub>2</sub> n , and since log<sub>2</sub> 2 = 1, equivalent to m = log<sub>2</sub>n.</p>
+<p>Since m is the number of halvings of an array before the array is chopped up into bite sized pieces of 1-element arrays, and then it will take m levels of merging a sub-array with its neighbor where the sum size of sub-arrays will be n at each level, it will be exactly n/2 comparisons for merging at each level, with m ( log<sub>2</sub>n ) levels, thus O(n/2 x log n ) &lt;=&gt; <b>O ( n log n).</b></p>
+<h3><span class="mw-headline" id="Iterative_Version">Iterative Version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=3" title="Edit section: Iterative Version">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This merge sort algorithm can be turned into an iterative algorithm by iteratively merging each subsequent pair, then each group of four, et cetera. Due to a lack of function overhead, iterative algorithms tend to be faster in practice. However, because the recursive version's call tree is logarithmically deep, it does not require much run-time stack space: Even sorting 4 gigs of items would only require 32 call entries on the stack, a very modest amount considering if even each call required 256 bytes on the stack, it would only require 8 kilobytes.</p>
+<p>The iterative version of mergesort is a minor modification to the recursive version - in fact we can reuse the earlier merging function. The algorithm works by merging small, sorted subsections of the original array to create larger subsections of the array which are sorted. To accomplish this, we iterate through the array with successively larger "strides".</p>
+<pre>
+<i>// sort -- returns a sorted copy of array a</i>
+function <b>sort_iterative</b>(array <i>a</i>[1..<i>n</i>]): array
+   let <i>result</i> := <i>a</i>.copy()
+   for <i>power</i> := 0 to log2(<i>n</i>-1)
+     let <i>unit</i> := 2^power
+     for <i>i</i> := 1 to <i>n</i> by <i>unit</i>*2
+       if i+<i>unit</i>-1 &lt; n: 
+         let <i>a1</i>[1..<i>unit</i>] := <i>result</i>[i..i+<i>unit</i>-1]
+         let <i>a2</i>[1..<i>unit</i>] := <i>result</i>[i+<i>unit</i>..min(i+<i>unit</i>*2-1, <i>n</i>)]
+         <i>result</i>[i..i+<i>unit</i>*2-1] := <b>merge</b>(<i>a1</i>,<i>a2</i>)
+       fi
+     repeat
+   repeat
+   
+   return <i>result</i>
+end
+</pre>
+<p>This works because each sublist of length 1 in the array is, by definition, sorted. Each iteration through the array (using counting variable <i>i</i>) doubles the size of sorted sublists by merging adjacent sublists into sorted larger versions. The current size of sorted sublists in the algorithm is represented by the <i>unit</i> variable.</p>
+<h3><span class="mw-headline" id="space_inefficiency">space inefficiency</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=4" title="Edit section: space inefficiency">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Straight forward merge sort requires a space of 2 x n , n to store the 2 sorted smaller arrays , and n to store the final result of merging. But merge sort still lends itself for batching of merging.</p>
+<h2><span class="mw-headline" id="Binary_Search">Binary Search</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=5" title="Edit section: Binary Search">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Once an array is sorted, we can quickly locate items in the array by doing a binary search. Binary search is different from other divide and conquer algorithms in that it is mostly divide based (nothing needs to be conquered). The concept behind binary search will be useful for understanding the partition and quicksort algorithms, presented in the randomization chapter.</p>
+<p>Finding an item in an already sorted array is similar to finding a name in a phonebook: you can start by flipping the book open toward the middle. If the name you're looking for is on that page, you stop. If you went too far, you can start the process again with the first half of the book. If the name you're searching for appears later than the page, you start from the second half of the book instead. You repeat this process, narrowing down your search space by half each time, until you find what you were looking for (or, alternatively, find where what you were looking for would have been if it were present).</p>
+<p>The following algorithm states this procedure precisely:</p>
+<pre>
+<i>// binary-search -- returns the index of value in the given array, or</i>
+<i>// -1 if value cannot be found. Assumes array is sorted in ascending order</i>
+function <b>binary-search</b>(<i>value</i>, array <i>A</i>[1..<i>n</i>]): integer
+  return <b>search-inner</b>(<i>value</i>, <i>A</i>, 1, <i>n</i> + 1)
+end
+
+<i>// search-inner -- search subparts of the array; end is one past the</i>
+<i>// last element </i>
+function <b>search-inner</b>(<i>value</i>, array <i>A</i>, <i>start</i>, <i>end</i>): integer
+  if <i>start</i> == <i>end</i>: 
+     return -1                   <i>// not found</i>
+  fi
+
+  let <i>length</i> := <i>end</i> - <i>start</i>
+  if <i>length</i> == 1:
+    if <i>value</i> == <i>A</i>[<i>start</i>]:
+      return <i>start</i>
+    else:
+      return -1 
+    fi
+  fi
+  
+  let <i>mid</i> := <i>start</i> + (<i>length</i> / 2)
+  if <i>value</i> == <i>A</i>[<i>mid</i>]:
+    return <i>mid</i>
+  else-if <i>value</i> &gt; <i>A</i>[<i>mid</i>]:
+    return <b>search-inner</b>(<i>value</i>, <i>A</i>, <i>mid</i> + 1, <i>end</i>)
+  else:
+    return <b>search-inner</b>(<i>value</i>, <i>A</i>, <i>start</i>, <i>mid</i>)
+  fi
+end
+</pre>
+<p>Note that all recursive calls made are tail-calls, and thus the algorithm is iterative. We can explicitly remove the tail-calls if our programming language does not do that for us already by turning the argument values passed to the recursive call into assignments, and then looping to the top of the function body again:</p>
+<pre>
+<i>// binary-search -- returns the index of value in the given array, or</i>
+<i>// -1 if value cannot be found. Assumes array is sorted in ascending order</i>
+function <b>binary-search</b>(<i>value</i>, array <i>A</i>[1,..<i>n</i>]): integer
+  let <i>start</i> := 1
+  let <i>end</i> := <i>n</i> + 1
+  
+  loop:
+    if <i>start</i> == <i>end</i>: return -1 fi                 <i>// not found</i>
+  
+    let <i>length</i> := <i>end</i> - <i>start</i>
+    if <i>length</i> == 1:
+      if <i>value</i> == <i>A</i>[<i>start</i>]: return <i>start</i>
+      else: return -1 fi
+    fi
+  
+    let <i>mid</i> := <i>start</i> + (<i>length</i> / 2)
+    if <i>value</i> == <i>A</i>[<i>mid</i>]:
+      return <i>mid</i>
+    else-if <i>value</i> &gt; <i>A</i>[<i>mid</i>]:
+      <i>start</i> := <i>mid</i> + 1
+    else:
+      <i>end</i> := <i>mid</i>
+    fi
+  repeat
+end
+</pre>
+<p>Even though we have an iterative algorithm, it's easier to reason about the recursive version. If the number of steps the algorithm takes is <img class="tex" alt="T(n)" src="//upload.wikimedia.org/math/5/1/4/514884be093e9ab7909b0d394e7b74d2.png" />, then we have the following recurrence that defines <img class="tex" alt="T(n)" src="//upload.wikimedia.org/math/5/1/4/514884be093e9ab7909b0d394e7b74d2.png" />:</p>
+<dl>
+<dd><img class="tex" alt="T(n) = 1\cdot T\left(\frac{n}{2}\right) + O(1)." src="//upload.wikimedia.org/math/6/a/5/6a51f0f28450408d3e83e7bb56b0de56.png" /></dd>
+</dl>
+<p>The size of each recursive call made is on half of the input size (<img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />), and there is a constant amount of time spent outside of the recursion (i.e., computing <i>length</i> and <i>mid</i> will take the same amount of time, regardless of how many elements are in the array). By the master theorem, this recurrence has values <img class="tex" alt="a=1, b=2, k=0" src="//upload.wikimedia.org/math/c/6/0/c603c64df2de3b4846131fd3bd788af4.png" />, which is a "steady state" tree, and thus we use the steady state case that tells us that</p>
+<dl>
+<dd><img class="tex" alt="T(n) = \Theta(n^k\cdot\log n) = \Theta(\log n)." src="//upload.wikimedia.org/math/2/6/e/26e74401bcd43f9e5f18ff17100fd624.png" /></dd>
+</dl>
+<p>Thus, this algorithm takes logarithmic time. Typically, even when <i>n</i> is large, it is safe to let the stack grow by <img class="tex" alt="\log n" src="//upload.wikimedia.org/math/0/d/2/0d2e858bd7f89eed5461e5637d6e0a50.png" /> activation records through recursive calls.</p>
+<h4><span class="mw-headline" id="difficulty_in_initially_correct_binary_search_implementations">difficulty in initially correct binary search implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=6" title="Edit section: difficulty in initially correct binary search implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The article on wikipedia on Binary Search also mentions the difficulty in writing a correct binary search algorithm: for instance, the java Arrays.binarySearch(..) overloaded function implementation does an interative binary search which didn't work when large integers overflowed a simple expression of mid calculation mid = ( end + start) / 2 i.e. end + start &gt; max_positive_integer . Hence the above algorithm is more correct in using a length = end - start, and adding half length to start. The java binary Search algorithm gave a return value useful for finding the position of the nearest key greater than the search key, i.e. the position where the search key could be inserted.</p>
+<p>i.e. it returns <i>- (keypos+1)</i> , if the search key wasn't found exactly, but an insertion point was needed for the search key ( insertion_point = <i>-return_value - 1</i>). Looking at <a href="/w/index.php?title=Boundary_values&amp;action=edit&amp;redlink=1" class="new" title="Boundary values (does not exist)">boundary values</a>, an insertion point could be at the front of the list ( ip = 0, return value = -1 ), to the position just after the last element, ( ip = length(A), return value = <i>- length(A) - 1</i>) .</p>
+<p>As an exercise, trying to implement this functionality on the above iterative binary search can be useful for further comprehension.</p>
+<h2><span class="mw-headline" id="Integer_Multiplication">Integer Multiplication</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=7" title="Edit section: Integer Multiplication">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you want to perform arithmetic with small integers, you can simply use the built-in arithmetic hardware of your machine. However, if you wish to multiply integers larger than those that will fit into the standard "word" integer size of your computer, you will have to implement a multiplication algorithm in software or use a software implementation written by someone else. For example, RSA encryption needs to work with integers of very large size (that is, large relative to the 64-bit word size of many machines) and utilizes special multiplication algorithms.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<h3><span class="mw-headline" id="Grade_School_Multiplication">Grade School Multiplication</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=8" title="Edit section: Grade School Multiplication">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>How do we represent a large, multi-word integer? We can have a binary representation by using an array (or an allocated block of memory) of words to represent the bits of the large integer. Suppose now that we have two integers, <img class="tex" alt="X" src="//upload.wikimedia.org/math/0/2/1/02129bb861061d1a052c592e2dc6b383.png" /> and <img class="tex" alt="Y" src="//upload.wikimedia.org/math/5/7/c/57cec4137b614c87cb4e24a3d003a3e0.png" />, and we want to multiply them together. For simplicity, let's assume that both <img class="tex" alt="X" src="//upload.wikimedia.org/math/0/2/1/02129bb861061d1a052c592e2dc6b383.png" /> and <img class="tex" alt="Y" src="//upload.wikimedia.org/math/5/7/c/57cec4137b614c87cb4e24a3d003a3e0.png" /> have <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> bits each (if one is shorter than the other, we can always pad on zeros at the beginning). The most basic way to multiply the integers is to use the grade school multiplication algorithm. This is even easier in binary, because we only multiply by 1 or 0:</p>
+<pre>
+         x6 x5 x4 x3 x2 x1 x0
+      ×  y6 y5 y4 y3 y2 y1 y0
+      -----------------------
+         x6 x5 x4 x3 x2 x1 x0 (when y0 is 1; 0 otherwise)
+      x6 x5 x4 x3 x2 x1 x0  0 (when y1 is 1; 0 otherwise)
+   x6 x5 x4 x3 x2 x1 x0  0  0 (when y2 is 1; 0 otherwise)
+x6 x5 x4 x3 x2 x1 x0  0  0  0 (when y3 is 1; 0 otherwise)
+  ... et cetera
+</pre>
+<p>As an algorithm, here's what multiplication would look like:</p>
+<pre>
+<i>// multiply -- return the product of two binary integers, both of length n</i>
+function <b>multiply</b>(bitarray <i>x</i>[1,..<i>n</i>], bitarray <i>y</i>[1,..<i>n</i>]): bitarray
+  bitarray <i>p</i> = 0
+  for <i>i</i>:=1 to <i>n</i>:
+    if <i>y</i>[<i>i</i>] == 1:
+      <i>p</i> := <b>add</b>(<i>p</i>, <i>x</i>)
+    fi
+    <i>x</i> := <b>pad</b>(<i>x</i>, 0)         <i>// add another zero to the end of x</i>
+  repeat
+  return <i>p</i>
+end
+</pre>
+<p>The subroutine <b>add</b> adds two binary integers and returns the result, and the subroutine <b>pad</b> adds an extra digit to the end of the number (padding on a zero is the same thing as shifting the number to the left; which is the same as multiplying it by two). Here, we loop <i>n</i> times, and in the worst-case, we make <i>n</i> calls to <b>add</b>. The numbers given to <b>add</b> will at most be of length <img class="tex" alt="2n" src="//upload.wikimedia.org/math/2/1/e/21e2c0c0472b331622877accbe29b91b.png" />. Further, we can expect that the <b>add</b> subroutine can be done in linear time. Thus, if <i>n</i> calls to a <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> subroutine are made, then the algorithm takes <img class="tex" alt="O(n^2)" src="//upload.wikimedia.org/math/1/8/9/189317b4b935a745fcfaf95940d2b4f0.png" /> time.</p>
+<h3><span class="mw-headline" id="Divide_and_Conquer_Multiplication">Divide and Conquer Multiplication</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=9" title="Edit section: Divide and Conquer Multiplication">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As you may have figured, this isn't the end of the story. We've presented the "obvious" algorithm for multiplication; so let's see if a divide and conquer strategy can give us something better. One route we might want to try is breaking the integers up into two parts. For example, the integer <i>x</i> could be divided into two parts, <img class="tex" alt="x_{h}" src="//upload.wikimedia.org/math/a/0/2/a026dab4c61211a27de40531d9a99a39.png" /> and <img class="tex" alt="x_{l}" src="//upload.wikimedia.org/math/f/3/d/f3d897253574b4388b44258f6f5c637f.png" />, for the high-order and low-order halves of <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" />. For example, if <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" /> has <i>n</i> bits, we have</p>
+<dl>
+<dd><img class="tex" alt="x = x_{h}\cdot 2^{n/2} + x_{l}" src="//upload.wikimedia.org/math/a/3/c/a3ccd80bed13472ec9d81dc4640c59ea.png" /></dd>
+</dl>
+<p>We could do the same for <img class="tex" alt="y" src="//upload.wikimedia.org/math/4/1/5/415290769594460e2e485922904f345d.png" />:</p>
+<dl>
+<dd><img class="tex" alt="y = y_{h}\cdot 2^{n/2} + y_{l}" src="//upload.wikimedia.org/math/8/c/6/8c6acf834f6b7f60fbc1e79d4bd3fb2c.png" /></dd>
+</dl>
+<p>But from this division into smaller parts, it's not clear how we can multiply these parts such that we can combine the results for the solution to the main problem. First, let's write out <img class="tex" alt="x\times y" src="//upload.wikimedia.org/math/8/9/d/89df7401551d525a04db9dc12e4684ba.png" /> would be in such a system:</p>
+<dl>
+<dd><img class="tex" alt="x\times y = x_h\times y_h\cdot (2^{n/2})^2 + (x_h\times y_l + x_l\times y_h)\cdot (2^{n/2}) + x_l\times y_l" src="//upload.wikimedia.org/math/1/2/a/12a3ed0209478453aa81a13fe0f05e8b.png" /></dd>
+</dl>
+<p>This comes from simply multiplying the new hi/lo representations of <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" /> and <img class="tex" alt="y" src="//upload.wikimedia.org/math/4/1/5/415290769594460e2e485922904f345d.png" /> together. The multiplication of the smaller pieces are marked by the "<img class="tex" alt="\times" src="//upload.wikimedia.org/math/9/e/e/9eedd61e32f7a8e70e171028a7e5dc08.png" />" symbol. Note that the multiplies by <img class="tex" alt="2^{n/2}" src="//upload.wikimedia.org/math/4/a/d/4addf4efa85422bf46470f4c8a39a260.png" /> and <img class="tex" alt="(2^{n/2})^2 = 2^n" src="//upload.wikimedia.org/math/3/e/8/3e89ad3e123416796baf08275856c496.png" /> does not require a real multiplication: we can just pad on the right number of zeros instead. This suggests the following divide and conquer algorithm:</p>
+<pre>
+<i>// multiply -- return the product of two binary integers, both of length n</i>
+function <b>multiply</b>(bitarray <i>x</i>[1,..<i>n</i>], bitarray <i>y</i>[1,..<i>n</i>]): bitarray
+  if <i>n</i> == 1: return <i>x</i>[1] * <i>y</i>[1] fi          <i>// multiply single digits: O(1)</i>
+  
+  let <i>xh</i> := <i>x</i>[<i>n</i>/2 + 1, .., <i>n</i>]               <i>// array slicing, O(n)</i>
+  let <i>xl</i> := <i>x</i>[0, .., <i>n</i> / 2]                 <i>// array slicing, O(n)</i>
+  let <i>yh</i> := <i>y</i>[<i>n</i>/2 + 1, .., <i>n</i>]               <i>// array slicing, O(n)</i>
+  let <i>yl</i> := <i>y</i>[0, .., <i>n</i> / 2]                 <i>// array slicing, O(n)</i>
+  
+  let <i>a</i> := <b>multiply</b>(<i>xh</i>, <i>yh</i>)                 <i>// recursive call; T(n/2)</i>
+  let <i>b</i> := <b>multiply</b>(<i>xh</i>, <i>yl</i>)                 <i>// recursive call; T(n/2)</i>
+  let <i>c</i> := <b>multiply</b>(<i>xl</i>, <i>yh</i>)                 <i>// recursive call; T(n/2)</i>
+  let <i>d</i> := <b>multiply</b>(<i>xl</i>, <i>yl</i>)                 <i>// recursive call; T(n/2)</i>
+  
+  <i>b</i> := <b>add</b>(<i>b</i>, <i>c</i>)                            <i>// regular addition; O(n)</i>
+  <i>a</i> := <b>shift</b>(<i>a</i>, <i>n</i>)                          <i>// pad on zeros; O(n)</i>
+  <i>b</i> := <b>shift</b>(<i>b</i>, <i>n</i>/2)                        <i>// pad on zeros; O(n)</i>
+  return <b>add</b>(<i>a</i>, <i>b</i>, <i>d</i>)                       <i>// regular addition; O(n)</i>
+end
+</pre>
+<p>We can use the master theorem to analyze the running time of this algorithm. Assuming that the algorithm's running time is <img class="tex" alt="T(n)" src="//upload.wikimedia.org/math/5/1/4/514884be093e9ab7909b0d394e7b74d2.png" />, the comments show how much time each step takes. Because there are four recursive calls, each with an input of size <img class="tex" alt="n/2" src="//upload.wikimedia.org/math/a/2/f/a2f070a31330443ceb0dcf352fe50035.png" />, we have:</p>
+<dl>
+<dd><img class="tex" alt="T(n) = 4T(n/2) + O(n)" src="//upload.wikimedia.org/math/4/c/6/4c61b6c528f67b912518c7969afcaf72.png" /></dd>
+</dl>
+<p>Here, <img class="tex" alt="a=4, b=2, k=1" src="//upload.wikimedia.org/math/8/f/b/8fb390b1b471c382d30f1bee05731091.png" />, and given that <img class="tex" alt="4&gt;2^1" src="//upload.wikimedia.org/math/3/c/5/3c538367fc6b1b4730094c0f27fbcf56.png" /> we are in the "bottom heavy" case and thus plugging in these values into the bottom heavy case of the master theorem gives us:</p>
+<dl>
+<dd><img class="tex" alt="T(n)=O(n^{\log_2 4}) = O(n^2)." src="//upload.wikimedia.org/math/a/8/0/a8099bbfe928f65bd19d30753d12a48c.png" /></dd>
+</dl>
+<p>Thus, after all of that hard work, we're still no better off than the grade school algorithm! Luckily, numbers and polynomials are a data set we know additional information about. In fact, we can reduce the running time by doing some mathematical tricks.</p>
+<p>First, let's replace the <img class="tex" alt="2^{n/2}" src="//upload.wikimedia.org/math/4/a/d/4addf4efa85422bf46470f4c8a39a260.png" /> with a variable, <i>z</i>:</p>
+<dl>
+<dd><img class="tex" alt="x\times y = x_h*y_h z^2 + (x_h*y_l + x_l*y_h)z + x_l*y_l" src="//upload.wikimedia.org/math/6/7/5/67523685a5432f740134b41a0fab0020.png" /></dd>
+</dl>
+<p>This appears to be a quadratic formula, and we know that you only need three co-efficients or points on a graph in order to uniquely describe a quadratic formula. However, in our above algorithm we've been using four multiplications total. Let's try recasting <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" /> and <img class="tex" alt="y" src="//upload.wikimedia.org/math/4/1/5/415290769594460e2e485922904f345d.png" /> as linear functions:</p>
+<dl>
+<dd><img class="tex" alt="P_x(z) = x_h\cdot z + x_l" src="//upload.wikimedia.org/math/8/4/2/842944f091d992c6a8c4ebaf1722c417.png" /></dd>
+<dd><img class="tex" alt="P_y(z) = y_h\cdot z + y_l" src="//upload.wikimedia.org/math/4/7/a/47af5f8bb624ab676323d5dfc314c864.png" /></dd>
+</dl>
+<p>Now, for <img class="tex" alt="x\times y" src="//upload.wikimedia.org/math/8/9/d/89df7401551d525a04db9dc12e4684ba.png" /> we just need to compute <img class="tex" alt="(P_x\cdot P_y)(2^{n/2})" src="//upload.wikimedia.org/math/a/d/0/ad093341e2145cdb4d083e35f1e5c636.png" />. We'll evaluate <img class="tex" alt="P_x(z)" src="//upload.wikimedia.org/math/c/3/e/c3eabb62407978ba0f90e3d5b82ebb92.png" /> and <img class="tex" alt="P_y(z)" src="//upload.wikimedia.org/math/6/0/2/6020abdcae8a0792c4d330ef653786cb.png" /> at three points. Three convenient points to evaluate the function will be at <img class="tex" alt="(P_x\cdot P_y)(1), (P_x\cdot P_y)(0), (P_x\cdot P_y)(-1)" src="//upload.wikimedia.org/math/8/4/1/841da1606b2cb5bb91bcda70f212db40.png" />:</p>
+<p>[TODO: show how to make the two-parts breaking more efficient; then mention that the best multiplication uses the FFT, but don't actually cover that topic (which is saved for the advanced book)]</p>
+<h2><span class="mw-headline" id="Base_Conversion">Base Conversion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=10" title="Edit section: Base Conversion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>[TODO: Convert numbers from decimal to binary quickly using DnC.]</p>
+<p>Along with the binary, the science of computers employs bases 8 and 16 for it's very easy to convert between the three while using bases 8 and 16 shortens considerably number representations.</p>
+<p>To represent 8 first digits in the binary system we need 3 bits. Thus we have, 0=000, 1=001, 2=010, 3=011, 4=100, 5=101, 6=110, 7=111. Assume M=(2065)<sub>8</sub>. In order to obtain its binary representation, replace each of the four digits with the corresponding triple of bits: 010 000 110 101. After removing the leading zeros, binary representation is immediate: M=(10000110101)<sub>2</sub>. (For the hexadecimal system conversion is quite similar, except that now one should use 4-bit representation of numbers below 16.) This fact follows from the general conversion algorithm and the observation that 8=<img class="tex" alt="2^3" src="//upload.wikimedia.org/math/6/3/a/63a1e1a5a5a28b0cf5e7687836075240.png" /> (and, of course, 16=<img class="tex" alt="2^4" src="//upload.wikimedia.org/math/5/5/f/55fb55173e87cbecee6d8ae1616dc74c.png" />). Thus it appears that the shortest way to convert numbers into the binary system is to first convert them into either octal or hexadecimal representation. Now let see how to implement the general algorithm programmatically.</p>
+<p>For the sake of reference, representation of a number in a system with base (radix) N may only consist of digits that are less than N.</p>
+<p>More accurately, if</p>
+<dl>
+<dd><img class="tex" alt="(1) M = a_kN^k+a_{k-1}N^{k-1}+...+a_1N^1+a_0" src="//upload.wikimedia.org/math/d/2/c/d2c0912710e206b66c1d2f8f88e4d999.png" /></dd>
+</dl>
+<p>with <img class="tex" alt="0 &lt;= a_i &lt; N" src="//upload.wikimedia.org/math/e/7/f/e7fa931c3b9e0975737f7ec41ae98af8.png" /> we have a representation of M in base N system and write</p>
+<dl>
+<dd><img class="tex" alt="M = (a_ka_{k-1}...a_0)N" src="//upload.wikimedia.org/math/e/6/9/e697ac6c52214f8b69cc508e44cdcff7.png" /></dd>
+</dl>
+<p>If we rewrite (1) as</p>
+<dl>
+<dd><img class="tex" alt="(2) M = a_0+N*(a_1+N*(a_2+N*...))" src="//upload.wikimedia.org/math/2/e/9/2e97d6709796a736ee343df3b1ff26d2.png" /></dd>
+</dl>
+<p>the algorithm for obtaining coefficients ai becomes more obvious. For example, <img class="tex" alt="a_0=M\ modulo\ n" src="//upload.wikimedia.org/math/6/2/1/6213514d2ee8e332b5219f82f591eb48.png" /> and <img class="tex" alt="a_1=(M/N)\ modulo\ n" src="//upload.wikimedia.org/math/b/6/2/b62d8290b3587b53101ae00b2d979e92.png" />, and so on.</p>
+<h3><span class="mw-headline" id="Recursive_Implementation">Recursive Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=11" title="Edit section: Recursive Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Let's represent the algorithm mnemonically: (result is a string or character variable where I shall accumulate the digits of the result one at a time)</p>
+<pre>
+result = "" 
+if M &lt; N, result = 'M' + result. Stop. 
+S = M mod N, result = 'S' + result
+M = M/N 
+goto 2 
+</pre>
+<p>A few words of explanation.</p>
+<p>"" is an empty string. You may remember it's a zero element for string concatenation. Here we check whether the conversion procedure is over. It's over if M is less than N in which case M is a digit (with some qualification for N&gt;10) and no additional action is necessary. Just prepend it in front of all other digits obtained previously. The '+' plus sign stands for the string concatenation. If we got this far, M is not less than N. First we extract its remainder of division by N, prepend this digit to the result as described previously, and reassign M to be M/N. This says that the whole process should be repeated starting with step 2. I would like to have a function say called Conversion that takes two arguments M and N and returns representation of the number M in base N. The function might look like this</p>
+<pre>
+1 String Conversion(int M, int N) // return string, accept two integers 
+2 {  
+3     if (M &lt; N) // see if it's time to return 
+4         return new String(""+M); // ""+M makes a string out of a digit 
+5     else // the time is not yet ripe 
+6         return Conversion(M/N, N) +
+           new String(""+(M mod N)); // continue 
+7 }  
+</pre>
+<p>This is virtually a working Java function and it would look very much the same in C++ and require only a slight modification for C. As you see, at some point the function calls itself with a different first argument. One may say that the function is defined in terms of itself. Such functions are called recursive. (The best known recursive function is factorial: n!=n*(n-1)!.) The function calls (applies) itself to its arguments, and then (naturally) applies itself to its new arguments, and then ... and so on. We can be sure that the process will eventually stop because the sequence of arguments (the first ones) is decreasing. Thus sooner or later the first argument will be less than the second and the process will start emerging from the recursion, still a step at a time.</p>
+<h3><span class="mw-headline" id="Iterative_Implementation">Iterative Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=12" title="Edit section: Iterative Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Not all programming languages allow functions to call themselves recursively. Recursive functions may also be undesirable if process interruption might be expected for whatever reason. For example, in the Tower of Hanoi puzzle, the user may want to interrupt the demonstration being eager to test his or her understanding of the solution. There are complications due to the manner in which computers execute programs when one wishes to jump out of several levels of recursive calls.</p>
+<p>Note however that the string produced by the conversion algorithm is obtained in the wrong order: all digits are computed first and then written into the string the last digit first. Recursive implementation easily got around this difficulty. With each invocation of the Conversion function, computer creates a new environment in which passed values of M, N, and the newly computed S are stored. Completing the function call, i.e. returning from the function we find the environment as it was before the call. Recursive functions store a sequence of computations implicitly. Eliminating recursive calls implies that we must manage to store the computed digits explicitly and then retrieve them in the reversed order.</p>
+<p>In Computer Science such a mechanism is known as LIFO - Last In First Out. It's best implemented with a stack data structure. Stack admits only two operations: push and pop. Intuitively stack can be visualized as indeed a stack of objects. Objects are stacked on top of each other so that to retrieve an object one has to remove all the objects above the needed one. Obviously the only object available for immediate removal is the top one, i.e. the one that got on the stack last.</p>
+<p>Then iterative implementation of the Conversion function might look as the following.</p>
+<pre>
+ 1 String Conversion(int M, int N) // return string, accept two integers 
+ 2 {  
+ 3     Stack stack = new Stack(); // create a stack 
+ 4     while (M &gt;= N) // now the repetitive loop is clearly seen 
+ 5     {  
+ 6         stack.push(M mod N); // store a digit 
+ 7         M = M/N; // find new M 
+ 8     }  
+ 9     // now it's time to collect the digits together  
+10     String str = new String(""+M); // create a string with a single digit M 
+11     while (stack.NotEmpty())  
+12         str = str+stack.pop() // get from the stack next digit 
+13     return str;  
+14 }  
+</pre>
+<p>The function is by far longer than its recursive counterpart; but, as I said, sometimes it's the one you want to use, and sometimes it's the only one you may actually use.</p>
+<h2><span class="mw-headline" id="Closest_Pair_of_Points">Closest Pair of Points</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=13" title="Edit section: Closest Pair of Points">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>For a set of points on a two-dimensional plane, if you want to find the closest two points, you could compare all of them to each other, at <img class="tex" alt="O(n^2)" src="//upload.wikimedia.org/math/1/8/9/189317b4b935a745fcfaf95940d2b4f0.png" /> time, or use a divide and conquer algorithm.</p>
+<p>[TODO: explain the algorithm, and show the n^2 algorithm]</p>
+<p>[TODO: write the algorithm, include intuition, proof of correctness, and runtime analysis]</p>
+<p>Use this link for the original document.</p>
+<p><a rel="nofollow" class="external free" href="http://www.cs.mcgill.ca/~cs251/ClosestPair/ClosestPairDQ.html">http://www.cs.mcgill.ca/~cs251/ClosestPair/ClosestPairDQ.html</a></p>
+<h2><span class="mw-headline" id="Closest_Pair:_A_Divide-and-Conquer_Approach">Closest Pair: A Divide-and-Conquer Approach</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=14" title="Edit section: Closest Pair: A Divide-and-Conquer Approach">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=15" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The brute force approach to the closest pair problem (i.e. checking every possible pair of points) takes quadratic time. We would now like to introduce a faster divide-and-conquer algorithm for solving the closest pair problem. Given a set of points in the plane S, our approach will be to split the set into two roughly equal halves (S1 and S2) for which we already have the solutions, and then to merge the halves in linear time to yield an O(nlogn) algorithm. However, the actual solution is far from obvious. It is possible that the desired pair might have one point in S1 and one in S2, does this not force us once again to check all possible pairs of points? The divide-and-conquer approach presented here generalizes directly from the one dimensional algorithm we presented in the previous section.</p>
+<h3><span class="mw-headline" id="Closest_Pair_in_the_Plane">Closest Pair in the Plane</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=16" title="Edit section: Closest Pair in the Plane">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Alright, we'll generalize our 1-D algorithm as directly as possible (see figure 3.2). Given a set of points S in the plane, we partition it into two subsets S1 and S2 by a vertical line l such that the points in S1 are to the left of l and those in S2 are to the right of l.</p>
+<p>We now recursively solve the problem on these two sets obtaining minimum distances of d1 (for S1), and d2 (for S2). We let d be the minimum of these.</p>
+<p>Now, identical to the 1-D case, if the closes pair of the whole set consists of one point from each subset, then these two points must be within d of l. This area is represented as the two strips P1 and P2 on either side of l</p>
+<p>Up to now, we are completely in step with the 1-D case. At this point, however, the extra dimension causes some problems. We wish to determine if some point in say P1 is less than d away from another point in P2. However, in the plane, we don't have the luxury that we had on the line when we observed that only one point in each set can be within d of the median. In fact, in two dimensions, all of the points could be in the strip! This is disastrous, because we would have to compare n2 pairs of points to merge the set, and hence our divide-and-conquer algorithm wouldn't save us anything in terms of efficiency. Thankfully, we can make another life saving observation at this point. For any particular point p in one strip, only points that meet the following constraints in the other strip need to be checked:</p>
+<ul>
+<li>those points within d of p in the direction of the other strip</li>
+<li>those within d of p in the positive and negative y directions</li>
+</ul>
+<p>Simply because points outside of this bounding box cannot be less than d units from p (see figure 3.3). It just so happens that because every point in this box is at least d apart, there can be at most six points within it.</p>
+<p>Now we don't need to check all n2 points. All we have to do is sort the points in the strip by their y-coordinates and scan the points in order, checking each point against a maximum of 6 of its neighbors. This means at most 6*n comparisons are required to check all candidate pairs. However, since we sorted the points in the strip by their y-coordinates the process of merging our two subsets is not linear, but in fact takes O(nlogn) time. Hence our full algorithm is not yet O(nlogn), but it is still an improvement on the quadratic performance of the brute force approach (as we shall see in the next section). In section 3.4, we will demonstrate how to make this algorithm even more efficient by strengthening our recursive sub-solution.</p>
+<h3><span class="mw-headline" id="Summary_and_Analysis_of_the_2-D_Algorithm">Summary and Analysis of the 2-D Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=17" title="Edit section: Summary and Analysis of the 2-D Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We present here a step by step summary of the algorithm presented in the previous section, followed by a performance analysis. The algorithm is simply written in list form because I find pseudo-code to be burdensome and unnecessary when trying to understand an algorithm. Note that we pre-sort the points according to their x coordinates, and maintain another structure which holds the points sorted by their y values(for step 4), which in itself takes O(nlogn) time.</p>
+<p>ClosestPair of a set of points:</p>
+<ol>
+<li>Divide the set into two equal sized parts by the line l, and recursively compute the minimal distance in each part.</li>
+<li>Let d be the minimal of the two minimal distances.</li>
+<li>Eliminate points that lie farther than d apart from l.</li>
+<li>Consider the remaining points according to their y-coordinates, which we have precomputed.</li>
+<li>Scan the remaining points in the y order and compute the distances of each point to all of its neighbors that are distanced no more than d(that's why we need it sorted according to y). Note that there are no more than 5(there is no figure 3.3 , so this 5 or 6 doesnt make sense without that figure . Please include it .) such points(see previous section).</li>
+<li>If any of these distances is less than d then update d.</li>
+</ol>
+<p>Analysis:</p>
+<ul>
+<li>Let us note T(n) as the efficiency of out algorithm</li>
+<li>Step 1 takes 2T(n/2) (we apply our algorithm for both halves)</li>
+<li>Step 3 takes O(n) time</li>
+<li>Step 5 takes O(n) time (as we saw in the previous section)</li>
+</ul>
+<p>so,</p>
+<p><img class="tex" alt="T(n) = 2T(n/2) + O(n)" src="//upload.wikimedia.org/math/2/7/a/27a628ce0934d40b979b734829102a48.png" /></p>
+<p>which, according the Master Theorem, result</p>
+<p><img class="tex" alt="T(n) \isin O(nlogn)" src="//upload.wikimedia.org/math/b/d/b/bdb5ce0b113654fea48e8dc8086c0d82.png" /></p>
+<p>Hence the merging of the sub-solutions is dominated by the sorting at step 4, and hence takes O(nlogn) time.</p>
+<p>This must be repeated once for each level of recursion in the divide-and-conquer algorithm,</p>
+<p>hence the whole of algorithm ClosestPair takes O(logn*nlogn) = O(nlog2n) time.</p>
+<h3><span class="mw-headline" id="Improving_the_Algorithm">Improving the Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=18" title="Edit section: Improving the Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We can improve on this algorithm slightly by reducing the time it takes to achieve the y-coordinate sorting in Step 4. This is done by asking that the recursive solution computed in Step 1 returns the points in sorted order by their y coordinates. This will yield two sorted lists of points which need only be merged (a linear time operation) in Step 4 in order to yield a complete sorted list. Hence the revised algorithm involves making the following changes: Step 1: Divide the set into..., and recursively compute the distance in each part, returning the points in each set in sorted order by y-coordinate. Step 4: Merge the two sorted lists into one sorted list in O(n) time. Hence the merging process is now dominated by the linear time steps thereby yielding an O(nlogn) algorithm for finding the closest pair of a set of points in the plane.</p>
+<h2><span class="mw-headline" id="Towers_Of_Hanoi_Problem">Towers Of Hanoi Problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=19" title="Edit section: Towers Of Hanoi Problem">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>[TODO: Write about the towers of hanoi algorithm and a program for it]</p>
+<p>There are n distinct sized discs and three pegs such that discs are placed at the left peg in the order of their sizes. The smallest one is at the top while the largest one is at the bottom. This game is to move all the discs from the left peg</p>
+<h3><span class="mw-headline" id="Rules">Rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=20" title="Edit section: Rules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1) Only one disc can be moved in each step.</p>
+<p>2) Only the disc at the top can be moved.</p>
+<p>3) Any disc can only be placed on the top of a larger disc.</p>
+<h3><span class="mw-headline" id="Solution">Solution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=21" title="Edit section: Solution">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Intuitive_Idea">Intuitive Idea</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=22" title="Edit section: Intuitive Idea">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In order to move the largest disc from the left peg to the middle peg, the smallest discs must be moved to the right peg first. After the largest one is moved. The smaller discs are then moved from the right peg to the middle peg.</p>
+<h4><span class="mw-headline" id="Recurrence">Recurrence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=23" title="Edit section: Recurrence">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Suppose n is the number of discs.</p>
+<p>To move n discs from peg a to peg b,</p>
+<p>1) If n&gt;1 then move n-1 discs from peg a to peg c</p>
+<p>2) Move n-th disc from peg a to peg b</p>
+<p>3) If n&gt;1 then move n-1 discs from peg c to peg a</p>
+<h4><span class="mw-headline" id="Pseudocode">Pseudocode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=24" title="Edit section: Pseudocode">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>
+void hanoi(n,src,dst){
+  if (n&gt;1)
+    hanoi(n-1,src,pegs-{src,dst});
+  print "move n-th disc from src to dst";
+  if (n&gt;1)
+    hanoi(n-1,pegs-{src,dst},dst);
+}
+</pre>
+<h4><span class="mw-headline" id="Analysis_2">Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=25" title="Edit section: Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The analysis is trivial. <img class="tex" alt=" T(n) = 2T(n-1) + O(1) = O(2^n)" src="//upload.wikimedia.org/math/2/5/1/25167f223a9c315d4061359514e6b5e2.png" /></p>
+<hr />
+<h2><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit&amp;section=26" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">A (mathematical) integer larger than the largest "int" directly supported by your computer's hardware is often called a "BigInt". Working with such large numbers is often called "multiple precision arithmetic". There are entire books on the various algorithms for dealing with such numbers, such as:</span>
+<ul>
+<li><span class="reference-text"><a rel="nofollow" class="external text" href="http://www.loria.fr/~zimmerma/mca/pub226.html">Modern Computer Arithmetic</a>, Richard Brent and Paul Zimmermann, Cambridge University Press, 2010.</span></li>
+<li><span class="reference-text">Donald E. Knuth, The Art of Computer Programming , Volume 2: Seminumerical Algorithms (3rd edition), 1997.</span></li>
+</ul>
+<span class="reference-text">People who implement such algorithms may</span>
+<ul>
+<li><span class="reference-text">write a one-off implementation for one particular application</span></li>
+<li><span class="reference-text">write a library that you can use for many applications, such as <a rel="nofollow" class="external text" href="http://gmplib.org/">GMP, the GNU Multiple Precision Arithmetic Library</a> or <a rel="nofollow" class="external text" href="https://mattmccutchen.net/bigint/">McCutchen's Big Integer Library</a> or various libraries <a rel="nofollow" class="external autonumber" href="http://www.leemon.com/crypto/BigInt.html">[1]</a> <a rel="nofollow" class="external autonumber" href="https://github.com/jasondavies/jsbn">[2]</a> <a rel="nofollow" class="external autonumber" href="https://github.com/libtom/libtomcrypt">[3]</a> <a rel="nofollow" class="external autonumber" href="http://www.gnu.org/software/gnu-crypto/">[4]</a> <a rel="nofollow" class="external autonumber" href="http://www.cryptopp.com/">[5]</a> used to demonstrate RSA encryption</span></li>
+<li><span class="reference-text">put those algorithms in the compiler of a programming language that you can use (such as Python and Lisp) that automatically switches from standard integers to BigInts when necessary</span></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <strong class="selflink">3</strong>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1033
+CPU time usage: 0.192 seconds
+Real time usage: 0.337 seconds
+Preprocessor visited node count: 735/1000000
+Preprocessor generated node count: 2148/1500000
+Post‐expand include size: 1246/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15000-0!0!0!!en!*!* and timestamp 20131212180600
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Divide_and_Conquer&amp;oldid=2513759">http://en.wikibooks.org/w/index.php?title=Algorithms/Divide_and_Conquer&amp;oldid=2513759</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FDivide+and+Conquer&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FDivide+and+Conquer" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Divide_and_Conquer"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms/Divide_and_Conquer"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Divide_and_Conquer" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Divide_and_Conquer" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Divide_and_Conquer" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;oldid=2513759" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FDivide_and_Conquer&amp;id=2513759" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FDivide+and+Conquer">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FDivide+and+Conquer&amp;oldid=2513759&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Divide_and_Conquer&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 April 2013, at 08:43.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Divide_and_Conquer" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1113 in 0.111 secs. -->
+	</body>
+</html>

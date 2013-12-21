@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Dynamic Programming - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Dynamic_Programming" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Dynamic_Programming","wgTitle":"Algorithms/Dynamic Programming","wgCurRevisionId":2401537,"wgRevisionId":2401537,"wgArticleId":15003,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Dynamic_Programming","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["en-us"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2401537,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Dynamic_Programming skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Dynamic Programming</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <strong class="selflink">6</strong>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p><b>Dynamic programming</b> can be thought of as an optimization technique for particular classes of backtracking algorithms where subproblems are repeatedly solved. Note that the term <i>dynamic</i> in dynamic programming should not be confused with dynamic programming languages, like Scheme or Lisp. Nor should the term <i>programming</i> be confused with the act of writing computer programs. In the context of algorithms, dynamic programming always refers to the technique of filling in a table with values computed from other table values. (It's dynamic because the values in the table are filled in by the algorithm based on other values of the table, and it's programming in the sense of setting things in a table, like how television programming is concerned with when to broadcast what shows.)</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Fibonacci_Numbers"><span class="tocnumber">1</span> <span class="toctext">Fibonacci Numbers</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Longest_Common_Subsequence_.28DP_version.29"><span class="tocnumber">2</span> <span class="toctext">Longest Common Subsequence (DP version)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Matrix_Chain_Multiplication"><span class="tocnumber">3</span> <span class="toctext">Matrix Chain Multiplication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Forming_a_Recursive_Solution"><span class="tocnumber">3.1</span> <span class="toctext">Forming a Recursive Solution</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Parsing_Any_Context-Free_Grammar"><span class="tocnumber">4</span> <span class="toctext">Parsing Any Context-Free Grammar</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Fibonacci_Numbers">Fibonacci Numbers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit&amp;section=1" title="Edit section: Fibonacci Numbers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Before presenting the dynamic programming technique, it will be useful to first show a related technique, called <b>memoization</b>, on a toy example: The Fibonacci numbers. What we want is a routine to compute the <i>n</i>th Fibonacci number:</p>
+<pre>
+<i>// fib -- compute Fibonacci(n)</i>
+function <b>fib</b>(integer <i>n</i>): integer
+</pre>
+<p>By definition, the <i>n</i>th Fibonacci number, denoted <img class="tex" alt="\textrm{F}_n" src="//upload.wikimedia.org/math/2/b/6/2b62a1786c55d0f4bd1392e5698ddeae.png" /> is</p>
+<dl>
+<dd><img class="tex" alt="\textrm{F}_0 = 0" src="//upload.wikimedia.org/math/3/2/0/320c31a0e1c5992e108fd6fafbc7e116.png" /></dd>
+<dd><img class="tex" alt="\textrm{F}_1 = 1" src="//upload.wikimedia.org/math/3/7/e/37e516e560cefe66e15a3d7cc4ef0c7c.png" /></dd>
+<dd><img class="tex" alt="\textrm{F}_n = \textrm{F}_{n-1} + \textrm{F}_{n-2}" src="//upload.wikimedia.org/math/c/1/9/c199668f5ac39af59ec892527a3a8cda.png" /></dd>
+</dl>
+<p>How would one create a good algorithm for finding the nth Fibonacci-number? Let's begin with the naive algorithm, which codes the mathematical definition:</p>
+<pre>
+<i>// fib -- compute Fibonacci(n)</i>
+function <b>fib</b>(integer <i>n</i>): integer
+  assert (n &gt;= 0)
+  if <i>n</i> == 0: return 0 fi
+  if <i>n</i> == 1: return 1 fi
+  
+  return <b>fib</b>(<i>n</i> - 1) + <b>fib</b>(<i>n</i> - 2)
+end
+</pre>
+<div id="toc"><small>This code sample is also available in <a href="/wiki/Ada_Programming/Algorithms#Simple_Implementation" title="Ada Programming/Algorithms">Ada</a>.</small></div>
+<p>Note that this is a toy example because there is already a mathematically closed form for <img class="tex" alt="\textrm{F}_n" src="//upload.wikimedia.org/math/2/b/6/2b62a1786c55d0f4bd1392e5698ddeae.png" />:</p>
+<dl>
+<dd><img class="tex" alt="F(n) = {\phi^n - (1 -\phi)^{n} \over \sqrt{5}}" src="//upload.wikimedia.org/math/b/d/e/bde083789da8779ef179982bad6f6745.png" /></dd>
+</dl>
+<p>where:</p>
+<dl>
+<dd><img class="tex" alt="\phi = {1 + \sqrt{5} \over 2}" src="//upload.wikimedia.org/math/d/2/6/d261ff480362f4ee9f0dcb9299db11b3.png" /></dd>
+</dl>
+<p>This latter equation is known as the <a href="//en.wikipedia.org/wiki/golden_ratio" class="extiw" title="w:golden ratio">Golden Ratio</a>. Thus, a program could efficiently calculate <img class="tex" alt="\textrm{F}_n" src="//upload.wikimedia.org/math/2/b/6/2b62a1786c55d0f4bd1392e5698ddeae.png" /> for even very large <i>n</i>. However, it's instructive to understand what's so inefficient about the current algorithm.</p>
+<p>To analyze the running time of <tt>fib</tt> we should look at a call tree for something even as small as the sixth Fibonacci number:</p>
+<p><a href="/wiki/File:Algorithms-F6CallTree.png" class="image"><img alt="Algorithms-F6CallTree.png" src="//upload.wikimedia.org/wikibooks/en/3/37/Algorithms-F6CallTree.png" width="604" height="219" /></a></p>
+<p>Every leaf of the call tree has the value 0 or 1, and the sum of these values is the final result. So, for any <i>n,</i> the number of leaves in the call tree is actually <img class="tex" alt="\textrm{F}_n" src="//upload.wikimedia.org/math/2/b/6/2b62a1786c55d0f4bd1392e5698ddeae.png" /> itself! The closed form thus tells us that the number of leaves in <tt><b>fib</b>(<i>n</i>)</tt> is approximately equal to</p>
+<dl>
+<dd><img class="tex" alt="\left(\frac{1 + \sqrt{5}}{2}\right)^n\approx 1.618^n = 2^{\lg (1.618^n)} = 2^{n \lg (1.618)} \approx 2^{0.69 n}." src="//upload.wikimedia.org/math/2/6/9/26957ebee60168dd01c3fdc083befeec.png" /></dd>
+</dl>
+<p>(Note the algebraic manipulation used above to make the base of the exponent the number 2.) This means that there are far too many leaves, particularly considering the repeated patterns found in the call tree above.</p>
+<p>One optimization we can make is to save a result in a table once it's already been computed, so that the same result needs to be computed only once. The optimization process is called memoization and conforms to the following methodology:</p>
+<table width="80%">
+<tr>
+<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top"><b>Memoization Methodology</b><br />
+<ol>
+<li>Start with a backtracking algorithm</li>
+<li>Look up the problem in a table; if there's a valid entry for it, return that value</li>
+<li>Otherwise, compute the problem recursively, and then store the result in the table before returning the value</li>
+</ol>
+</td>
+</tr>
+</table>
+<p>Consider the solution presented in the backtracking chapter for the Longest Common Subsequence problem. In the execution of that algorithm, many common subproblems were computed repeatedly. As an optimization, we can compute these subproblems once and then store the result to read back later. A recursive memoization algorithm can be turned "bottom-up" into an iterative algorithm that fills in a table of solutions to subproblems. Some of the subproblems solved might not be needed by the end result (and that is where dynamic programming differs from memoization), but dynamic programming can be very efficient because the iterative version can better use the cache and have less call overhead. Asymptotically, dynamic programming and memoization have the same complexity.</p>
+<p>So how would a fibonacci program using memoization work? Consider the following program (<i>f</i>[<i>n</i>] contains the <i>n</i>th Fibonacci-number if has been calculated, -1 otherwise):</p>
+<pre>
+function <b>fib</b>(integer <i>n</i>): integer
+  if <i>n</i> == 0 <b>or</b> n == 1:
+    return <i>n</i>
+  else-if <i>f</i>[<i>n</i>] != -1:
+    return <i>f</i>[<i>n</i>]
+  else
+    <i>f</i>[<i>n</i>] = <b>fib</b>(<i>n</i> - 1) + <b>fib</b>(<i>n</i> - 2)
+    return <i>f</i>[<i>n</i>]
+  fi
+end
+</pre>
+<div id="toc"><small>This code sample is also available in <a href="/wiki/Ada_Programming/Algorithms#Cached_Implementation" title="Ada Programming/Algorithms">Ada</a>.</small></div>
+<p>The code should be pretty obvious. If the value of fib(n) already has been calculated it's stored in f[n] and then returned instead of calculating it again. That means all the copies of the sub-call trees are removed from the calculation.</p>
+<p><a href="/wiki/File:Algorithms-F6CallTreeMemoized.PNG" class="image"><img alt="Algorithms-F6CallTreeMemoized.PNG" src="//upload.wikimedia.org/wikibooks/en/f/fb/Algorithms-F6CallTreeMemoized.PNG" width="604" height="219" /></a></p>
+<p>The values in the blue boxes are values that already have been calculated and the calls can thus be skipped. It is thus a lot faster than the straight-forward recursive algorithm. Since every value less than n is calculated once, and only once, the first time you execute it, the asymptotic running time is <img class="tex" alt="O (n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />. Any other calls to it will take <img class="tex" alt="O (1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> since the values have been precalculated (assuming each subsequent call's argument is less than n).</p>
+<p>The algorithm does consume a lot of memory. When we calculate fib(<i>n</i>), the values fib(0) to fib(n) are stored in main memory. Can this be improved? Yes it can, although the <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> running time of subsequent calls are obviously lost since the values aren't stored. Since the value of fib(<i>n</i>) only depends on fib(<i>n-1</i>) and fib(<i>n-2</i>) we can discard the other values by going bottom-up. If we want to calculate fib(<i>n</i>), we first calculate fib(2) = fib(0) + fib(1). Then we can calculate fib(3) by adding fib(1) and fib(2). After that, fib(0) and fib(1) can be discarded, since we don't need them to calculate any more values. From fib(2) and fib(3) we calculate fib(4) and discard fib(2), then we calculate fib(5) and discard fib(3), etc. etc. The code goes something like this:</p>
+<pre>
+function <b>fib</b>(integer <i>n</i>): integer
+  if <i>n</i> == 0 <b>or</b> n == 1:
+    return <i>n</i>
+  fi
+
+  let <i>u</i> := 0
+  let <i>v</i> := 1
+
+  for <i>i</i> := 2 to <i>n</i>:
+    let <i>t</i> := <i>u</i> + <i>v</i>
+    <i>u</i> := <i>v</i>
+    <i>v</i> := <i>t</i>
+  repeat
+  
+  return <i>v</i>
+end
+</pre>
+<div id="toc"><small>This code sample is also available in <a href="/wiki/Ada_Programming/Algorithms#Memory_Optimized_Implementation" title="Ada Programming/Algorithms">Ada</a>.</small></div>
+<p>We can modify the code to store the values in an array for subsequent calls, but the point is that we don't <i>have</i> to. This method is typical for dynamic programming. First we identify what subproblems need to be solved in order to solve the entire problem, and then we calculate the values bottom-up using an iterative process.</p>
+<h2><span class="mw-headline" id="Longest_Common_Subsequence_.28DP_version.29">Longest Common Subsequence (DP version)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit&amp;section=2" title="Edit section: Longest Common Subsequence (DP version)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This will remind us of the backtracking version and then improve it via memoization. Finally, the recursive algorithm will be made iterative and be full-fledged DP. [TODO: write this section]</p>
+<h2><span class="mw-headline" id="Matrix_Chain_Multiplication">Matrix Chain Multiplication</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit&amp;section=3" title="Edit section: Matrix Chain Multiplication">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Suppose that you need to multiply a series of <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> matrices <img class="tex" alt="M_1,\ldots, M_n" src="//upload.wikimedia.org/math/0/d/e/0dec4587d96aba0617cb96a667606ff2.png" /> together to form a product matrix <img class="tex" alt="P" src="//upload.wikimedia.org/math/4/4/c/44c29edb103a2872f519ad0c9a0fdaaa.png" />:</p>
+<dl>
+<dd><img class="tex" alt="P = M_1\cdot M_2 \cdots M_{n-1}\cdot M_n" src="//upload.wikimedia.org/math/3/c/2/3c2bce3fd3622d42cb053a05e399bce2.png" /></dd>
+</dl>
+<p>This will require <img class="tex" alt="n-1" src="//upload.wikimedia.org/math/a/4/3/a438673491daae8148eae77373b6a467.png" /> multiplications, but what is the fastest way we can form this product? Matrix multiplication is associative, that is,</p>
+<dl>
+<dd><img class="tex" alt="(A\cdot B)\cdot C = A\cdot (B\cdot C)" src="//upload.wikimedia.org/math/a/4/a/a4a6fb9c1d3cf53e2b25dd7d7a382c82.png" /></dd>
+</dl>
+<p>for any <img class="tex" alt="A, B, C" src="//upload.wikimedia.org/math/c/e/0/ce04be1226e56f48da55b6c130d45b94.png" />, and so we have some choice in what multiplication we perform first. (Note that matrix multiplication is <i>not</i> commutative, that is, it does not hold in general that <img class="tex" alt="A\cdot B = B\cdot A" src="//upload.wikimedia.org/math/4/d/2/4d25559f97a5baea78134b786ea9553e.png" />.)</p>
+<p>Because you can only multiply two matrices at a time the product <img class="tex" alt="M_1\cdot M_2\cdot M_3\cdot M_4" src="//upload.wikimedia.org/math/8/a/7/8a78bcbc84c14eb7a68c6af8f599ba27.png" /> can be paranthesized in these ways:</p>
+<dl>
+<dd><img class="tex" alt="((M_1 M_2) M_3) M_4" src="//upload.wikimedia.org/math/9/a/d/9ad0290f84f10ca4694845a3d803a199.png" /></dd>
+<dd><img class="tex" alt="(M_1 (M_2 M_3)) M_4" src="//upload.wikimedia.org/math/0/b/d/0bdf6255ea86c36017ec8762076903ba.png" /></dd>
+<dd><img class="tex" alt="M_1 ((M_2 M_3) M_4)" src="//upload.wikimedia.org/math/1/b/b/1bb2c25f38b41a515f26b008ea3308a5.png" /></dd>
+<dd><img class="tex" alt="(M_1 M_2) (M_3 M_4)" src="//upload.wikimedia.org/math/7/a/4/7a4215b90f6830a115c4cf3699521fbb.png" /></dd>
+<dd><img class="tex" alt="M_1 (M_2 (M_3 M_4))" src="//upload.wikimedia.org/math/b/3/d/b3ddfa576b919c1eca80237589a1dfa0.png" /></dd>
+</dl>
+<p>Two matrices <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" /> and <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" /> can be multiplied if the number of columns in <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" /> equals the number of rows in <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" />. The number of rows in their product will equal the number rows in <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" /> and the number of columns will equal the number of columns in <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" />. That is, if the dimensions of <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" /> is <img class="tex" alt="a \times b" src="//upload.wikimedia.org/math/2/d/1/2d1dc88200d501549f9d6edae3d6c195.png" /> and <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" /> has dimensions <img class="tex" alt="b \times c" src="//upload.wikimedia.org/math/6/5/7/657389c8d4e6654c5eebad2f5bf82752.png" /> their product will have dimensions <img class="tex" alt="a \times c" src="//upload.wikimedia.org/math/5/c/7/5c7ec5b32c36eacca278668ecc18cb88.png" />.</p>
+<p>To multiply two matrices with each other we use a function called matrix-multiply that takes two matrices and returns their product. We will leave implementation of this function alone for the moment as it is not the focus of this chapter (how to multiply two matrices in the fastest way has been under intensive study for several years [TODO: propose this topic for the <i>Advanced</i> book]). The time this function takes to multiply two matrices of size <img class="tex" alt="a \times b" src="//upload.wikimedia.org/math/2/d/1/2d1dc88200d501549f9d6edae3d6c195.png" /> and <img class="tex" alt="b \times c" src="//upload.wikimedia.org/math/6/5/7/657389c8d4e6654c5eebad2f5bf82752.png" /> is proportional to the number of scalar multiplications, which is proportional to <img class="tex" alt="a b c" src="//upload.wikimedia.org/math/9/0/0/900150983cd24fb0d6963f7d28e17f72.png" />. Thus, paranthezation matters: Say that we have three matrices <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" />, <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" /> and <img class="tex" alt="M_3" src="//upload.wikimedia.org/math/e/4/7/e47fdbf0968587d24cc2817c16b2ba15.png" />. <img class="tex" alt="M_1" src="//upload.wikimedia.org/math/f/2/d/f2da4ca1b046da32d73b4ecc49d58680.png" /> has dimensions <img class="tex" alt="5 \times 100" src="//upload.wikimedia.org/math/f/f/1/ff138afefd80e558fd6d0650c5ed584b.png" />, <img class="tex" alt="M_2" src="//upload.wikimedia.org/math/3/4/a/34a392a9e27dd596c3ed3292b990712f.png" /> has dimensions <img class="tex" alt="100 \times 100" src="//upload.wikimedia.org/math/1/0/1/1010487f977eb234f3e40bd658b7bcfc.png" /> and <img class="tex" alt="M_3" src="//upload.wikimedia.org/math/e/4/7/e47fdbf0968587d24cc2817c16b2ba15.png" /> has dimensions <img class="tex" alt="100 \times 50" src="//upload.wikimedia.org/math/2/e/1/2e10ca6c50aa3dfe622a5350970d39ad.png" />. Let's paranthezise them in the two possible ways and see which way requires the least amount of multiplications. The two ways are</p>
+<dl>
+<dd><img class="tex" alt="((M_1 M_2) M_3)" src="//upload.wikimedia.org/math/6/2/4/624a462e588485e047db81007a5afa61.png" />, and</dd>
+<dd><img class="tex" alt="(M_1 (M_2 M_3))" src="//upload.wikimedia.org/math/0/a/9/0a9ed2da219cc7bab47d32d5e9d7b770.png" />.</dd>
+</dl>
+<p>To form the product in the first way requires 75000 scalar multiplications (5*100*100=50000 to form product <img class="tex" alt="(M_1 M_2)" src="//upload.wikimedia.org/math/7/4/9/749a9031a65d7d25853987bf4dd321be.png" /> and another 5*100*50=25000 for the last multiplications.) This might seem like a lot, but in comparison to the 525000 scalar multiplications required by the second parenthesization (50*100*100=500000 plus 5*50*100=25000) it is miniscule! You can see why determining the parenthesization is important: imagine what would happen if we needed to multiply 50 matrices!</p>
+<h3><span class="mw-headline" id="Forming_a_Recursive_Solution">Forming a Recursive Solution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit&amp;section=4" title="Edit section: Forming a Recursive Solution">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Note that we concentrate on finding a how many scalar multiplications are needed instead of the actual order. This is because once we have found a working algorithm to find the amount it is trivial to create an algorithm for the actual parenthesization. It will, however, be discussed in the end.</p>
+<p>So how would an algorithm for the optimum parenthesization look? By the chapter title you might expect that a dynamic programming method is in order (not to give the answer away or anything). So how would a dynamic programming method work? Because dynamic programming algorithms are based on optimal substructure, what would the optimal substructure in this problem be?</p>
+<p>Suppose that the optimal way to parenthesize</p>
+<dl>
+<dd><img class="tex" alt="M_1 M_2 \dots M_n" src="//upload.wikimedia.org/math/1/8/f/18f0fa99c21c064844735ca7a70d05bc.png" /></dd>
+</dl>
+<p>splits the product at <img class="tex" alt="k" src="//upload.wikimedia.org/math/8/c/e/8ce4b16b22b58894aa86c421e8759df3.png" />:</p>
+<dl>
+<dd><img class="tex" alt="(M_1 M_2 \dots M_k)(M_{k+1} M_{k+2} \dots M_n)" src="//upload.wikimedia.org/math/5/4/5/54528282ebc1be7fc0e6328a3c1801ab.png" />.</dd>
+</dl>
+<p>Then the optimal solution contains the optimal solutions to the two subproblems</p>
+<dl>
+<dd><img class="tex" alt="(M_1 \dots M_k)" src="//upload.wikimedia.org/math/a/9/f/a9f21546d1aff539a13d77edfef760d8.png" /></dd>
+<dd><img class="tex" alt="(M_{k+1} \dots M_n)" src="//upload.wikimedia.org/math/a/e/4/ae4cb612b4c77b9ceff22e633e6ca28f.png" /></dd>
+</dl>
+<p>That is, just in accordance with the fundamental principle of dynamic programming, the solution to the problem depends on the solution of smaller sub-problems.</p>
+<p>Let's say that it takes <img class="tex" alt="c(n)" src="//upload.wikimedia.org/math/6/f/9/6f92aad59cd2c0646a2f0c5844875990.png" /> scalar multiplications to multiply matrices <img class="tex" alt="M_n" src="//upload.wikimedia.org/math/1/5/4/1547a74739c1e2b6be3ebe927017bfbb.png" /> and <img class="tex" alt="M_{n+1}" src="//upload.wikimedia.org/math/b/5/3/b5325dfd3bcbec5eebd582dcd42a0923.png" />, and <img class="tex" alt="f(m,n)" src="//upload.wikimedia.org/math/a/5/3/a53a7f70857529f682edcff165e899a4.png" /> is the number of scalar multiplications to be performed in an optimal parenthesization of the matrices <img class="tex" alt="M_m \dots M_n" src="//upload.wikimedia.org/math/2/b/6/2b6baadb8faab6f829922c9d1367066b.png" />. The definition of <img class="tex" alt="f(m,n)" src="//upload.wikimedia.org/math/a/5/3/a53a7f70857529f682edcff165e899a4.png" /> is the first step toward a solution.</p>
+<p>When <img class="tex" alt="n-m=1" src="//upload.wikimedia.org/math/2/f/e/2feb6fcae2322bed80afb0b8775e614b.png" />, the formulation is trivial; it is just <img class="tex" alt="c(m)" src="//upload.wikimedia.org/math/6/3/8/638fd40dab714afadb4bd56d7dde521c.png" />. But what is it when the distance is larger? Using the observation above, we can derive a formulation. Suppose an optimal solution to the problem divides the matrices at matrices k and k+1 (i.e. <img class="tex" alt="(M_m \dots M_k)(M_{k+1} \dots M_n)" src="//upload.wikimedia.org/math/d/8/c/d8c2c886f78f954c2946e6443deaefcb.png" />) then the number of scalar multiplications are.</p>
+<dl>
+<dd><img class="tex" alt="f(m,k) + f(k+1,n) + c(k)" src="//upload.wikimedia.org/math/c/5/9/c5998d17549dde20dc4eca0e2dccc602.png" /></dd>
+</dl>
+<p>That is, the amount of time to form the first product, the amount of time it takes to form the second product, and the amount of time it takes to multiply them together. But what is this optimal value k? The answer is, of course, the value that makes the above formula assume its minimum value. We can thus form the complete definition for the function:</p>
+<dl>
+<dd><img class="tex" alt="f(m,n) = \begin{cases} \min_{m \le k &lt; n}f(m,k) + f(k+1,n) + c(k) &amp; \mbox{if } n-m&gt;1 \\ 0 &amp; \mbox{if } n=m\end{cases}" src="//upload.wikimedia.org/math/0/1/b/01b376c226b97035f2be64bf5d87f3ea.png" /></dd>
+</dl>
+<p>A straight-forward recursive solution to this would look something like this <i>(the language is <a class="external text" href="http://en.wikipedia.org/wiki/Wikipedia:Wikicode">Wikicode</a>)</i>:</p>
+<pre>
+function <b>f</b>(<i>m</i>, <i>n</i>) {
+
+    if <i>m</i> == <i>n</i>
+        return 0
+
+    let <i>minCost</i> := <img class="tex" alt="\infty" src="//upload.wikimedia.org/math/d/2/4/d245777abca64ece2d5d7ca0d19fddb6.png" />
+
+    for <i>k</i> := <i>m</i> to <i>n</i> - 1 {
+        v := <b>f</b>(<i>m</i>, <i>k</i>) + <b>f</b>(<i>k</i> + 1, <i>n</i>) + <i>c</i>(<i>k</i>)
+        if <i>v</i> &lt; <i>minCost</i>
+            <i>minCost</i> := <i>v</i>
+    }
+    return <i>minCost</i>
+}
+</pre>
+<p>This rather simple solution is, unfortunately, not a very good one. It spends mountains of time recomputing data and its running time is exponential.</p>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+write an analysis of the straight-forward-recursion method</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+write a memoization version</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<p>Using the same adaptation as above we get:</p>
+<pre>
+function <b>f</b>(<i>m</i>, <i>n</i>) {
+
+    if <i>m</i> == <i>n</i>
+        return 0
+
+    else-if <i>f</i>[<i>m,n</i>] != -1:
+      return <i>f</i>[<i>m,n</i>]
+    fi
+
+    let <i>minCost</i> := <img class="tex" alt="\infty" src="//upload.wikimedia.org/math/d/2/4/d245777abca64ece2d5d7ca0d19fddb6.png" />
+
+    for <i>k</i> := <i>m</i> to <i>n</i> - 1 {
+        v := <b>f</b>(<i>m</i>, <i>k</i>) + <b>f</b>(<i>k</i> + 1, <i>n</i>) + <i>c</i>(<i>k</i>)
+        if <i>v</i> &lt; <i>minCost</i>
+            <i>minCost</i> := <i>v</i>
+    }
+    <i>f</i>[<i>m,n</i>]=minCost
+    return <i>minCost</i>
+}
+</pre>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+write a full-fledged DP version</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<h2><span class="mw-headline" id="Parsing_Any_Context-Free_Grammar">Parsing Any Context-Free Grammar</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit&amp;section=5" title="Edit section: Parsing Any Context-Free Grammar">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Note that special types of context-free grammars can be parsed much more efficiently than this technique, but in terms of generality, the DP method is the only way to go.</p>
+<p><br /></p>
+<hr />
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <strong class="selflink">6</strong>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1031
+CPU time usage: 0.312 seconds
+Real time usage: 0.681 seconds
+Preprocessor visited node count: 755/1000000
+Preprocessor generated node count: 2230/1500000
+Post‐expand include size: 2767/2048000 bytes
+Template argument size: 294/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15003-0!0!0!!en!4!* and timestamp 20131124020441
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Dynamic_Programming&amp;oldid=2401537">http://en.wikibooks.org/w/index.php?title=Algorithms/Dynamic_Programming&amp;oldid=2401537</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FDynamic+Programming&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FDynamic+Programming" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Dynamic_Programming"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms/Dynamic_Programming"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Dynamic_Programming" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Dynamic_Programming" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Dynamic_Programming" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;oldid=2401537" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FDynamic_Programming&amp;id=2401537" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FDynamic+Programming">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FDynamic+Programming&amp;oldid=2401537&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Dynamic_Programming&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 August 2012, at 21:59.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Dynamic_Programming" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1170 in 0.133 secs. -->
+	</body>
+</html>

@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Stacks and Queues - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Stacks_and_Queues","wgTitle":"Data Structures/Stacks and Queues","wgCurRevisionId":2594229,"wgRevisionId":2594229,"wgArticleId":20060,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Stacks_and_Queues","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["en-us","en"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2594229,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Stacks_and_Queues skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Stacks and Queues</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<strong class="selflink">Stacks &amp; Queues</strong> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+queue implemented as an array: circular and fixed-sized</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Stacks_and_Queues"><span class="tocnumber">1</span> <span class="toctext">Stacks and Queues</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Stacks"><span class="tocnumber">1.1</span> <span class="toctext">Stacks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Linked_List_Implementation"><span class="tocnumber">1.1.1</span> <span class="toctext">Linked List Implementation</span></a>
+<ul>
+<li class="toclevel-4 tocsection-4"><a href="#Performance_Analysis"><span class="tocnumber">1.1.1.1</span> <span class="toctext">Performance Analysis</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#Applications_of_Stacks"><span class="tocnumber">1.2</span> <span class="toctext">Applications of Stacks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Converting_a_decimal_number_into_a_binary_number"><span class="tocnumber">1.2.1</span> <span class="toctext">Converting a decimal number into a binary number</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Towers_of_Hanoi"><span class="tocnumber">1.2.2</span> <span class="toctext">Towers of Hanoi</span></a>
+<ul>
+<li class="toclevel-4 tocsection-8"><a href="#First_Implementation_.28Without_using_Stacks.29"><span class="tocnumber">1.2.2.1</span> <span class="toctext">First Implementation (Without using Stacks)</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="#Second_Implementation_.28Using_Stacks.29"><span class="tocnumber">1.2.2.2</span> <span class="toctext">Second Implementation (Using Stacks)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="#Expression_evaluation_and_syntax_parsing"><span class="tocnumber">1.2.3</span> <span class="toctext">Expression evaluation and syntax parsing</span></a>
+<ul>
+<li class="toclevel-4 tocsection-11"><a href="#Evaluation_of_an_Infix_Expression_that_is_Fully_Parenthesized"><span class="tocnumber">1.2.3.1</span> <span class="toctext">Evaluation of an Infix Expression that is Fully Parenthesized</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#Evaluation_of_Infix_Expression_which_is_not_fully_parenthesized"><span class="tocnumber">1.2.3.2</span> <span class="toctext">Evaluation of Infix Expression which is not fully parenthesized</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Evaluation_of_Prefix_Expression"><span class="tocnumber">1.2.3.3</span> <span class="toctext">Evaluation of Prefix Expression</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-14"><a href="#Conversion_of_an_Infix_expression_that_is_fully_parenthesized_into_a_Postfix_expression"><span class="tocnumber">1.2.4</span> <span class="toctext">Conversion of an Infix expression that is fully parenthesized into a Postfix expression</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Rearranging_railroad_cars"><span class="tocnumber">1.2.5</span> <span class="toctext">Rearranging railroad cars</span></a>
+<ul>
+<li class="toclevel-4 tocsection-16"><a href="#Problem_Description"><span class="tocnumber">1.2.5.1</span> <span class="toctext">Problem Description</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#Solution_Strategy"><span class="tocnumber">1.2.5.2</span> <span class="toctext">Solution Strategy</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="#A_Three_Track_Example"><span class="tocnumber">1.2.5.3</span> <span class="toctext">A Three Track Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-19"><a href="#Quicksort"><span class="tocnumber">1.2.6</span> <span class="toctext">Quicksort</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#The_Stock_Span_Problem"><span class="tocnumber">1.2.7</span> <span class="toctext">The Stock Span Problem</span></a>
+<ul>
+<li class="toclevel-4 tocsection-21"><a href="#An_algorithm_which_has_Quadratic_Time_Complexity"><span class="tocnumber">1.2.7.1</span> <span class="toctext">An algorithm which has Quadratic Time Complexity</span></a></li>
+<li class="toclevel-4 tocsection-22"><a href="#An_algorithm_that_has_Linear_Time_Complexity"><span class="tocnumber">1.2.7.2</span> <span class="toctext">An algorithm that has Linear Time Complexity</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="#Related_Links"><span class="tocnumber">1.3</span> <span class="toctext">Related Links</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Queues"><span class="tocnumber">1.4</span> <span class="toctext">Queues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Linked_List_Implementation_2"><span class="tocnumber">1.4.1</span> <span class="toctext">Linked List Implementation</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#Performance_Analysis_2"><span class="tocnumber">1.4.1.1</span> <span class="toctext">Performance Analysis</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#Circular_Array_Implementation"><span class="tocnumber">1.4.2</span> <span class="toctext">Circular Array Implementation</span></a>
+<ul>
+<li class="toclevel-4 tocsection-28"><a href="#Performance_Analysis_3"><span class="tocnumber">1.4.2.1</span> <span class="toctext">Performance Analysis</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-29"><a href="#Priority_Queue_Implementation"><span class="tocnumber">1.4.3</span> <span class="toctext">Priority Queue Implementation</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#Related_Links_2"><span class="tocnumber">1.4.4</span> <span class="toctext">Related Links</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-31"><a href="#Deques"><span class="tocnumber">1.5</span> <span class="toctext">Deques</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#References"><span class="tocnumber">2</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Stacks_and_Queues">Stacks and Queues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=1" title="Edit section: Stacks and Queues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Stacks">Stacks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=2" title="Edit section: Stacks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A stack is a basic data structure that can be logically thought as linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. This structure is used all throughout programming.</p>
+<p>The basic implementation of a stack is also called a LIFO (Last In First Out) to demonstrate the way it accesses data, since as we will see there are various variations of stack implementations.</p>
+<p>There are basically three operations that can be performed on stacks . They are 1) inserting an item into a stack (push). 2) deleting an item from the stack (pop). 3) displaying the contents of the stack(pip).</p>
+<div style="clear: both"></div>
+<p><a href="/wiki/File:Data_stack.svg" class="image"><img alt="Data stack.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/391px-Data_stack.svg.png" width="391" height="281" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/587px-Data_stack.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/782px-Data_stack.svg.png 2x" /></a></p>
+<table class="notice notice-note noprint" style="background: #f2fff2; border: solid 1px #bfffbf; padding: 0.5em; width: 95%; margin: auto; vertical-align: top; -moz-border-radius:10px;">
+<tr>
+<td>
+<p><b>Note:</b><br />
+Depending on the language and implementation the data structure may share the name with an abstract data type that support all of the data structure characteristics.</p>
+</td>
+</tr>
+</table>
+<p>Below are some of operations a <b>stack data type</b> normally supports:</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Stack&lt;item-type&gt; Operations">
+<p><b><code>Stack&lt;item-type&gt;</code> Operations</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>push</b>(<var>new-item</var>:item-type)</code></dt>
+<dd>Adds an item onto the stack.</dd>
+<dt style="font-weight:normal"><code><b>top</b>():item-type</code></dt>
+<dd>Returns the last item pushed onto the stack.</dd>
+<dt style="font-weight:normal"><code><b>pop</b>()</code></dt>
+<dd>Removes the most-recently-pushed item from the stack.</dd>
+<dt style="font-weight:normal"><code><b>is-empty</b>():Boolean</code></dt>
+<dd>True if no more items can be popped and there is no top item.</dd>
+<dt style="font-weight:normal"><code><b>is-full</b>():Boolean</code></dt>
+<dd>True if no more items can be pushed.</dd>
+<dt style="font-weight:normal"><code><b>get-size</b>():Integer</code></dt>
+<dd>Returns the number of elements on the stack.</dd>
+</dl>
+<p>All operations except <code>get-size()</code> can be performed in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time. <code>get-size()</code> runs in at worst <img class="tex" alt="O(N)." src="//upload.wikimedia.org/math/e/4/7/e472b7d37456fd24e8f5f7208475262b.png" /></p>
+</div>
+<p><br /></p>
+<h4><span class="mw-headline" id="Linked_List_Implementation">Linked List Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=3" title="Edit section: Linked List Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The basic linked list implementation is one of the easiest linked list implementations you can do. Structurally it is a linked list.</p>
+<pre>
+type Stack&lt;item_type&gt;
+  data list:Singly Linked List&lt;item_type&gt;
+
+  constructor()
+    list := new Singly-Linked-List()
+  end constructor
+</pre>
+<p>Most operations are implemented by passing them through to the underlying linked list. When you want to <b>push</b> something onto the list, you simply add it to the front of the linked list. The previous top is then "next" from the item being added and the list's front pointer points to the new item.</p>
+<pre>
+  method push(new_item:item_type)
+    list.prepend(new_item)
+  end method
+</pre>
+<p>To look at the <b>top</b> item, you just examine the first item in the linked list.</p>
+<pre>
+  method top():item_type
+    return list.get-begin().get-value()
+  end method
+</pre>
+<p>When you want to <b>pop</b> something off the list, simply remove the first item from the linked list.</p>
+<pre>
+  method pop()
+    list.remove-first()
+  end method
+</pre>
+<p>A check for emptiness is easy. Just check if the list is empty.</p>
+<pre>
+  method is-empty():Boolean
+    return list.is-empty()
+  end method
+</pre>
+<p>A check for full is simple. Linked lists are considered to be limitless in size.</p>
+<pre>
+  method is-full():Boolean
+    return False
+  end method
+</pre>
+<p>A check for the size is again passed through to the list.</p>
+<pre>
+  method get-size():Integer
+    return list.get-size()
+  end method
+end type
+</pre>
+<p>A real Stack implementation in a published library would probably re-implement the linked list in order to squeeze the last bit of performance out of the implementation by leaving out unneeded functionality. The above implementation gives you the ideas involved, and any optimization you need can be accomplished by inlining the linked list code.</p>
+<p><br /></p>
+<h5><span class="mw-headline" id="Performance_Analysis">Performance Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=4" title="Edit section: Performance Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>In a linked list, accessing the first element is an <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> operation because the list contains a pointer that checks for empty/fullness as done here are also <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />. depending on what time/space tradeoff is made. Most of the time, users of a Stack do not use the <code>getSize()</code> operation, and so a bit of space can be saved by not optimizing it.</p>
+<p>Since all operations are at the top of the stack, the array implementation is now much, much better.</p>
+<pre>
+  public class StackArray implements Stack
+  {
+      protected int top;
+      protected Object[] data;
+      ...
+</pre>
+<p>The array implementation keeps the bottom of the stack at the beginning of the array. It grows toward the end of the array. The only problem is if you attempt to push an element when the array is full. If so</p>
+<pre>
+   Assert.pre(!isFull(),"Stack is not full.");
+</pre>
+<p>will fail, raising an exception. Thus it makes more sense to implement with Vector (see StackVector) to allow unbounded growth (at cost of occasional O(n) delays).</p>
+<p>Complexity:</p>
+<p>All operations are O(1) with exception of occasional push and clear, which should replace all entries by null in order to let them be garbage-collected. Array implementation does not replace null entries. The Vector implementation does.</p>
+<h3><span class="mw-headline" id="Applications_of_Stacks">Applications of Stacks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=5" title="Edit section: Applications of Stacks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Stack_of_books.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Stack_of_books.jpg/220px-Stack_of_books.jpg" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Stack_of_books.jpg/330px-Stack_of_books.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Stack_of_books.jpg/440px-Stack_of_books.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Stack_of_books.jpg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Stack of books</div>
+</div>
+</div>
+<p>Using stacks, we can solve many applications, some of which are listed below.</p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<h4><span class="mw-headline" id="Converting_a_decimal_number_into_a_binary_number">Converting a decimal number into a binary number</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=6" title="Edit section: Converting a decimal number into a binary number">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The logic for transforming a decimal number into a binary number is as follows:</p>
+<pre>
+    * Read a number
+    * Iteration (while number is greater than zero)
+              1. Find out the remainder after dividing the number by 2
+              2. Print the remainder
+              3. Divide the number by 2
+    * End the iteration
+</pre>
+<p>However, there is a problem with this logic. Suppose the number, whose binary form we want to find is 23. Using this logic, we get the result as 11101, instead of getting 10111.</p>
+<p>To solve this problem, we use a stack. We make use of the <i>LIFO</i> property of the stack. Initially we <i>push</i> the binary digit formed into the stack, instead of printing it directly. After the entire digit has been converted into the binary form, we <i>pop</i> one digit at a time from the stack and print it. Therefore we get the decimal number is converted into its proper binary form.</p>
+<p><b>Algorithm:</b></p>
+<pre>
+   1. Create a stack
+   2. Enter a decimal number, which has to be converted into its equivalent binary form.
+   3. iteration1 (while number &gt; 0)
+         3.1 digit = number % 2
+         3.2 Push <i>digit</i> into the stack
+         3.3 If the stack is full
+              3.3.1 Print an error
+              3.3.2 Stop the algorithm
+         3.4 End the <i>if</i> condition
+         3.5 Divide the number by 2
+   4. End <i>iteration1</i>
+   
+   5. iteration2 (while stack is not empty)
+         5.1 Pop <i>digit</i> from the stack
+         5.2 Print the <i>digit</i>
+   6. End iteration2
+   7. STOP
+</pre>
+<h4><span class="mw-headline" id="Towers_of_Hanoi">Towers of Hanoi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=7" title="Edit section: Towers of Hanoi">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Tower_of_Hanoi.jpeg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tower_of_Hanoi.jpeg/300px-Tower_of_Hanoi.jpeg" width="300" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tower_of_Hanoi.jpeg/450px-Tower_of_Hanoi.jpeg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tower_of_Hanoi.jpeg/600px-Tower_of_Hanoi.jpeg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Tower_of_Hanoi.jpeg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Towers of Hanoi</div>
+</div>
+</div>
+<p>One of the most interesting applications of stacks can be found in solving a puzzle called Tower of Hanoi. According to an old Brahmin story, the existence of the universe is calculated in terms of the time taken by a number of monks, who are working all the time, to move 64 disks from one pole to another. But there are some rules about how this should be done, which are:</p>
+<ol>
+<li>You can move only one disk at a time.</li>
+<li>For temporary storage, a third pole may be used.</li>
+<li>You cannot place a disk of larger diameter on a disk of smaller diameter.<sup id="cite_ref-Dromey_1-0" class="reference"><a href="#cite_note-Dromey-1">[1]</a></sup></li>
+</ol>
+<p>Here we assume that A is first tower, B is second tower &amp; C is third tower.</p>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:377px;"><a href="/wiki/File:Towersofhanoi1.pdf" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Towersofhanoi1.pdf/page1-375px-Towersofhanoi1.pdf.jpg" width="375" height="485" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Towersofhanoi1.pdf/page1-563px-Towersofhanoi1.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/87/Towersofhanoi1.pdf/page1-750px-Towersofhanoi1.pdf.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Towersofhanoi1.pdf" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Towers of Hanoi step 1</div>
+</div>
+</div>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:377px;"><a href="/wiki/File:Towersofhanoi2.pdf" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Towersofhanoi2.pdf/page1-375px-Towersofhanoi2.pdf.jpg" width="375" height="485" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Towersofhanoi2.pdf/page1-563px-Towersofhanoi2.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Towersofhanoi2.pdf/page1-750px-Towersofhanoi2.pdf.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Towersofhanoi2.pdf" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Towers of Hanoi step 2</div>
+</div>
+</div>
+</div>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:377px;"><a href="/wiki/File:Towersofhanoi3.pdf" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Towersofhanoi3.pdf/page1-375px-Towersofhanoi3.pdf.jpg" width="375" height="485" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Towersofhanoi3.pdf/page1-563px-Towersofhanoi3.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Towersofhanoi3.pdf/page1-750px-Towersofhanoi3.pdf.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Towersofhanoi3.pdf" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Towers of Hanoi step 3</div>
+</div>
+</div>
+<p><br /></p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:377px;"><a href="/wiki/File:Towersofhanoi4.pdf" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Towersofhanoi4.pdf/page1-375px-Towersofhanoi4.pdf.jpg" width="375" height="485" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Towersofhanoi4.pdf/page1-563px-Towersofhanoi4.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Towersofhanoi4.pdf/page1-750px-Towersofhanoi4.pdf.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Towersofhanoi4.pdf" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Towers of Hanoi step 4</div>
+</div>
+</div>
+</div>
+<p><br /></p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="/wiki/File:Towerofhanoi.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Towerofhanoi.jpg/350px-Towerofhanoi.jpg" width="350" height="702" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Towerofhanoi.jpg/525px-Towerofhanoi.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Towerofhanoi.jpg/700px-Towerofhanoi.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Towerofhanoi.jpg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Tower of Hanoi</div>
+</div>
+</div>
+<p><b>Output&#160;: (when there are 3 disks)</b></p>
+<p>Let <i>1</i> be the smallest disk, <i>2</i> be the disk of medium size and <i>3</i> be the largest disk.</p>
+<table class="wikitable sortable">
+<tr>
+<th>Move disk</th>
+<th>From peg</th>
+<th>To peg</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>C</td>
+</tr>
+</table>
+<p><b>Output&#160;: (when there are 4 disks)</b></p>
+<table class="wikitable sortable">
+<tr>
+<th>Move disk</th>
+<th>From peg</th>
+<th>To peg</th>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>3</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>C</td>
+</tr>
+</table>
+<p>The C++ code for this solution can be implemented in two ways:</p>
+<h5><span class="mw-headline" id="First_Implementation_.28Without_using_Stacks.29">First Implementation (Without using Stacks)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=8" title="Edit section: First Implementation (Without using Stacks)">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Here we assume that A is first tower, B is second tower &amp; C is third tower. (B is the intermediate)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">void</span> TowersofHanoi<span class="br0">(</span><span class="kw4">int</span> n<span class="sy0">,</span> <span class="kw4">int</span> a<span class="sy0">,</span> <span class="kw4">int</span> b<span class="sy0">,</span> <span class="kw4">int</span> c<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="co1">//Move top n disks from tower a to tower b, use tower c for intermediate storage.</span>
+    <span class="kw1">if</span><span class="br0">(</span>n <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span>
+    <span class="br0">{</span>
+        TowersofHanoi<span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> a<span class="sy0">,</span> c<span class="sy0">,</span> b<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">//recursion</span>
+        cout <span class="sy0">&lt;&lt;</span> <span class="st0">" Move top disk from tower "</span> <span class="sy0">&lt;&lt;</span> a <span class="sy0">&lt;&lt;</span> <span class="st0">" to tower "</span> <span class="sy0">&lt;&lt;</span> b <span class="sy0">&lt;&lt;</span> endl <span class="sy0">;</span>
+        <span class="co1">//Move n-1 disks from intermediate(b) to the source(a) back</span>
+        TowersofHanoi<span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> c<span class="sy0">,</span> b<span class="sy0">,</span> a<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">//recursion</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p><sup id="cite_ref-ReferenceA_2-0" class="reference"><a href="#cite_note-ReferenceA-2">[2]</a></sup></p>
+<h5><span class="mw-headline" id="Second_Implementation_.28Using_Stacks.29">Second Implementation (Using Stacks)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=9" title="Edit section: Second Implementation (Using Stacks)">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="co1">// Global variable , tower [1:3] are three towers</span>
+arrayStack<span class="sy0">&lt;</span>int<span class="sy0">&gt;</span> tower<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span><span class="sy0">;</span>
+<span class="kw4">void</span> TowerofHanoi<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="co1">// Preprocessor for moveAndShow.</span>
+    <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> d <span class="sy0">=</span> n<span class="sy0">;</span> d <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="sy0">;</span> d<span class="sy0">--</span><span class="br0">)</span>        <span class="co1">//initialize</span>
+        tower<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">push</span><span class="br0">(</span>d<span class="br0">)</span><span class="sy0">;</span>              <span class="co1">//add disk d to tower 1</span>
+    moveAndShow<span class="br0">(</span>n<span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">)</span><span class="sy0">;</span>           <span class="coMULTI">/*move n disks from tower 1 to tower 3 using 
+                                       tower 2 as intermediate tower*/</span>  
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> moveAndShow<span class="br0">(</span><span class="kw4">int</span> n<span class="sy0">,</span> <span class="kw4">int</span> a<span class="sy0">,</span> <span class="kw4">int</span> b<span class="sy0">,</span> <span class="kw4">int</span> c<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="co1">// Move the top n disks from tower a to tower b showing states.</span>
+    <span class="co1">// Use tower c for intermediate storage.</span>
+    <span class="kw1">if</span><span class="br0">(</span>n <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span>
+    <span class="br0">{</span>
+        moveAndShow<span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> a<span class="sy0">,</span> c<span class="sy0">,</span> b<span class="br0">)</span><span class="sy0">;</span>     <span class="co1">//recursion</span>
+        <span class="kw4">int</span> d <span class="sy0">=</span> tower<span class="br0">[</span>x<span class="br0">]</span>.<span class="me1">top</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>        <span class="co1">//move a disc from top of tower x to top of </span>
+        tower<span class="br0">[</span>x<span class="br0">]</span>.<span class="me1">pop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>                <span class="co1">//tower y</span>
+        tower<span class="br0">[</span>y<span class="br0">]</span>.<span class="me1">push</span><span class="br0">(</span>d<span class="br0">)</span><span class="sy0">;</span>
+        showState<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>                   <span class="co1">//show state of 3 towers</span>
+        moveAndShow<span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> c<span class="sy0">,</span> b<span class="sy0">,</span> a<span class="br0">)</span><span class="sy0">;</span>     <span class="co1">//recursion</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>However complexity for above written implementations is O(<img class="tex" alt="2^n" src="//upload.wikimedia.org/math/9/a/a/9aa0ec0374c89d2f7f3d9cd2e05a4bc5.png" />). So it's obvious that problem can only be solved for small values of n (generally n &lt;= 30). In case of the monks, the number of turns taken to transfer 64 disks, by following the above rules, will be 18,446,744,073,709,551,615; which will surely take a lot of time!!</p>
+<p><sup id="cite_ref-Dromey_1-1" class="reference"><a href="#cite_note-Dromey-1">[1]</a></sup></p>
+<p><sup id="cite_ref-ReferenceA_2-1" class="reference"><a href="#cite_note-ReferenceA-2">[2]</a></sup></p>
+<h4><span class="mw-headline" id="Expression_evaluation_and_syntax_parsing">Expression evaluation and syntax parsing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=10" title="Edit section: Expression evaluation and syntax parsing">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Calculators employing <a href="//en.wikipedia.org/wiki/reverse_Polish_notation" class="extiw" title="w:reverse Polish notation">reverse Polish notation</a> use a stack structure to hold values. Expressions can be represented in prefix, postfix or infix notations. Conversion from one form of the expression to another form may be accomplished using a stack. Many compilers use a stack for parsing the syntax of expressions, program blocks etc. before translating into low level code. Most of the programming languages are <a href="//en.wikipedia.org/wiki/context-free_grammar" class="extiw" title="w:context-free grammar">context-free languages</a> allowing them to be parsed with stack based machines.</p>
+<h5><span class="mw-headline" id="Evaluation_of_an_Infix_Expression_that_is_Fully_Parenthesized">Evaluation of an Infix Expression that is Fully Parenthesized</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=11" title="Edit section: Evaluation of an Infix Expression that is Fully Parenthesized">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><b>Input:</b> (((2 * 5) - (1 * 2)) / (11 - 9))</p>
+<p><b>Output:</b> 4</p>
+<p><b>Analysis:</b> Five types of input characters</p>
+<pre>
+  * Opening bracket
+  * Numbers
+  * Operators
+  * Closing bracket
+  * New line character
+</pre>
+<p><b>Data structure requirement:</b> A character stack</p>
+<p><b>Algorithm</b></p>
+<pre>
+  1. Read one input character
+  2. Actions at end of each input
+     Opening brackets              (2.1)  <i>Push</i> into stack and then Go to step (1)
+     Number                        (2.2)  <i>Push</i> into stack and then Go to step (1)
+     Operator                      (2.3)  <i>Push</i> into stack and then Go to step (1)
+     Closing brackets              (2.4)  <i>Pop</i> it from character stack
+                                   (2.4.1) if it is opening bracket, then discard it, Go to step (1)
+                                   (2.4.2) <i>Pop</i> is used three times
+                                           The first popped element is assigned to op2
+                                           The second popped element is assigned to op
+                                           The third popped element is assigned to op1
+                                           Evaluate op1 op op2
+                                           Convert the result into character and 
+                                           <i>push</i> into the stack
+                                           Go to step (2.4)
+    New line character            (2.5)  <i>Pop</i> from stack and print the answer
+                                         <i>STOP</i>
+</pre>
+<p><b>Result:</b> The evaluation of the fully parenthesized infix expression is printed on the monitor as follows:</p>
+<p><b>Input String:</b> (((2 * 5) - (1 * 2)) / (11 - 9))</p>
+<table class="wikitable sortable">
+<tr>
+<th>Input Symbol</th>
+<th>Stack (from bottom to top)</th>
+<th>Operation</th>
+</tr>
+<tr>
+<td>(</td>
+<td>(</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>( (</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>( ( (</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>( ( ( 2</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>( ( ( 2 *</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>( ( ( 2 * 5</td>
+</tr>
+<tr>
+<td>)</td>
+<td>( ( 10</td>
+<td>2 * 5 = 10 and <i>push</i></td>
+</tr>
+<tr>
+<td>-</td>
+<td>( ( 10 -</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>( ( 10 - (</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>( ( 10 - ( 1</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>( ( 10 - ( 1 *</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>( ( 10 - ( 1 * 2</td>
+<td></td>
+</tr>
+<tr>
+<td>)</td>
+<td>( ( 10 - 2</td>
+<td>1 * 2 = 2 &amp; <i>Push</i></td>
+</tr>
+<tr>
+<td>)</td>
+<td>( 8</td>
+<td>10 - 2 = 8 &amp; <i>Push</i></td>
+</tr>
+<tr>
+<td>/</td>
+<td>( 8 /</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>( 8 / (</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>( 8 / ( 11</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>( 8 / ( 11 -</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>( 8 / ( 11 - 9</td>
+<td></td>
+</tr>
+<tr>
+<td>)</td>
+<td>( 8 / 2</td>
+<td>11 - 9 = 2 &amp; <i>Push</i></td>
+</tr>
+<tr>
+<td>)</td>
+<td>4</td>
+<td>8 / 2 = 4 &amp; <i>Push</i></td>
+</tr>
+<tr>
+<td>New line</td>
+<td>Empty</td>
+<td><i>Pop</i> &amp; Print</td>
+</tr>
+</table>
+<p><b>C Program</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> main <span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">*</span>argv<span class="br0">[</span><span class="br0">]</span><span class="br0">)</span>
+<span class="br0">{</span>
+     <span class="kw4">struct</span> ch <span class="sy0">*</span>charactop<span class="sy0">;</span>
+     <span class="kw4">struct</span> integer <span class="sy0">*</span>integertop<span class="sy0">;</span>
+     <span class="kw4">char</span> rd<span class="sy0">,</span> op<span class="sy0">;</span>
+     <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="sy0">;</span>
+     charactop <span class="sy0">=</span> cclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     integertop <span class="sy0">=</span> iclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     <span class="kw1">while</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>
+     <span class="br0">{</span>
+         rd <span class="sy0">=</span> argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span>i<span class="sy0">++</span><span class="br0">]</span><span class="sy0">;</span>
+         <span class="kw1">switch</span><span class="br0">(</span>rd<span class="br0">)</span>
+         <span class="br0">{</span>
+             <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'('</span><span class="sy0">:</span> charactop <span class="sy0">=</span> cpush<span class="br0">(</span>charactop<span class="sy0">,</span> rd<span class="br0">)</span><span class="sy0">;</span>
+             <span class="kw2">break</span><span class="sy0">;</span>
+             <span class="kw1">case</span> <span class="st0">')'</span><span class="sy0">:</span> integertop <span class="sy0">=</span> ipop <span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                       charactop <span class="sy0">=</span> cpop <span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw1">while</span><span class="br0">(</span>op <span class="sy0">!=</span> <span class="st0">'('</span><span class="br0">)</span>
+                       <span class="br0">{</span>
+                           integertop <span class="sy0">=</span> ipush <span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="sy0">;</span>
+                           charactop <span class="sy0">=</span> cpop <span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                           <span class="kw1">if</span> <span class="br0">(</span>op <span class="sy0">!=</span> <span class="st0">'('</span><span class="br0">)</span>
+                           <span class="br0">{</span>
+                               integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                               integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                           <span class="br0">}</span>
+                       <span class="br0">}</span>
+                       <span class="kw2">break</span><span class="sy0">;</span>
+            <span class="kw1">case</span> <span class="st0">'<span class="es5">\0</span>'</span><span class="sy0">:</span> <span class="kw1">while</span> <span class="br0">(</span><span class="sy0">!=</span> cemptystack<span class="br0">(</span>charactop<span class="br0">)</span><span class="br0">)</span>
+                       <span class="br0">{</span>
+                           charactop <span class="sy0">=</span> cpop<span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="br0">}</span>
+                       integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"<span class="es1">\n</span> The final solution is: %d"</span><span class="sy0">,</span> op1<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+           <span class="kw1">default</span><span class="sy0">:</span> integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> rd <span class="sy0">-</span> <span class="st0">'0'</span><span class="br0">)</span><span class="sy0">;</span>
+           <span class="br0">}</span>
+      <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> eval<span class="br0">(</span><span class="kw4">char</span> op<span class="sy0">,</span> <span class="kw4">int</span> op1<span class="sy0">,</span> <span class="kw4">int</span> op2<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">switch</span> <span class="br0">(</span>op<span class="br0">)</span>
+    <span class="br0">{</span>
+         <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">+</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">-</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">/</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">*</span> op2<span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p><b>Output of the program:</b></p>
+<p>Input entered at the command line: (((2 * 5) - (1 * 2) / (11 - 9)) <sup id="cite_ref-Gopal_3-0" class="reference"><a href="#cite_note-Gopal-3">[3]</a></sup></p>
+<h5><span class="mw-headline" id="Evaluation_of_Infix_Expression_which_is_not_fully_parenthesized">Evaluation of Infix Expression which is not fully parenthesized</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=12" title="Edit section: Evaluation of Infix Expression which is not fully parenthesized">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><b>Input:</b> (2 * 5 - 1 * 2) / (11 - 9)</p>
+<p><b>Output:</b> 4</p>
+<p><b>Analysis:</b> There are five types of input characters which are:</p>
+<pre>
+               * Opening brackets
+               * Numbers
+               * Operators
+               * Closing brackets
+               * New line character (\n)
+</pre>
+<p>We do not know what to do if an operator is read as an input character. By implementing the priority rule for operators, we have a solution to this problem.</p>
+<p>The <i>Priority rule</i> we should perform comparative priority check if an operator is read, and then push it. If the stack <i>top</i> contains an operator of prioirty higher than or equal to the priority of the input operator, then we <i>pop</i> it and print it. We keep on perforrming the prioirty check until the <i>top</i> of stack either contains an operator of lower priority or if it does not contain an operator.</p>
+<p><b>Data Structure Requirement for this problem:</b> A character stack and an integer stack</p>
+<p><b>Algorithm:</b></p>
+<pre>
+   1. Read an input character
+   2. Actions that will be performed at the end of each input
+      Opening brackets              (2.1)  <i>Push</i> it into stack and then Go to step (1)  
+      Digit                         (2.2)  <i>Push</i> into stack, Go to step (1)
+      Operator                      (2.3)  Do the comparative priority check
+                                    (2.3.1) if the character stack's <i>top</i> contains an operator with equal
+                                             or higher priority, then <i>pop</i> it into op
+                                             <i>Pop</i> a number from integer stack into op2
+                                             <i>Pop</i> another number from integer stack into op1
+                                           Calculate op1 op op2 and <i>push</i> the result into the integer
+                                           stack
+     Closing brackets              (2.4)  <i>Pop</i> from the character stack
+                                   (2.4.1) if it is an opening bracket, then discard it and Go to
+                                           step (1)
+                                   (2.4.2) To op, assign the popped element
+                                           <i>Pop</i> a number from integer stack and assign it op2
+                                           <i>Pop</i> another number from integer stack and assign it
+                                           to op1
+                                           Calculate <i>op1</i> <i>op</i> <i>op2</i> and push the result into the integer
+                                           stack
+                                           Convert into character and <i>push</i> into stack
+                                           Go to the step (2.4)
+    New line character            (2.5)  Print the result after popping from the stack
+                                         <i>STOP</i>
+</pre>
+<p><b>Result:</b> The evaluation of an infix expression that is not fully parenthesized is printed as follows:</p>
+<p><b>Input String:</b> (2 * 5 - 1 * 2) / (11 - 9)</p>
+<table class="wikitable sortable">
+<tr>
+<th>Input Symbol</th>
+<th>Character Stack (from bottom to top)</th>
+<th>Integer Stack (from bottom to top)</th>
+<th>Operation performed</th>
+</tr>
+<tr>
+<td>(</td>
+<td>(</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>(</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>( *</td>
+<td></td>
+<td><i>Push</i> as * has higher priority</td>
+</tr>
+<tr>
+<td>5</td>
+<td>( *</td>
+<td>2 5</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>( *</td>
+<td></td>
+<td>Since '-' has less priority, we do 2 * 5 = 10</td>
+</tr>
+<tr>
+<td></td>
+<td>( -</td>
+<td>10</td>
+<td>We push 10 and then push '-'</td>
+</tr>
+<tr>
+<td>1</td>
+<td>( -</td>
+<td>10 1</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>( - *</td>
+<td>10 1</td>
+<td>Push * as it has higher priority</td>
+</tr>
+<tr>
+<td>2</td>
+<td>( - *</td>
+<td>10 1 2</td>
+<td></td>
+</tr>
+<tr>
+<td>)</td>
+<td>( -</td>
+<td>10 2</td>
+<td>Perform 1 * 2 = 2 and push it</td>
+</tr>
+<tr>
+<td></td>
+<td>(</td>
+<td>8</td>
+<td>Pop - and 10 - 2 = 8 and push, Pop (</td>
+</tr>
+<tr>
+<td>/</td>
+<td>/</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>/ (</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>/ (</td>
+<td>8 11</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>/ ( -</td>
+<td>8 11</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>/ ( -</td>
+<td>8 11 9</td>
+<td></td>
+</tr>
+<tr>
+<td>)</td>
+<td>/</td>
+<td>8 2</td>
+<td>Perform 11 - 9 = 2 and push it</td>
+</tr>
+<tr>
+<td>New line</td>
+<td></td>
+<td>4</td>
+<td>Perform 8 / 2 = 4 and push it</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4</td>
+<td>Print the output, which is 4</td>
+</tr>
+</table>
+<p><b>C Program</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> main <span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">*</span>argv<span class="br0">[</span><span class="br0">]</span><span class="br0">)</span>
+<span class="br0">{</span>
+     <span class="kw4">struct</span> ch <span class="sy0">*</span>charactop<span class="sy0">;</span>
+     <span class="kw4">struct</span> integer <span class="sy0">*</span>integertop<span class="sy0">;</span>
+     <span class="kw4">char</span> rd<span class="sy0">,</span> op<span class="sy0">;</span>
+     <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="sy0">;</span>
+     charactop <span class="sy0">=</span> cclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     integertop <span class="sy0">=</span> iclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     <span class="kw1">while</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>
+     <span class="br0">{</span>
+         rd <span class="sy0">=</span> argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span>i<span class="sy0">++</span><span class="br0">]</span><span class="sy0">;</span>
+         <span class="kw1">switch</span><span class="br0">(</span>rd<span class="br0">)</span>
+         <span class="br0">{</span>
+             <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span>
+             <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span> <span class="kw1">while</span> <span class="br0">(</span><span class="br0">(</span>charactop<span class="sy0">-&gt;</span>data <span class="sy0">!=</span> <span class="st0">'('</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> <span class="br0">(</span><span class="sy0">!</span>cemptystack<span class="br0">(</span>charactop<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+                       <span class="br0">{</span>
+                            <span class="kw1">if</span><span class="br0">(</span>priority<span class="br0">(</span>rd<span class="br0">)</span> <span class="sy0">&gt;</span> <span class="br0">(</span>priority<span class="br0">(</span>charactop<span class="sy0">-&gt;</span>data<span class="br0">)</span><span class="br0">)</span>
+                                <span class="kw2">break</span><span class="sy0">;</span>
+                            <span class="kw1">else</span>
+                            <span class="br0">{</span>
+                                charactop <span class="sy0">=</span> cpop<span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                                integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                                integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                                integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="sy0">;</span>
+                            <span class="br0">}</span>
+                       <span class="br0">}</span>
+                       charactop <span class="sy0">=</span> cpush<span class="br0">(</span>charactop<span class="sy0">,</span> rd<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw2">break</span><span class="sy0">;</span>
+             <span class="kw1">case</span> <span class="st0">'('</span><span class="sy0">:</span> charactop <span class="sy0">=</span> cpush<span class="br0">(</span>charactop<span class="sy0">,</span> rd<span class="br0">)</span><span class="sy0">;</span>
+             <span class="kw2">break</span><span class="sy0">;</span>
+             <span class="kw1">case</span> <span class="st0">')'</span><span class="sy0">:</span> integertop <span class="sy0">=</span> ipop <span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                       integertop <span class="sy0">=</span> ipop <span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                       charactop <span class="sy0">=</span> cpop <span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw1">while</span><span class="br0">(</span>op <span class="sy0">!=</span> <span class="st0">'('</span><span class="br0">)</span>
+                       <span class="br0">{</span>
+                           integertop <span class="sy0">=</span> ipush <span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="sy0">;</span>
+                           charactop <span class="sy0">=</span> cpop <span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                           <span class="kw1">if</span> <span class="br0">(</span>op <span class="sy0">!=</span> <span class="st0">'('</span><span class="br0">)</span>
+                           <span class="br0">{</span>
+                               integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                               integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                           <span class="br0">}</span>
+                       <span class="br0">}</span>
+                       <span class="kw2">break</span><span class="sy0">;</span>
+            <span class="kw1">case</span> <span class="st0">'<span class="es5">\0</span>'</span><span class="sy0">:</span> <span class="kw1">while</span> <span class="br0">(</span><span class="sy0">!=</span> cemptystack<span class="br0">(</span>charactop<span class="br0">)</span><span class="br0">)</span>
+                       <span class="br0">{</span>
+                           charactop <span class="sy0">=</span> cpop<span class="br0">(</span>charactop<span class="sy0">,</span> <span class="sy0">&amp;</span>op<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                           integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="br0">}</span>
+                       integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"<span class="es1">\n</span> The final solution is: %d"</span><span class="sy0">,</span> op1<span class="br0">)</span><span class="sy0">;</span>
+                       <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+           <span class="kw1">default</span><span class="sy0">:</span> integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> rd <span class="sy0">-</span> <span class="st0">'0'</span><span class="br0">)</span><span class="sy0">;</span>
+           <span class="br0">}</span>
+      <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> eval<span class="br0">(</span><span class="kw4">char</span> op<span class="sy0">,</span> <span class="kw4">int</span> op1<span class="sy0">,</span> <span class="kw4">int</span> op2<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">switch</span> <span class="br0">(</span>op<span class="br0">)</span>
+    <span class="br0">{</span>
+         <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">+</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">-</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">/</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">*</span> op2<span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> priority <span class="br0">(</span><span class="kw4">char</span> op<span class="br0">)</span>
+<span class="br0">{</span>
+   <span class="kw1">switch</span><span class="br0">(</span>op<span class="br0">)</span>
+  <span class="br0">{</span>
+      <span class="kw1">case</span> <span class="st0">'^'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'$'</span><span class="sy0">:</span>  <span class="kw1">return</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span>  <span class="kw1">return</span> <span class="nu0">2</span><span class="sy0">;</span>
+      <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span> <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p><b>Output of the program:</b></p>
+<p><i>Input entered at the command line:</i> (2 * 5 - 1 * 2) / (11 - 9)</p>
+<p><i>Output:</i> 4 <sup id="cite_ref-Gopal_3-1" class="reference"><a href="#cite_note-Gopal-3">[3]</a></sup></p>
+<h5><span class="mw-headline" id="Evaluation_of_Prefix_Expression">Evaluation of Prefix Expression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=13" title="Edit section: Evaluation of Prefix Expression">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><b>Input:</b> x + 6 * ( y + z ) ^ 3</p>
+<p><br />
+<i>Output:'</i> 4</p>
+<p><b>Analysis:</b> There are three types of input characters</p>
+<pre>
+               * Numbers
+               * Operators
+               * New line character (\n)
+</pre>
+<p><b>Data structure requirement:</b> A character stack and an integer stack</p>
+<p><b>Algorithm:</b></p>
+<pre>
+   1. Read one character input at a time and keep pushing it into the character stack until the new
+      line character is reached
+   2. Perform <i>pop</i> from the character stack. If the stack is empty, go to step (3)
+      Number                        (2.1) <i>Push</i> in to the integer stack and then go to step (1) 
+      Operator                      (2.2)  Assign the operator to op
+                                           <i>Pop</i> a number from  integer stack and assign it to op1
+                                           <i>Pop</i> another number from integer stack
+                                           and assign it to op2                               
+                                           Calculate op1 op op2 and push the output into the integer
+                                           stack. Go to step (2)                                       
+   3. <i>Pop</i> the result from the integer stack and display the result
+                       
+</pre>
+<p><b>Result:</b> The evaluation of prefix expression is printed as follows:</p>
+<p><b>Input String:</b> / - * 2 5 * 1 2 - 11 9</p>
+<table class="wikitable sortable">
+<tr>
+<th>Input Symbol</th>
+<th>Character Stack (from bottom to top)</th>
+<th>Integer Stack (from bottom to top)</th>
+<th>Operation performed</th>
+</tr>
+<tr>
+<td>/</td>
+<td>/</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>/</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>/ - *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>/ - * 2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>/ - * 2 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>/ - * 2 5 *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>/ - * 2 5 * 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>/ - * 2 5 * 1 2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>/ - * 2 5 * 1 2 -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>/ - * 2 5 * 1 2 - 11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>/ - * 2 5 * 1 2 - 11 9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>\n</td>
+<td>/ - * 2 5 * 1 2 - 11</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2 5 * 1 2 -</td>
+<td>9 11</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2 5 * 1 2</td>
+<td>2</td>
+<td>11 - 9 = 2</td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2 5 * 1</td>
+<td>2 2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2 5 *</td>
+<td>2 2 1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2 5</td>
+<td>2 2</td>
+<td>1 * 2 = 2</td>
+</tr>
+<tr>
+<td></td>
+<td>/ - * 2</td>
+<td>2 2 5</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ - *</td>
+<td>2 2 5 2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/ -</td>
+<td>2 2 10</td>
+<td>5 * 2 = 10</td>
+</tr>
+<tr>
+<td></td>
+<td>/</td>
+<td>2 8</td>
+<td>10 - 2 = 8</td>
+</tr>
+<tr>
+<td></td>
+<td>Stack is empty</td>
+<td>4</td>
+<td>8 / 2 = 4</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Stack is empty</td>
+<td>Print 4</td>
+</tr>
+</table>
+<p><b>C Program</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> main <span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">*</span>argv<span class="br0">[</span><span class="br0">]</span><span class="br0">)</span>
+<span class="br0">{</span>
+     <span class="kw4">struct</span> ch <span class="sy0">*</span>charactop <span class="sy0">=</span> NULL<span class="sy0">;</span>
+     <span class="kw4">struct</span> integer <span class="sy0">*</span>integertop <span class="sy0">=</span> NULL<span class="sy0">;</span>
+     <span class="kw4">char</span> rd<span class="sy0">,</span> op<span class="sy0">;</span>
+     <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="sy0">;</span>
+     charactop <span class="sy0">=</span> cclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     integertop <span class="sy0">=</span> iclearstack<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+     rd <span class="sy0">=</span> argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span>i<span class="br0">]</span><span class="sy0">;</span>
+     <span class="kw1">while</span><span class="br0">(</span>rd <span class="sy0">!=</span> <span class="st0">'<span class="es5">\0</span>'</span><span class="br0">)</span>
+     <span class="br0">{</span>
+         charactop <span class="sy0">=</span> cpush<span class="br0">(</span>charactop<span class="sy0">,</span> rd<span class="br0">)</span><span class="sy0">;</span>
+         rd <span class="sy0">=</span> argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">[</span>i<span class="sy0">++</span><span class="br0">]</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">while</span><span class="br0">(</span><span class="sy0">!</span>emptystack<span class="br0">(</span>charactop<span class="br0">)</span><span class="br0">)</span>
+      <span class="br0">{</span>
+           charactop <span class="sy0">=</span> cpop<span class="br0">(</span>charactop<span class="sy0">,</span> rd<span class="br0">)</span><span class="sy0">;</span>
+           <span class="kw1">switch</span><span class="br0">(</span>rd<span class="br0">)</span>
+           <span class="br0">{</span>
+              <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span>
+              <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span>
+              <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span>
+              <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span> 
+                            op <span class="sy0">=</span> rd<span class="sy0">;</span>
+                            integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op2<span class="br0">)</span><span class="sy0">;</span>
+                            integertop <span class="sy0">=</span> ipop<span class="br0">(</span>integertop<span class="sy0">,</span> <span class="sy0">&amp;</span>op1<span class="br0">)</span><span class="sy0">;</span>
+                            integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> eval<span class="br0">(</span>op<span class="sy0">,</span> op1<span class="sy0">,</span> op2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+              <span class="kw2">break</span><span class="sy0">;</span>
+ 
+              <span class="kw1">default</span><span class="sy0">:</span>      integertop <span class="sy0">=</span> ipush<span class="br0">(</span>integertop<span class="sy0">,</span> rd <span class="sy0">-</span> <span class="st0">'0'</span><span class="br0">)</span><span class="sy0">;</span>
+           <span class="br0">}</span>
+       <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> eval<span class="br0">(</span><span class="kw4">char</span> op<span class="sy0">,</span> <span class="kw4">int</span> op1<span class="sy0">,</span> <span class="kw4">int</span> op2<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">switch</span> <span class="br0">(</span>op<span class="br0">)</span>
+    <span class="br0">{</span>
+         <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">+</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">-</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">/</span> op2<span class="sy0">;</span>
+         <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span> <span class="kw1">return</span> op1 <span class="sy0">*</span> op2<span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> priority <span class="br0">(</span><span class="kw4">char</span> op<span class="br0">)</span>
+<span class="br0">{</span>
+   <span class="kw1">switch</span><span class="br0">(</span>op<span class="br0">)</span>
+  <span class="br0">{</span>
+      <span class="kw1">case</span> <span class="st0">'^'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'$'</span><span class="sy0">:</span>  <span class="kw1">return</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">case</span> <span class="st0">'*'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'/'</span><span class="sy0">:</span>  <span class="kw1">return</span> <span class="nu0">2</span><span class="sy0">;</span>
+      <span class="kw1">case</span> <span class="st0">'+'</span><span class="sy0">:</span>
+      <span class="kw1">case</span> <span class="st0">'-'</span><span class="sy0">:</span> <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p><b>Output of the program:</b></p>
+<p>Input entered at the command line: / - * 2 5 * 1 2 - 11 9</p>
+<p>Output: 4 <sup id="cite_ref-Gopal_3-2" class="reference"><a href="#cite_note-Gopal-3">[3]</a></sup></p>
+<h4><span class="mw-headline" id="Conversion_of_an_Infix_expression_that_is_fully_parenthesized_into_a_Postfix_expression">Conversion of an Infix expression that is fully parenthesized into a Postfix expression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=14" title="Edit section: Conversion of an Infix expression that is fully parenthesized into a Postfix expression">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><b>Input:</b> (((8 + 1) - (7 - 4)) / (11 - 9))</p>
+<p><b>Output:</b> 8 1 + 7 4 - - 11 9 - /</p>
+<p><b>Analysis:</b> There are five types of input characters which are:</p>
+<pre>
+               * Opening brackets
+               * Numbers
+               * Operators
+               * Closing brackets
+               * New line character (\n)
+</pre>
+<p><b>Requirement:</b> A character stack</p>
+<p><b>Algorithm:</b></p>
+<pre>
+   1. Read an character input
+   2. Actions to be performed at end of each input
+     Opening brackets              (2.1)  <i>Push</i> into stack and then Go to step (1)
+     Number                        (2.2)  Print and then Go to step (1)
+     Operator                      (2.3)  <i>Push</i> into stack and then Go to step (1)
+     Closing brackets              (2.4)  <i>Pop</i> it from the stack
+                                   (2.4.1) If it is an operator, print it, Go to step (1)
+                                   (2.4.2) If the popped element is an opening bracket,
+                                           discard it and go to step (1)           
+     New line character            (2.5)  <i>STOP</i>
+</pre>
+<p>Therefore, the final output after conversion of an infix expression to a postfix expression is as follows:</p>
+<p><br /></p>
+<table class="wikitable sortable">
+<tr>
+<th>Input</th>
+<th>Operation</th>
+<th>Stack (after op)</th>
+<th>Output on monitor</th>
+</tr>
+<tr>
+<td>(</td>
+<td>(2.1) Push operand into stack</td>
+<td>(</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>(2.1) Push operand into stack</td>
+<td>( (</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>(2.1) Push operand into stack</td>
+<td>( ( (</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8</td>
+</tr>
+<tr>
+<td>+</td>
+<td>(2.3) Push operator into stack</td>
+<td>( ( ( +</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8 1</td>
+</tr>
+<tr>
+<td>)</td>
+<td>(2.4) Pop from the stack: Since popped element is '+' print it</td>
+<td>( ( (</td>
+<td>8 1 +</td>
+</tr>
+<tr>
+<td></td>
+<td>(2.4) Pop from the stack: Since popped element is '(' we ignore it and read next character</td>
+<td>( (</td>
+<td>8 1 +</td>
+</tr>
+<tr>
+<td>-</td>
+<td>(2.3) Push operator into stack</td>
+<td>( ( -</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>(2.1) Push operand into stack</td>
+<td>( ( - (</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8 1 + 7</td>
+</tr>
+<tr>
+<td>-</td>
+<td>(2.3) Push the operator in the stack</td>
+<td>( ( - ( -</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8 1 + 7 4</td>
+</tr>
+<tr>
+<td>)</td>
+<td>(2.4) Pop from the stack: Since popped element is '-' print it</td>
+<td>( ( - (</td>
+<td>8 1 + 7 4 -</td>
+</tr>
+<tr>
+<td></td>
+<td>(2.4) Pop from the stack: Since popped element is '(' we ignore it and read next character</td>
+<td>( ( -</td>
+</tr>
+<tr>
+<td>)</td>
+<td>(2.4) Pop from the stack: Since popped element is '-' print it</td>
+<td>( (</td>
+<td>8 1 + 7 4 - -</td>
+</tr>
+<tr>
+<td></td>
+<td>(2.4) Pop from the stack: Since popped element is '(' we ignore it and read next character</td>
+<td>(</td>
+<td></td>
+</tr>
+<tr>
+<td>/</td>
+<td>(2.3) Push the operand into the stack</td>
+<td>( /</td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>(2.1) Push into the stack</td>
+<td>( / (</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8 1 + 7 4 - - 11</td>
+</tr>
+<tr>
+<td>-</td>
+<td>(2.3) Push the operand into the stack</td>
+<td>( / ( -</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>(2.2) Print it</td>
+<td></td>
+<td>8 1 + 7 4 - - 11 9</td>
+</tr>
+<tr>
+<td>)</td>
+<td>(2.4) Pop from the stack: Since popped element is '-' print it</td>
+<td>( / (</td>
+<td>8 1 + 7 4 - - 11 9 -</td>
+</tr>
+<tr>
+<td></td>
+<td>(2.4) Pop from the stack: Since popped element is '(' we ignore it and read next character</td>
+<td>( /</td>
+<td></td>
+</tr>
+<tr>
+<td>)</td>
+<td>(2.4) Pop from the stack: Since popped element is '/' print it</td>
+<td>(</td>
+<td>8 1 + 7 4 - - 11 9 - /</td>
+</tr>
+<tr>
+<td></td>
+<td>(2.4) Pop from the stack: Since popped element is '(' we ignore it and read next character</td>
+<td>Stack is empty</td>
+<td></td>
+</tr>
+<tr>
+<td>New line character</td>
+<td>(2.5) STOP</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<h4><span class="mw-headline" id="Rearranging_railroad_cars">Rearranging railroad cars</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=15" title="Edit section: Rearranging railroad cars">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h5><span class="mw-headline" id="Problem_Description">Problem Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=16" title="Edit section: Problem Description">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>It's a very nice application of stacks. Consider that a freight train has <i><b>n</b></i> railroad cars. Each to be left at different station. They're numbered 1 through n &amp; freight train visits these stations in order n through 1. Obviously, the railroad cars are labeled by their destination.To facilitate removal of the cars from the train, we must rearrange them in ascending order of their number(i.e. 1 through n). When cars are in this order , they can be detached at each station. We rearrange cars at a shunting yard that has <i><b>input track</b></i>, <i><b>output track</b></i> &amp; <i><b>k</b></i> holding tracks between input &amp; output tracks(i.e. <i><b>holding track</b></i>).</p>
+<h5><span class="mw-headline" id="Solution_Strategy">Solution Strategy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=17" title="Edit section: Solution Strategy">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>To rearrange cars, we examine the cars on the the input from front to back. If the car being examined is next one in the output arrangement , we move it directly to <i><b>output track</b></i>. If not , we move it to the <i><b>holding track</b></i> &amp; leave it there until it's time to place it to the <i><b>output track</b></i>. The holding tracks operate in a LIFO manner as the cars enter &amp; leave these tracks from top. When rearranging cars only following moves are permitted:</p>
+<ul>
+<li>A car may be moved from front (i.e. right end) of the input track to the top of one of the <i><b>holding tracks</b></i> or to the left end of the output track.</li>
+<li>A car may be moved from the top of <i><b>holding track</b></i> to left end of the <i><b>output track</b></i>.</li>
+</ul>
+<p>The figure shows a shunting yard with <i><b>k</b></i> = 3, holding tracks <i><b>H1</b></i>, <i><b>H2</b></i> &amp; <i><b>H3</b></i>, also <i><b>n</b></i> = 9. The <i><b>n</b></i> cars of freight train begin in the input track &amp; are to end up in the output track in order 1 through <i><b>n</b></i> from right to left. The cars initially are in the order 5,8,1,7,4,2,9,6,3 from back to front. Later cars are rearranged in desired order.</p>
+<h5><span class="mw-headline" id="A_Three_Track_Example">A Three Track Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=18" title="Edit section: A Three Track Example">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Railroadcars2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Railroadcars2.png/220px-Railroadcars2.png" width="220" height="486" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Railroadcars2.png/330px-Railroadcars2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Railroadcars2.png/440px-Railroadcars2.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Railroadcars2.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Railroad cars example</div>
+</div>
+</div>
+<ul>
+<li>Consider the input arrangement from figure , here we note that the car 3 is at the front, so it can't be output yet, as it to be preceded by cars 1 &amp; 2. So car 3 is detached &amp; moved to holding track <i><b>H1</b></i>.</li>
+<li>The next car 6 can't be output &amp; it is moved to holding track <i><b>H2</b></i>. Because we have to output car 3 before car 6 &amp; this will not possible if we move car 6 to holding track <i><b>H1</b></i>.</li>
+<li>Now it's obvious that we move car 9 to <i><b>H3</b></i>.</li>
+</ul>
+<p>The requirement of rearrangement of cars on any holding track is that the cars should be preferred to arrange in ascending order from top to bottom.</p>
+<ul>
+<li>So car 2 is now moved to holding track H1 so that it satisfies the previous statement. If we move car 2 to H2 or H3, then we've no place to move cars 4,5,7,8.<i><b>The least restrictions on future car placement arise when the new car λ is moved to the holding track that has a car at its top with smallest label Ψ such that λ &lt; Ψ. We may call it an assignment rule to decide whether a particular car belongs to a specific holding track.</b></i></li>
+<li>When car 4 is considered, there are three places to move the car H1,H2,H3. The top of these tracks are 2,6,9.So using above mentioned Assignment rule, we move car 4 to H2.</li>
+<li>The car 7 is moved to H3.</li>
+<li>The next car 1 has the least label, so it's moved to output track.</li>
+<li>Now it's time for car 2 &amp; 3 to output which are from H1(in short all the cars from H1 are appended to car 1 on output track).</li>
+</ul>
+<p>The car 4 is moved to output track. No other cars can be moved to output track at this time.</p>
+<ul>
+<li>The next car 8 is moved to holding track H1.</li>
+<li>Car 5 is output from input track. Car 6 is moved to output track from H2, so is the 7 from H3,8 from H1 &amp; 9 from H3.</li>
+</ul>
+<p><br /></p>
+<h4><span class="mw-headline" id="Quicksort">Quicksort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=19" title="Edit section: Quicksort">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Sorting means arranging a group of elements in a particular order. Be it ascending or descending, by cardinality or alphabetical order or variations thereof. The resulting ordering possibilities will only be limited by the type of the source elements.</p>
+<p>Quicksort is an algorithm of the <i>divide and conquer</i> type. In this method, to sort a set of numbers, we reduce it to two smaller sets, and then sort these smaller sets.</p>
+<p>This can be explained with the help of the following example:</p>
+<p>Suppose <b>A</b> is a list of the following numbers:</p>
+<p><a href="/wiki/File:Quicksort1.pdf" class="image"><img alt="Quicksort1.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Quicksort1.pdf/page1-500px-Quicksort1.pdf.jpg" width="500" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Quicksort1.pdf/page1-750px-Quicksort1.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Quicksort1.pdf/page1-1000px-Quicksort1.pdf.jpg 2x" /></a></p>
+<p>In the reduction step, we find the final position of one of the numbers. In this case, let us assume that we have to find the final position of 48, which is the first number in the list.</p>
+<p>To accomplish this, we adopt the following method. Begin with the last number, and move from right to left. Compare each number with 48. If the number is smaller than 48, we stop at that number and swap it with 48.</p>
+<p><br />
+In our case, the number is 24. Hence, we swap 24 and 48.</p>
+<p><a href="/wiki/File:Quicksort2.pdf" class="image"><img alt="Quicksort2.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Quicksort2.pdf/page1-500px-Quicksort2.pdf.jpg" width="500" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Quicksort2.pdf/page1-750px-Quicksort2.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Quicksort2.pdf/page1-1000px-Quicksort2.pdf.jpg 2x" /></a></p>
+<p>The numbers 96 and 72 to the right of 48, are greater than 48. Now beginning with 24, scan the numbers in the opposite direction, that is from left to right. Compare every number with 48 until you find a number that is greater than 48.</p>
+<p>In this case, it is 60. Therefore we swap 48 and 60.</p>
+<p><a href="/wiki/File:Quicksort3.pdf" class="image"><img alt="Quicksort3.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Quicksort3.pdf/page1-500px-Quicksort3.pdf.jpg" width="500" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Quicksort3.pdf/page1-750px-Quicksort3.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/15/Quicksort3.pdf/page1-1000px-Quicksort3.pdf.jpg 2x" /></a></p>
+<p>Note that the numbers 12, 24 and 36 to the left of 48 are all smaller than 48. Now, start scanning numbers from 60, in the right to left direction. As soon as you find lesser number, swap it with 48.</p>
+<p>In this case, it is 44. Swap it with 48. The final result is:</p>
+<p><a href="/wiki/File:Quicksort4.pdf" class="image"><img alt="Quicksort4.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Quicksort4.pdf/page1-500px-Quicksort4.pdf.jpg" width="500" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Quicksort4.pdf/page1-750px-Quicksort4.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Quicksort4.pdf/page1-1000px-Quicksort4.pdf.jpg 2x" /></a></p>
+<p>Now, beginning with 44, scan the list from left to right, until you find a number greater than 48.</p>
+<p>Such a number is 84. Swap it with 48. The final result is:</p>
+<p><a href="/wiki/File:Quicksort5.pdf" class="image"><img alt="Quicksort5.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Quicksort5.pdf/page1-500px-Quicksort5.pdf.jpg" width="500" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Quicksort5.pdf/page1-750px-Quicksort5.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/30/Quicksort5.pdf/page1-1000px-Quicksort5.pdf.jpg 2x" /></a></p>
+<p>Now, beginning with 84, traverse the list from right to left, until you reach a number lesser than 48. We do not find such a number before reaching 48. This means that all the numbers in the list have been scanned and compared with 48. Also, we notice that all numbers less than 48 are to the left of it, and all numbers greater than 48, are to it's right.</p>
+<p>The final partitions look as follows:</p>
+<p><a href="/wiki/File:Quicksort6.pdf" class="image"><img alt="Quicksort6.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Quicksort6.pdf/page1-500px-Quicksort6.pdf.jpg" width="500" height="132" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Quicksort6.pdf/page1-750px-Quicksort6.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Quicksort6.pdf/page1-1000px-Quicksort6.pdf.jpg 2x" /></a></p>
+<p>Therefore, 48 has been placed in it's proper position and now our task is reduced to sorting the two partitions. This above step of creating partitions can be repeated with every partition containing 2 or more elements. As we can process only a single partition at a time, we should be able to keep track of the other partitions, for future processing.</p>
+<p>This is done by using two <b>stacks</b> called LOWERBOUND and UPPERBOUND, to temporarily store these partitions. The addresses of the first and last elements of the partitions are pushed into the LOWERBOUND and UPPERBOUND stacks respectively. Now, the above reduction step is applied to the partitions only after it's boundary values are <i>popped</i> from the stack.</p>
+<p>We can understand this from the following example:</p>
+<p>Take the above list A with 12 elements. The algorithm starts by pushing the boundary values of A, that is 1 and 12 into the LOWERBOUND and UPPERBOUND stacks respectively. Therefore the stacks look as follows:</p>
+<pre>
+    LOWERBOUND:  1                   UPPERBOUND:  12
+</pre>
+<p>To perform the reduction step, the values of the stack top are popped from the stack. Therefore, both the stacks become empty.</p>
+<pre>
+    LOWERBOUND:  {empty}                UPPERBOUND: {empty}
+</pre>
+<p>Now, the reduction step causes 48 to be fixed to the 5th position and creates two partitions, one from position 1 to 4 and the other from position 6 to 12. Hence, the values 1 and 6 are pushed into the LOWERBOUND stack and 4 and 12 are pushed into the UPPERBOUND stack.</p>
+<pre>
+    LOWERBOUND:  1, 6                   UPPERBOUND: 4, 12
+</pre>
+<p>For applying the reduction step again, the values at the stack top are popped. Therefore, the values 6 and 12 are popped. Therefore the stacks look like:</p>
+<pre>
+    LOWERBOUND:  1                      UPPERBOUND: 4
+</pre>
+<p>The reduction step is now applied to the second partition, that is from the 6th to 12th element.</p>
+<p><a href="/wiki/File:Quicksort7.pdf" class="image"><img alt="Quicksort7.pdf" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Quicksort7.pdf/page1-500px-Quicksort7.pdf.jpg" width="500" height="270" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Quicksort7.pdf/page1-750px-Quicksort7.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/55/Quicksort7.pdf/page1-1000px-Quicksort7.pdf.jpg 2x" /></a></p>
+<p>After the reduction step, 98 is fixed in the 11th position. So, the second partition has only one element. Therefore, we push the upper and lower boundary values of the first partition onto the stack. So, the stacks are as follows:</p>
+<pre>
+    LOWERBOUND:  1, 6                   UPPERBOUND:  4, 10
+</pre>
+<p>The processing proceeds in the following way and ends when the stacks do not contain any upper and lower bounds of the partition to be processed, and the list gets sorted.</p>
+<h4><span class="mw-headline" id="The_Stock_Span_Problem">The Stock Span Problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=20" title="Edit section: The Stock Span Problem">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright">
+<div class="thumbinner" style="width:327px;"><a href="/wiki/File:Stockspan.pdf" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stockspan.pdf/page1-325px-Stockspan.pdf.jpg" width="325" height="162" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stockspan.pdf/page1-488px-Stockspan.pdf.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/33/Stockspan.pdf/page1-650px-Stockspan.pdf.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Stockspan.pdf" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The Stockspan Problem</div>
+</div>
+</div>
+<p>In the stock span problem, we will solve a financial problem with the help of stacks.</p>
+<p>Suppose, for a stock, we have a series of <i>n</i> daily price quotes, the <i>span</i> of the stock's price on a particular day is defined as the maximum number of consecutive days for which the price of the stock on the current day is less than or equal to its price on that day.</p>
+<h5><span class="mw-headline" id="An_algorithm_which_has_Quadratic_Time_Complexity">An algorithm which has Quadratic Time Complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=21" title="Edit section: An algorithm which has Quadratic Time Complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><b>Input:</b> An array <i>P</i> with <i>n</i> elements</p>
+<p><b>Output:</b> An array <i>S</i> of <i>n</i> elements such that P[i] is the largest integer k such that k &lt;= i + 1 and P[y] &lt;= P[i] for j = i - k + 1,.....,i</p>
+<p><b>Algorithm:</b></p>
+<pre>
+       1. Initialize an array P which contains the daily prices of the stocks
+       2. Initialize an array S which will store the span of the stock
+       3. <b>for</b> i = 0 to i = n - 1
+               3.1 Initialize k to zero
+               3.2 Done with a <i>false</i> condition
+               3.3 <b>repeat</b>
+                     3.3.1 if ( P[i - k] &lt;= P[i)] then
+                               Increment k by 1
+                     3.3.2 else
+                               Done with <i>true</i> condition
+               3.4 Till (k &gt; i) or done with processing
+                     Assign value of k to S[i] to get the span of the stock
+       4. Return array S
+</pre>
+<p>Now, analyzing this algorithm for running time, we observe:</p>
+<ul>
+<li>We have initialized the array S at the beginning and returned it at the end. This is a constant time operation, hence takes <i>O</i>(n) time</li>
+</ul>
+<ul>
+<li>The <i>repeat</i> loop is nested within the <i>for</i> loop. The <i>for</i> loop, whose counter is <i>i</i> is executed n times. The statements which are not in the repeat loop, but in the for loop are executed <i>n</i> times. Therefore these statements and the incrementing and condition testing of i take <i>O</i>(n) time.</li>
+</ul>
+<ul>
+<li>In repetition of i for the outer for loop, the body of the inner <i>repeat</i> loop is executed maximum i + 1 times. In the worst case, element S[i] is greater than all the previous elements. So, testing for the if condition, the statement after that, as well as testing the until condition, will be performed i + 1 times during iteration i for the outer for loop. Hence, the total time taken by the inner loop is <i>O</i>(n(n + 1)/2), which is <i>O</i>(<img class="tex" alt="n^2 " src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />)</li>
+</ul>
+<p>The running time of all these steps is calculated by adding the time taken by all these three steps. The first two terms are <i>O</i>(<img class="tex" alt=" n " src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />) while the last term is <i>O</i>(<img class="tex" alt="n^2 " src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />). Therefore the total running time of the algorithm is <i>O</i>(<img class="tex" alt="n^2 " src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" />).</p>
+<h5><span class="mw-headline" id="An_algorithm_that_has_Linear_Time_Complexity">An algorithm that has Linear Time Complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=22" title="Edit section: An algorithm that has Linear Time Complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>In order to calculate the span more efficiently, we see that the span on a particular day can be easily calculated if we know the closest day before <i>i</i> , such that the price of the stocks on that day was higher than the price of the stocks on the present day. If there exists such a day, we can represent it by h(i) and initialize h(i) to be -1.</p>
+<p>Therefore the span of a particular day is given by the formula, s = i - h(i).</p>
+<p>To implement this logic, we use a stack as an abstract data type to store the days i, h(i), h(h(i)) and so on. When we go from day i-1 to i, we pop the days when the price of the stock was less than or equal to p(i) and then push the value of day <i>i</i> back into the stack.</p>
+<p>Here, we assume that the stack is implemented by operations that take <i>O</i>(1) that is constant time. The algorithm is as follows:</p>
+<p><b>Input:</b> An array P with <i>n</i> elements and an empty stack N</p>
+<p><b>Output:</b> An array <i>S</i> of <i>n</i> elements such that P[i] is the largest integer k such that k &lt;= i + 1 and P[y] &lt;= P[i] for j = i - k + 1,.....,i</p>
+<p><b>Algorithm:</b></p>
+<pre>
+       1. Initialize an array P which contains the daily prices of the stocks
+       2. Initialize an array S which will store the span of the stock
+       3. <b>for</b> i = 0 to i = n - 1
+               3.1 Initialize k to zero
+               3.2 Done with a <i>false</i> condition
+               3.3 <b>while not</b> (Stack N is empty or done with processing)
+                     3.3.1 if ( P[i] &gt;= P[N.top())] then
+                               Pop a value from stack N
+                     3.3.2 else
+                               Done with <i>true</i> condition
+               3.4 if Stack N is empty
+                        3.4.1 Initialize h to -1
+               3.5 else
+                        3.5.1 Initialize stack top to h
+                        3.5.2 Put the value of h - i in S[i]
+                        3.5.3 Push the value of i in N 
+       4. Return array S
+</pre>
+<p>Now, analyzing this algorithm for running time, we observe:</p>
+<ul>
+<li>We have initialized the array S at the beginning and returned it at the end. This is a constant time operation, hence takes <i>O</i>(n) time</li>
+</ul>
+<ul>
+<li>The <i>while</i> loop is nested within the <i>for</i> loop. The <i>for</i> loop, whose counter is <i>i</i> is executed n times. The statements which are not in the repeat loop, but in the for loop are executed <i>n</i> times. Therefore these statements and the incrementing and condition testing of i take <i>O</i>(n) time.</li>
+</ul>
+<ul>
+<li>Now, observe the inner while loop during <i>i</i> repetitions of the for loop. The statement <i>done with a true condition</i> is done at most once, since it causes an exit from the loop. Let us say that t(i) is the number of times statement <i>Pop a value from stack N</i> is executed. So it becomes clear that <i>while not (Stack N is empty or done with processing)</i> is tested maximum t(i) + 1 times.</li>
+</ul>
+<ul>
+<li>Adding the running time of all the operations in the while loop, we get:</li>
+</ul>
+<p><br /></p>
+<dl>
+<dd><img class="tex" alt="\sum_{i=0}^{n-1}t(i) +  1" src="//upload.wikimedia.org/math/2/8/a/28a6e52ddd01f1a1bfb11dd97b5aa26a.png" /></dd>
+</dl>
+<ul>
+<li>An element once popped from the stack N is never pushed back into it. Therefore,</li>
+</ul>
+<p><br /></p>
+<dl>
+<dd><img class="tex" alt="\sum_{i=1}^{n-1}t(i)" src="//upload.wikimedia.org/math/1/4/2/14215870cc4d0596009a903b89234f78.png" /></dd>
+</dl>
+<p>So, the running time of all the statements in the while loop is <i>O</i>(<img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />)</p>
+<p>The running time of all the steps in the algorithm is calculated by adding the time taken by all these steps. The run time of each step is <i>O</i>(<img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />). Hence the running time complexity of this algorithm is <i>O</i>(<img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />).</p>
+<h3><span class="mw-headline" id="Related_Links">Related Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=23" title="Edit section: Related Links">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="//en.wikipedia.org/wiki/Stack_(data_structure)" class="extiw" title="wikipedia:Stack (data structure)">Stack (Wikipedia)</a></li>
+</ul>
+<h3><span class="mw-headline" id="Queues">Queues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=24" title="Edit section: Queues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A queue is a basic data structure that is used throughout programming. You can think of it as a line in a grocery store. The first one in the line is the first one to be served.Just like a queue.</p>
+<p>A queue is also called a FIFO (First In First Out) to demonstrate the way it accesses data.</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Queue&lt;item-type&gt; Operations">
+<p><b><code>Queue&lt;item-type&gt;</code> Operations</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>enqueue</b>(<var>new-item</var>:item-type)</code></dt>
+<dd>Adds an item onto the end of the queue.</dd>
+<dt style="font-weight:normal"><code><b>front</b>():item-type</code></dt>
+<dd>Returns the item at the front of the queue.</dd>
+<dt style="font-weight:normal"><code><b>dequeue</b>()</code></dt>
+<dd>Removes the item from the front of the queue.</dd>
+<dt style="font-weight:normal"><code><b>is-empty</b>():Boolean</code></dt>
+<dd>True if no more items can be dequeued and there is no front item.</dd>
+<dt style="font-weight:normal"><code><b>is-full</b>():Boolean</code></dt>
+<dd>True if no more items can be enqueued.</dd>
+<dt style="font-weight:normal"><code><b>get-size</b>():Integer</code></dt>
+<dd>Returns the number of elements in the queue.</dd>
+</dl>
+<p>All operations except <code>get-size()</code> can be performed in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time. <code>get-size()</code> runs in at worst <img class="tex" alt="O(N)." src="//upload.wikimedia.org/math/e/4/7/e472b7d37456fd24e8f5f7208475262b.png" /></p>
+</div>
+<p><br /></p>
+<h4><span class="mw-headline" id="Linked_List_Implementation_2">Linked List Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=25" title="Edit section: Linked List Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The basic linked list implementation uses a singly-linked list with a tail pointer to keep track of the back of the queue.</p>
+<pre>
+type Queue&lt;item_type&gt;
+  data list:Singly Linked List&lt;item_type&gt;
+  data tail:List Iterator&lt;item_type&gt;
+
+  constructor()
+    list := new Singly-Linked-List()
+    tail := list.get-begin() # null
+  end constructor
+</pre>
+<p>When you want to <b>enqueue</b> something, you simply add it to the back of the item pointed to by the tail pointer. So the previous tail is considered next compared to the item being added and the tail pointer points to the new item. If the list was empty, this doesn't work, since the tail iterator doesn't refer to anything</p>
+<pre>
+ method enqueue(new_item:item_type)
+   if is-empty()
+     list.prepend(new_item)
+     tail := list.get-begin()
+   else
+     list.insert_after(new_item, tail)
+     tail.move-next()
+   end if
+ end method
+</pre>
+<p>The <b>front</b> item on the queue is just the one referred to by the linked list's head pointer</p>
+<pre>
+  method front():item_type
+    return list.get-begin().get-value()
+  end method
+</pre>
+<p>When you want to <b>dequeue</b> something off the list, simply point the head pointer to the previous from head item. The old head item is the one you removed of the list. If the list is now empty, we have to fix the tail iterator.</p>
+<pre>
+  method dequeue()
+    list.remove-first()
+    if is-empty()
+      tail := list.get-begin()
+    end if
+  end method
+</pre>
+<p>A check for emptiness is easy. Just check if the list is empty.</p>
+<pre>
+  method is-empty():Boolean
+    return list.is-empty()
+  end method
+</pre>
+<p>A check for full is simple. Linked lists are considered to be limitless in size.</p>
+<pre>
+  method is-full():Boolean
+    return False
+  end method
+</pre>
+<p>A check for the size is again passed through to the list.</p>
+<pre>
+  method get-size():Integer
+    return list.get-size()
+  end method
+end type
+</pre>
+<p><br /></p>
+<h5><span class="mw-headline" id="Performance_Analysis_2">Performance Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=26" title="Edit section: Performance Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>In a linked list, accessing the first element is an <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> operation because the list contains a pointer directly to it. Therefore, enqueue, front, and dequeue are a quick <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> operations.</p>
+<p>The checks for empty/fullness as done here are also <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />.</p>
+<p>The performance of <code>getSize()</code> depends on the performance of the corresponding operation in the linked list implementation. It could be either <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />, or <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />, depending on what time/space tradeoff is made. Most of the time, users of a Queue do not use the <code>getSize()</code> operation, and so a bit of space can be saved by not optimizing it.</p>
+<h4><span class="mw-headline" id="Circular_Array_Implementation">Circular Array Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=27" title="Edit section: Circular Array Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h5><span class="mw-headline" id="Performance_Analysis_3">Performance Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=28" title="Edit section: Performance Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<h4><span class="mw-headline" id="Priority_Queue_Implementation">Priority Queue Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=29" title="Edit section: Priority Queue Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+Discuss priority queues and implementations including sorted lists and various heaps.</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<h4><span class="mw-headline" id="Related_Links_2">Related Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=30" title="Edit section: Related Links">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li><a href="//en.wikipedia.org/wiki/queue_(data_structure)" class="extiw" title="wikipedia:queue (data structure)">Queue (Wikipedia)</a></li>
+</ul>
+<h3><span class="mw-headline" id="Deques">Deques</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=31" title="Edit section: Deques">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A Deque is a homogeneous list of elements in which insertions and deletion operations are performed on both the ends.<br />
+Because of this property it is known as double ended queue i.e. Deque<br />
+Deque has two types:<br /></p>
+<ol>
+<li>Input restricted queue: It allows insertion at only one end<br /></li>
+<li>Output restricted queue: It allows deletion at only one end</li>
+</ol>
+<ul>
+<li><a href="//en.wikipedia.org/wiki/deque" class="extiw" title="wikipedia:deque">Deque (Double-Ended QUEue)</a></li>
+</ul>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<strong class="selflink">Stacks &amp; Queues</strong> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit&amp;section=32" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references" style="">
+<ol class="references">
+<li id="cite_note-Dromey-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-Dromey_1-0"><i><b>a</b></i></a></sup> <sup><a href="#cite_ref-Dromey_1-1"><i><b>b</b></i></a></sup></span> <span class="reference-text"><span class="citation book">Dromey, R.G. <i>How to Solve it by Computer</i>. Prentice Hall of India.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=How+to+Solve+it+by+Computer&amp;rft.aulast=Dromey&amp;rft.aufirst=R.G&amp;rft.au=Dromey%2C%26%2332%3BR.G&amp;rft.pub=Prentice+Hall+of+India&amp;rfr_id=info:sid/en.wikibooks.org:Data_Structures/Stacks_and_Queues"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-ReferenceA-2"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-ReferenceA_2-0"><i><b>a</b></i></a></sup> <sup><a href="#cite_ref-ReferenceA_2-1"><i><b>b</b></i></a></sup></span> <span class="reference-text">Data structures, Algorithms and Applications in C++ by Sartaj Sahni</span></li>
+<li id="cite_note-Gopal-3"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-Gopal_3-0"><i><b>a</b></i></a></sup> <sup><a href="#cite_ref-Gopal_3-1"><i><b>b</b></i></a></sup> <sup><a href="#cite_ref-Gopal_3-2"><i><b>c</b></i></a></sup></span> <span class="reference-text"><span class="citation book">Gopal, Arpita. <i>Magnifying Data Structures</i>. PHI.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Magnifying+Data+Structures&amp;rft.aulast=Gopal&amp;rft.aufirst=Arpita&amp;rft.au=Gopal%2C%26%2332%3BArpita&amp;rft.pub=PHI&amp;rfr_id=info:sid/en.wikibooks.org:Data_Structures/Stacks_and_Queues"><span style="display: none;">&#160;</span></span></span></li>
+</ol>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1077
+CPU time usage: 0.756 seconds
+Real time usage: 0.852 seconds
+Preprocessor visited node count: 1568/1000000
+Preprocessor generated node count: 12156/1500000
+Post‐expand include size: 7357/2048000 bytes
+Template argument size: 1075/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20060-0!0!0!!en!4!* and timestamp 20131217041346
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;oldid=2594229">http://en.wikibooks.org/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;oldid=2594229</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FStacks+and+Queues&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FStacks+and+Queues" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Stacks_and_Queues"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Stacks_and_Queues"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures/Stacks_and_Queues" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Stacks_and_Queues" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Stacks_and_Queues" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;oldid=2594229" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FStacks_and_Queues&amp;id=2594229" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FStacks+and+Queues">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FStacks+and+Queues&amp;oldid=2594229&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Stacks_and_Queues&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 December 2013, at 02:44.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1171 in 0.153 secs. -->
+	</body>
+</html>

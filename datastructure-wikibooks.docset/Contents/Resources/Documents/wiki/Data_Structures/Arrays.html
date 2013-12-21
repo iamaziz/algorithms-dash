@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Arrays - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Arrays" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.geshi.local%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Arrays","wgTitle":"Data Structures/Arrays","wgCurRevisionId":2588255,"wgRevisionId":2588255,"wgArticleId":569,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages needing attention","Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Arrays","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["fr-fr","fr","en-us","en"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2588255,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-ada {line-height: normal;}
+.source-ada li, .source-ada pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for ada
+ * CSS class: source-ada, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.ada.source-ada .de1, .ada.source-ada .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.ada.source-ada  {font-family:monospace;}
+.ada.source-ada .imp {font-weight: bold; color: red;}
+.ada.source-ada li, .ada.source-ada .li1 {font-weight: normal; vertical-align:top;}
+.ada.source-ada .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.ada.source-ada .li2 {font-weight: bold; vertical-align:top;}
+.ada.source-ada .kw1 {color: #00007f;}
+.ada.source-ada .kw2 {color: #0000ff;}
+.ada.source-ada .kw3 {color: #46aa03; font-weight:bold;}
+.ada.source-ada .co1 {color: #adadad; font-style: italic;}
+.ada.source-ada .coMULTI {color: #808080; font-style: italic;}
+.ada.source-ada .es0 {color: #000099; font-weight: bold;}
+.ada.source-ada .br0 {color: #66cc66;}
+.ada.source-ada .sy0 {color: #66cc66;}
+.ada.source-ada .st0 {color: #7f007f;}
+.ada.source-ada .nu0 {color: #ff0000;}
+.ada.source-ada .me1 {color: #202020;}
+.ada.source-ada .ln-xtra, .ada.source-ada li.ln-xtra, .ada.source-ada div.ln-xtra {background-color: #ffc;}
+.ada.source-ada span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Arrays skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Arrays</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content" style="">
+<tr>
+<td class="mbox-image">
+<div style="width: 52px;"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/40px-Book_important2.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/60px-Book_important2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/80px-Book_important2.svg.png 2x" /></div>
+</td>
+<td class="mbox-text" style=""><b>A Wikibookian has nominated this page for cleanup.</b><br />
+<small>You can <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Arrays&amp;action=edit">help make it better</a>. Please review any <a href="/wiki/Talk:Data_Structures/Arrays" title="Talk:Data Structures/Arrays">relevant discussion</a>.</small></td>
+</tr>
+</table>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <strong class="selflink">Arrays</strong> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Arrays"><span class="tocnumber">1</span> <span class="toctext">Arrays</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Type"><span class="tocnumber">1.1</span> <span class="toctext">Type</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Bounds"><span class="tocnumber">1.2</span> <span class="toctext">Bounds</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Bounds_check"><span class="tocnumber">1.3</span> <span class="toctext">Bounds check</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Declaring_Array_Types"><span class="tocnumber">1.4</span> <span class="toctext">Declaring Array Types</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Array_Access"><span class="tocnumber">1.5</span> <span class="toctext">Array Access</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Arrays">Arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=1" title="Edit section: Arrays">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Array is a collection mainly using similar data types that are stored into a common variable, forming (at least conceptually that may even be replicated into the memory hardware) a linear data structure.</p>
+<p>An array is a particular method of storing <b>elements</b> of indexed data. Elements of data are logically stored sequentially in blocks within the array. Each element is referenced by an <b>index</b>, or subscripts.</p>
+<p>The index is usually a number used to address an element in the array. For example, if you were storing information about each day in August, you would create an array with an index capable of addressing 31 values -- one for each day of the month. Indexing rules are language dependent, however most languages use either 0 or 1 as the first element of an array.</p>
+<p>The concept of an array can be daunting to the uninitiated, but it is really quite simple. Think of a notebook with pages numbered 1 through 12. Each page may or may not contain information on it. The notebook is an <i>array</i> of pages. Each page is an <i>element</i> of the array 'notebook'. Programmatically, you would retrieve information from a page by referring to its number or <i>subscript</i>, i.e., notebook(4) would refer to the contents of page 4 of the array notebook.</p>
+<p><br /></p>
+<center><a href="/wiki/File:SimpleArray.png" class="image"><img alt="SimpleArray.png" src="//upload.wikimedia.org/wikibooks/en/8/85/SimpleArray.png" width="385" height="25" /></a><br />
+<i>The notebook (array) contains 12 pages (elements)</i></center>
+<p><br />
+Arrays can also be multidimensional - instead of accessing an element of a one-dimensional list, elements are accessed by two or more indices, as from a matrix or tensor.</p>
+<p>Multidimensional arrays are as simple as our notebook example above. To envision a multidimensional array, think of a calendar. Each page of the calendar, 1 through 12, is an element, representing a month, which contains approximately 30 elements, which represent days. Each day may or may not have information in it. Programmatically then, calendar(4,15) would refer to the 4th month, 15th day. Thus we have a two-dimensional array. To envision a three-dimensional array, break each day up into 24 hours. Now calendar(4,15,9) would refer to 4th month, 15th day, 9th hour.</p>
+<p><br /></p>
+<center><a href="/wiki/File:MultidimensionalArray.png" class="image"><img alt="MultidimensionalArray.png" src="//upload.wikimedia.org/wikibooks/en/1/16/MultidimensionalArray.png" width="169" height="131" /></a><br />
+<i>A simple 6 element by 4 element array</i></center>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 8px; width:85%" title="Array&lt;Element&gt; Operations">
+<p><b>Array&lt;Element&gt; Operations</b><br /></p>
+<p><tt>make-array(integer <i>n</i>): Array</tt></p>
+<dl>
+<dd>Create an array of elements indexed from <img class="tex" alt="0" src="//upload.wikimedia.org/math/c/f/c/cfcd208495d565ef66e7dff9f98764da.png" /> to <img class="tex" alt="n-1" src="//upload.wikimedia.org/math/a/4/3/a438673491daae8148eae77373b6a467.png" />, inclusive. The number of elements in the array, also known as the size of the array, is <i>n</i>.</dd>
+</dl>
+<p><tt>get-value-at(Array <i>a</i>, integer <i>index</i>): Element</tt></p>
+<dl>
+<dd>Returns the value of the element at the given <i>index</i>. The value of <i>index</i> must be in bounds: <i>0 &lt;= index &lt;= (n - 1)</i>. This operation is also known as <b>subscripting</b>.</dd>
+</dl>
+<p><tt>set-value-at(Array <i>a</i>, integer <i>index</i>, Element <i>new-value</i>)</tt></p>
+<dl>
+<dd>Sets the element of the array at the given <i>index</i> to be equal to <i>new-value</i>.</dd>
+</dl>
+</div>
+<p>Arrays guarantee <b>constant</b> time read and write access, <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />, however many lookup operations (find_min, find_max, find_index) of an instance of an element are <b>linear</b> time, <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />. Arrays are very efficient in most languages, as operations compute the address of an element via a simple formula based on the base address element of the array.</p>
+<p>The implementation of arrays differ greatly between languages: some languages allow arrays to be resized automatically, or to even contain elements of differing types (such as Perl). Other languages are very strict and require the type and length information of an array to be known at run time (such as C).</p>
+<p>Arrays typically map directly to contiguous storage locations within your computers memory and are therefore the "natural" storage structure for most higher level languages.</p>
+<p>Simple linear arrays are the basis for most of the other data structures. Many languages do not allow you to allocate any structure except an array, everything else must be implemented on top of the array. The exception is the linked list, that is typically implemented as individually allocated objects, but it is possible to implement a linked list within an array.</p>
+<h3><span class="mw-headline" id="Type">Type</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=2" title="Edit section: Type">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The array index needs to be of some type. Usually, the standard integer type of that language is used, but there are also languages such as <a href="//en.wikipedia.org/wiki/Ada_programming_language" class="extiw" title="w:Ada programming language">Ada</a> and <a href="//en.wikipedia.org/wiki/Pascal_programming_language" class="extiw" title="w:Pascal programming language">Pascal</a> which allow any discrete type as an array index. Scripting languages often allow any type as an index (associative array).</p>
+<h3><span class="mw-headline" id="Bounds">Bounds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=3" title="Edit section: Bounds">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The array index consists of a range of values with a lower bound and an upper bound.</p>
+<p>In some programming languages only the upper bound can be chosen while the lower bound is fixed to be either 0 <small>(<a href="//en.wikipedia.org/wiki/C_programming_language" class="extiw" title="w:C programming language">C</a>, <a href="//en.wikipedia.org/wiki/C_plus_plus" class="extiw" title="w:C plus plus">C++</a>, <a href="//en.wikipedia.org/wiki/C_Sharp_programming_language" class="extiw" title="w:C Sharp programming language">C#</a>, <a href="//en.wikipedia.org/wiki/Java_programming_language" class="extiw" title="w:Java programming language">Java</a>)</small> or 1 <small>(<a href="/w/index.php?title=FORTRAN_66&amp;action=edit&amp;redlink=1" class="new" title="FORTRAN 66 (does not exist)">FORTRAN 66</a>, <a href="//en.wikipedia.org/wiki/R_Programming" class="extiw" title="w:R Programming">R</a>)</small>.</p>
+<p>In other programming languages <small>(<a href="//en.wikipedia.org/wiki/Ada_programming_language" class="extiw" title="w:Ada programming language">Ada</a>, <a href="//en.wikipedia.org/wiki/PL/I" class="extiw" title="w:PL/I">PL/I</a>, <a href="//en.wikipedia.org/wiki/Pascal_programming_language" class="extiw" title="w:Pascal programming language">Pascal</a>)</small> both the upper and lower bound can be freely chosen <small>(even negative)</small>.</p>
+<h3><span class="mw-headline" id="Bounds_check">Bounds check</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=4" title="Edit section: Bounds check">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The third aspect of an array index is the check for valid ranges and what happens when an invalid index is accessed. This is a very important point since the majority of <a href="//en.wikipedia.org/wiki/Computer_worm" class="extiw" title="w:Computer worm">computer worms</a> and <a href="//en.wikipedia.org/wiki/Computer_virus" class="extiw" title="w:Computer virus">computer viruses</a> attack by using invalid array bounds.</p>
+<p>There are three options open:</p>
+<ol>
+<li>Most languages <small>(<a href="//en.wikipedia.org/wiki/Ada_programming_language" class="extiw" title="w:Ada programming language">Ada</a>, <a href="//en.wikipedia.org/wiki/PL/I" class="extiw" title="w:PL/I">PL/I</a>, <a href="//en.wikipedia.org/wiki/Pascal_programming_language" class="extiw" title="w:Pascal programming language">Pascal</a>, <a href="//en.wikipedia.org/wiki/Java_programming_language" class="extiw" title="w:Java programming language">Java</a>, <a href="//en.wikipedia.org/wiki/C_Sharp" class="extiw" title="w:C Sharp">C#</a>)</small> will check the bounds and raise some error condition when an element is accessed which does not exist.</li>
+<li>A few languages <small>(<a href="//en.wikipedia.org/wiki/C_programming_language" class="extiw" title="w:C programming language">C</a>, <a href="//en.wikipedia.org/wiki/C_plus_plus" class="extiw" title="w:C plus plus">C++</a>)</small> will not check the bounds and return or set some arbitrary value when an element outside the valid range is accessed.</li>
+<li>Scripting languages often automatically expand the array when data is written to an index which was not valid until then.</li>
+</ol>
+<h3><span class="mw-headline" id="Declaring_Array_Types">Declaring Array Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=5" title="Edit section: Declaring Array Types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The declaration of array type depends on how many features the array in a particular language has.</p>
+<p>The easiest declaration is when the language has a fixed lower bound and fixed index type. If you need an array to store the monthly income you could declare in <a href="/wiki/C_Programming" title="C Programming">C</a></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">double</span> Income<span class="br0">[</span><span class="nu0">12</span><span class="br0">]</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This gives you an array with in the range of 0 to 11. For a full description of arrays in C see <a href="/wiki/C_Programming/Arrays" title="C Programming/Arrays">C Programming/Arrays</a>.</p>
+<p>If you use a language where you can choose both the lower bound as well as the index type, the declaration is -- of course -- more complex. Here are two examples in <a href="/wiki/Ada_Programming" title="Ada Programming">Ada</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ada source-ada">
+<pre class="de1">
+<span class="kw3">type</span> Month <span class="kw1">is</span> <span class="kw3">range</span> <span class="nu0">1</span> .. <span class="nu0">12</span>;
+<span class="kw3">type</span> Income <span class="kw1">is</span> <span class="kw3">array</span><span class="br0">(</span>Month<span class="br0">)</span> <span class="kw3">of</span> Float;
+</pre></div>
+</div>
+<p>or shorter:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ada source-ada">
+<pre class="de1">
+<span class="kw3">type</span> Income <span class="kw1">is</span> <span class="kw3">array</span><span class="br0">(</span><span class="nu0">1</span> .. <span class="nu0">12</span><span class="br0">)</span> <span class="kw3">of</span> Float;
+</pre></div>
+</div>
+<p>For a full description of arrays in Ada see <a href="/wiki/Ada_Programming/Types/array" title="Ada Programming/Types/array">Ada Programming/Types/array</a>.</p>
+<h3><span class="mw-headline" id="Array_Access">Array Access</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit&amp;section=6" title="Edit section: Array Access">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We generally write arrays with a name, followed by the index in some brackets, square '[]' or round '()'. For example, <tt>august[3]</tt> is the method used in the C programming language to refer to a particular day in the month.</p>
+<p>Because the C language starts the index at zero, <tt>august[3]</tt> is the 4th element in the array. <tt>august[0]</tt> actually refers to the first element of this array. Starting an index at zero is natural for computers, whose internal representations of numbers begin with zero, but for humans, this unnatural numbering system can lead to problems when accessing data in an array. When fetching an element in a language with zero-based indexes, keep in mind the <i>true</i> length of an array, lest you find yourself fetching the wrong data. This is the disadvantage of programming in languages with fixed lower bounds, the programmer must always remember that "[0]" means "1st" and, when appropriate, add or subtract one from the index. Languages with variable lower bounds will take that burden off the programmer's shoulder.</p>
+<p>We use indexes to store <i>related</i> data. If our C language array is called <tt>august</tt>, and we wish to store that we're going to the supermarket on the 1st, we can say, for example</p>
+<pre>
+august[0] = "Going to the shops today"
+</pre>
+<p>In this way, we can go through the indexes from 0 to 30 and get the related tasks for each day in <tt>august</tt>.</p>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <strong class="selflink">Arrays</strong> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1022
+CPU time usage: 0.220 seconds
+Real time usage: 0.268 seconds
+Preprocessor visited node count: 293/1000000
+Preprocessor generated node count: 2939/1500000
+Post‐expand include size: 5466/2048000 bytes
+Template argument size: 1323/2048000 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:569-0!0!0!!en!4!* and timestamp 20131206074218
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Arrays&amp;oldid=2588255">http://en.wikibooks.org/w/index.php?title=Data_Structures/Arrays&amp;oldid=2588255</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/wiki/Category:Pages_needing_attention" title="Category:Pages needing attention">Pages needing attention</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FArrays&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FArrays" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Arrays"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Arrays"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures/Arrays" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Arrays" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Arrays" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Arrays&amp;oldid=2588255" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Arrays&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FArrays&amp;id=2588255" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FArrays">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FArrays&amp;oldid=2588255&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Arrays&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 6 December 2013, at 03:46.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Arrays" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1062 in 0.182 secs. -->
+	</body>
+</html>

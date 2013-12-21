@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Randomization - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Randomization&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Randomization&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Randomization" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.geshi.local%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Randomization","wgTitle":"Algorithms/Randomization","wgCurRevisionId":2576090,"wgRevisionId":2576090,"wgArticleId":15001,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Randomization","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2530531,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Randomization skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Randomization</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />The <a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms/Randomization&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Algorithms/Randomization">checked</a> on <i>7 October 2013</i>. There are <a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms/Randomization&amp;oldid=2530531&amp;diff=cur&amp;diffonly=0">3 pending changes</a> awaiting review.</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <strong class="selflink">4</strong>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p>As deterministic algorithms are driven to their limits when one tries to solve hard problems with them, a useful technique to speed up the computation is <b>randomization</b>. In randomized algorithms, the algorithm has access to a <i>random source</i>, which can be imagined as tossing coins during the computation. Depending on the outcome of the toss, the algorithm may split up its computation path.</p>
+<p>There are two main types of randomized algorithms: Las Vegas algorithms and Monte-Carlo algorithms. In Las Vegas algorithms, the algorithm may use the randomness to speed up the computation, but the algorithm must always return the correct answer to the input. Monte-Carlo algorithms do not have the former restriction, that is, they are allowed to give <i>wrong</i> return values. However, returning a wrong return value must have a <i>small probability</i>, otherwise that Monte-Carlo algorithm would not be of any use.</p>
+<p>Many approximation algorithms use randomization.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ordered_Statistics"><span class="tocnumber">1</span> <span class="toctext">Ordered Statistics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#find-max"><span class="tocnumber">1.1</span> <span class="toctext">find-max</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#find-min-max"><span class="tocnumber">1.2</span> <span class="toctext">find-min-max</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#find-median"><span class="tocnumber">1.3</span> <span class="toctext">find-median</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Quicksort"><span class="tocnumber">2</span> <span class="toctext">Quicksort</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Shuffling_an_Array"><span class="tocnumber">3</span> <span class="toctext">Shuffling an Array</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Equal_Multivariate_Polynomials"><span class="tocnumber">4</span> <span class="toctext">Equal Multivariate Polynomials</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Hash_tables"><span class="tocnumber">5</span> <span class="toctext">Hash tables</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Skip_Lists"><span class="tocnumber">6</span> <span class="toctext">Skip Lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Role_of_Randomness"><span class="tocnumber">6.1</span> <span class="toctext">Role of Randomness</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#concurrent_access_application"><span class="tocnumber">6.2</span> <span class="toctext">concurrent access application</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Idea_for_an_exercise"><span class="tocnumber">6.3</span> <span class="toctext">Idea for an exercise</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Treaps"><span class="tocnumber">7</span> <span class="toctext">Treaps</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Derandomization"><span class="tocnumber">8</span> <span class="toctext">Derandomization</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Exercises"><span class="tocnumber">9</span> <span class="toctext">Exercises</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Supplementary_Topic:_skip_lists_and_multiprocessor_algorithms"><span class="tocnumber">10</span> <span class="toctext">Supplementary Topic: skip lists and multiprocessor algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Lock-free_programming_issues"><span class="tocnumber">10.1</span> <span class="toctext">Lock-free programming issues</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Ordered_Statistics">Ordered Statistics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=1" title="Edit section: Ordered Statistics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Before covering randomized techniques, we'll start with a deterministic problem that leads to a problem that utilizes randomization. Suppose you have an unsorted array of values and you want to find</p>
+<ul>
+<li>the maximum value,</li>
+<li>the minimum value, and</li>
+<li>the median value.</li>
+</ul>
+<p>In the immortal words of one of our former computer science professors, "How can you do?"</p>
+<h3><span class="mw-headline" id="find-max">find-max</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=2" title="Edit section: find-max">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>First, it's relatively straightforward to find the largest element:</p>
+<pre>
+<i>// find-max -- returns the maximum element</i>
+function <b>find-max</b>(array <i>vals</i>[1..<i>n</i>]): element
+  let <i>result</i> := <i>vals[1]</i>
+  for <i>i</i> from <i>2</i> to <i>n</i>:
+    <i>result</i> := max(<i>result</i>, <i>vals[i]</i>)
+  repeat
+  
+  return <i>result</i>
+end
+</pre>
+<p>An initial assignment of <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" /> to <i>result</i> would work as well, but this is a useless call to the max function since the first element compared gets set to <i>result</i>. By initializing result as such the function only requires <i>n-1</i> comparisons. (Moreover, in languages capable of metaprogramming, the data type may not be strictly numerical and there might be no good way of assigning <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />; using vals[1] is type-safe.)</p>
+<p>A similar routine to find the minimum element can be done by calling the min function instead of the max function.</p>
+<h3><span class="mw-headline" id="find-min-max">find-min-max</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=3" title="Edit section: find-min-max">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>But now suppose you want to find the min and the max at the same time; here's one solution:</p>
+<pre>
+<i>// find-min-max -- returns the minimum and maximum element of the given array</i>
+function <b>find-min-max</b>(array <i>vals</i>): pair
+  return pair {<b>find-min</b>(<i>vals</i>), <b>find-max</b>(<i>vals</i>)}
+end
+</pre>
+<p>Because <b>find-max</b> and <b>find-min</b> both make <i>n-1</i> calls to the max or min functions (when <i>vals</i> has <i>n</i> elements), the total number of comparisons made in <b>find-min-max</b> is <img class="tex" alt="2n-2" src="//upload.wikimedia.org/math/3/3/1/3317d29db4b05b3d1136a5f75203de3e.png" />.</p>
+<p>However, some redundant comparisons are being made. These redundancies can be removed by "weaving" together the min and max functions:</p>
+<pre>
+<i>// find-min-max -- returns the minimum and maximum element of the given array</i>
+function <b>find-min-max</b>(array <i>vals</i>[1..<i>n</i>]): pair
+  let <i>min</i> := <img class="tex" alt="\infty" src="//upload.wikimedia.org/math/d/2/4/d245777abca64ece2d5d7ca0d19fddb6.png" />
+  let <i>max</i> := <img class="tex" alt="-\infty" src="//upload.wikimedia.org/math/b/e/a/beab416080922c84a90ba092f7734fe5.png" />
+  
+  if <i>n</i> is odd:
+    <i>min</i> := <i>max</i> := <i>vals</i>[1]
+    <i>vals</i> := <i>vals</i>[2,..,<i>n</i>]          <i>// we can now assume n is even</i>
+    <i>n</i> := <i>n</i> - 1
+  fi
+  
+  for <i>i</i>:=1 to <i>n</i> by 2:             <i>// consider pairs of values in vals</i>
+    if <i>vals</i>[<i>i</i>] &lt; <i>vals</i>[<i>i</i> + <i>n</i> by 2]:
+      let <i>a</i> := <i>vals</i>[<i>i</i>]
+      let <i>b</i> := <i>vals</i>[<i>i</i> + <i>n</i> by 2]
+    else:
+      let <i>a</i> := <i>vals</i>[<i>i</i> + <i>n</i> by 2]
+      let <i>b</i> := <i>vals</i>[<i>i</i>]            <i>// invariant: a &lt;= b</i>
+    fi
+    
+    if <i>a</i> &lt; <i>min</i>: <i>min</i> := <i>a</i> fi
+    if <i>b</i> &gt; <i>max</i>: <i>max</i> := <i>b</i> fi
+  repeat
+  
+  return pair {<i>min</i>, <i>max</i>}
+end
+</pre>
+<p>Here, we only loop <img class="tex" alt="n/2" src="//upload.wikimedia.org/math/a/2/f/a2f070a31330443ceb0dcf352fe50035.png" /> times instead of <i>n</i> times, but for each iteration we make three comparisons. Thus, the number of comparisons made is <img class="tex" alt="(3/2)n = 1.5n" src="//upload.wikimedia.org/math/9/9/7/9979b58480ac5dac2ec8d9cd4dd2a940.png" />, resulting in a <img class="tex" alt="3/4" src="//upload.wikimedia.org/math/4/0/7/40735ef69decd7cebd3e8be7cc186c8f.png" /> speed up over the original algorithm.</p>
+<p>Only three comparisons need to be made instead of four because, by construction, it's always the case that <img class="tex" alt="a\le b" src="//upload.wikimedia.org/math/d/7/3/d7356d20677cd7949b92ae77480fe9fe.png" />. (In the first part of the "if", we actually know more specifically that <img class="tex" alt="a &lt; b" src="//upload.wikimedia.org/math/1/a/3/1a382af93ed4b8a29ebd8e859a0168d7.png" />, but under the else part, we can only conclude that <img class="tex" alt="a\le b" src="//upload.wikimedia.org/math/d/7/3/d7356d20677cd7949b92ae77480fe9fe.png" />.) This property is utilized by noting that <i>a</i> doesn't need to be compared with the current maximum, because <i>b</i> is already greater than or equal to <i>a</i>, and similarly, <i>b</i> doesn't need to be compared with the current minimum, because <i>a</i> is already less than or equal to <i>b</i>.</p>
+<p>In software engineering, there is a struggle between using libraries versus writing customized algorithms. In this case, the min and max functions weren't used in order to get a faster <b>find-min-max</b> routine. Such an operation would probably not be the bottleneck in a real-life program: however, if testing reveals the routine should be faster, such an approach should be taken. Typically, the solution that reuses libraries is better overall than writing customized solutions. Techniques such as open implementation and aspect-oriented programming may help manage this contention to get the best of both worlds, but regardless it's a useful distinction to recognize.</p>
+<h3><span class="mw-headline" id="find-median">find-median</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=4" title="Edit section: find-median">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Finally, we need to consider how to find the median value. One approach is to sort the array then extract the median from the position <tt><i>vals</i>[<i>n</i>/2]</tt>:</p>
+<pre>
+<i>// find-median -- returns the median element of vals</i>
+function <b>find-median</b>(array <i>vals</i>[1..<i>n</i>]): element
+  assert (<i>n</i> &gt; 0)
+  
+  sort(<i>vals</i>)
+  return <i>vals</i>[<i>n</i> / 2]
+end
+</pre>
+<p>If our values are not numbers close enough in value (or otherwise cannot be sorted by a radix sort) the sort above is going to require <img class="tex" alt="O(n\log n)" src="//upload.wikimedia.org/math/f/4/9/f49341ab621f12e8cb93d0146ea51d34.png" /> steps.</p>
+<p>However, it is possible to extract the <i>n</i>th-ordered statistic in <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> time. The key is eliminating the sort: we don't actually require the entire array to be sorted in order to find the median, so there is some waste in sorting the entire array first. One technique we'll use to accomplish this is randomness.</p>
+<p>Before presenting a non-sorting <b>find-median</b> function, we introduce a divide and conquer-style operation known as <b>partitioning</b>. What we want is a routine that finds a random element in the array and then partitions the array into three parts:</p>
+<ol>
+<li>elements that are less than or equal to the random element;</li>
+<li>elements that are equal to the random element; and</li>
+<li>elements that are greater than or equal to the random element.</li>
+</ol>
+<p>These three sections are denoted by two integers: <i>j</i> and <i>i</i>. The partitioning is performed "in place" in the array:</p>
+<pre>
+<i>// partition -- break the array three partitions based on a randomly picked element</i>
+function <b>partition</b>(array <i>vals</i>): pair{<i>j</i>, <i>i</i>}
+</pre>
+<p>Note that when the random element picked is actually represented three or more times in the array it's possible for entries in all three partitions to have the same value as the random element. While this operation may not sound very useful, it has a powerful property that can be exploited: When the partition operation completes, the randomly picked element will be in the same position in the array as it would be if the array were fully sorted!</p>
+<p>This property might not sound so powerful, but recall the optimization for the <b>find-min-max</b> function: we noticed that by picking elements from the array in pairs and comparing them to each other first we could reduce the total number of comparisons needed (because the current min and max values need to be compared with only one value each, and not two). A similar concept is used here.</p>
+<p>While the code for <b>partition</b> is not magical, it has some tricky boundary cases:</p>
+<pre>
+<i>// partition -- break the array into three ordered partitions from a random element</i>
+function <b>partition</b>(array <i>vals</i>): pair{<i>j</i>, <i>i</i>}
+  let <i>m</i> := 0
+  let <i>n</i> := <i>vals</i>.length - 2   //  for an array vals, vals[vals.length-1] is the last element, which holds the partition, 
+                                     // so the last sort element is vals[vals.length-2]
+  let <i>irand</i> := random(<i>m</i>, <i>n</i>)   <i>// returns any value from m to n</i>
+  let <i>x</i> := <i>vals</i>[<i>irand</i>]
+  swap( <i>irand</i>,<i>n</i>+ 1 ) // n+1 = vals.length-1 , which is the right most element, and acts as store for partition element and sentinel for m
+  // values in <i>vals</i>[<i>n</i>..] are greater than <i>x</i>
+  // values in <i>vals</i>[0..<i>m</i>] are less than <i>x</i>
+  while (m &lt;= n  ) // see explanation in quick sort why should be m &lt;= n instead of m &lt; n
+                  // in the 2 element case, vals.length -2 = 0 = n = m, but if the 2-element case is out-of-order vs. in-order, there must be a different action.
+                  // by implication, the different action occurs within this loop, so must process the m = n case before exiting.
+     while <i>vals</i>[<i>m</i>] &lt;= <i>x</i>  // in the 2-element case, second element is partition, first element at m. If in-order, m will increment
+        <i>m</i>++
+     endwhile
+     while <i>x</i> &lt;  <i>vals</i>[<i>n</i>] &amp;&amp; <i>n</i> &gt; 0   // stops if vals[n] belongs in left partition or hits start of array
+        <i>n</i>--
+     endwhile
+     if ( m &gt;= n) break;
+     swap(<i>m</i>,<i>n</i>)                // exchange <i>vals</i>[<i>n</i>] and <i>vals</i>[<i>m</i>]
+     <i>m</i>++   // don't rescan swapped elements
+     <i>n</i>--
+     
+  endwhile
+  // partition: [0..<i>m</i>-1]   []   [<i>n</i>+1..]   note that <i>m</i>=<i>n</i>+1
+  // if you need non empty sub-arrays:
+  swap(<i>m</i>,<i>vals</i>.length - 1)  // put the partition element in the between left and right partitions
+                                   // in 2-element out-of-order case, m=0 (not incremented in loop), and the first and last(second) element will swap.
+  // partition: [0..<i>n</i>-1]   [<i>n</i>..<i>n</i>]   [<i>n</i>+1..]
+end
+</pre>
+<p>We can use <b>partition</b> as a subroutine for a general <b>find</b> operation:</p>
+<pre>
+<i>// find -- moves elements in vals such that location k holds the value it would when sorted</i>
+function <b>find</b>(array <i>vals</i>, integer <i>k</i>)
+  assert (0 &lt;= <i>k</i> &lt; <i>vals</i>.length)        <i>// k it must be a valid index</i>
+  if <i>vals</i>.length &lt;= 1:
+    return
+  fi
+  
+  let pair (<i>j</i>, <i>i</i>) := <b>partition</b>(<i>vals</i>)
+  if <i>k</i> &lt;= <i>i</i>:
+    <b>find</b>(<i>a</i>[0,..,<i>i</i>], <i>k</i>)
+  else-if <i>j</i> &lt;= <i>k</i>:
+    <b>find</b>(<i>a</i>[<i>j</i>,..,<i>n</i>], <i>k</i> - <i>j</i>)
+  fi
+  TODO: debug this!
+end
+</pre>
+<p>Which leads us to the punch-line:</p>
+<pre>
+ <i>// find-median -- returns the median element of vals</i>
+function <b>find-median</b>(array <i>vals</i>): element
+  assert (<i>vals</i>.length &gt; 0)
+  
+  let <i>median_index</i> := <i>vals</i>.length / 2;
+  <b>find</b>(<i>vals</i>, <i>median_index</i>)
+  return <i>vals</i>[<i>median_index</i>]
+end
+</pre>
+<p>One consideration that might cross your mind is "is the random call really necessary?" For example, instead of picking a random pivot, we could always pick the middle element instead. Given that our algorithm works with all possible arrays, we could conclude that the running time on average for <i>all of the possible inputs</i> is the same as our analysis that used the random function. The reasoning here is that under the set of all possible arrays, the middle element is going to be just as "random" as picking anything else. But there's a pitfall in this reasoning: Typically, the input to an algorithm in a program isn't random at all. For example, the input has a higher probability of being sorted than just by chance alone. Likewise, because it is real data from real programs, the data might have other patterns in it that could lead to suboptimal results.</p>
+<p>To put this another way: for the randomized median finding algorithm, there is a very small probability it will run suboptimally, independent of what the input is; while for a deterministic algorithm that just picks the middle element, there is a greater chance it will run poorly on some of the most frequent input types it will receive. This leads us to the following guideline:</p>
+<table width="80%">
+<tr>
+<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top"><b>Randomization Guideline:</b><br />
+If your algorithm depends upon randomness, be sure you introduce the randomness yourself instead of depending upon the data to be random.</td>
+</tr>
+</table>
+<p>Note that there are "derandomization" techniques that can take an average-case fast algorithm and turn it into a fully deterministic algorithm. Sometimes the overhead of derandomization is so much that it requires very large datasets to get any gains. Nevertheless, derandomization in itself has theoretical value.</p>
+<p>The randomized <b>find</b> algorithm was invented by C. A. R. "Tony" Hoare. While Hoare is an important figure in computer science, he may be best known in general circles for his quicksort algorithm, which we discuss in the next section.</p>
+<h2><span class="mw-headline" id="Quicksort">Quicksort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=5" title="Edit section: Quicksort">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The median-finding partitioning algorithm in the previous section is actually very close to the implementation of a full blown sorting algorithm. Building a Quicksort Algorithm is left as an exercise for the reader, and is recommended first, before reading the next section ( Quick sort is diabolical compared to Merge sort, which is a sort not improved by a randomization step ) .</p>
+<p>A key part of quick sort is choosing the right median. But to get it up and running quickly, start with the assumption that the array is unsorted, and the rightmost element of each array is as likely to be the median as any other element, and that we are entirely optimistic that the rightmost doesn't happen to be the largest key , which would mean we would be removing one element only ( the partition element) at each step, and having no right array to sort, and a n-1 left array to sort.</p>
+<p>This is where <b>randomization</b> is important for quick sort, i.e. <i>choosing the more optimal partition key</i>, which is pretty important for quick sort to work efficiently.</p>
+<p>Compare the number of comparisions that are required for quick sort vs. insertion sort.</p>
+<p>With insertion sort, the average number of comparisons for finding the lowest first element in an ascending sort of a randomized array is n /2 .</p>
+<p>The second element's average number of comparisons is (n-1)/2;</p>
+<p>the third element ( n- 2) / 2.</p>
+<p>The total number of comparisons is [ n + (n - 1) + (n - 2) + (n - 3) .. + (n - [n-1]) ] divided by 2, which is [ n x n - (n-1)! ] /2 or about O(n squared) .</p>
+<p>In Quicksort, the number of comparisons will halve at each partition step if the true median is chosen, since the left half partition doesn't need to be compared with the right half partition, but at each step , the number elements of all partitions created by the previously level of partitioning will still be n.</p>
+<p>The number of levels of comparing n elements is the number of steps of dividing n by two , until n = 1. Or in reverse, 2 ^ m ~ n, so m = log<sub>2</sub> n.</p>
+<p>So the total number of comparisons is n (elements) x m (levels of scanning) or n x log<sub>2</sub>n ,</p>
+<p>So the number of comparison is O(n x log <sub>2</sub>(n) ) , which is smaller than insertion sort's O(n^2) or O( n x n ).</p>
+<p>(Comparing O(n x log <sub>2</sub>(n) ) with O( n x n ) , the common factor n can be eliminated , and the comparison is log<sub>2</sub>(n) vs n , which is exponentially different as n becomes larger. e.g. compare n = 2^16 , or 16 vs 32768, or 32 vs 4 gig ).</p>
+<p>To implement the partitioning in-place on a part of the array determined by a previous recursive call, what is needed a scan from each end of the part , swapping whenever the value of the left scan's current location is greater than the partition value, and the value of the right scan's current location is less than the partition value. So the initial step is&#160;:-</p>
+<pre>
+ Assign the partition value to the right most element, swapping if necessary.
+</pre>
+<p>So the partitioning step is&#160;:-</p>
+<pre>
+ increment the left scan pointer while the current value is less than the partition value.
+ decrement the right scan pointer while the current value is more than the partition value , 
+ or the location is equal to or more than the left most location.
+ exit if the pointers have crossed ( l &gt;= r), 
+ OTHERWISE
+ perform a swap where the left and right pointers have stopped ,
+ on values where the left pointer's value is greater than the partition,
+ and the right pointer's value is less than the partition.
+
+ Finally, after exiting the loop because the left and right pointers  have crossed,
+ <i>swap the </i>rightmost<i> partition value, </i>
+ with the last location of the <b>left</b> forward scan pointer <i>,   </i>
+ and hence ends up between the left and right partitions. 
+</pre>
+<p>Make sure at this point , that after the final swap, the cases of a 2 element in-order array, and a 2 element out-of-order array , are handled correctly, which should mean all cases are handled correctly. This is a good debugging step for getting quick-sort to work.</p>
+<p><b>For the in-order two-element case</b>, the left pointer stops on the partition or second element , as the partition value is found. The right pointer , scanning backwards, starts on the first element before the partition, and stops because it is in the leftmost position.</p>
+<p>The pointers cross, and the loop exits before doing a loop swap. Outside the loop, the contents of the left pointer at the rightmost position and the partition , also at the right most position , are swapped, achieving no change to the in-order two-element case.</p>
+<p><b>For the out-of-order two-element case</b>, The left pointer scans and stops at the first element, because it is greater than the partition (left scan value stops to swap values greater than the partition value).</p>
+<p>The right pointer starts and stops at the first element because it has reached the leftmost element.</p>
+<p>The loop exits because left pointer and right pointer are equal at the first position, and the contents of the left pointer at the first position and the partition at the rightmost (other) position , are swapped , putting previously out-of-order elements , into order.</p>
+<p>Another implementation issue, is to how to move the pointers during scanning. Moving them at the end of the outer loop seems logical.</p>
+<pre>
+partition(a,l,r) {
+  v = a[r];
+  i = l;
+  j = r -1;
+ while ( i &lt;= j ) {  // need to also scan when i = j as well as i &lt; j , 
+                           // in the 2 in-order case, 
+                           // so that i is incremented to the  partition 
+                           // and nothing happens in the final swap with the partition at r.
+    while ( a[i] &lt; v) ++i;
+    while ( v &lt;= a[j] &amp;&amp; j &gt; 0  ) --j;
+    if ( i &gt;= j) break;
+    swap(a,i,j);
+    ++i; --j;
+ }
+ swap(a, i, r);
+ return i;
+</pre>
+<p>With the pre-increment/decrement unary operators, scanning can be done just before testing within the test condition of the while loops, but this means the pointers should be offset -1 and +1 respectively at the start&#160;: so the algorithm then looks like:-</p>
+<pre>
+partition (a, l, r ) {
+ v=a[r]; // v is partition value, at a[r]
+ i=l-1;
+ j=r;
+ while(true) {
+  while(  a[++i] &lt; v ); 
+  while( v &lt;= a[--j]  &amp;&amp; j &gt; l );
+  if (i &gt;= j) break;
+  swap ( a, i, j);
+ }
+ swap (a,i,r);
+ return i;
+}
+</pre>
+<p>And the qsort algorithm is</p>
+<pre>
+qsort( a, l, r)  {
+  if (l &gt;= r) return ;
+  p = partition(a, l, r)
+  qsort(a , l, p-1)
+  qsort( a, p+1, r)
+</pre>
+<p>}</p>
+<p>Finally, randomization of the partition element.</p>
+<pre>
+random_partition (a,l,r) {
+ p = random_int( r-l) + l;
+ // median of a[l], a[p] , a[r]
+ if (a[p] &lt; a[l]) p =l;
+ if ( a[r]&lt; a[p]) p = r;
+ swap(a, p, r);
+}
+</pre>
+<p>this can be called just before calling partition in qsort().</p>
+<h2><span class="mw-headline" id="Shuffling_an_Array">Shuffling an Array</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=6" title="Edit section: Shuffling an Array">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>
+  <b>This keeps data in during shuffle</b>
+  temporaryArray = { }
+  <b>This records if an item has been shuffled</b>
+  usedItemArray = { }
+  <b>Number of item in array</b>
+  itemNum = 0
+  while ( itemNum != lengthOf( inputArray) ){
+      usedItemArray[ itemNum ] = false <b>None of the items have been shuffled</b>
+      itemNum = itemNum + 1
+  }
+  itemNum = 0 <b>we'll use this again</b>
+  itemPosition = randdomNumber( 0 --- (lengthOf(inputArray) - 1 ))
+  while( itemNum != lengthOf( inputArray ) ){
+      while( usedItemArray[ itemPosition ] != false ){
+          itemPosition = randdomNumber( 0 --- (lengthOf(inputArray) - 1 ))
+      }
+      temporaryArray[ itemPosition ] = inputArray[ itemNum ]
+      itemNum = itemNum + 1
+  }
+  inputArray = temporaryArray
+</pre>
+<h2><span class="mw-headline" id="Equal_Multivariate_Polynomials">Equal Multivariate Polynomials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=7" title="Edit section: Equal Multivariate Polynomials">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>[TODO: as of now, there is no known deterministic polynomial time solution, but there is a randomized polytime solution. The canonical example used to be IsPrime, but a deterministic, polytime solution has been found.]</p>
+<h2><span class="mw-headline" id="Hash_tables">Hash tables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=8" title="Edit section: Hash tables">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hashing relies on a hashcode function to randomly distribute keys to available slots evenly. In java , this is done in a fairly straight forward method of adding a moderate sized prime number (31 * 17 ) to a integer key , and then modulus by the size of the hash table. For string keys, the initial hash number is obtained by adding the products of each character's ordinal value multiplied by 31.</p>
+<p>The wikibook Data Structures/Hash Tables chapter covers the topic well.</p>
+<h2><span class="mw-headline" id="Skip_Lists">Skip Lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=9" title="Edit section: Skip Lists">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>[TODO: Talk about skips lists. The point is to show how randomization can sometimes make a structure easier to understand, compared to the complexity of balanced trees.]</p>
+<p>Dictionary or Map , is a general concept where a value is inserted under some key, and retrieved by the key. For instance, in some languages , the dictionary concept is built-in (Python), in others , it is in core libraries ( C++ S.T.L. , and Java standard collections library ). The library providing languages usually lets the programmer choose between a hash algorithm, or a balanced binary tree implementation (red-black trees). Recently, skip lists have been offered, because they offer advantages of being implemented to be highly concurrent for multiple threaded applications.</p>
+<p>Hashing is a technique that depends on the randomness of keys when passed through a hash function, to find a hash value that corresponds to an index into a linear table. Hashing works as fast as the hash function, but works well only if the inserted keys spread out evenly in the array, as any keys that hash to the same index , have to be deal with as a hash collision problem e.g. by keeping a linked list for collisions for each slot in the table, and iterating through the list to compare the full key of each key-value pair vs the search key.</p>
+<p>The disadvantage of hashing is that in-order traversal is not possible with this data structure.</p>
+<p>Binary trees can be used to represent dictionaries, and in-order traversal of binary trees is possible by visiting of nodes ( visit left child, visit current node, visit right child, recursively ). Binary trees can suffer from poor search when they are "unbalanced" e.g. the keys of key-value pairs that are inserted were inserted in ascending or descending order, so they effectively look like <i>linked lists</i> with no left child, and all right children. <i>self-balancing</i> binary trees can be done probabilistically (using randomness) or deterministically ( using child link coloring as red or black ) , through local 3-node tree <b>rotation</b> operations. A rotation is simply swapping a parent with a child node, but preserving order e.g. for a left child rotation, the left child's right child becomes the parent's left child, and the parent becomes the left child's right child.</p>
+<p><b>Splay trees</b> are a random application of rotations during a search , so that a lopsided tree structure is randomized into a balanced one.</p>
+<p><b>Red-black trees</b> can be understood more easily if corresponding <b>2-3-4 trees</b> are examined. A 2-3-4 tree is a tree where nodes can have 2 children, 3 children, or 4 children, with 3 children nodes having 2 keys between the 3 children, and 4 children-nodes having 3 keys between the 4 children. 4-nodes are actively split into 3 single key 2 -nodes, and the middle 2-node passed up to be merged with the parent node , which , if a one-key 2-node, becomes a two key 3-node; or if a two key 3-node, becomes a 4-node, which will be later split (on the way up). The act of splitting a three key 4-node is actually a re-balancing operation, that prevents a string of 3 nodes of grandparent, parent , child occurring , without a balancing rotation happening. 2-3-4 trees are a limited example of <b>B-trees</b>, which usually have enough nodes as to fit a physical disk block, to facilitate caching of very large indexes that can't fit in physical RAM ( which is much less common nowadays).</p>
+<p>A <b>red-black tree</b> is a binary tree representation of a 2-3-4 tree, where 3-nodes are modeled by a parent with one red child, and 4 -nodes modeled by a parent with two red children. Splitting of a 4-node is represented by the parent with 2 red children, <b>flipping</b> the red children to black, and itself into red. There is never a case where the parent is already red, because there also occurs balancing operations where if there is a grandparent with a red parent with a red child , the grandparent is rotated to be a child of the parent, and parent is made black and the grandparent is made red; this unifies with the previous <b>flipping</b> scenario, of a 4-node represented by 2 red children. Actually, it may be this standardization of 4-nodes with mandatory rotation of skewed or zigzag 4-nodes that results in re-balancing of the binary tree.</p>
+<p>A newer optimization is to left rotate any single right red child to a single left red child, so that only right rotation of left-skewed inline 4-nodes (3 red nodes inline ) would ever occur, simplifying the re-balancing code.</p>
+<p><b>Skip lists</b> are modeled after single linked lists, except nodes are multilevel. Tall nodes are rarer, but the insert operation ensures nodes are connected at each level.</p>
+<p>Implementation of skip lists requires creating randomly high multilevel nodes, and then inserting them.</p>
+<p>Nodes are created using iteration of a random function where high level node occurs later in an iteration, and are rarer, because the iteration has survived a number of random thresholds (e.g. 0.5, if the random is between 0 and 1).</p>
+<p>Insertion requires a temporary previous node array with the height of the generated inserting node. It is used to store the last pointer for a given level , which has a key less than the insertion key.</p>
+<p>The scanning begins at the head of the skip list, at highest level of the head node, and proceeds across until a node is found with a key higher than the insertion key, and the previous pointer stored in the temporary previous node array. Then the next lower level is scanned from that node , and so on, walking zig-zag down, until the lowest level is reached.</p>
+<p>Then a list insertion is done at each level of the temporary previous node array, so that the previous node's next node at each level is made the next node for that level for the inserting node, and the inserting node is made the previous node's next node.</p>
+<p>Search involves iterating from the highest level of the head node to the lowest level, and scanning along the next pointer for each level until a node greater than the search key is found, moving down to the next level , and proceeding with the scan, until the higher keyed node at the lowest level has been found, or the search key found.</p>
+<p>The creation of less frequent-when-taller , randomized height nodes, and the process of linking in all nodes at every level, is what gives skip lists their advantageous overall structure.</p>
+<p>What follows is a implementation of skip lists in python.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="co1">#a python implementation of SkipLists, using references as pointers</span>
+<span class="co1"># copyright 2013 , as much gnu as compatible with wikibooks</span>
+<span class="co1"># as taken from reading pugh's paper , and sedgewick</span>
+<span class="kw1">import</span> <span class="kw3">random</span> 
+<span class="kw2">min</span> <span class="sy0">=</span> <span class="nu0">8</span>
+thresh <span class="sy0">=</span> <span class="nu0">6</span>
+SK_MAXV <span class="sy0">=</span> <span class="nu0">16</span>
+<span class="kw1">class</span> SkNode:
+  <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="sy0">,</span> v<span class="br0">)</span>:
+        <span class="kw2">self</span>.<span class="me1">ht</span> <span class="sy0">=</span> SK_MAXV
+        <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span>SK_MAXV<span class="br0">)</span>:
+          <span class="kw1">if</span> <span class="kw3">random</span>.<span class="me1">randint</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">10</span><span class="br0">)</span> <span class="sy0">&lt;</span> <span class="nu0">5</span>:
+            <span class="kw2">self</span>.<span class="me1">ht</span> <span class="sy0">=</span> i
+            <span class="kw1">break</span>
+        <span class="kw2">self</span>.<span class="me1">next</span> <span class="sy0">=</span> <span class="br0">[</span><span class="kw2">None</span><span class="br0">]</span> * <span class="kw2">self</span>.<span class="me1">ht</span>
+        <span class="kw2">self</span>.<span class="me1">v</span> <span class="sy0">=</span> v 
+        <span class="kw2">self</span>.<span class="me1">x</span> <span class="sy0">=</span> x
+ 
+  <span class="kw1">def</span> increase_ht<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> h<span class="br0">)</span>:
+        <span class="kw2">self</span>.<span class="me1">next</span>.<span class="me1">extend</span><span class="br0">(</span> <span class="br0">[</span><span class="kw2">None</span><span class="br0">]</span> * <span class="br0">(</span>h - <span class="kw2">self</span>.<span class="me1">ht</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw2">self</span>.<span class="me1">ht</span> <span class="sy0">=</span> h
+ 
+<span class="kw1">class</span> SkipList:
+ 
+  <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span> <span class="br0">)</span>:
+    <span class="kw2">self</span>.<span class="me1">head</span> <span class="sy0">=</span> <span class="kw2">None</span> 
+    <span class="kw2">self</span>.<span class="me1">level</span> <span class="sy0">=</span> <span class="nu0">0</span>
+ 
+  <span class="kw1">def</span> insert<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="sy0">,</span> v<span class="br0">)</span>:
+    n <span class="sy0">=</span> SkNode<span class="br0">(</span>x<span class="sy0">,</span> v<span class="br0">)</span>     
+    <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">head</span> <span class="kw1">is</span> <span class="kw2">None</span>:
+      <span class="kw2">self</span>.<span class="me1">head</span> <span class="sy0">=</span> n
+    <span class="kw1">else</span>:
+      <span class="kw1">if</span> n.<span class="me1">ht</span> <span class="sy0">&gt;</span> <span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">ht</span>:
+        <span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">increase_ht</span><span class="br0">(</span>n.<span class="me1">ht</span><span class="br0">)</span>   
+ 
+      <span class="kw1">if</span> x <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">x</span>:  
+        <span class="co1"># the key is less than the head's key, replace the head</span>
+        <span class="kw1">for</span> j <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span>n.<span class="me1">ht</span><span class="br0">)</span>:
+                n.<span class="me1">next</span><span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">head</span>
+        <span class="kw2">self</span>.<span class="me1">head</span> <span class="sy0">=</span> n
+      <span class="kw1">else</span>:
+        prev <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">head</span>
+ 
+        <span class="co1">#last holds the previous node for each level</span>
+        last <span class="sy0">=</span> <span class="br0">[</span><span class="kw2">None</span><span class="br0">]</span>* <span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">ht</span> 
+ 
+        <span class="co1"># starts at ht-1, scans to 0, stepping down ; this is "skipping" at higher j</span>
+        <span class="co1"># when j = 0, the lowest level,  there is no skipping , and every next node is traversed.</span>
+        <span class="co1"># tall nodes are less frequently inserted, and links between taller nodes at higher j skip over more</span>
+        <span class="co1"># more frequent shorter nodes.</span>
+        <span class="kw1">for</span> j <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span> <span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">ht</span>-<span class="nu0">1</span><span class="sy0">,</span> -<span class="nu0">1</span><span class="sy0">,</span> -<span class="nu0">1</span><span class="br0">)</span>:
+ 
+          <span class="co1"># while there is a next node with smaller x than inserting x, go to next node </span>
+          <span class="kw1">while</span>   <span class="kw1">not</span> <span class="br0">(</span>prev.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span> <span class="kw1">is</span> <span class="kw2">None</span><span class="br0">)</span> <span class="kw1">and</span> prev.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span>.<span class="me1">x</span> <span class="sy0">&lt;</span> x:
+            prev <span class="sy0">=</span> prev.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span>
+ 
+            <span class="co1">#print "prev", prev</span>
+ 
+          last<span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">=</span> prev <span class="co1">#record the previous node for this level which is points to node with higher x</span>
+ 
+        <span class="co1">#weave in the node</span>
+        <span class="co1">#only change pointers for the levels of the inserted node</span>
+        <span class="kw1">for</span> j <span class="kw1">in</span> <span class="kw2">xrange</span> <span class="br0">(</span> <span class="nu0">0</span><span class="sy0">,</span> n.<span class="me1">ht</span><span class="br0">)</span>:  
+          tmp <span class="sy0">=</span> last<span class="br0">[</span>j<span class="br0">]</span>.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span>
+          last<span class="br0">[</span>j<span class="br0">]</span>.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">=</span> n
+          n.<span class="me1">next</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">=</span>tmp 
+ 
+ 
+  <span class="kw1">def</span> find<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="br0">)</span>:
+    c <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">find_node</span><span class="br0">(</span>x<span class="br0">)</span>
+    <span class="kw1">if</span> c <span class="kw1">is</span> <span class="kw2">None</span> <span class="kw1">or</span> c.<span class="me1">x</span> <span class="sy0">&lt;&gt;</span> x: 
+      <span class="kw1">return</span> <span class="kw2">None</span>
+ 
+    <span class="kw1">return</span> c.<span class="me1">x</span>
+ 
+ 
+  <span class="kw1">def</span> find_node_and_prev<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="br0">)</span>:
+    <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">head</span> <span class="kw1">is</span> <span class="kw2">None</span>:
+      <span class="kw1">return</span> <span class="kw2">None</span>
+    c <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">head</span>
+    prev <span class="sy0">=</span> <span class="br0">[</span> y <span class="kw1">for</span> y <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">head</span> <span class="br0">]</span>
+    <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">head</span>.<span class="me1">ht</span> - <span class="nu0">1</span><span class="sy0">,</span> -<span class="nu0">1</span><span class="sy0">,</span> -<span class="nu0">1</span><span class="br0">)</span>:
+      <span class="kw1">while</span> c.<span class="me1">x</span> <span class="sy0">&lt;</span> x <span class="kw1">and</span> <span class="kw1">not</span> c.<span class="me1">next</span><span class="br0">[</span>i<span class="br0">]</span> <span class="kw1">is</span> <span class="kw2">None</span> <span class="kw1">and</span> c.<span class="me1">next</span><span class="br0">[</span>i<span class="br0">]</span>.<span class="me1">x</span> <span class="sy0">&lt;=</span> x: <span class="co1"># must be &lt;= otherwise won't make c.x = x</span>
+        prev<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> c
+        c <span class="sy0">=</span> c.<span class="me1">next</span><span class="br0">[</span>i<span class="br0">]</span>
+      <span class="co1">#print c.x, x</span>
+      <span class="kw1">if</span> c.<span class="me1">x</span> <span class="sy0">&gt;=</span> x:
+        <span class="kw1">return</span> <span class="br0">(</span>c<span class="sy0">,</span> prev<span class="br0">)</span>
+    <span class="kw1">return</span> <span class="br0">(</span><span class="kw2">None</span><span class="sy0">,</span> <span class="kw2">None</span><span class="br0">)</span>
+ 
+  <span class="kw1">def</span> find_node<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="br0">)</span>:
+    <span class="kw1">return</span> <span class="kw2">self</span>.<span class="me1">find_node_and_prev</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>   
+ 
+  <span class="kw1">def</span> delete<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> x<span class="br0">)</span>:
+    c<span class="sy0">,</span> prev <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">find_node_and_prev</span><span class="br0">(</span>x<span class="br0">)</span>
+ 
+    <span class="kw1">if</span> c <span class="kw1">is</span> <span class="kw2">None</span>:
+      <span class="kw1">return</span> <span class="kw2">False</span>
+ 
+    <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>c.<span class="me1">next</span><span class="br0">)</span> <span class="br0">)</span>:
+      prev<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> c.<span class="me1">next</span><span class="br0">[</span>i<span class="br0">]</span>
+    <span class="kw1">return</span> <span class="kw2">True</span>
+ 
+  <span class="co1"># efficient subranges         </span>
+  <span class="kw1">def</span> find_range_nodes<span class="br0">(</span> <span class="kw2">self</span><span class="sy0">,</span> x1<span class="sy0">,</span> x2<span class="br0">)</span>:
+    c1 <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">find_node</span><span class="br0">(</span>x1<span class="br0">)</span>
+    c2 <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">find_node</span><span class="br0">(</span>x2<span class="br0">)</span>
+    l <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+    <span class="kw1">while</span> c1 <span class="sy0">&lt;&gt;</span> c2:
+      l.<span class="me1">append</span><span class="br0">(</span>c1<span class="br0">)</span>
+      c1<span class="sy0">=</span> c1.<span class="me1">next</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+    <span class="kw1">return</span> l 
+ 
+  <span class="kw1">def</span> find_range_keys<span class="br0">(</span> <span class="kw2">self</span><span class="sy0">,</span> x1<span class="sy0">,</span> x2<span class="br0">)</span>:
+    <span class="kw1">return</span> <span class="br0">[</span> n.<span class="me1">x</span> <span class="kw1">for</span> n <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">find_range_nodes</span><span class="br0">(</span>x1<span class="sy0">,</span>x2<span class="br0">)</span> <span class="br0">]</span>
+ 
+  <span class="kw1">def</span> find_range_values<span class="br0">(</span> <span class="kw2">self</span><span class="sy0">,</span> x1<span class="sy0">,</span> x2<span class="br0">)</span>:
+    <span class="kw1">return</span> <span class="br0">[</span> n.<span class="me1">v</span> <span class="kw1">for</span> n <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">find_range_nodes</span><span class="br0">(</span>x1<span class="sy0">,</span>x2<span class="br0">)</span> <span class="br0">]</span>
+ 
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">"__main__"</span>:
+  sk <span class="sy0">=</span> SkipList<span class="br0">(</span><span class="br0">)</span>
+  <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">100000</span><span class="br0">)</span>:
+    <span class="co1">#x = random.randint(0,1000000)</span>
+ 
+    sk.<span class="me1">insert</span><span class="br0">(</span>i<span class="sy0">,</span> i * <span class="nu0">10</span> <span class="br0">)</span>
+ 
+  <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">100000</span><span class="br0">)</span>:
+    <span class="kw1">print</span> i<span class="sy0">,</span> sk.<span class="me1">find</span><span class="br0">(</span>i<span class="br0">)</span>
+ 
+  <span class="kw1">print</span> sk.<span class="me1">find_range_keys</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">100001</span><span class="br0">)</span>     
+ 
+  <span class="kw1">print</span> sk.<span class="me1">find_range_values</span><span class="br0">(</span><span class="nu0">75500</span><span class="sy0">,</span> <span class="nu0">75528</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p><br /></p>
+<h3><span class="mw-headline" id="Role_of_Randomness">Role of Randomness</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=10" title="Edit section: Role of Randomness">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The idea of making higher nodes geometrically randomly less common, means there are less keys to compare with the higher the level of comparison, and since these are randomly selected, this should get rid of problems of degenerate input that makes it necessary to do tree balancing in tree algorithms. Since the higher level list have more widely separated elements, but the search algorithm moves down a level after each search terminates at a level, the higher levels help "skip" over the need to search earlier elements on lower lists. Because there are multiple levels of skipping, it becomes less likely that a meagre skip at a higher level won't be compensated by better skips at lower levels, and Pugh claims O(logN) performance overall.</p>
+<p>Conceptually , is it easier to understand than balancing trees and hence easier to implement&#160;? The development of ideas from binary trees, balanced binary trees, 2-3 trees, red-black trees, and B-trees make a stronger conceptual network but is progressive in development, so arguably, once red-black trees are understood, they have more conceptual context to aid memory , or refresh of memory.</p>
+<h3><span class="mw-headline" id="concurrent_access_application">concurrent access application</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=11" title="Edit section: concurrent access application">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Apart from using randomization to enhance a basic memory structure of linked lists, skip lists can also be extended as a global data structure used in a multiprocessor application. See supplementary topic at the end of the chapter.</p>
+<h3><span class="mw-headline" id="Idea_for_an_exercise">Idea for an exercise</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=12" title="Edit section: Idea for an exercise">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Replace the Linux completely fair scheduler red-black tree implementation with a skip list , and see how your brand of Linux runs after recompiling.</p>
+<h2><span class="mw-headline" id="Treaps">Treaps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=13" title="Edit section: Treaps">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A treap is a two keyed binary tree, that uses a second randomly generated key and the previously discussed tree operation of parent-child rotation to randomly rotate the tree so that overall, a balanced tree is produced. Recall that binary trees work by having all nodes in the left subtree small than a given node, and all nodes in a right subtree greater. Also recall that node rotation does not break this order ( some people call it an invariant), but changes the relationship of parent and child, so that if the parent was smaller than a right child, then the parent becomes the left child of the formerly right child. The idea of a tree-heap or treap, is that a binary heap relationship is maintained between parents and child, and that is a parent node has higher priority than its children, which is not the same as the left , right order of keys in a binary tree, and hence a recently inserted leaf node in a binary tree which happens to have a high random priority, can be rotated so it is relatively higher in the tree, having no parent with a lower priority. See the preamble to skip lists about red-black trees on the details of <a href="/wiki/Algorithms/Left_rotation" title="Algorithms/Left rotation">left rotation</a>.</p>
+<p>A treap is an alternative to both red-black trees, and skip lists, as a self-balancing sorted storage structure.</p>
+<h2><span class="mw-headline" id="Derandomization">Derandomization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=14" title="Edit section: Derandomization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>[TODO: Deterministic algorithms for Quicksort exist that perform as well as quicksort in the average case and are guaranteed to perform at least that well in all cases. Best of all, no randomization is needed. Also in the discussion should be some perspective on using randomization: some randomized algorithms give you better confidence probabilities than the actual hardware itself! (e.g. sunspots can randomly flip bits in hardware, causing failure, which is a risk we take quite often)]</p>
+<p>[Main idea: Look at all blocks of 5 elements, and pick the median (O(1) to pick), put all medians into an array (O(n)), recursively pick the medians of that array, repeat until you have &lt; 5 elements in the array. This recursive median constructing of every five elements takes time T(n)=T(n/5) + O(n), which by the master theorem is O(n). Thus, in O(n) we can find the right pivot. Need to show that this pivot is sufficiently good so that we're still O(n log n) no matter what the input is. This version of quicksort doesn't need rand, and it never performs poorly. Still need to show that element picked out is sufficiently good for a pivot.]</p>
+<h2><span class="mw-headline" id="Exercises">Exercises</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=15" title="Edit section: Exercises">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol>
+<li>Write a <b>find-min</b> function and run it on several different inputs to demonstrate its correctness.</li>
+</ol>
+<h2><span class="mw-headline" id="Supplementary_Topic:_skip_lists_and_multiprocessor_algorithms">Supplementary Topic: skip lists and multiprocessor algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=16" title="Edit section: Supplementary Topic: skip lists and multiprocessor algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Multiprocessor hardware provides CAS ( compare-and-set) or CMPEXCHG( compare-and-exchange)(intel manual 253666.pdf, p 3-188) atomic operations, where an expected value is loaded into the accumulator register, which is compared to a target memory location's contents, and if the same, a source memory location's contents is loaded into the target memories contents, and the zero flag set, otherwise, if different, the target memory's contents is returned in the accumulator, and the zero flag is unset, signifying , for instance, a lock contention. In the intel architecture, a LOCK instruction is issued before CMPEXCHG , which either locks the cache from concurrent access if the memory location is being cached, or locks a shared memory location if not in the cache , for the next instruction.</p>
+<p>The CMPEXCHG can be used to implement locking, where spinlocks , e.g. retrying until the zero flag is set, are simplest in design.</p>
+<p>Lockless design increases efficiency by avoiding spinning waiting for a lock .</p>
+<p>The java standard library has an implementation of non-blocking concurrent skiplists, based on a paper titled "a pragmatic implementation of non-blocking single-linked lists".</p>
+<p>The skip list implementation is an extension of the lock-free single-linked list , of which a description follows&#160;:-</p>
+<p>The <b>insert</b> operation is&#160;: X -&gt; Y insert N , N -&gt; Y, X -&gt; N&#160;; expected result is X -&gt; N -&gt; Y .</p>
+<p>A race condition is if M is inserting between X and Y and M completes first , then N completes, so the situation is X -&gt; N -&gt; Y &lt;- M</p>
+<p>M is not in the list. The CAS operation avoids this, because a copy of -&gt; Y is checked before updating X -&gt; , against the current value of X -&gt; .</p>
+<p>If N gets to update X -&gt; first, then when M tries to update X -&gt; , its copy of X -&gt; Y , which it got before doing M -&gt; Y , does not match X -&gt; N , so CAS returns non-zero flag set. The process that tried to insert M then can retry the insertion after X, but now the CAS checks -&gt;N is X's next pointer, so after retry, X-&gt;M-&gt;N-&gt;Y , and neither insertions are lost.</p>
+<p>If M updates X-&gt; first, N 's copy of X-&gt;Y does not match X -&gt; M , so the CAS will fail here too, and the above retry of the process inserting N, would have the serialized result of X -&gt;N -&gt; M -&gt; Y .</p>
+<p>The <b>delete</b> operation depends on a separate 'logical' deletion step, before 'physical' deletion.</p>
+<p>'Logical' deletion involves a CAS change of the next pointer into a 'marked' pointer. The java implementation substitutes with an atomic insertion of a proxy marker node to the next node.</p>
+<p>This prevents future insertions from inserting after a node which has a next pointer 'marked' , making the latter node 'logically' deleted.</p>
+<p>The <b>insert</b> operation relies on another function , <i>search</i> , returning <u>2</u> <b>unmarked</b> , at the time of the invocation, node pointers&#160;: the first pointing to a node , whose next pointer is equal to the second.</p>
+<p>The first node is the node before the insertion point.</p>
+<p>The <i>insert</i> CAS operation checks that the current next pointer of the first node, corresponds to the unmarked reference of the second, so will fail 'logically' if the first node's <i>next</i> pointer has become marked <i>after</i> the call to the <i>search</i> function above, because the first node has been concurrently logically deleted.</p>
+<p><i>This meets the aim to prevent a insertion occurring concurrently after a node has been deleted.</i></p>
+<p>If the insert operation fails the CAS of the previous node's next pointer, the search for the insertion point starts from the <b>start of the entire list</b> again, since a new unmarked previous node needs to be found, and there are no previous node pointers as the list nodes are singly-linked.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:CAS_insert.png" class="image"><img alt="CAS insert.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/18/CAS_insert.png/300px-CAS_insert.png" width="300" height="233" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/18/CAS_insert.png/450px-CAS_insert.png 1.5x, //upload.wikimedia.org/wikipedia/commons/1/18/CAS_insert.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:CAS_insert.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+</div>
+</div>
+</div>
+<p>The <b>delete</b> operation outlined above, also relies on the <i>search</i> operation returning two <i>unmarked</i> nodes, and the two CAS operations in delete, one for logical deletion or marking of the second pointer's next pointer, and the other for physical deletion by making the first node's next pointer point to the second node's unmarked next pointer.</p>
+<p>The first CAS of delete happens only after a check that the copy of the original second nodes' next pointer is unmarked, and ensures that only one concurrent delete succeeds which reads the second node's current next pointer as being unmarked as well.</p>
+<p>The second CAS checks that the previous node hasn't been logically deleted because its next pointer is not the same as the unmarked pointer to the current second node returned by the search function, so only an active previous node's next pointer is 'physically' updated to a copy of the original unmarked next pointer of the node being deleted ( whose next pointer is already marked by the first CAS).</p>
+<p>If the second CAS fails, then the previous node is logically deleted and its next pointer is marked, and so is the current node's next pointer. A call to <i>search</i> function again, tidies things up, because in endeavouring to find the key of the current node and return adjacent unmarked previous and current pointers, and while doing so, it truncates strings of logically deleted nodes .</p>
+<h4><span class="mw-headline" id="Lock-free_programming_issues">Lock-free programming issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit&amp;section=17" title="Edit section: Lock-free programming issues">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Starvation could be possible , as failed inserts have to restart from the front of the list. Wait-freedom is a concept where the algorithm has all threads safe from starvation.</p>
+<p>The ABA problem exists, where a garbage collector recycles the pointer A , but the address is loaded differently, and the pointer is re-added at a point where a check is done for A by another thread that read A and is doing a CAS to check A has not changed&#160;; the address is the same and is unmarked, but the contents of A has changed.</p>
+<p><br /></p>
+<hr />
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <strong class="selflink">4</strong>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1056
+CPU time usage: 0.160 seconds
+Real time usage: 0.573 seconds
+Preprocessor visited node count: 226/1000000
+Preprocessor generated node count: 848/1500000
+Post‐expand include size: 1063/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15001-0!0!0!!en!4!* and timestamp 20131129122458
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Randomization&amp;oldid=2576090">http://en.wikibooks.org/w/index.php?title=Algorithms/Randomization&amp;oldid=2576090</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FRandomization&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FRandomization" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Randomization"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms/Randomization"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Randomization&amp;stable=1" >Read</a></span></li>
+					<li id="ca-current" class="collapsible collapsible selected"><span><a href="/w/index.php?title=Algorithms/Randomization&amp;stable=0&amp;redirect=no"  title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Randomization&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Randomization" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Randomization" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Randomization&amp;oldid=2576090" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Randomization&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FRandomization&amp;id=2576090" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FRandomization">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FRandomization&amp;oldid=2576090&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Randomization&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 30 October 2013, at 12:01.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Randomization" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1060 in 0.136 secs. -->
+	</body>
+</html>

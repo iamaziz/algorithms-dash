@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Min and Max Heaps - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Min_and_Max_Heaps","wgTitle":"Data Structures/Min and Max Heaps","wgCurRevisionId":2566412,"wgRevisionId":2566412,"wgArticleId":20063,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Min_and_Max_Heaps","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2566412,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Min_and_Max_Heaps skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Min and Max Heaps</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <strong class="selflink">Min &amp; Max Heaps</strong> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p><br />
+A heap is an efficient semi-ordered data structure for storing a collection of orderable data. A min-heap supports two operations:</p>
+<pre>
+  INSERT(heap, element)
+  element REMOVE_MIN(heap)
+</pre>
+<p>(we discuss min-heaps, but there's no real difference between min and max heaps, except how the comparison is interpreted.)</p>
+<p>This chapter will refer exclusively to binary heaps, although different types of heaps exist. The term binary heap and heap are interchangeable in most cases. A heap can be thought of as a tree with parent and child. The main difference between a heap and a binary tree is the heap property. In order for a data structure to be considered a heap, it must satisfy the following condition (heap property):</p>
+<dl>
+<dd>If <i>A</i> and <i>B</i> are elements in the heap and <i>B</i> is a child of <i>A</i>, then key(<i>A</i>) ≤ key(<i>B</i>).</dd>
+</dl>
+<p>(This property applies for a min-heap. A max heap would have the comparison reversed). What this tells us is that the minimum key will always remain at the top and greater values will be below it. Due to this fact, heaps are used to implement priority queues which allows quick access to the item with the most priority. Here's an example of a min-heap:</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Binary-heap.png" class="image"><img alt="Binary-heap.png" src="//upload.wikimedia.org/wikibooks/en/thumb/5/5c/Binary-heap.png/300px-Binary-heap.png" width="300" height="200" class="thumbimage" srcset="//upload.wikimedia.org/wikibooks/en/thumb/5/5c/Binary-heap.png/450px-Binary-heap.png 1.5x, //upload.wikimedia.org/wikibooks/en/5/5c/Binary-heap.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Binary-heap.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf6/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+</div>
+</div>
+</div>
+<p>A heap is implemented using an array that is indexed from 1 to N, where N is the number of elements in the heap.</p>
+<p>At any time, the heap must satisfy the heap property</p>
+<pre>
+  array[n] &lt;= array[2*n]   // parent element &lt;= left child
+</pre>
+<p>and</p>
+<pre>
+  array[n] &lt;= array[2*n+1] // parent element &lt;= right child
+</pre>
+<p>whenever the indices are in the arrays bounds.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Compute_the_extreme_value"><span class="tocnumber">1</span> <span class="toctext">Compute the extreme value</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Removing_the_Extreme_Value"><span class="tocnumber">2</span> <span class="toctext">Removing the Extreme Value</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Inserting_a_value_into_the_heap"><span class="tocnumber">3</span> <span class="toctext">Inserting a value into the heap</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#TODO"><span class="tocnumber">4</span> <span class="toctext">TODO</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Treaps"><span class="tocnumber">4.1</span> <span class="toctext">Treaps</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Applications_of_Priority_Heaps"><span class="tocnumber">5</span> <span class="toctext">Applications of Priority Heaps</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Compute_the_extreme_value">Compute the extreme value</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=1" title="Edit section: Compute the extreme value">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>We will prove that <code>array[1]</code> is the minimum element in the heap. We prove it by seeing a contradiction if some other element is less than the first element. Suppose <code>array[i]</code> is the first instance of the minimum, with <code>array[j] &gt; array[i]</code> for all <code>j &lt; i</code>, and <code>i &gt;= 2</code>. But by the heap invariant array, <code>array[floor(i/2)] &lt;= array[i]</code>: this is a contradiction.</p>
+<p>Therefore, it is easy to compute <code>MIN(heap)</code>:</p>
+<pre>
+  MIN(heap)
+     return heap.array[1];
+</pre>
+<h2><span class="mw-headline" id="Removing_the_Extreme_Value">Removing the Extreme Value</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=2" title="Edit section: Removing the Extreme Value">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>To remove the minimum element, we must adjust the heap to fill <code>heap.array[1]</code>. This process is called <i>percolation</i>. Basically, we move the hole from node i to either node <code>2i</code> or <code>2i+1</code>. If we pick the minimum of these two, the heap invariant will be maintained; suppose <code>array[2i] &lt; array[2i+1]</code>. Then <code>array[2i]</code> will be moved to <code>array[i]</code>, leaving a hole at <code>2i</code>, but after the move <code>array[i] &lt; array[2i+1]</code>, so the heap invariant is maintained. In some cases, <code>2i+1</code> will exceed the array bounds, and we are forced to percolate <code>2i</code>. In other cases, <code>2i</code> is also outside the bounds: in that case, we are done.</p>
+<p><br />
+Therefore, here is the remove algorithm:</p>
+<p><br /></p>
+<pre>
+#define LEFT(i) (2*i)
+</pre>
+<pre>
+#define RIGHT(i) (2*i + 1)  
+</pre>
+<pre>
+REMOVE_MIN(heap)
+{  
+    savemin=arr[1];
+    arr[1]=arr[--heapsize];
+    i=1;
+    while(i&lt;heapsize){
+        minidx=i;
+        if(LEFT(i)&lt;heapsize &amp;&amp; arr[LEFT(i)] &lt; arr[minidx])
+            minidx=LEFT(i);
+        if(RIGHT(i)&lt;heapsize &amp;&amp; arr[RIGHT(i)] &lt; arr[minidx]) 
+            minidx=RIGHT(i);
+        if(mindx!=i){
+            swap(arr[i],arr[minidx]);
+            i=minidx;            
+        }
+        else 
+            break;
+    }
+}
+</pre>
+<p>Why does this work?</p>
+<pre>
+   If there is only 1 element ,heapsize becomes 0, nothing in the array is valid.
+   If there are 2 elements , one min and other max, you replace min with max.
+   If there are 3 or more elements say n, you replace 0th element with n-1th element. 
+   The heap property is destroyed. Choose the 2 childs of root and check which is the minimum.
+   Choose the minimum among them , swap it . Now subtree with swapped child is looses heap property.
+   If no violations break.
+</pre>
+<h2><span class="mw-headline" id="Inserting_a_value_into_the_heap">Inserting a value into the heap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=3" title="Edit section: Inserting a value into the heap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A similar strategy exists for INSERT: just append the element to the array, then fixup the heap-invariants by swapping. For example if we just appended element N, then the only invariant violation possible involves that element, in particular if <img class="tex" alt="array[floor(N/2)] &gt; array[N]" src="//upload.wikimedia.org/math/9/4/e/94ee09e1f251c8a1f02a12da09ed52b3.png" />, then those two elements must be swapped and now the only invariant violation possible is between</p>
+<pre>
+ array[floor(N/4)]  and  array[floor(N/2)]
+</pre>
+<p>we continue iterating until N=1 or until the invariant is satisfied.</p>
+<pre>
+INSERT(heap, element)
+   append(heap.array, element)
+   i = heap.array.length
+   while (i &gt; 1)
+     {
+       if (heap.array[i/2] &lt;= heap.array[i])
+         break;
+       swap(heap.array[i/2], heap.array[i]);
+       i /= 2;
+     }
+</pre>
+<h2><span class="mw-headline" id="TODO">TODO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=4" title="Edit section: TODO">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>
+ Merge-heap: it would take two max/min heap and merge them and return a single heap. O(n) time.
+ Make-heap: it would also be nice to describe the O(n) make-heap operation
+ Heap sort: the structure can actually be used to efficiently sort arrays
+ Treaps: heaps where elements can be deleted by name
+</pre>
+<p>Make-heap would make use a function heapify</p>
+<pre>
+//Element is a data structure//
+</pre>
+<p>Make-heap(Element Arr[],int size) {</p>
+<pre>
+   for(j=size/2;j&gt;0;j--)
+       {
+           Heapify(Arr,size,j);
+       }
+</pre>
+<p>}</p>
+<p>Heapify(Element Arr[],int size,int t) {</p>
+<pre>
+   L=2*t;
+   R=2*t+1;
+   if(L&lt;size )
+   {
+       mix=minindex(Arr,L,t);
+       if(R&lt;=size)
+           mix=minindex(Arr,R,mix);
+   }
+   else
+       mix=t;
+</pre>
+<pre>
+   if(mix!=t)
+   {
+       swap(mix,t);
+       Heapify(Arr,size,mix);
+   }
+</pre>
+<p>}</p>
+<p>minindex returns index of the smaller element</p>
+<h3><span class="mw-headline" id="Treaps">Treaps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=5" title="Edit section: Treaps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>covered in this example in the Algorithms book. <a href="/wiki/Algorithms/Left_rotation" title="Algorithms/Left rotation">Algorithms/Left_rotation</a></p>
+<h2><span class="mw-headline" id="Applications_of_Priority_Heaps">Applications of Priority Heaps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit&amp;section=6" title="Edit section: Applications of Priority Heaps">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In 2009, a smaller Sort Benchmark was won by OzSort, which has a paper describing lucidly how to use a priority heap as the sorting machine to produce merged parts of large (internally) sorted sections . If a sorted section took M memory and the sorting problem was k x M big, then take sequential sections of each of the k sections of size M/k , at a time, so they fit in M memory ( k * M/k = M ), and feed the first element of each of k sections to make a k sized priority queue, and as the top element is removed and written to an output buffer, take the next element from the corresponding section. This means elements may need to be associated with a label for the section they come from. When a M/k-sized section is exhausted, load in the next M/k sized minisection from the original sorted section stored on disc. Continue until all minisections in each of the k sections on disc have been exhausted.</p>
+<p>(As an example of pipelining to fill up disc operational delays, there are twin output buffers, so that once an output buffer is full one gets written the disc while the other is being filled.)</p>
+<p>This paper showed that a priority heap is more straightforward than a binary tree, because elements are constantly being deleted, as well as added, as a queuing mechanism for a k way merge, and has practical application for sorting large sets of data that exceed internal memory storage.</p>
+<p><br /></p>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <strong class="selflink">Min &amp; Max Heaps</strong> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1178
+CPU time usage: 0.084 seconds
+Real time usage: 0.106 seconds
+Preprocessor visited node count: 68/1000000
+Preprocessor generated node count: 544/1500000
+Post‐expand include size: 1797/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20063-0!0!0!!en!4!* and timestamp 20131213235843
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;oldid=2566412">http://en.wikibooks.org/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;oldid=2566412</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FMin+and+Max+Heaps&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FMin+and+Max+Heaps" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Min_and_Max_Heaps"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Min_and_Max_Heaps"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures/Min_and_Max_Heaps" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Min_and_Max_Heaps" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Min_and_Max_Heaps" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;oldid=2566412" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FMin_and_Max_Heaps&amp;id=2566412" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FMin+and+Max+Heaps">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FMin+and+Max+Heaps&amp;oldid=2566412&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Min_and_Max_Heaps&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 14 October 2013, at 20:15.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1168 in 0.127 secs. -->
+	</body>
+</html>

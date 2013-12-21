@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Hill Climbing - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Hill_Climbing" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Hill_Climbing","wgTitle":"Algorithms/Hill Climbing","wgCurRevisionId":2361404,"wgRevisionId":2361404,"wgArticleId":15005,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Hill_Climbing","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["th-th","th"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2361404,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Hill_Climbing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Hill Climbing</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <strong class="selflink">8</strong>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p><b>Hill climbing</b> is a technique for certain classes of optimization problems. The idea is to start with a sub-optimal solution to a problem (i.e., <i>start at the base of a hill</i>) and then repeatedly improve the solution (<i>walk up the hill</i>) until some condition is maximized (<i>the top of the hill is reached</i>).</p>
+<table width="80%">
+<tr>
+<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top"><b>Hill-Climbing Methodology</b><br />
+<ol>
+<li>Construct a sub-optimal solution that meets the constraints of the problem</li>
+<li>Take the solution and make an improvement upon it</li>
+<li>Repeatedly improve the solution until no more improvements are necessary/possible</li>
+</ol>
+</td>
+</tr>
+</table>
+<p>One of the most popular hill-climbing problems is the network flow problem. Although network flow may sound somewhat specific it is important because it has high expressive power: for example, many algorithmic problems encountered in practice can actually be considered special cases of network flow. After covering a simple example of the hill-climbing approach for a numerical problem we cover network flow and then present examples of applications of network flow.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Newton.27s_Root_Finding_Method"><span class="tocnumber">1</span> <span class="toctext">Newton's Root Finding Method</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Network_Flow"><span class="tocnumber">2</span> <span class="toctext">Network Flow</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_Ford-Fulkerson_Algorithm"><span class="tocnumber">3</span> <span class="toctext">The Ford-Fulkerson Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Applications_of_Network_Flow"><span class="tocnumber">4</span> <span class="toctext">Applications of Network Flow</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Newton.27s_Root_Finding_Method">Newton's Root Finding Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit&amp;section=1" title="Edit section: Newton's Root Finding Method">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Newton_iteration.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Newton_iteration.png/300px-Newton_iteration.png" width="300" height="247" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Newton_iteration.png/450px-Newton_iteration.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Newton_iteration.png/600px-Newton_iteration.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Newton_iteration.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An illustration of Newton's method: The zero of the <i>f(x)</i> function is at <i>x</i>. We see that the guess <i>x<sub>n+1</sub></i> is a better guess than <i>x<sub>n</sub></i> because it is closer to <i>x</i>. (<i>from <a href="//en.wikipedia.org/wiki/Newton%27s_method" class="extiw" title="w:Newton's method">Wikipedia</a></i>)</div>
+</div>
+</div>
+<p>Newton's Root Finding Method is a three-centuries-old algorithm for finding numerical approximations to roots of a function (that is a point <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" /> where the function <img class="tex" alt="f(x)" src="//upload.wikimedia.org/math/5/0/b/50bbd36e1fd2333108437a2ca378be62.png" /> becomes zero), starting from an initial guess. You need to know the function <img class="tex" alt="f(x)\," src="//upload.wikimedia.org/math/5/5/0/550f51512f9bb16a0f613ae65e1d3088.png" /> and its first derivative <img class="tex" alt="f'(x)\," src="//upload.wikimedia.org/math/b/2/b/b2bf76697fa80b174e04943d1777bcf6.png" /> for this algorithm. The idea is the following: In the vicinity of the initial guess <img class="tex" alt="x_0" src="//upload.wikimedia.org/math/0/b/2/0b21a666a81629962ade8afd967826ed.png" /> we can form the Taylor expansion of the function</p>
+<dl>
+<dd><img class="tex" alt="f(x)=f(x_0+\epsilon)\," src="//upload.wikimedia.org/math/a/3/d/a3dd5b3a5f64ad46380c13edb8d8151d.png" /><img class="tex" alt="\approx f(x_0)+\epsilon f'(x_0)" src="//upload.wikimedia.org/math/9/4/1/941664c61c5c7ee64aec8d04d8df1581.png" /><img class="tex" alt="+\frac{\epsilon^2}{2} f''(x_0)+..." src="//upload.wikimedia.org/math/b/3/5/b358a1cb96f734c2c6a4791ee180cc2c.png" /></dd>
+</dl>
+<p>which gives a good approximation to the function near <img class="tex" alt="x_0" src="//upload.wikimedia.org/math/0/b/2/0b21a666a81629962ade8afd967826ed.png" />. Taking only the first two terms on the right hand side, setting them equal to zero, and solving for <img class="tex" alt="\epsilon" src="//upload.wikimedia.org/math/c/5/0/c50b9e82e318d4c163e4b1b060f7daf5.png" />, we obtain</p>
+<dl>
+<dd><img class="tex" alt="\epsilon=-\frac{f(x_0)}{f'(x_0)}" src="//upload.wikimedia.org/math/c/a/6/ca6dd883a103f85d31d6026ec39411f8.png" /></dd>
+</dl>
+<p>which we can use to construct a better solution</p>
+<dl>
+<dd><img class="tex" alt="x_1=x_0+\epsilon=x_0-\frac{f(x_0)}{f'(x_0)}." src="//upload.wikimedia.org/math/b/8/5/b856f37cba71272dac9cb76ce208253a.png" /></dd>
+</dl>
+<p>This new solution can be the starting point for applying the same procedure again. Thus, in general a better approximation can be constructed by repeatedly applying</p>
+<dl>
+<dd><img class="tex" alt="x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}." src="//upload.wikimedia.org/math/4/1/c/41cb7e4f10c06202b86e92c9e1125a81.png" /></dd>
+</dl>
+<p>As shown in the illustration, this is nothing else but the construction of the zero from the tangent at the initial guessing point. In general, Newton's root finding method converges quadratically, except when the first derivative of the solution <img class="tex" alt="f'(x)=0\," src="//upload.wikimedia.org/math/a/c/b/acbe5f509f3b03f4f0e4ddf0a5056360.png" /> vanishes at the root.</p>
+<p>Coming back to the "Hill climbing" analogy, we could apply Newton's root finding method not to the function <img class="tex" alt="f(x)\," src="//upload.wikimedia.org/math/5/5/0/550f51512f9bb16a0f613ae65e1d3088.png" />, but to its first derivative <img class="tex" alt="f'(x)\," src="//upload.wikimedia.org/math/b/2/b/b2bf76697fa80b174e04943d1777bcf6.png" />, that is look for <img class="tex" alt="x" src="//upload.wikimedia.org/math/9/d/d/9dd4e461268c8034f5c8564e155c67a6.png" /> such that <img class="tex" alt="f'(x)=0\," src="//upload.wikimedia.org/math/a/c/b/acbe5f509f3b03f4f0e4ddf0a5056360.png" />. This would give the extremal positions of the function, its maxima and minima. Starting Newton's method close enough to a maximum this way, we climb the hill.</p>
+<p>Instead of regarding continuous functions, the hill-climbing method can also be applied to discrete networks.</p>
+<h2><span class="mw-headline" id="Network_Flow">Network Flow</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit&amp;section=2" title="Edit section: Network Flow">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Suppose you have a directed graph (possibly with cycles) with one vertex labeled as the source and another vertex labeled as the destination or the "sink". The source vertex only has edges coming out of it, with no edges going into it. Similarly, the destination vertex only has edges going into it, with no edges coming out of it. We can assume that the graph fully connected with no dead-ends; i.e., for every vertex (except the source and the sink), there is at least one edge going into the vertex and one edge going out of it.</p>
+<p>We assign a "capacity" to each edge, and initially we'll consider only integral-valued capacities. The following graph meets our requirements, where "s" is the source and "t" is the destination:</p>
+<p><a href="/wiki/File:Algorithms-NetFlow1.png" class="image"><img alt="Algorithms-NetFlow1.png" src="//upload.wikimedia.org/wikibooks/en/9/98/Algorithms-NetFlow1.png" width="443" height="280" /></a></p>
+<p>We'd like now to imagine that we have some series of inputs arriving at the source that we want to carry on the edges over to the sink. The number of units we can send on an edge at a time must be less than or equal to the edge's capacity. You can think of the vertices as cities and the edges as roads between the cities and we want to send as many cars from the source city to the destination city as possible. The constraint is that we cannot send more cars down a road than its capacity can handle.</p>
+<p><b>The goal of network flow</b> is to send as much traffic from <img class="tex" alt="s" src="//upload.wikimedia.org/math/0/3/c/03c7c0ace395d80182db07ae2c30f034.png" /> to <img class="tex" alt="t" src="//upload.wikimedia.org/math/e/3/5/e358efa489f58062f10dd7316b65649e.png" /> as each street can bear.</p>
+<p>To organize the traffic routes, we can build a list of different paths from city <img class="tex" alt="s" src="//upload.wikimedia.org/math/0/3/c/03c7c0ace395d80182db07ae2c30f034.png" /> to city <img class="tex" alt="t" src="//upload.wikimedia.org/math/e/3/5/e358efa489f58062f10dd7316b65649e.png" />. Each path has a carrying capacity equal to the smallest capacity value for any edge on the path; for example, consider the following path <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" />:</p>
+<p><a href="/wiki/File:Algorithms-NetFlow2.png" class="image"><img alt="Algorithms-NetFlow2.png" src="//upload.wikimedia.org/wikibooks/en/4/46/Algorithms-NetFlow2.png" width="443" height="290" /></a></p>
+<p>Even though the final edge of <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" /> has a capacity of 8, that edge only has one car traveling on it because the edge before it only has a capacity of 1 (thus, that edge is at full capacity). After using this path, we can compute the <b>residual graph</b> by subtracting 1 from the capacity of each edge:</p>
+<p><a href="/wiki/File:Algorithms-NetFlow3.png" class="image"><img alt="Algorithms-NetFlow3.png" src="//upload.wikimedia.org/wikibooks/en/3/32/Algorithms-NetFlow3.png" width="443" height="280" /></a></p>
+<p>(We subtracted 1 from the capacity of each edge in <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" /> because 1 was the carrying capacity of <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" />.) We can say that path <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" /> has a flow of 1. Formally, a <b>flow</b> is an assignment <img class="tex" alt="f(e)" src="//upload.wikimedia.org/math/6/5/3/653ffcb912ba48b85050f5b382ddf94b.png" /> of values to the set of edges in the graph <img class="tex" alt="G = (V, E)" src="//upload.wikimedia.org/math/9/e/9/9e9992d6bf50b7580f971487c466a8cb.png" /> such that:</p>
+<dl>
+<dd>1. <img class="tex" alt="\forall e\in E: f(e)\in\R" src="//upload.wikimedia.org/math/8/0/f/80f8652530b57b53fe476665f6925293.png" /></dd>
+<dd>2. <img class="tex" alt="\forall (u,v)\in E: f((u,v)) = -f((v,u))" src="//upload.wikimedia.org/math/a/d/0/ad0d6d860b855c29cdc53619e737c290.png" /></dd>
+<dd>3. <img class="tex" alt="\forall u\in V, u\ne s,t: \sum_{v\in V}f(u,v) = 0" src="//upload.wikimedia.org/math/c/9/b/c9b6eb1aab7e1cd626ae196ef006b1dd.png" /></dd>
+<dd>4. <img class="tex" alt="\forall e\in E: f(e)\le c(e)" src="//upload.wikimedia.org/math/e/1/8/e18544f9618f690082a7e9c7ecea7c52.png" /></dd>
+</dl>
+<p>Where <img class="tex" alt="s" src="//upload.wikimedia.org/math/0/3/c/03c7c0ace395d80182db07ae2c30f034.png" /> is the source node and <img class="tex" alt="t" src="//upload.wikimedia.org/math/e/3/5/e358efa489f58062f10dd7316b65649e.png" /> is the sink node, and <img class="tex" alt="c(e)\ge 0" src="//upload.wikimedia.org/math/6/e/f/6efe269944c66a2ac599909ac79c2906.png" /> is the capacity of edge <img class="tex" alt="e" src="//upload.wikimedia.org/math/e/1/6/e1671797c52e15f763380b45e841ec32.png" />. We define the value of a flow <img class="tex" alt="f" src="//upload.wikimedia.org/math/8/f/a/8fa14cdd754f91cc6554c9e71929cce7.png" /> to be:</p>
+<dl>
+<dd><img class="tex" alt="\textrm{Value}(f) = \sum_{v\in V} f((s, v))" src="//upload.wikimedia.org/math/3/e/e/3ee4db2aab71af66ddcdedcf4f23994b.png" /></dd>
+</dl>
+<p>The goal of network flow is to find an <img class="tex" alt="f" src="//upload.wikimedia.org/math/8/f/a/8fa14cdd754f91cc6554c9e71929cce7.png" /> such that <img class="tex" alt="\textrm{Value}(f)" src="//upload.wikimedia.org/math/0/8/3/08395e38b0fb8ba0944b8d835aa7e0e0.png" /> is maximal. To be maximal means that there is no other flow assignment that obeys the constraints 1-4 that would have a higher value. The traffic example can describe what the four flow constraints mean:</p>
+<ol>
+<li><img class="tex" alt="\forall e\in E: f(e)\in\R" src="//upload.wikimedia.org/math/8/0/f/80f8652530b57b53fe476665f6925293.png" />. This rule simply defines a flow to be a function from edges in the graph to real numbers. The function is defined for every edge in the graph. You could also consider the "function" to simply be a mapping: Every edge can be an index into an array and the value of the array at an edge is the value of the flow function at that edge.</li>
+<li><img class="tex" alt="\forall (u,v)\in E: f((u,v)) = -f((v,u))" src="//upload.wikimedia.org/math/a/d/0/ad0d6d860b855c29cdc53619e737c290.png" />. This rule says that if there is some traffic flowing from node <i>u</i> to node <i>v</i> then there should be considered negative that amount flowing from <i>v</i> to <i>u</i>. For example, if two cars are flowing from city <i>u</i> to city <i>v</i>, then negative two cars are going in the other direction. Similarly, if three cars are going from city <i>u</i> to city <i>v</i> and two cars are going city <i>v</i> to city <i>u</i> then the net effect is the same as if one car was going from city <i>u</i> to city <i>v</i> and no cars are going from city <i>v</i> to city <i>u</i>.</li>
+<li><img class="tex" alt="\forall u\in V, u\ne s,t: \sum_{v\in V}f(u,v) = 0" src="//upload.wikimedia.org/math/c/9/b/c9b6eb1aab7e1cd626ae196ef006b1dd.png" />. This rule says that the net flow (except for the source and the destination) should be neutral. That is, you won't ever have more cars going into a city than you would have coming out of the city. New cars can only come from the source, and cars can only be stored in the destination. Similarly, whatever flows out of <i>s</i> must eventually flow into <i>t</i>. Note that if a city has three cars coming into it, it could send two cars to one city and the remaining car to a different city. Also, a city might have cars coming into it from multiple sources (although all are ultimately from city <i>s</i>).</li>
+<li><img class="tex" alt="\forall e\in E: f(e)\le c(e)" src="//upload.wikimedia.org/math/e/1/8/e18544f9618f690082a7e9c7ecea7c52.png" />.</li>
+</ol>
+<h2><span class="mw-headline" id="The_Ford-Fulkerson_Algorithm">The Ford-Fulkerson Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit&amp;section=3" title="Edit section: The Ford-Fulkerson Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following algorithm computes the maximal flow for a given graph with non-negative capacities. What the algorithm does can be easy to understand, but it's non-trivial to show that it terminates and provides an optimal solution.</p>
+<pre>
+function <b>net-flow</b>(graph (<i>V</i>, <i>E</i>), node <i>s</i>, node <i>t</i>, cost <i>c</i>): flow
+  initialize <i>f</i>(<i>e</i>) := 0 for all <i>e</i> in <i>E</i>
+  loop while not <i>done</i>
+    for all <i>e</i> in <i>E</i>:                         <i>// compute residual capacities</i>
+      let <i>cf</i>(<i>e</i>) := <i>c</i>(<i>e</i>) - <i>f</i>(<i>e</i>)
+    repeat
+    
+    let <i>Gf</i> := (<i>V</i>, {<i>e</i> : <i>e</i> in <i>E</i> and <i>cf</i>(<i>e</i>) &gt; 0})
+
+    find a path <i>p</i> from <i>s</i> to <i>t</i> in <i>Gf</i>         <i>// e.g., use depth first search</i>
+    if no path <i>p</i> exists: signal <i>done</i>
+
+    let <i>path-capacities</i> := map(<i>p</i>, <i>cf</i>)       <i>// a path is a set of edges</i>
+    let <i>m</i> := min-val-of(<i>path-capacities</i>)    <i>// smallest residual capacity of p</i>
+    for all (<i>u</i>, <i>v</i>) in <i>p</i>:                    <i>// maintain flow constraints</i>
+      <i>f</i>((<i>u</i>, <i>v</i>)) := <i>f</i>((<i>u</i>, <i>v</i>)) + <i>m</i>
+      <i>f</i>((<i>v</i>, <i>u</i>)) := <i>f</i>((<i>v</i>, <i>u</i>)) - <i>m</i>
+    repeat
+  repeat
+end
+</pre>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+explain, hopefully using pictures, what the algorithm is doing. Explain its run time. Prove that it is optimal. Show an optimization, by "remembering" the Depth First Search to cut down the time the algorithm takes.</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<h2><span class="mw-headline" id="Applications_of_Network_Flow">Applications of Network Flow</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit&amp;section=4" title="Edit section: Applications of Network Flow">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>1. finding out maximum bi - partite matching . 2. finding out min cut of a graph .</p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1067
+CPU time usage: 0.196 seconds
+Real time usage: 0.565 seconds
+Preprocessor visited node count: 469/1000000
+Preprocessor generated node count: 1504/1500000
+Post‐expand include size: 1226/2048000 bytes
+Template argument size: 215/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15005-0!0!0!!en!4!* and timestamp 20131124065544
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Hill_Climbing&amp;oldid=2361404">http://en.wikibooks.org/w/index.php?title=Algorithms/Hill_Climbing&amp;oldid=2361404</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FHill+Climbing&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FHill+Climbing" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Hill_Climbing"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Algorithms/Hill_Climbing&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Hill_Climbing" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Hill_Climbing" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Hill_Climbing" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;oldid=2361404" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FHill_Climbing&amp;id=2361404" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FHill+Climbing">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FHill+Climbing&amp;oldid=2361404&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Hill_Climbing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 June 2012, at 12:22.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Hill_Climbing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1110 in 0.159 secs. -->
+	</body>
+</html>

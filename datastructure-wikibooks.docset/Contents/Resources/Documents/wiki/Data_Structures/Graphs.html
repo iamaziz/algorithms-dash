@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Graphs - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Graphs" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Graphs","wgTitle":"Data Structures/Graphs","wgCurRevisionId":2586381,"wgRevisionId":2586381,"wgArticleId":20058,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Graphs","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["en-us","en","he"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2505967,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Graphs skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Graphs</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />The <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Graphs&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Data_Structures/Graphs">checked</a> on <i>26 March 2013</i>. There are <a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/Graphs&amp;oldid=2505967&amp;diff=cur&amp;diffonly=0">2 pending changes</a> awaiting review.</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <strong class="selflink">Graphs</strong><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Graphs"><span class="tocnumber">1</span> <span class="toctext">Graphs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Directed_Graphs"><span class="tocnumber">1.1</span> <span class="toctext">Directed Graphs</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Undirected_Graphs"><span class="tocnumber">1.2</span> <span class="toctext">Undirected Graphs</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Weighted_Graphs"><span class="tocnumber">1.3</span> <span class="toctext">Weighted Graphs</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Graph_Representations"><span class="tocnumber">1.4</span> <span class="toctext">Graph Representations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Adjacency_Matrix_Representation"><span class="tocnumber">1.4.1</span> <span class="toctext">Adjacency Matrix Representation</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Adjacency_List_Representation"><span class="tocnumber">1.4.2</span> <span class="toctext">Adjacency List Representation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Graph_Traversals"><span class="tocnumber">1.5</span> <span class="toctext">Graph Traversals</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Depth-First_Search"><span class="tocnumber">1.5.1</span> <span class="toctext">Depth-First Search</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Graphs">Graphs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=1" title="Edit section: Graphs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <b>graph</b> is a mathematical structure consisting of a set of vertices (also called nodes) <img class="tex" alt="\{v_1, v_2,\dots,v_n\}" src="//upload.wikimedia.org/math/f/f/d/ffdaac931dd3c9b9ae4c0043c2ed3aca.png" /> and a set of edges <img class="tex" alt="\{e_1, e_2,\dots,e_m\}" src="//upload.wikimedia.org/math/5/a/d/5adefe493437755185f23294b068a508.png" />. An edge is a pair of vertices <img class="tex" alt="\{v_i, v_j\}\ i,j \in \{1..n\}" src="//upload.wikimedia.org/math/3/e/0/3e0afd93c03a303096fc3818c0a9b7ed.png" />. The two vertices are called the edge <i>endpoints</i>. Graphs are ubiquitous in computer science. They are used to model real-world systems such as the Internet (each node represents a router and each edge represents a connection between routers); airline connections (each node is an airport and each edge is a flight); or a city road network (each node represents an intersection and each edge represents a block). The wireframe drawings in computer graphics are another example of graphs.</p>
+<p>A graph may be either <i>undirected</i> or <i>directed</i>. Intuitively, an undirected edge models a "two-way" or "duplex" connection between its endpoints, while a directed edge is a one-way connection, and is typically drawn as an arrow. A directed edge is often called an <i>arc</i>. Mathematically, an undirected edge is an unordered pair of vertices, and an arc is an ordered pair. For example, a road network might be modeled as a directed graph, with one-way streets indicated by an arrow between endpoints in the appropriate direction, and two-way streets shown by a pair of parallel directed edges going both directions between the endpoints. You might ask, why not use a single <i>undirected</i> edge for a two-way street. There's no theoretical problem with this, but from a practical programming standpoint, it's generally simpler and less error-prone to stick with all directed or all undirected edges.</p>
+<p>An undirected graph can have at most <img class="tex" alt="\left (
+   \begin{array}{c}
+   n+1 \\ 2
+   
+   \end{array}
+   \right )" src="//upload.wikimedia.org/math/e/1/9/e19bdeade9c93ef0475355e6cb66de5c.png" /> edges (one for each unordered pair), while a directed graph can have at most <img class="tex" alt="n^2" src="//upload.wikimedia.org/math/b/0/8/b08b1c6ec09f20907eb1d6f1392c01c6.png" /> edges (one per ordered pair). A graph is called <i>sparse</i> if it has many fewer than this many edges (typically <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> edges), and <i>dense</i> if it has closer to <img class="tex" alt="\Omega(n^2)" src="//upload.wikimedia.org/math/0/3/0/030573389a70338bd19a9707c16f31a4.png" /> edges. A <b>multigraph</b> can have more than one edge between the same two vertices. For example, if one were modeling airline flights, there might be multiple flights between two cities, occurring at different times of the day.</p>
+<p>A <b>path</b> in a graph is a sequence of vertices <img class="tex" alt="\{ v_{i_1}, v_{i_2}, \dots , v_{i_k} \}" src="//upload.wikimedia.org/math/b/5/2/b5281df62ea23992d5e17de7ba4b3ce9.png" /> such that there exists an edge or arc between consecutive vertices. The path is called a <b>cycle</b> if <img class="tex" alt="v_{i_1} \equiv v_{i_k}" src="//upload.wikimedia.org/math/4/8/e/48efe45572a2944cc3b4d5c55a55fd18.png" />. An undirected acyclic graph is equivalent to an undirected tree. A directed acyclic graph is called a <b>DAG</b>. It is not necessarily a tree.</p>
+<p>Nodes and edges often have associated information, such as <i>labels</i> or <i>weights</i>. For example, in a graph of airline flights, a node might be labeled with the name of the corresponding airport, and an edge might have a weight equal to the flight time. The popular game "<a href="//en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon" class="extiw" title="w:Six Degrees of Kevin Bacon">Six Degrees of Kevin Bacon</a>" can be modeled by a labeled undirected graph. Each actor becomes a node, labeled by the actor's name. Nodes are connected by an edge when the two actors appeared together in some movie. We can label this edge by the name of the movie. Deciding if an actor is separated from Kevin Bacon by six or fewer steps is equivalent to finding a path of length at most six in the graph between Bacon's vertex and the other actors vertex. (This can be done with the breadth-first search algorithm found in the companion <a href="/wiki/Computer_Science:Algorithms" title="Computer Science:Algorithms" class="mw-redirect">Algorithms</a> book. The Oracle of Bacon at the University of Virginia has actually implemented this algorithm and can tell you the path from any actor to Kevin Bacon in a few clicks<a rel="nofollow" class="external autonumber" href="http://www.cs.virginia.edu/oracle/">[1]</a>.)</p>
+<h3><span class="mw-headline" id="Directed_Graphs">Directed Graphs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=2" title="Edit section: Directed Graphs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:127px;"><a href="/wiki/File:Directed.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/125px-Directed.svg.png" width="125" height="113" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/188px-Directed.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/250px-Directed.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Directed.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A directed graph.</div>
+</div>
+</div>
+<p>The number of edges with one endpoint on a given vertex is called that vertex's <b>degree</b>. In a directed graph, the number of edges that point <i>to</i> a given vertex is called its <b>in-degree</b>, and the number that point <i>from</i> it is called its <b>out-degree</b>. Often, we may want to be able to distinguish between different nodes and edges. We can associate labels with either. We call such a graph <b>labeled</b>.</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Directed Graph Operations">
+<p><b>Directed Graph Operations</b></p>
+<dl>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>make-graph</b>(): graph</code></dt>
+<dd>Create a new graph, initially with no nodes or edges.</dd>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>make-vertex</b>(graph <i>G</i>, element <i>value</i>): vertex</code></dt>
+<dd>Create a new vertex, with the given value.</dd>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>make-edge</b>(vertex <i>u</i>, vertex <i>v</i>): edge</code></dt>
+<dd>Create an edge between <i>u</i> and <i>v</i>. In a directed graph, the edge will flow from <i>u</i> to <i>v</i>.</dd>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>get-edges</b>(vertex <i>v</i>): edge-set</code></dt>
+<dd>Returns the set of edges flowing from <i>v</i></dd>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>get-neighbors</b>(vertex <i>v</i>): vertex-set</code></dt>
+<dd>Returns the set of vertices connected to <i>v</i></dd>
+</dl>
+<p>[TODO: also need undirected graph abstraction in that section, and also find a better set of operations-- the key to finding good operations is seeing what the algorithms that <i>use</i> graphs actually <i>need</i>]</p>
+</div>
+<h3><span class="mw-headline" id="Undirected_Graphs">Undirected Graphs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=3" title="Edit section: Undirected Graphs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:127px;"><a href="/wiki/File:Undirected.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Undirected.svg/125px-Undirected.svg.png" width="125" height="113" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Undirected.svg/188px-Undirected.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Undirected.svg/250px-Undirected.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Undirected.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An undirected graph.</div>
+</div>
+</div>
+<p>In a directed graph, the edges point from one vertex to another, while in an <b>undirected graph</b>, they merely connect two vertices.</p>
+<h3><span class="mw-headline" id="Weighted_Graphs">Weighted Graphs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=4" title="Edit section: Weighted Graphs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We may also want to associate some cost or weight to the traversal of an edge. When we add this information, the graph is called <b>weighted</b>. An example of a weighted graph would be the distance between the capitals of a set of countries.</p>
+<p>Directed and undirected graphs may both be weighted. The operations on a weighted graph are the same with addition of a weight parameter during edge creation:</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Directed Graph Operations">
+<p><b>Weighted Graph Operations (an extension of undirected/directed graph operations)</b></p>
+<dl>
+<dt style="font-weight:normal"><code style="background:#FFFFEE"><b>make-edge</b>(vertex <i>u</i>, vertex <i>v</i>, weight <i>w</i>): edge</code></dt>
+<dd>Create an edge between <i>u</i> and <i>v</i> with weight <i>w</i>. In a directed graph, the edge will flow from <i>u</i> to <i>v</i>.</dd>
+</dl>
+</div>
+<h3><span class="mw-headline" id="Graph_Representations">Graph Representations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=5" title="Edit section: Graph Representations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Adjacency_Matrix_Representation">Adjacency Matrix Representation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=6" title="Edit section: Adjacency Matrix Representation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>An <b>adjacency matrix</b> is one of the two common ways to represent a graph. The adjacency matrix shows which nodes are <b>adjacent</b> to one another. Two nodes are adjacent if there is an edge connecting them. In the case of a directed graph, if node <img class="tex" alt="j" src="//upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" /> is adjacent to node <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" />, there is an edge from <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> to <img class="tex" alt="j" src="//upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" />. In other words, if <img class="tex" alt="j" src="//upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" /> is adjacent to <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" />, you can get from <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> to <img class="tex" alt="j" src="//upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" /> by traversing one edge. For a given graph with <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> nodes, the adjacency matrix will have dimensions of <img class="tex" alt="n \times n" src="//upload.wikimedia.org/math/6/0/7/607acaa73c762411b20745149a11e90b.png" />. For an unweighted graph, the adjacency matrix will be populated with boolean values.</p>
+<p>For any given node <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" />, you can determine its adjacent nodes by looking at row <img class="tex" alt="\left( i , \left[ 1..n \right] \right)" src="//upload.wikimedia.org/math/4/4/e/44e71524eb872bccfb00276f9f6494cf.png" /> of the adjacency matrix. A value of true at <img class="tex" alt="\left( i , j \right)" src="//upload.wikimedia.org/math/d/3/b/d3b45aac8e2bfb89793f116ad87e6fed.png" /> indicates that there is an edge from node <img class="tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> to node <img class="tex" alt="j" src="//upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" />, and false indicating no edge. In an undirected graph, the values of <img class="tex" alt="\left( i, j \right)" src="//upload.wikimedia.org/math/d/3/b/d3b45aac8e2bfb89793f116ad87e6fed.png" /> and <img class="tex" alt="\left( j, i \right)" src="//upload.wikimedia.org/math/c/a/a/caa5ee57a1515facb4f8909255ae8db2.png" /> will be equal. In a weighted graph, the boolean values will be replaced by the weight of the edge connecting the two nodes, with a special value that indicates the absence of an edge.</p>
+<p>The memory use of an adjacency matrix is <img class="tex" alt="O(n^2)" src="//upload.wikimedia.org/math/1/8/9/189317b4b935a745fcfaf95940d2b4f0.png" />.</p>
+<h4><span class="mw-headline" id="Adjacency_List_Representation">Adjacency List Representation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=7" title="Edit section: Adjacency List Representation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The adjacency list is another common representation of a graph. There are many ways to implement this adjacency representation. One way is to have the graph maintain a list of lists, in which the first list is a list of indices corresponding to each node in the graph. Each of these refer to another list that stores a the index of each adjacent node to this one. It might also be useful to associate the weight of each link with the adjacent node in this list.</p>
+<p>Example: An undirected graph contains four nodes 1, 2, 3 and 4. 1 is linked to 2 and 3. 2 is linked to 3. 3 is linked to 4.</p>
+<p>1 - [2, 3]</p>
+<p>2 - [1, 3]</p>
+<p>3 - [1, 2, 4]</p>
+<p>4 - [3]</p>
+<p>It might be useful to store the list of all the nodes in the graph in a hash table. The keys then would correspond to the indices of each node and the value would be a reference to the list of adjacent node indices.</p>
+<p>Another implementation might require that each node keep a list of its adjacent nodes.</p>
+<h3><span class="mw-headline" id="Graph_Traversals">Graph Traversals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=8" title="Edit section: Graph Traversals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Depth-First_Search">Depth-First Search</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit&amp;section=9" title="Edit section: Depth-First Search">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Start at vertex v, visit its neighbour w, then w's neighbour y and keep going until reach 'a dead end' then iterate back and visit nodes reachable from second last visited vertex and keep applying the same principle.</p>
+<p><br /></p>
+<pre>
+[TODO: depth-first search -- with compelling example]
+</pre>
+<pre>
+// Search in the subgraph for a node matching 'criteria'. Do not re-examine 
+// nodes listed in 'visited' which have already been tested.
+GraphNode depth_first_search(GraphNode node, Predicate criteria, VisitedSet visited) {
+ // Check that we haven't already visited this part of the graph
+ if (visited.contains(node)) {
+   return null;
+ }
+ visited.insert(node);
+ // Test to see if this node satifies the criteria
+ if (criteria.apply(node.value)) {
+   return node;
+ }
+ // Search adjacent nodes for a match
+ for (adjacent in node.adjacentnodes()) {
+   GraphNode ret = depth_first_search(adjacent, criteria, visited);
+   if (ret != null) {
+     return ret;
+   }
+ }
+ // Give up - not in this part of the graph
+ return null;
+}
+</pre>
+<pre>
+Breadth-First Search 
+</pre>
+<p>Breadth first search visits the nodes neighbours and then the unvisited neighbours of the neighbours, etc. If it starts on vertex a it will go to all vertices that have an edge from a. If some points are not reachable it will have to start another BFS from a new vertex.</p>
+<pre>
+[TODO: breadth-first search -- with compelling example]
+[TODO: topological sort -- with compelling example]
+</pre>
+<p><br /></p>
+<hr />
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <strong class="selflink">Graphs</strong><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1076
+CPU time usage: 0.124 seconds
+Real time usage: 0.148 seconds
+Preprocessor visited node count: 324/1000000
+Preprocessor generated node count: 1096/1500000
+Post‐expand include size: 1698/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20058-0!0!0!!en!4!* and timestamp 20131129175544
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Graphs&amp;oldid=2586381">http://en.wikibooks.org/w/index.php?title=Data_Structures/Graphs&amp;oldid=2586381</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FGraphs&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FGraphs" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Graphs"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Data_Structures/Graphs&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Graphs&amp;stable=1" >Read</a></span></li>
+					<li id="ca-current" class="collapsible collapsible selected"><span><a href="/w/index.php?title=Data_Structures/Graphs&amp;stable=0&amp;redirect=no"  title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Graphs" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Graphs" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Graphs&amp;oldid=2586381" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Graphs&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FGraphs&amp;id=2586381" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FGraphs">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FGraphs&amp;oldid=2586381&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Graphs&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 November 2013, at 17:55.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Graphs" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1040 in 0.310 secs. -->
+	</body>
+</html>

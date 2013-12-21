@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Ada Implementation - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Ada_Implementation&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Ada_Implementation&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Ada_Implementation" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Ada_Implementation","wgTitle":"Algorithms/Ada Implementation","wgCurRevisionId":1797508,"wgRevisionId":1797508,"wgArticleId":15006,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms","Ada Programming"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Ada_Implementation","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":1797508,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Ada_Implementation skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Ada Implementation</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><strong class="selflink">A</strong></i></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1"><a href="#Chapter_1:_Introduction"><span class="tocnumber">2</span> <span class="toctext">Chapter 1: Introduction</span></a>
+<ul>
+<li class="toclevel-2"><a href="#To_Lower"><span class="tocnumber">2.1</span> <span class="toctext">To Lower</span></a></li>
+<li class="toclevel-2"><a href="#Equal_Ignore_Case"><span class="tocnumber">2.2</span> <span class="toctext">Equal Ignore Case</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Chapter_6:_Dynamic_Programming"><span class="tocnumber">3</span> <span class="toctext">Chapter 6: Dynamic Programming</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Fibonacci_numbers"><span class="tocnumber">3.1</span> <span class="toctext">Fibonacci numbers</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Simple_Implementation"><span class="tocnumber">3.1.1</span> <span class="toctext">Simple Implementation</span></a></li>
+<li class="toclevel-3"><a href="#Cached_Implementation"><span class="tocnumber">3.1.2</span> <span class="toctext">Cached Implementation</span></a></li>
+<li class="toclevel-3"><a href="#Memory_Optimized_Implementation"><span class="tocnumber">3.1.3</span> <span class="toctext">Memory Optimized Implementation</span></a></li>
+<li class="toclevel-3"><a href="#No_64_bit_integers"><span class="tocnumber">3.1.4</span> <span class="toctext">No 64 bit integers</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Intro&amp;action=edit&amp;section=T-1" title="Ada Programming/Algorithms/Intro">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Welcome to the Ada implementations of the <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a> Wikibook. For those who are new to <a href="/wiki/Ada_Programming" title="Ada Programming">Ada Programming</a> a few notes:</p>
+<ul>
+<li>All examples are fully functional with all the needed input and output operations. However, only the code needed to outline the algorithms at hand is copied into the text - the full samples are available via the download links. <small>(Note: It can take up to 48 hours until the cvs is updated)</small>.</li>
+<li>We seldom use predefined types in the sample code but define special types suitable for the algorithms at hand.</li>
+<li>Ada allows for default function parameters; however, we always fill in and name all parameters, so the reader can see which options are available.</li>
+<li>We seldom use shortcuts - like using the attributes <a href="/wiki/Ada_Programming/Attributes/%27Image" title="Ada Programming/Attributes/'Image"><font style="color:teal">Image</font></a> or <a href="/wiki/Ada_Programming/Attributes/%27Value" title="Ada Programming/Attributes/'Value"><font style="color:teal">Value</font></a> for String &lt;=&gt; Integer conversions.</li>
+</ul>
+<p>All these rules make the code more elaborate than perhaps needed. However, we also hope it makes the code easier to understand</p>
+<p><br /></p>
+<h2><span class="mw-headline" id="Chapter_1:_Introduction">Chapter 1: Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_1&amp;action=edit&amp;section=T-1" title="Ada Programming/Algorithms/Chapter 1">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following subprograms are implementations of the <a href="/wiki/Algorithms/Introduction#Inventing_an_Algorithm" title="Algorithms/Introduction"><i>Inventing an Algorithm</i> examples</a>.</p>
+<h3><span class="mw-headline" id="To_Lower">To Lower</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_1&amp;action=edit&amp;section=T-2" title="Ada Programming/Algorithms/Chapter 1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Ada example code does not append to the array as the algorithms. Instead we create an empty array of the desired length and then replace the characters inside.</p>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: to_lower_1.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/to_lower_1.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/to_lower_1.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> To_Lower (C : Character) <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Character <a href="/wiki/Ada_Programming/Keywords/renames" title="Ada Programming/Keywords/renames"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">renames</tt></a>
+     Ada.Characters.Handling.To_Lower;
+
+  --  tolower - translates all alphabetic, uppercase characters
+  --  in str to lowercase
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> To_Lower (Str : String) <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> String <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+     Result : String (Str'<a href="/wiki/Ada_Programming/Attributes/%27Range" title="Ada Programming/Attributes/'Range"><font style="color:teal">Range</font></a>);
+  <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/for" title="Ada Programming/Keywords/for"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">for</tt></a> C <a href="/wiki/Ada_Programming/Keywords/in" title="Ada Programming/Keywords/in"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">in</tt></a>  Str'<a href="/wiki/Ada_Programming/Attributes/%27Range" title="Ada Programming/Attributes/'Range"><font style="color:teal">Range</font></a> <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>
+        Result (C) := To_Lower (Str (C));
+     <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>;
+     <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Result;
+  <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> To_Lower;
+</pre>
+<p>Would the append approach be impossible with Ada? No, but it would be significantly more complex and slower.</p>
+<h3><span class="mw-headline" id="Equal_Ignore_Case">Equal Ignore Case</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_1&amp;action=edit&amp;section=T-3" title="Ada Programming/Algorithms/Chapter 1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: to_lower_2.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/to_lower_2.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/to_lower_2.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+  --  equal-ignore-case -- returns true if s or t are equal,
+  --  ignoring case
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> Equal_Ignore_Case
+    (S    : String;
+     T    : String)
+     <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Boolean
+  <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+     O : <a href="/wiki/Ada_Programming/Keywords/constant" title="Ada Programming/Keywords/constant"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">constant</tt></a> Integer := S'<a href="/wiki/Ada_Programming/Attributes/%27First" title="Ada Programming/Attributes/'First"><font style="color:teal">First</font></a> - T'<a href="/wiki/Ada_Programming/Attributes/%27First" title="Ada Programming/Attributes/'First"><font style="color:teal">First</font></a>;
+  <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> T'<a href="/wiki/Ada_Programming/Attributes/%27Length" title="Ada Programming/Attributes/'Length"><font style="color:teal">Length</font></a> /= S'<a href="/wiki/Ada_Programming/Attributes/%27Length" title="Ada Programming/Attributes/'Length"><font style="color:teal">Length</font></a> <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> False;  --  if they aren't the same length, they
+                       --  aren't equal
+     <a href="/wiki/Ada_Programming/Keywords/else" title="Ada Programming/Keywords/else"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">else</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/for" title="Ada Programming/Keywords/for"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">for</tt></a> I <a href="/wiki/Ada_Programming/Keywords/in" title="Ada Programming/Keywords/in"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">in</tt></a>  S'<a href="/wiki/Ada_Programming/Attributes/%27Range" title="Ada Programming/Attributes/'Range"><font style="color:teal">Range</font></a> <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>
+           <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> To_Lower (S (I)) /=
+              To_Lower (T (I + O))
+           <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+              <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> False;
+           <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a>;
+        <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>;
+     <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a>;
+     <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> True;
+  <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> Equal_Ignore_Case;
+</pre>
+<p><br /></p>
+<p><br /></p>
+<h2><span class="mw-headline" id="Chapter_6:_Dynamic_Programming">Chapter 6: Dynamic Programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-1" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Fibonacci_numbers">Fibonacci numbers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-2" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following codes are implementations of the <a href="/wiki/Algorithms/Dynamic_Programming#Fibonacci_Numbers" title="Algorithms/Dynamic Programming">Fibonacci-Numbers examples</a>.</p>
+<h4><span class="mw-headline" id="Simple_Implementation">Simple Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-3" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: fibonacci_1.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/fibonacci_1.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/fibonacci_1.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+...
+</pre>
+<p>To calculate Fibonacci numbers negative values are not needed so we define an integer type which starts at 0. With the integer type defined you can calculate up until <code>Fib (87)</code>. <code>Fib (88)</code> will result in an <code>Constraint_Error</code>.</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a> <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> 0 .. 999_999_999_999_999_999;
+</pre>
+<p>You might notice that there is not equivalence for the <code>assert (n &gt;= 0)</code> from the original example. Ada will test the correctness of the parameter <i>before</i> the function is called.</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> Fib (n : Integer_Type) <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+  <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> n = 0 <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> 0;
+     <a href="/wiki/Ada_Programming/Keywords/elsif" title="Ada Programming/Keywords/elsif"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">elsif</tt></a> n = 1 <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> 1;
+     <a href="/wiki/Ada_Programming/Keywords/else" title="Ada Programming/Keywords/else"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">else</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Fib (n - 1) + Fib (n - 2);
+     <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a>;
+  <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> Fib;
+
+...
+</pre>
+<h4><span class="mw-headline" id="Cached_Implementation">Cached Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-4" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: fibonacci_2.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/fibonacci_2.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/fibonacci_2.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+...
+</pre>
+<p>For this implementation we need a special cache type can also store a -1 as "not calculated" marker</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Cache_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a> <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> -1 .. 999_999_999_999_999_999;
+</pre>
+<p>The actual type for calculating the fibonacci numbers continues to start at 0. As it is a <a href="/wiki/Ada_Programming/Keywords/subtype" title="Ada Programming/Keywords/subtype"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">subtype</tt></a> of the cache type Ada will automatically convert between the two. <small>(the conversion is - of course - checked for validity)</small></p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/subtype" title="Ada Programming/Keywords/subtype"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">subtype</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a> Cache_Type <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a>
+     0 .. Cache_Type'<a href="/wiki/Ada_Programming/Attributes/%27Last" title="Ada Programming/Attributes/'Last"><font style="color:teal">Last</font></a>;
+</pre>
+<p>In order to know how large the cache need to be we first read the actual value from the command line.</p>
+<pre>
+  Value : <a href="/wiki/Ada_Programming/Keywords/constant" title="Ada Programming/Keywords/constant"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">constant</tt></a> Integer_Type :=
+     Integer_Type'Value (Ada.Command_Line.Argument (1));
+</pre>
+<p>The Cache array starts with element 2 since Fib (0) and Fib (1) are constants and ends with the value we want to calculate.</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Cache_Array <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/array" title="Ada Programming/Keywords/array"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">array</tt></a> (Integer_Type <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> 2 .. Value) <a href="/wiki/Ada_Programming/Keywords/of" title="Ada Programming/Keywords/of"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">of</tt></a> Cache_Type;
+</pre>
+<p>The Cache is initialized to the first valid value of the cache type — this is <code>-1</code>.</p>
+<pre>
+  F : Cache_Array := (<a href="/wiki/Ada_Programming/Keywords/others" title="Ada Programming/Keywords/others"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">others</tt></a> =&gt; Cache_Type'First);
+</pre>
+<p>What follows is the actual algorithm.</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> Fib (N : Integer_Type) <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+  <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> N = 0 <a href="/wiki/Ada_Programming/Keywords/or" title="Ada Programming/Keywords/or"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">or</tt></a> <a href="/wiki/Ada_Programming/Keywords/else" title="Ada Programming/Keywords/else"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">else</tt></a> N = 1 <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> N;
+     <a href="/wiki/Ada_Programming/Keywords/elsif" title="Ada Programming/Keywords/elsif"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">elsif</tt></a> F (N) /= Cache_Type'First <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> F (N);
+     <a href="/wiki/Ada_Programming/Keywords/else" title="Ada Programming/Keywords/else"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">else</tt></a>
+        F (N) := Fib (N - 1) + Fib (N - 2);
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> F (N);
+     <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a>;
+  <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> Fib;
+
+...
+</pre>
+<p>This implementation is faithful to the original from the <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a> book. However, in Ada you would normally do it a little different:</p>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: fibonacci_3.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/fibonacci_3.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/fibonacci_3.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<p>when you use a slightly larger array which also stores the elements 0 and 1 and initializes them to the correct values</p>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Cache_Array <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/array" title="Ada Programming/Keywords/array"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">array</tt></a> (Integer_Type <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> 0 .. Value) <a href="/wiki/Ada_Programming/Keywords/of" title="Ada Programming/Keywords/of"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">of</tt></a> Cache_Type;
+
+  F : Cache_Array :=
+     (0      =&gt; 0,
+      1      =&gt; 1,
+      <a href="/wiki/Ada_Programming/Keywords/others" title="Ada Programming/Keywords/others"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">others</tt></a> =&gt; Cache_Type'First);
+</pre>
+<p>and then you can remove the first <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> path.</p>
+<pre>
+<strike>     <a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> N = 0 <a href="/wiki/Ada_Programming/Keywords/or" title="Ada Programming/Keywords/or"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">or</tt></a> <a href="/wiki/Ada_Programming/Keywords/else" title="Ada Programming/Keywords/else"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">else</tt></a> N = 1 <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+        <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> N;
+     els</strike><a href="/wiki/Ada_Programming/Keywords/if" title="Ada Programming/Keywords/if"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">if</tt></a> F (N) /= Cache_Type'First <a href="/wiki/Ada_Programming/Keywords/then" title="Ada Programming/Keywords/then"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">then</tt></a>
+</pre>
+<p>This will save about 45% of the execution-time <small>(measured on Linux i686)</small> while needing only two more elements in the cache array.</p>
+<h4><span class="mw-headline" id="Memory_Optimized_Implementation">Memory Optimized Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-5" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This version looks just like the original in WikiCode.</p>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: fibonacci_4.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/fibonacci_4.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/fibonacci_4.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a> <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> 0 .. 999_999_999_999_999_999;
+
+  <a href="/wiki/Ada_Programming/Keywords/function" title="Ada Programming/Keywords/function"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">function</tt></a> Fib (N : Integer_Type) <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a>
+     U : Integer_Type := 0;
+     V : Integer_Type := 1;
+  <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+     <a href="/wiki/Ada_Programming/Keywords/for" title="Ada Programming/Keywords/for"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">for</tt></a> I <a href="/wiki/Ada_Programming/Keywords/in" title="Ada Programming/Keywords/in"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">in</tt></a>  2 .. N <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>
+        Calculate_Next : <a href="/wiki/Ada_Programming/Keywords/declare" title="Ada Programming/Keywords/declare"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">declare</tt></a>
+           T : <a href="/wiki/Ada_Programming/Keywords/constant" title="Ada Programming/Keywords/constant"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">constant</tt></a> Integer_Type := U + V;
+        <a href="/wiki/Ada_Programming/Keywords/begin" title="Ada Programming/Keywords/begin"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">begin</tt></a>
+           U := V;
+           V := T;
+        <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> Calculate_Next;
+     <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> <a href="/wiki/Ada_Programming/Keywords/loop" title="Ada Programming/Keywords/loop"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">loop</tt></a>;
+     <a href="/wiki/Ada_Programming/Keywords/return" title="Ada Programming/Keywords/return"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">return</tt></a> V;
+  <a href="/wiki/Ada_Programming/Keywords/end" title="Ada Programming/Keywords/end"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">end</tt></a> Fib;
+</pre>
+<h4><span class="mw-headline" id="No_64_bit_integers">No 64 bit integers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ada_Programming/Algorithms/Chapter_6&amp;action=edit&amp;section=T-6" title="Ada Programming/Algorithms/Chapter 6">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Your Ada compiler does not support 64 bit integer numbers? Then you could try to use <a href="/wiki/Ada_Programming/Types/delta" title="Ada Programming/Types/delta">decimal numbers</a> instead. Using decimal numbers results in a slower program <small>(takes about three times as long)</small> but the result will be the same.</p>
+<p>The following example shows you how to define a suitable decimal type. Do experiment with the <a href="/wiki/Ada_Programming/Keywords/digits" title="Ada Programming/Keywords/digits"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">digits</tt></a> and <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a> parameters until you get the optimum out of your Ada compiler.</p>
+<div style="background-color: snow; border: solid 1px PeachPuff; padding: 1em;">File: fibonacci_5.adb <small>(<a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/wikibook-ada/trunk/demos/Source/fibonacci_5.adb?view=markup">view</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.svn.sourceforge.net/viewvc/*checkout*/wikibook-ada/trunk/demos/Source/fibonacci_5.adb">plain text</a>, <a rel="nofollow" class="external text" href="https://sourceforge.net/project/showfiles.php?group_id=124904">download page</a>, <a rel="nofollow" class="external text" href="http://wikibook-ada.sourceforge.net/html/index.html">browse all</a>)</small></div>
+<pre>
+  <a href="/wiki/Ada_Programming/Keywords/type" title="Ada Programming/Keywords/type"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">type</tt></a> Integer_Type <a href="/wiki/Ada_Programming/Keywords/is" title="Ada Programming/Keywords/is"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">is</tt></a> <a href="/wiki/Ada_Programming/Keywords/delta" title="Ada Programming/Keywords/delta"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">delta</tt></a> 1.0 <a href="/wiki/Ada_Programming/Keywords/digits" title="Ada Programming/Keywords/digits"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">digits</tt></a> 18 <a href="/wiki/Ada_Programming/Keywords/range" title="Ada Programming/Keywords/range"><tt style="color:DodgerBlue; text-decoration:none; font-weight:bold;">range</tt></a>
+     0.0 .. 999_999_999_999_999_999.0;
+</pre>
+<p>You should know that floating point numbers are unsuitable for the calculation of fibonacci numbers. They will not report an error condition when the number calculated becomes too large — instead they will lose in precision which makes the result meaningless.</p>
+<p><br /></p>
+<p><br /></p>
+<hr />
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">7</a>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><strong class="selflink">A</strong></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1059
+CPU time usage: 0.404 seconds
+Real time usage: 0.456 seconds
+Preprocessor visited node count: 944/1000000
+Preprocessor generated node count: 2191/1500000
+Post‐expand include size: 45502/2048000 bytes
+Template argument size: 1532/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15006-0!*!0!!en!*!* and timestamp 20131123045821
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Ada_Implementation&amp;oldid=1797508">http://en.wikibooks.org/w/index.php?title=Algorithms/Ada_Implementation&amp;oldid=1797508</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li><li><a href="/wiki/Category:Ada_Programming" title="Category:Ada Programming">Ada Programming</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FAda+Implementation&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FAda+Implementation" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Ada_Implementation"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms/Ada_Implementation"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Ada_Implementation" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Ada_Implementation&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Ada_Implementation&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Ada_Implementation" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Ada_Implementation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Ada_Implementation&amp;oldid=1797508" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Ada_Implementation&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FAda_Implementation&amp;id=1797508" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FAda+Implementation">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FAda+Implementation&amp;oldid=1797508&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Ada_Implementation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 May 2010, at 13:52.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Ada_Implementation" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1078 in 0.169 secs. -->
+	</body>
+</html>

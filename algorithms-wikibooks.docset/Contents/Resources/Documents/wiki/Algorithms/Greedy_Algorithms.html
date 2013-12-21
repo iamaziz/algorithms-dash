@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Algorithms/Greedy Algorithms - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms/Greedy_Algorithms" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.geshi.local%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms/Greedy_Algorithms","wgTitle":"Algorithms/Greedy Algorithms","wgCurRevisionId":2522080,"wgRevisionId":2522080,"wgArticleId":15004,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms/Greedy_Algorithms","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2522080,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms_Greedy_Algorithms skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms/Greedy Algorithms</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <strong class="selflink">7</strong>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+<p>In the backtracking algorithms we looked at, we saw algorithms that found decision points and recursed over all options from that decision point. A <b>greedy algorithm</b> can be thought of as a backtracking algorithm where at each decision point "the best" option is already known and thus can be picked without having to recurse over any of the alternative options.</p>
+<p>The name "greedy" comes from the fact that the algorithms make decisions based on a single criterion, instead of a global analysis that would take into account the decision's effect on further steps. As we will see, such a backtracking analysis will be unnecessary in the case of greedy algorithms, so it is not greedy in the sense of causing harm for only short-term gain.</p>
+<p>Unlike backtracking algorithms, greedy algorithms can't be made for every problem. Not every problem is "solvable" using greedy algorithms. Viewing the finding solution to an optimization problem as a hill climbing problem greedy algorithms can be used for only those hills where at every point taking the steepest step would lead to the peak always.</p>
+<p>Greedy algorithms tend to be very efficient and can be implemented in a relatively straightforward fashion. Many a times in O(n) complexity as there would be a single choice at every point. However, most attempts at creating a correct greedy algorithm fail unless a precise proof of the algorithm's correctness is first demonstrated. When a greedy strategy fails to produce optimal results on all inputs, we instead refer to it as a heuristic instead of an algorithm. Heuristics can be useful when speed is more important than exact results (for example, when "good enough" results are sufficient).</p>
+<h2><span class="mw-headline" id="Event_Scheduling_Problem">Event Scheduling Problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit&amp;section=1" title="Edit section: Event Scheduling Problem">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first problem we'll look at that can be solved with a greedy algorithm is the event scheduling problem. We are given a set of events that have a start time and finish time, and we need to produce a subset of these events such that no events intersect each other (that is, having overlapping times), and that we have the maximum number of events scheduled as possible.</p>
+<p>Here is a formal statement of the problem:</p>
+<dl>
+<dd><i>Input</i>: <i>events</i>: a set of intervals <img class="tex" alt="(s_i, f_i)" src="//upload.wikimedia.org/math/d/1/0/d10f9a5fab981939bf27aafd71cf7653.png" /> where <img class="tex" alt="s_i" src="//upload.wikimedia.org/math/e/5/a/e5a7472d780a5a032c7775cc5e3ce901.png" /> is the start time, and <img class="tex" alt="f_i" src="//upload.wikimedia.org/math/d/b/b/dbb3b84cea7e7015fb1a591964fbd918.png" /> is the finish time.</dd>
+<dd><i>Solution</i>: A subset <i>S</i> of <i>Events</i>.</dd>
+<dd><i>Constraint</i>: No events can intersect (start time exclusive). That is, for all intervals <img class="tex" alt="i=(s_i, f_i), j=(s_j, f_j)" src="//upload.wikimedia.org/math/a/b/7/ab764cda65ce85e57e34c554f39a33d7.png" /> where <img class="tex" alt="s_i &lt; s_j" src="//upload.wikimedia.org/math/5/9/f/59fb1c995d82f4ebfb9410249ed96d3a.png" /> it holds that <img class="tex" alt="f_i\le s_j" src="//upload.wikimedia.org/math/9/4/c/94c75f92873378f40478925a23e4d3af.png" />.</dd>
+<dd><i>Objective</i>: Maximize the number of scheduled events, i.e. maximize the size of the set <i>S</i>.</dd>
+</dl>
+<p>We first begin with a backtracking solution to the problem:</p>
+<pre>
+<i>// event-schedule -- schedule as many non-conflicting events as possible</i>
+function <b>event-schedule</b>(<i>events</i> array of <i>s</i>[1..<i>n</i>], <i>j</i>[1..<i>n</i>]): set
+  if <i>n</i> == 0: return <img class="tex" alt="\emptyset" src="//upload.wikimedia.org/math/4/d/f/4df085f70a97244c977b6ff20b1952b4.png" /> fi
+  if <i>n</i> == 1: return {<i>events</i>[1]} fi
+  let <i>event</i> := <i>events</i>[1]
+  let <i>S1</i> := union(<b>event-schedule</b>(<i>events</i> - set of conflicting events), <i>event</i>)
+  let <i>S2</i> := <b>event-schedule</b>(<i>events</i> - {<i>event</i>})
+  if <i>S1</i>.size() &gt;= <i>S2</i>.size():
+    return <i>S1</i>
+  else
+    return <i>S2</i>
+  fi
+end
+</pre>
+<p>The above algorithm will faithfully find the largest set of non-conflicting events. It brushes aside details of how the set</p>
+<dl>
+<dd><i>events</i> - set of conflicting events</dd>
+</dl>
+<p>is computed, but it would require <img class="tex" alt="O(n)" src="//upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> time. Because the algorithm makes two recursive calls on itself, each with an argument of size <img class="tex" alt="n - 1" src="//upload.wikimedia.org/math/a/4/3/a438673491daae8148eae77373b6a467.png" />, and because removing conflicts takes linear time, a recurrence for the time this algorithm takes is:</p>
+<dl>
+<dd><img class="tex" alt="T(n) = 2\cdot T(n - 1) + O(n)" src="//upload.wikimedia.org/math/7/6/3/7631b7bcfd14d8be580a738ae6bdecf1.png" /></dd>
+</dl>
+<p>which is <img class="tex" alt="O(2^{n})" src="//upload.wikimedia.org/math/a/5/b/a5bab29729331b95aeebc96eda2906ad.png" />.</p>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+a tighter bound is possible</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<p>But suppose instead of picking just the first element in the array we used some other criterion. The aim is to just pick the "right" one so that we wouldn't need two recursive calls. First, let's consider the greedy strategy of picking the shortest events first, until we can add no more events without conflicts. The idea here is that the shortest events would likely interfere less than other events.</p>
+<p>There are scenarios were picking the shortest event first produces the optimal result. However, here's a scenario where that strategy is sub-optimal:</p>
+<p><a href="/wiki/File:AlgorithmsShortestFirst.png" class="image"><img alt="AlgorithmsShortestFirst.png" src="//upload.wikimedia.org/wikibooks/en/d/db/AlgorithmsShortestFirst.png" width="358" height="140" /></a></p>
+<p>Above, the optimal solution is to pick event A and C, instead of just B alone. Perhaps instead of the shortest event we should pick the events that have the least number of conflicts. This strategy seems more direct, but it fails in this scenario:</p>
+<p><a href="/wiki/File:AlgorithmsLeastConflicts.png" class="image"><img alt="AlgorithmsLeastConflicts.png" src="//upload.wikimedia.org/wikibooks/en/f/fd/AlgorithmsLeastConflicts.png" width="358" height="238" /></a></p>
+<p>Above, we can maximize the number of events by picking A, B, C, D, and E. However, the events with the least conflicts are 6, 2 and 7, 3. But picking one of 6, 2 and one of 7, 3 means that we cannot pick B, C and D, which includes three events instead of just two.</p>
+<h2><span class="mw-headline" id="Dijkstra.27s_Shortest_Path_Algorithm">Dijkstra's Shortest Path Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit&amp;section=2" title="Edit section: Dijkstra's Shortest Path Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>With two (high-level, pseudocode) transformations, Dijsktra's algorithm can be derived from the much less efficient backtracking algorithm. The trick here is to prove the transformations maintain correctness, but that's the whole insight into Dijkstra's algorithm anyway. [TODO: important to note the paradox that to solve this problem it's easier to solve a more-general version. That is, shortest path from s to all nodes, not just to t. Worthy of its own colored box.]</p>
+<p>To see the workings of Dijkstra's Shortest Path Algorithm, take an example:</p>
+<p>There is a start and end node, with 2 paths between them&#160;; one path has cost 30 on first hop, then 10 on last hop to the target node, with total cost 40. Another path cost 10 on first hop, 10 on second hop, and 40 on last hop, with total cost 60.</p>
+<p>The start node is given distance zero so it can be at the front of a shortest distance queue, all the other nodes are given infinity or a large number e.g. 32767 .</p>
+<p>This makes the start node the first current node in the queue.</p>
+<p>With each iteration, the current node is the first node of a shortest path queue. It looks at all nodes adjacent to the current node;</p>
+<p>For the case of the start node, in the first path it will find a node of distance 30, and in the second path, an adjacent node of distance 10. The current nodes distance , which is zero at the beginning, is added to distances of the adjacent nodes, and the distances from the start node of each node are updated , so the nodes will be 30+0 = 30 in the 1st path , and 10+0=10 in the 2nd path.</p>
+<p>Importantly, also updated is a previous pointer attribute for each node, so each node will point back to the current node, which is the start node for these two nodes.</p>
+<p>Each node's priority is updated in the priority queue using the new distance.</p>
+<p>That ends one iteration. The current node was removed from the queue before examining its adjacent nodes.</p>
+<p>In the next iteration, the front of the queue will be the node in the second path of distance 10, and it has only one adjacent node of distance 10, and that adjacent node will distance will be updated from 32767 to 10 (the current node distance) + 10 ( the distance from the current node) = 20.</p>
+<p>In the next iteration, the second path node of cost 20 will be examined, and it has one adjacent hop of 40 to the target node, and the target nodes distance is updated from 32767 to 20 + 40 = 60 . The target node has its priority updated.</p>
+<p>In the next iteration, the shortest path node will be the first path node of cost 30, and the target node has not been yet removed from the queue. It is also adjacent to the target node, with the total distance cost of 30 + 10 = 40.</p>
+<p>Since 40 is less than 60, the previous calculated distance of the target node, the target node distance is updated to 40, and the previous pointer of the target node is updated to the node on the first path.</p>
+<p>In the final iteration, the shortest path node is the target node, and the loop exits.</p>
+<p>Looking at the previous pointers starting with the target node, a shortest path can be reverse constructed as a list to the start node.</p>
+<p>Given the above example, what kind of data structures are needed for the nodes and the algorithm&#160;?</p>
+<p><br /></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="co1"># author , copyright under GFDL</span>
+<span class="kw1">class</span> Node :
+    <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> label<span class="sy0">,</span> distance <span class="sy0">=</span> <span class="nu0">32767</span> <span class="br0">)</span>: 
+        <span class="co1"># a bug in constructor, uses a shared map initializer </span>
+        <span class="co1"># , adjacency_distance_map = {} ):</span>
+      <span class="kw2">self</span>.<span class="me1">label</span> <span class="sy0">=</span> label
+ 
+      <span class="kw2">self</span>.<span class="me1">adjacent</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span>  <span class="co1"># this is an adjacency map, with keys nodes, and values the adjacent distance</span>
+ 
+      <span class="kw2">self</span>.<span class="me1">distance</span> <span class="sy0">=</span> distance   <span class="co1"># this is the updated distance from the start node, used as the node's priority</span>
+      <span class="co1"># default distance is 32767</span>
+ 
+      <span class="kw2">self</span>.<span class="me1">shortest_previous</span> <span class="sy0">=</span> <span class="kw2">None</span>  <span class="co1">#this the last shortest distance adjacent node</span>
+ 
+    <span class="co1"># the logic is that the last adjacent distance added is recorded , for any distances of the same node added</span>
+    <span class="kw1">def</span> add_adjacent<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> local_distance<span class="sy0">,</span> node<span class="br0">)</span>:
+       <span class="kw2">self</span>.<span class="me1">adjacent</span><span class="br0">[</span>node<span class="br0">]</span><span class="sy0">=</span>local_distance
+       <span class="kw1">print</span> <span class="st0">"adjacency to "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">label</span><span class="sy0">,</span> <span class="st0">" of "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">adjacent</span><span class="br0">[</span>node<span class="br0">]</span><span class="sy0">,</span> <span class="st0">" to "</span><span class="sy0">,</span> \
+                node.<span class="me1">label</span>
+ 
+    <span class="kw1">def</span> get_adjacent<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span> :
+        <span class="kw1">return</span> <span class="kw2">self</span>.<span class="me1">adjacent</span>.<span class="me1">iteritems</span><span class="br0">(</span><span class="br0">)</span>      
+ 
+    <span class="kw1">def</span> update_shortest<span class="br0">(</span> <span class="kw2">self</span><span class="sy0">,</span> node<span class="br0">)</span>:
+        new_distance <span class="sy0">=</span> node.<span class="me1">adjacent</span><span class="br0">[</span><span class="kw2">self</span><span class="br0">]</span> + node.<span class="me1">distance</span>
+ 
+        <span class="co1">#DEBUG</span>
+        <span class="kw1">print</span> <span class="st0">"for node "</span><span class="sy0">,</span> node.<span class="me1">label</span><span class="sy0">,</span> <span class="st0">" updating "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">label</span><span class="sy0">,</span> \
+                <span class="st0">" with distance "</span><span class="sy0">,</span> node.<span class="me1">distance</span> <span class="sy0">,</span> \
+                <span class="st0">" and adjacent distance "</span><span class="sy0">,</span> node.<span class="me1">adjacent</span><span class="br0">[</span><span class="kw2">self</span><span class="br0">]</span>
+ 
+        updated <span class="sy0">=</span> <span class="kw2">False</span>
+        <span class="co1"># node's adjacency map gives the adjacent distance for this node</span>
+        <span class="co1"># the new distance for the path to this (self)node is the adjacent distance plus the other node's distance</span>
+        <span class="kw1">if</span> new_distance <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">distance</span> :
+                <span class="co1"># if it is the shortest distance then record the distance, and make the previous node that node</span>
+                <span class="kw2">self</span>.<span class="me1">distance</span> <span class="sy0">=</span> new_distance
+                <span class="kw2">self</span>.<span class="me1">shortest_previous</span><span class="sy0">=</span> node  
+                updated <span class="sy0">=</span> <span class="kw2">True</span>
+        <span class="kw1">return</span> updated
+ 
+MAX_IN_PQ <span class="sy0">=</span> <span class="nu0">100000</span>   
+<span class="kw1">class</span> PQ:
+       <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span> <span class="sy0">,</span>  sign  <span class="sy0">=</span> -<span class="nu0">1</span> <span class="br0">)</span>: 
+          <span class="kw2">self</span>.<span class="me1">q</span> <span class="sy0">=</span> <span class="br0">[</span><span class="kw2">None</span> <span class="br0">]</span> * MAX_IN_PQ <span class="co1"># make the array preallocated</span>
+          <span class="kw2">self</span>.<span class="me1">sign</span> <span class="sy0">=</span> sign  <span class="co1"># a negative sign is a minimum priority queue</span>
+          <span class="kw2">self</span>.<span class="me1">end</span> <span class="sy0">=</span> <span class="nu0">1</span> <span class="co1"># this is the next slot of the array (self.q) to be used , </span>
+          <span class="kw2">self</span>.<span class="kw2">map</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span>
+ 
+       <span class="kw1">def</span>  insert<span class="br0">(</span> <span class="kw2">self</span><span class="sy0">,</span>  priority<span class="sy0">,</span> data<span class="br0">)</span>:
+           <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span><span class="kw2">self</span>.<span class="me1">end</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">(</span>priority<span class="sy0">,</span> data<span class="br0">)</span>
+           <span class="co1"># sift up after insert</span>
+           p <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">end</span>
+           <span class="kw2">self</span>.<span class="me1">end</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">end</span> + <span class="nu0">1</span>    
+           <span class="kw2">self</span>.<span class="me1">sift_up</span><span class="br0">(</span>p<span class="br0">)</span>       
+ 
+       <span class="kw1">def</span> sift_up<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> p<span class="br0">)</span>:
+           <span class="co1"># p is the current node's position</span>
+           <span class="co1"># q[p][0] is the priority, q[p][1] is the item or node</span>
+ 
+           <span class="co1"># while the parent exists ( p &gt;= 1) , and parent's priority is less than the current node's priority</span>
+           <span class="kw1">while</span>  p / <span class="nu0">2</span> <span class="sy0">!=</span> <span class="nu0">0</span> <span class="kw1">and</span>  <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p/<span class="nu0">2</span><span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>*<span class="kw2">self</span>.<span class="me1">sign</span>  <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>*<span class="kw2">self</span>.<span class="me1">sign</span>:
+              <span class="co1"># swap the parent and the current node, and make the current node's position the parent's position</span>
+              tmp <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span>
+              <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p/<span class="nu0">2</span><span class="br0">]</span>
+              <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p/<span class="nu0">2</span><span class="br0">]</span> <span class="sy0">=</span> tmp
+              <span class="kw2">self</span>.<span class="kw2">map</span><span class="br0">[</span><span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">]</span> <span class="sy0">=</span> p
+              p <span class="sy0">=</span> p/<span class="nu0">2</span>
+ 
+           <span class="co1"># this map's the node to the position in the priority queue</span>
+           <span class="kw2">self</span>.<span class="kw2">map</span><span class="br0">[</span><span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">]</span> <span class="sy0">=</span> p
+ 
+           <span class="kw1">return</span> p
+ 
+ 
+       <span class="kw1">def</span> remove_top<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:
+ 
+            <span class="kw1">if</span>  <span class="kw2">self</span>.<span class="me1">end</span> <span class="sy0">==</span> <span class="nu0">1</span> :
+              <span class="kw1">return</span> <span class="br0">(</span>-<span class="nu0">1</span><span class="sy0">,</span> <span class="kw2">None</span><span class="br0">)</span>
+ 
+            <span class="br0">(</span>priority<span class="sy0">,</span> node<span class="br0">)</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>
+            <span class="co1"># put the end of the heap at the top of the heap, and sift it down to adjust the heap</span>
+            <span class="co1"># after the heap's top has been removed. this takes log2(N) time, where N iis the size of the heap.</span>
+ 
+            <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span><span class="kw2">self</span>.<span class="me1">end</span>-<span class="nu0">1</span><span class="br0">]</span>
+            <span class="kw2">self</span>.<span class="me1">end</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">end</span> - <span class="nu0">1</span>
+ 
+            <span class="kw2">self</span>.<span class="me1">sift_down</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>
+ 
+            <span class="kw1">return</span> <span class="br0">(</span>priority<span class="sy0">,</span> node<span class="br0">)</span>
+ 
+       <span class="kw1">def</span> sift_down<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> p<span class="br0">)</span>:
+           <span class="kw1">while</span> <span class="nu0">1</span>:
+             l <span class="sy0">=</span> p * <span class="nu0">2</span>
+ 
+             <span class="co1"># if the left child's position is more than the size of the heap, </span>
+             <span class="co1"># then left and right children don't exist</span>
+             <span class="kw1">if</span> <span class="br0">(</span> l <span class="sy0">&gt;</span> <span class="kw2">self</span>.<span class="me1">end</span><span class="br0">)</span> :
+               <span class="kw1">break</span>
+ 
+             r<span class="sy0">=</span> l + <span class="nu0">1</span>
+             <span class="co1"># the selected child node should have the greatest priority</span>
+             t <span class="sy0">=</span> l
+             <span class="kw1">if</span> r <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">end</span> <span class="kw1">and</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>r<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>*<span class="kw2">self</span>.<span class="me1">sign</span> <span class="sy0">&gt;</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>l<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>*<span class="kw2">self</span>.<span class="me1">sign</span> :
+               t <span class="sy0">=</span> r
+             <span class="kw1">print</span> <span class="st0">"checking for sift down of "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">label</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">,</span> <span class="st0">" vs child "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>t<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">label</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>t<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+             <span class="co1"># if the selected child with the greatest priority has a higher priority than the current node</span>
+             <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>t<span class="br0">]</span> <span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> * <span class="kw2">self</span>. <span class="me1">sign</span>  <span class="sy0">&gt;</span>  <span class="kw2">self</span>.<span class="me1">q</span> <span class="br0">[</span>p<span class="br0">]</span> <span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> * <span class="kw2">self</span>.<span class="me1">sign</span> :
+               <span class="co1"># swap the current node with that child, and update the mapping of the child node to its new position</span>
+               tmp <span class="sy0">=</span> <span class="kw2">self</span>. <span class="me1">q</span> <span class="br0">[</span> t <span class="br0">]</span>
+               <span class="kw2">self</span>. <span class="me1">q</span> <span class="br0">[</span> t <span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">q</span> <span class="br0">[</span> p <span class="br0">]</span>
+               <span class="kw2">self</span>. <span class="me1">q</span> <span class="br0">[</span> p <span class="br0">]</span> <span class="sy0">=</span> tmp
+               <span class="kw2">self</span>.<span class="kw2">map</span> <span class="br0">[</span> tmp <span class="br0">[</span><span class="nu0">1</span> <span class="br0">]</span> <span class="br0">]</span> <span class="sy0">=</span> p
+               p <span class="sy0">=</span> t
+             <span class="kw1">else</span>: <span class="kw1">break</span>    <span class="co1"># end the swap if the greatest priority child has a lesser priority than the current node</span>
+ 
+           <span class="co1"># after the sift down, update the new position of the current node.</span>
+           <span class="kw2">self</span>.<span class="kw2">map</span> <span class="br0">[</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> <span class="br0">]</span> <span class="sy0">=</span> p
+           <span class="kw1">return</span> p
+ 
+       <span class="kw1">def</span>  update_priority<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> priority<span class="sy0">,</span> data <span class="br0">)</span> :
+ 
+            p <span class="sy0">=</span> <span class="kw2">self</span>. <span class="kw2">map</span><span class="br0">[</span> data <span class="br0">]</span>
+            <span class="kw1">print</span> <span class="st0">"priority prior update"</span><span class="sy0">,</span> p<span class="sy0">,</span> <span class="st0">"for priority"</span><span class="sy0">,</span> priority<span class="sy0">,</span> <span class="st0">" previous priority"</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+            <span class="kw1">if</span> p <span class="kw1">is</span> <span class="kw2">None</span> : 
+               <span class="kw1">return</span> -<span class="nu0">1</span>
+ 
+            <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span>  <span class="sy0">=</span> <span class="br0">(</span>priority<span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span>
+            p <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">sift_up</span><span class="br0">(</span>p<span class="br0">)</span>
+            p <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">sift_down</span><span class="br0">(</span>p<span class="br0">)</span>
+            <span class="kw1">print</span> <span class="st0">"updated "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">label</span> <span class="sy0">,</span> p<span class="sy0">,</span> <span class="st0">"priority now "</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">q</span><span class="br0">[</span>p<span class="br0">]</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>
+ 
+            <span class="kw1">return</span> p
+ 
+<span class="kw1">class</span> NoPathToTargetNode <span class="br0">(</span> BaseException<span class="br0">)</span>:
+  <span class="kw1">pass</span>
+ 
+<span class="kw1">def</span> test_1<span class="br0">(</span><span class="br0">)</span> :
+     st <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'start'</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">)</span>
+     p1a <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'p1a'</span><span class="br0">)</span>
+     p1b <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'p1b'</span><span class="br0">)</span>
+     p2a <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'p2a'</span><span class="br0">)</span>
+     p2b <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'p2b'</span><span class="br0">)</span>
+     p2c <span class="sy0">=</span> Node<span class="br0">(</span><span class="st0">'p2c'</span><span class="br0">)</span>
+     p2d <span class="sy0">=</span> Node<span class="br0">(</span><span class="st0">'p2d'</span><span class="br0">)</span> 
+     targ <span class="sy0">=</span>  Node<span class="br0">(</span><span class="st0">'target'</span><span class="br0">)</span>
+     st.<span class="me1">add_adjacent</span> <span class="br0">(</span> <span class="nu0">30</span><span class="sy0">,</span> p1a<span class="br0">)</span>
+     <span class="co1">#st.add_adjacent ( 10, p2a)</span>
+     st.<span class="me1">add_adjacent</span> <span class="br0">(</span> <span class="nu0">20</span><span class="sy0">,</span> p2a<span class="br0">)</span>
+     <span class="co1">#p1a.add_adjacent(10, targ)</span>
+     p1a.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">40</span><span class="sy0">,</span> targ<span class="br0">)</span>
+     p1a.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">10</span><span class="sy0">,</span> p1b<span class="br0">)</span>
+     p1b.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">10</span><span class="sy0">,</span> targ<span class="br0">)</span>
+     <span class="co1"># testing alternative</span>
+     <span class="co1">#p1b.add_adjacent(20, targ)</span>
+     p2a.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">10</span><span class="sy0">,</span> p2b<span class="br0">)</span>
+     p2b.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">5</span><span class="sy0">,</span>p2c<span class="br0">)</span>
+     p2c.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">5</span><span class="sy0">,</span>p2d<span class="br0">)</span>
+     <span class="co1">#p2d.add_adjacent(5,targ)</span>
+     <span class="co1">#chooses the alternate path</span>
+     p2d.<span class="me1">add_adjacent</span><span class="br0">(</span><span class="nu0">15</span><span class="sy0">,</span>targ<span class="br0">)</span>
+     pq <span class="sy0">=</span>  PQ<span class="br0">(</span><span class="br0">)</span>
+ 
+     <span class="co1"># st.distance is 0, but the other's have default starting distance 32767</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> st.<span class="me1">distance</span><span class="sy0">,</span> st<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> p1a.<span class="me1">distance</span><span class="sy0">,</span> p1a<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> p2a.<span class="me1">distance</span><span class="sy0">,</span> p2a<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> p2b.<span class="me1">distance</span><span class="sy0">,</span> p2b<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span>targ.<span class="me1">distance</span><span class="sy0">,</span> targ<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> p2c.<span class="me1">distance</span><span class="sy0">,</span> p2c<span class="br0">)</span>
+     pq.<span class="me1">insert</span><span class="br0">(</span> p2d.<span class="me1">distance</span><span class="sy0">,</span> p2d<span class="br0">)</span>
+ 
+     pq.<span class="me1">insert</span><span class="br0">(</span>p1b.<span class="me1">distance</span><span class="sy0">,</span> p1b<span class="br0">)</span>
+ 
+     node <span class="sy0">=</span> <span class="kw2">None</span>
+ 
+     <span class="kw1">while</span>  node <span class="sy0">!=</span>  targ :
+      <span class="br0">(</span>pr<span class="sy0">,</span> node <span class="br0">)</span> <span class="sy0">=</span> pq.<span class="me1">remove_top</span><span class="br0">(</span><span class="br0">)</span>
+      <span class="co1">#debug</span>
+      <span class="kw1">print</span> <span class="st0">"node "</span><span class="sy0">,</span> node.<span class="me1">label</span><span class="sy0">,</span> <span class="st0">" removed from top "</span>
+      <span class="kw1">if</span>  node <span class="kw1">is</span> <span class="kw2">None</span>:
+               <span class="kw1">print</span> <span class="st0">"target node not in queue"</span>
+               <span class="kw1">raise</span> 
+      <span class="kw1">elif</span> pr <span class="sy0">==</span> <span class="nu0">32767</span>:
+               <span class="kw1">print</span> <span class="st0">"max distance encountered so no further nodes updated. No path to target node."</span>
+               <span class="kw1">raise</span> NoPathToTargetNode
+ 
+      <span class="co1"># update the distance to the start node using this node's distance to all of the nodes adjacent to it, and update its priority if </span>
+      <span class="co1"># a shorter distance was found for an adjacent node ( .update_shortest(..) returns true ).</span>
+      <span class="co1"># this is the greedy part of the dijsktra's algorithm, always greedy for the shortest distance using the priority queue.</span>
+      <span class="kw1">for</span> adj_node <span class="sy0">,</span> dist <span class="kw1">in</span> node.<span class="me1">get_adjacent</span><span class="br0">(</span><span class="br0">)</span>:
+        <span class="co1">#debug</span>
+        <span class="kw1">print</span> <span class="st0">"updating adjacency from "</span><span class="sy0">,</span> node.<span class="me1">label</span><span class="sy0">,</span> <span class="st0">" to "</span><span class="sy0">,</span> adj_node.<span class="me1">label</span>
+        <span class="kw1">if</span> adj_node.<span class="me1">update_shortest</span><span class="br0">(</span> node <span class="br0">)</span>:
+                pq.<span class="me1">update_priority</span><span class="br0">(</span>  adj_node.<span class="me1">distance</span><span class="sy0">,</span> adj_node<span class="br0">)</span> 
+ 
+      <span class="kw1">print</span> <span class="st0">"node and targ "</span><span class="sy0">,</span> node<span class="sy0">,</span> targ <span class="sy0">,</span> node <span class="sy0">&lt;&gt;</span> targ 
+     <span class="kw1">print</span> <span class="st0">"length of path"</span><span class="sy0">,</span> targ.<span class="me1">distance</span>
+     <span class="kw1">print</span> <span class="st0">" shortest path"</span>
+ 
+     <span class="co1">#create a reverse list from the target node, through the shortes path nodes to the start node</span>
+     node <span class="sy0">=</span> targ
+ 
+     path <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+     <span class="kw1">while</span> node <span class="sy0">&lt;&gt;</span> <span class="kw2">None</span> :
+        path.<span class="me1">append</span><span class="br0">(</span>node<span class="br0">)</span>
+        node <span class="sy0">=</span> node. <span class="me1">shortest_previous</span>
+ 
+     <span class="kw1">for</span> node <span class="kw1">in</span> <span class="kw2">reversed</span><span class="br0">(</span>path<span class="br0">)</span>:  <span class="co1"># new iterator version of list.reverse()</span>
+        <span class="kw1">print</span> node.<span class="me1">label</span>
+ 
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">"__main__"</span>:
+  test_1<span class="br0">(</span><span class="br0">)</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Minimum_spanning_tree">Minimum spanning tree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit&amp;section=3" title="Edit section: Minimum spanning tree">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks noprint messagebox notice" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
+<tr style="vertical-align:middle;">
+<td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img alt="Wikipedia-logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/40px-Wikipedia-logo.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/60px-Wikipedia-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/80px-Wikipedia-logo.png 2x" /></td>
+<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
+<p><a href="//en.wikipedia.org/wiki/" class="extiw" title="w:">Wikipedia</a> has related information at <a class="external text" href="//en.wikipedia.org/wiki/Minimum_spanning_tree"><i><b>Minimum spanning tree</b></i></a></p>
+</td>
+</tr>
+</table>
+<hr />
+<p><a href="/wiki/Algorithms" title="Algorithms">Top</a>, Chapters: <a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">1</a>, <a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">2</a>, <a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">3</a>, <a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">4</a>, <a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">5</a>, <a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">6</a>, <strong class="selflink">7</strong>, <a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">8</a>, <a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">9</a>, <i><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">A</a></i></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1035
+CPU time usage: 0.304 seconds
+Real time usage: 0.872 seconds
+Preprocessor visited node count: 264/1000000
+Preprocessor generated node count: 2370/1500000
+Post‐expand include size: 3067/2048000 bytes
+Template argument size: 411/2048000 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:15004-0!0!0!!*!4!* and timestamp 20131130163053
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms/Greedy_Algorithms&amp;oldid=2522080">http://en.wikibooks.org/w/index.php?title=Algorithms/Greedy_Algorithms&amp;oldid=2522080</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FGreedy+Algorithms&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms%2FGreedy+Algorithms" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms/Greedy_Algorithms"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Algorithms/Greedy_Algorithms&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Algorithms/Greedy_Algorithms" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms/Greedy_Algorithms" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms/Greedy_Algorithms" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;oldid=2522080" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms%2FGreedy_Algorithms&amp;id=2522080" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms%2FGreedy+Algorithms">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms%2FGreedy+Algorithms&amp;oldid=2522080&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Algorithms/Greedy_Algorithms&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 7 May 2013, at 14:30.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms/Greedy_Algorithms" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1219 in 0.128 secs. -->
+	</body>
+</html>

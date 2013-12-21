@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/List Structures - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/List_Structures" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/List_Structures","wgTitle":"Data Structures/List Structures","wgCurRevisionId":2554438,"wgRevisionId":2554438,"wgArticleId":20092,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/List_Structures","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["en-us","en"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":0,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_List_Structures skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/List Structures</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_notice plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />This page may need to be <a href="/wiki/Wikibooks:REVIEW" title="Wikibooks:REVIEW" class="mw-redirect">reviewed</a> for quality.</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <strong class="selflink">List Structures &amp; Iterators</strong><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#List_Structures_and_Iterators"><span class="tocnumber">1</span> <span class="toctext">List Structures and Iterators</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Syntactic_Sugar"><span class="tocnumber">1.1</span> <span class="toctext">Syntactic Sugar</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Implementations"><span class="tocnumber">1.2</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Singly_Linked_List"><span class="tocnumber">1.2.1</span> <span class="toctext">Singly Linked List</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Vector"><span class="tocnumber">1.2.2</span> <span class="toctext">Vector</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Bidirectional_Lists"><span class="tocnumber">1.3</span> <span class="toctext">Bidirectional Lists</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Doubly_Linked_List_Implementation"><span class="tocnumber">1.4</span> <span class="toctext">Doubly Linked List Implementation</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Vector_Implementation"><span class="tocnumber">1.5</span> <span class="toctext">Vector Implementation</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Tradeoffs"><span class="tocnumber">1.6</span> <span class="toctext">Tradeoffs</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Advantages_.2F_Disadvantages"><span class="tocnumber">1.7</span> <span class="toctext">Advantages / Disadvantages</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="List_Structures_and_Iterators">List Structures and Iterators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=1" title="Edit section: List Structures and Iterators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>We have seen now two different data structures that allow us to store an ordered sequence of elements. However, they have two very different interfaces. The array allows us to use <code>get-element()</code> and <code>set-element()</code> functions to access and change elements. The node chain requires us to use <code>get-next()</code> until we find the desired node, and then we can use <code>get-value()</code> and <code>set-value()</code> to access and modify its value. Now, what if you've written some code, and you realize that you should have been using the other sequence data structure? You have to go through all of the code you've already written and change one set of accessor functions into another. What a pain! Fortunately, there is a way to localize this change into only one place: by using the <b>List</b> Abstract Data Type (ADT).</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="List&lt;item-type&gt; ADT">
+<p><b><code>List&lt;item-type&gt;</code> ADT</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>get-begin</b>():List Iterator&lt;item-type&gt;</code></dt>
+<dd>Returns the <i>list iterator</i> (we'll define this soon) that represents the first element of the list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-end</b>():List Iterator&lt;item-type&gt;</code></dt>
+<dd>Returns the list iterator that represents one element past the last element in the list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>prepend</b>(<var>new-item</var>:item-type)</code></dt>
+<dd>Adds a new element at the beginning of a list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>insert-after</b>(<var>iter</var>:List Iterator&lt;item-type&gt;, <var>new-item</var>:item-type)</code></dt>
+<dd>Adds a new element immediately after <var>iter</var>. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>remove-first</b>()</code></dt>
+<dd>Removes the element at the beginning of a list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>remove-after</b>(<var>iter</var>:List Iterator&lt;item-type&gt;)</code></dt>
+<dd>Removes the element immediately after <var>iter</var>. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>is-empty</b>():Boolean</code></dt>
+<dd>True if there are no elements in the list. Has a default implementation. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-size</b>():Integer</code></dt>
+<dd>Returns the number of elements in the list. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-nth</b>(<var>n</var>:Integer):item-type</code></dt>
+<dd>Returns the nth element in the list, counting from 0. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>set-nth</b>(<var>n</var>:Integer, <var>new-value</var>:item-type)</code></dt>
+<dd>Assigns a new value to the nth element in the list, counting from 0. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+</dl>
+</div>
+<p>The <b>iterator</b> is another abstraction that encapsulates both access to a single element and incremental movement around the list. Its interface is very similar to the node interface presented in the introduction, but since it is an abstract type, different lists can implement it differently.</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="List Iterator&lt;item-type&gt; ADT">
+<p><b><code>List Iterator&lt;item-type&gt;</code> ADT</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>get-value</b>():item-type</code></dt>
+<dd>Returns the value of the list element that this iterator refers to.</dd>
+<dt style="font-weight:normal"><code><b>set-value</b>(<var>new-value</var>:item-type)</code></dt>
+<dd>Assigns a new value to the list element that this iterator refers to.</dd>
+<dt style="font-weight:normal"><code><b>move-next</b>()</code></dt>
+<dd>Makes this iterator refer to the next element in the list.</dd>
+<dt style="font-weight:normal"><code><b>equal</b>(<var>other-iter</var>:List Iterator&lt;item-type&gt;):Boolean</code></dt>
+<dd>True if the other iterator refers to the same list element as this iterator.</dd>
+</dl>
+<p>All operations run in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</p>
+</div>
+<p>There are several other aspects of the List ADT's definition that need more explanation. First, notice that the <code>get-end()</code> operation returns an iterator that is "one past the end" of the list. This makes its implementation a little trickier, but allows you to write loops like:</p>
+<pre>
+var iter:List Iterator := list.get-begin()
+while(not iter.equal(list.get-end()))
+ # Do stuff with the iterator
+ iter.move-next()
+end while
+</pre>
+<p>Second, each operation gives a worst-case running time. Any implementation of the List ADT is guaranteed to be able to run these operation at least that fast. Most implementations will run most of the operations faster. For example, the node chain implementation of List can run <code>insert-after()</code> in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />.</p>
+<p>Third, some of the operations say that they have a default implementation. This means that these operations can be implemented in terms of other, more primitive operations. They're included in the ADT so that certain implementations can implement them faster. For example, the default implementation of <code>get-nth()</code> runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> because it has to traverse all of the elements before the nth. Yet the array implementation of List can implement it in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> using its <code>get-element()</code> operation. The other default implementations are:</p>
+<pre>
+abstract type List&lt;item-type&gt;
+ method is-empty()
+  return get-begin().equal(get-end())
+ end method
+
+ method get-size():Integer
+  var size:Integer := 0
+  var iter:List Iterator&lt;item-type&gt; := get-begin()
+  while(not iter.equal(get-end()))
+   size := size+1
+   iter.move-next()
+  end while
+  return size
+ end method
+
+ helper method find-nth(n:Integer):List Iterator&lt;item-type&gt;
+  if n &gt;= get-size()
+   error "The index is past the end of the list"
+  end if
+  var iter:List Iterator&lt;item-type&gt; := get-begin()
+  while(n &gt; 0)
+   iter.move-next()
+   n := n-1
+  end while
+  return iter
+ end method
+
+ method get-nth(n:Integer):item-type
+  return find-nth(n).get-value()
+ end method
+
+ method set-nth(n:Integer, new-value:item-type)
+  find-nth(n).set-value(new-value)
+ end method
+end type
+</pre>
+<h3><span class="mw-headline" id="Syntactic_Sugar">Syntactic Sugar</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=2" title="Edit section: Syntactic Sugar">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Occasionally throughout this book we'll introduce an abbreviation that will allow us to write, and you to read, less pseudocode. For now, we'll introduce an easier way to compare iterators and a specialized loop for traversing sequences.</p>
+<p>Instead of using the <code>equal()</code> method to compare iterators, we'll overload the <code>==</code> operator. To be precise, the following two expressions are equivalent:</p>
+<pre>
+<var>iter1</var>.equal(<var>iter2</var>)
+<var>iter1</var> == <var>iter2</var>
+</pre>
+<p>Second, we'll use the <code>for</code> keyword to express list traversal. The following two blocks are equivalent:</p>
+<pre>
+var <var>iter</var>:List Iterator&lt;<var>item-type</var>&gt; := <var>list</var>.get-begin()
+while(not <var>iter</var> == <var>list</var>.get-end())
+ <var>operations on iter</var>
+ <var>iter</var>.move-next()
+end while
+</pre>
+<pre>
+for <var>iter</var> in <var>list</var>
+ <var>operations on iter</var>
+end for
+</pre>
+<h3><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=3" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In order to actually use the List ADT, we need to write a <i>concrete</i> data type that implements its interface. There are two standard data types that naturally implement List: the node chain described in the Introduction, normally called a Singly Linked List; and an extension of the array type called a Vector, which automatically resizes itself to accommodate inserted nodes.</p>
+<h4><span class="mw-headline" id="Singly_Linked_List">Singly Linked List</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=4" title="Edit section: Singly Linked List">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>
+type Singly Linked List&lt;item-type&gt; implements List&lt;item-type&gt;
+</pre>
+<p><var>head</var> refers to the first node in the list. When it's null, the list is empty.</p>
+<pre>
+  data head:Node&lt;item-type&gt;
+</pre>
+<p>Initially, the list is empty.</p>
+<pre>
+  constructor()
+    head := null
+  end constructor
+
+  method get-begin():Sll Iterator&lt;item-type&gt;
+    return new Sll-Iterator(head)
+  end method
+
+</pre>
+<p>The "one past the end" iterator is just a null node. To see why, think about what you get when you have an iterator for the last element in the list and you call <code>move-next()</code>.</p>
+<pre>
+  method get-end():Sll Iterator&lt;item-type&gt;
+    return new Sll-Iterator(null)
+  end method
+
+  method prepend(new-item:item-type)
+    head = make-node(new-item, head)
+  end method
+
+  method insert-after(iter:Sll Iterator&lt;item-type&gt;, new-item:item-type)
+    var new-node:Node&lt;item-type&gt; := make-node(new-item, iter.node().get-next())
+    iter.node.set-next(new-node)
+  end method
+
+  method remove-first()
+    head = head.get-next()
+  end method
+
+</pre>
+<p>This takes the node the iterator holds and makes it point to the node two nodes later.</p>
+<pre>
+  method remove-after(iter:Sll Iterator&lt;item-type&gt;)
+    iter.node.set-next(iter.node.get-next().get-next())
+  end method
+end type
+</pre>
+<p>If we want to make <code>get-size()</code> be an <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> operation, we can add an Integer data member that keeps track of the list's size at all times. Otherwise, the default <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> implementation works fine.</p>
+<p>An iterator for a singly linked list simply consists of a reference to a node.</p>
+<pre>
+type Sll Iterator&lt;item-type&gt;
+  data node:Node&lt;item-type&gt;
+
+  constructor(_node:Node&lt;item-type&gt;)
+    node := _node
+  end constructor
+</pre>
+<p>Most of the operations just pass through to the node.</p>
+<pre>
+  method get-value():item-type
+    return node.get-value()
+  end method
+
+  method set-value(new-value:item-type)
+    node.set-value(new-value)
+  end method
+
+  method move-next()
+    node := node.get-next()
+  end method
+</pre>
+<p>For equality testing, we assume that the underlying system knows how to compare nodes for equality. In nearly all languages, this would be a pointer comparison.</p>
+<pre>
+  method equal(other-iter:List Iterator&lt;item-type&gt;):Boolean
+    return node == other-iter.node
+  end method
+end type
+</pre>
+<h4><span class="mw-headline" id="Vector">Vector</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=5" title="Edit section: Vector">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Let's write the Vector's iterator first. It will make the Vector's implementation clearer.</p>
+<pre>
+type Vector Iterator&lt;item-type&gt;
+  data array:Array&lt;item-type&gt;
+  data index:Integer
+
+  constructor(my_array:Array&lt;item-type&gt;, my_index:Integer)
+    array := my_array
+    index := my_index
+  end constructor
+
+  method get-value():item-type
+    return array.get-element(index)
+  end method
+
+  method set-value(new-value:item-type)
+    array.set-element(index, new-value)
+  end method
+
+  method move-next()
+    index := index+1
+  end method
+
+  method equal(other-iter:List Iterator&lt;item-type&gt;):Boolean
+    return array==other-iter.array and index==other-iter.index
+  end method
+end type
+</pre>
+<p>We implement the Vector in terms of the primitive Array data type. It is inefficient to always keep the array exactly the right size (think of how much resizing you'd have to do), so we store both a <code>size</code>, the number of logical elements in the Vector, and a <code>capacity</code>, the number of spaces in the array. The array's valid indices will <i>always</i> range from <code>0</code> to <code>capacity-1</code>.</p>
+<pre>
+type Vector&lt;item-type&gt;
+  data array:Array&lt;item-type&gt;
+  data size:Integer
+  data capacity:Integer
+</pre>
+<p>We initialize the vector with a capacity of 10. Choosing 10 was fairly arbitrary. If we'd wanted to make it appear less arbitrary, we would have chosen a power of 2, and innocent readers like you would assume that there was some deep, binary-related reason for the choice.</p>
+<pre>
+  constructor()
+    array := create-array(0, 9)
+    size := 0
+    capacity := 10
+  end constructor
+
+  method get-begin():Vector-Iterator&lt;item-type&gt;
+    return new Vector-Iterator(array, 0)
+  end method
+</pre>
+<p>The end iterator has an index of <code>size</code>. That's one more than the highest valid index.</p>
+<pre>
+  method get-end():List Iterator&lt;item-type&gt;
+    return new Vector-Iterator(array, size)
+  end method
+</pre>
+<p>We'll use this method to help us implement the insertion routines. After it is called, the <code>capacity</code> of the array is guaranteed to be at least <code>new-capacity</code>. A naive implementation would simply allocate a new array with exactly <code>new-capacity</code> elements and copy the old array over. To see why this is inefficient, think what would happen if we started appending elements in a loop. Once we exceeded the original capacity, each new element would require us to copy the entire array. That's why this implementation at least doubles the size of the underlying array any time it needs to grow.</p>
+<pre>
+  helper method ensure-capacity(new-capacity:Integer)
+</pre>
+<p>If the current capacity is already big enough, return quickly.</p>
+<pre>
+    if capacity &gt;= new-capacity
+      return
+    end if
+</pre>
+<p>Now, find the new capacity we'll need,</p>
+<pre>
+    var allocated-capacity:Integer := max(capacity*2, new-capacity)
+    var new-array:Array&lt;item-type&gt; := create-array(0, allocated-capacity - 1)
+</pre>
+<p>copy over the old array,</p>
+<pre>
+    for i in 0..size-1
+      new-array.set-element(i, array.get-element(i))
+    end for
+</pre>
+<p>and update the Vector's state.</p>
+<pre>
+    array := new-array
+    capacity := allocated-capacity
+  end method
+</pre>
+<p>This method uses a normally-illegal iterator, which refers to the item one before the start of the Vector, to trick <code>insert-after()</code> into doing the right thing. By doing this, we avoid duplicating code.</p>
+<pre>
+  method prepend(new-item:item-type)
+    insert-after(new Vector-Iterator(array, -1), new-item)
+  end method
+</pre>
+<p><code>insert-after()</code> needs to copy all of the elements between <var>iter</var> and the end of the Vector. This means that in general, it runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time. However, in the special case where <var>iter</var> refers to the last element in the vector, we don't need to copy any elements to make room for the new one. An append operation can run in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time, plus the time needed for the <code>ensure-capacity()</code> call. <code>ensure-capacity()</code> will sometimes need to copy the whole array, which takes <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time. But much more often, it doesn't need to do anything at all.</p>
+<div class="note" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; margin:0 2em" title="List&lt;item-type&gt; ADT">
+<p><b>Amortized Analysis</b><br />
+In fact, if you think of a series of append operations starting immediately after <code>ensure-capacity()</code> increases the Vector's capacity (call the capacity here <img class="tex" alt="C" src="//upload.wikimedia.org/math/0/d/6/0d61f8370cad1d412f80b84d143e1257.png" />), and ending immediately after the next increase in capacity, you can see that there will be exactly <img class="tex" alt="\frac{C}{2}=O(C)" src="//upload.wikimedia.org/math/3/8/a/38adc3da42c19e75b8975571d0800d7f.png" /> appends. At the later increase in capacity, it will need to copy <img class="tex" alt="C" src="//upload.wikimedia.org/math/0/d/6/0d61f8370cad1d412f80b84d143e1257.png" /> elements over to the new array. So this entire sequence of <img class="tex" alt="\frac{C}{2}" src="//upload.wikimedia.org/math/6/9/b/69b970e95b3d66d6bd5216568ef59b4e.png" /> function calls took <img class="tex" alt="\frac{3C}{2}=O(C)" src="//upload.wikimedia.org/math/4/8/5/485862e62daf288dff9b5c89530ac731.png" /> operations. We call this situation, where there are <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> operations for <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> function calls "<i>amortized</i> <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time".</p>
+</div>
+<pre>
+  method insert-after(iter:Vector Iterator&lt;item-type&gt;, new-item:item-type)
+    ensure-capacity(size+1)
+</pre>
+<p>This loop copies all of the elements in the vector into the spot one index up. We loop backwards in order to make room for each successive element just before we copy it.</p>
+<pre>
+    for i in size-1 .. iter.index+1 step -1
+      array.set-element(i+1, array.get-element(i))
+    end for
+</pre>
+<p>Now that there is an empty space in the middle of the array, we can put the new element there.</p>
+<pre>
+    array.set-element(iter.index+1, new-item)
+</pre>
+<p>And update the Vector's size.</p>
+<pre>
+    size := size+1
+  end method
+
+</pre>
+<p>Again, cheats a little bit to avoid duplicate code.</p>
+<pre>
+  method remove-first()
+   remove-after(new Vector-Iterator(array, -1))
+  end method
+
+</pre>
+<p>Like <code>insert-after()</code>, <code>remove-after</code> needs to copy all of the elements between <var>iter</var> and the end of the Vector. So in general, it runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time. But in the special case where <var>iter</var> refers to the last element in the vector, we can simply decrement the Vector's size, without copying any elements. A remove-last operation runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</p>
+<pre>
+  method remove-after(iter:List Iterator&lt;item-type&gt;)
+    for i in iter.index+1 .. size-2
+      array.set-element(i, array.get-element(i+1))
+    end for
+    size := size-1
+  end method
+
+</pre>
+<p>This method has a default implementation, but we're already storing the size, so we can implement it in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time, rather than the default's <img class="tex" alt="O(N)." src="//upload.wikimedia.org/math/e/4/7/e472b7d37456fd24e8f5f7208475262b.png" /></p>
+<pre>
+  method get-size():Integer
+    return size
+  end method
+</pre>
+<p>Because an array allows constant-time access to elements, we can implement <code>get-</code> and <code>set-nth()</code> in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" />, rather than the default implementation's <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /></p>
+<pre>
+  method get-nth(n:Integer):item-type
+    return array.get-element(n)
+  end method
+
+  method set-nth(n:Integer, new-value:item-type)
+    array.set-element(n, new-value)
+  end method
+end type
+</pre>
+<h3><span class="mw-headline" id="Bidirectional_Lists">Bidirectional Lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=6" title="Edit section: Bidirectional Lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+This is very terse. It should be fleshed out later.</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<p>Sometimes we want to move backward in a list too.</p>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Bidirectional List&lt;item-type&gt; ADT">
+<p><b><code>Bidirectional List&lt;item-type&gt;</code> ADT</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>get-begin</b>():Bidirectional List Iterator&lt;item-type&gt;</code></dt>
+<dd>Returns the <i>list iterator</i> (we'll define this soon) that represents the first element of the list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-end</b>():Bidirectional List Iterator&lt;item-type&gt;</code></dt>
+<dd>Returns the list iterator that represents one element past the last element in the list. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>insert</b>(<var>iter</var>:Bidirectional List Iterator&lt;item-type&gt;, <var>new-item</var>:item-type)</code></dt>
+<dd>Adds a new element immediately before <var>iter</var>. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>remove</b>(<var>iter</var>:Bidirectional List Iterator&lt;item-type&gt;)</code></dt>
+<dd>Removes the element immediately referred to by <var>iter</var>. After this call, <var>iter</var> will refer to the next element in the list. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>is-empty</b>():Boolean</code></dt>
+<dd>True iff there are no elements in the list. Has a default implementation. Runs in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-size</b>():Integer</code></dt>
+<dd>Returns the number of elements in the list. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>get-nth</b>(<var>n</var>:Integer):item-type</code></dt>
+<dd>Returns the nth element in the list, counting from 0. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+<dt style="font-weight:normal"><code><b>set-nth</b>(<var>n</var>:Integer, <var>new-value</var>:item-type)</code></dt>
+<dd>Assigns a new value to the nth element in the list, counting from 0. Has a default implementation. Runs in <img class="tex" alt="O(N)" src="//upload.wikimedia.org/math/3/3/6/33697ce7dfa48ba80980d298c8089378.png" /> time.</dd>
+</dl>
+</div>
+<div class="interface" style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em; width:80%" title="Bidirectional List Iterator&lt;item-type&gt; ADT">
+<p><b><code>Bidirectional List Iterator&lt;item-type&gt;</code> ADT</b></p>
+<dl>
+<dt style="font-weight:normal"><code><b>get-value</b>():item-type</code></dt>
+<dd>Returns the value of the list element that this iterator refers to. Undefined if the iterator is past-the-end.</dd>
+<dt style="font-weight:normal"><code><b>set-value</b>(<var>new-value</var>:item-type)</code></dt>
+<dd>Assigns a new value to the list element that this iterator refers to. Undefined if the iterator is past-the-end.</dd>
+<dt style="font-weight:normal"><code><b>move-next</b>()</code></dt>
+<dd>Makes this iterator refer to the next element in the list. Undefined if the iterator is past-the-end.</dd>
+<dt style="font-weight:normal"><code><b>move-previous</b>()</code></dt>
+<dd>Makes this iterator refer to the previous element in the list. Undefined if the iterator refers to the first list element.</dd>
+<dt style="font-weight:normal"><code><b>equal</b>(<var>other-iter</var>:List Iterator&lt;item-type&gt;):Boolean</code></dt>
+<dd>True iff the other iterator refers to the same list element as this iterator.</dd>
+</dl>
+<p>All operations run in <img class="tex" alt="O(1)" src="//upload.wikimedia.org/math/5/e/0/5e079a28737d5dd019a3b8f6133ee55e.png" /> time.</p>
+</div>
+<h3><span class="mw-headline" id="Doubly_Linked_List_Implementation">Doubly Linked List Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=7" title="Edit section: Doubly Linked List Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+Explain this: It is part of linked lists that can show the connectivity between the list.</p>
+</td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<h3><span class="mw-headline" id="Vector_Implementation">Vector Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=8" title="Edit section: Vector Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The vector we've already seen has a perfectly adequate implementation to be a Bidirectional List. All we need to do is add the extra member functions to it and its iterator; the old ones don't have to change.</p>
+<pre>
+type Vector&lt;item-type&gt;
+  ... # already-existing data and methods
+</pre>
+<p>Implement this in terms of the original <code>insert-after()</code> method. After that runs, we have to adjust <var>iter</var>'s index so that it still refers to the same element.</p>
+<pre>
+  method insert(iter:Bidirectional List Iterator&lt;item-type&gt;, <var>new-item</var>:item-type)
+    insert-after(new Vector-Iterator(iter.array, iter.index-1))
+    iter.move-next()
+  end method
+</pre>
+<p>Also implement this on in terms of an old function. After <code>remove-after()</code> runs, the index will already be correct.</p>
+<pre>
+  method remove(iter:Bidirectional List Iterator&lt;item-type&gt;)
+    remove-after(new Vector-Iterator(iter.array, iter.index-1))
+  end method
+end type
+</pre>
+<h3><span class="mw-headline" id="Tradeoffs">Tradeoffs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=9" title="Edit section: Tradeoffs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="clear: both"></div>
+<table style="background: #ffd; border: 1px solid #aaaaaa; padding: 6pt; margin: 12pt 8%; width: 60%; margin: auto;" class="notice noprint notice-todo">
+<tr>
+<td style="width: 58px;">
+<div class="floatleft"><img alt="Clipboard" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/45px-Clipboard.svg.png" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/68px-Clipboard.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Clipboard.svg/90px-Clipboard.svg.png 2x" /></div>
+</td>
+<td>
+<p><b>To do:</b><br />
+Refactor useful information from below into above</p>
+<pre>
+following outline from talk page:
+ Common list operations &amp; example
+   set(pos, val), get(pos), remove(pos), append(val)
+     [Perhaps discuss operations on Nodes, versus operations on the List
+     itself: example, Nodes have a next operation, but the List itself has
+     a pointer to the head and tail node, and an integer for the number of
+     elements. This view would work well in both the Lisp and OO worlds.]
+ Doubley linked list
+ Vectors (resizeable arrays)
+</pre></td>
+</tr>
+</table>
+<div style="clear: both"></div>
+<p>In order to choose the correct data structure for the job, we need to have some idea of what we're going to *do* with the data.</p>
+<ul>
+<li>Do we know that we'll never have more than 100 pieces of data at any one time, or do we need to occasionally handle gigabytes of data&#160;?</li>
+<li>How will we read the data out&#160;? Always in chronological order&#160;? Always sorted by name&#160;? Randomly accessed by record number&#160;?</li>
+<li>Will we always add/delete data to the end or to the beginning&#160;? Or will we be doing a lot of insertions and deletions in the middle&#160;?</li>
+</ul>
+<p>We must strike a balance between the various requirements. If we need to frequently read data out in 3 different ways, pick a data structure that allows us to do all 3 things not-too-slowly. Don't pick some data structure that's unbearably slow for *one* way, no matter how blazingly fast it is for the other ways.</p>
+<p>Often the shortest, simplest programming solution for some task will use a linear (1D) array.</p>
+<p>If we keep our data as an ADT, that makes it easier to temporarily switch to some other underlying data structure, and objectively measure whether it's faster or slower.</p>
+<h3><span class="mw-headline" id="Advantages_.2F_Disadvantages">Advantages / Disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit&amp;section=10" title="Edit section: Advantages / Disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For the most part, an advantage of an array is a disadvantage of a linked-list, and vice versa.</p>
+<ul>
+<li>Array Advantages (vs. Link-Lists)</li>
+</ul>
+<ol>
+<li><i>Index</i> - <b>Fast access to every element in the array using an index []</b>, not so with linked list where elements in beginning must be traversed to your desired element.</li>
+<li><i>Faster</i> - In general, It is <b>faster to access an element in an array</b> than accessing an element in a linked-list.</li>
+</ol>
+<ul>
+<li>Link-Lists Advantages (vs. Arrays)</li>
+</ul>
+<ol>
+<li><i>Resize</i> - <b>Can easily resize the link-list by adding elements</b> without affecting the majority of the other elements in the link-list.</li>
+<li><i>Insertion</i> - <b>Can easily insert an element in the middle of a linked-list,</b> (the element is created and then you code pointers to link this element to the other element(s) in the link-list).</li>
+</ol>
+<p>Side-note: - <b>How to insert an element in the middle of an array</b>. If an array is not full, you take all the elements <b>after</b> the spot or index in the array you want to insert, and move them forward by 1, then insert your element. If the array is already full and you want to insert an element, you would have to, in a sense, 'resize the array.' A new array would have to be made one size larger than the original array to insert your element, then all the elements of the original array are copied to the new array taking into consideration the spot or index to insert your element, then insert your element.</p>
+<hr />
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <strong class="selflink">List Structures &amp; Iterators</strong><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Trees</a> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1071
+CPU time usage: 0.280 seconds
+Real time usage: 0.613 seconds
+Preprocessor visited node count: 525/1000000
+Preprocessor generated node count: 1630/1500000
+Post‐expand include size: 3558/2048000 bytes
+Template argument size: 669/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20092-0!0!0!!en!4!* and timestamp 20131205152312
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/List_Structures&amp;oldid=2554438">http://en.wikibooks.org/w/index.php?title=Data_Structures/List_Structures&amp;oldid=2554438</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FList+Structures&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FList+Structures" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/List_Structures"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/List_Structures"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures/List_Structures" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/List_Structures" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/List_Structures" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/List_Structures&amp;oldid=2554438" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/List_Structures&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FList_Structures&amp;id=2554438" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FList+Structures">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FList+Structures&amp;oldid=2554438&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/List_Structures&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 September 2013, at 20:28.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/List_Structures" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1073 in 0.176 secs. -->
+	</body>
+</html>

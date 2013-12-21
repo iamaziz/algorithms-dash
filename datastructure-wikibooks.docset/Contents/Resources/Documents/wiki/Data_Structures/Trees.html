@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Data Structures/Trees - Wikibooks, open books for an open world</title>
+<meta name="generator" content="MediaWiki 1.23wmf7" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures/Trees&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures/Trees&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures/Trees" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.geshi.local%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures/Trees","wgTitle":"Data Structures/Trees","wgCurRevisionId":2584356,"wgRevisionId":2584356,"wgArticleId":20095,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data Structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures/Trees","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2584356,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
+"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
+"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-java {line-height: normal;}
+.source-java li, .source-java pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.java.source-java .de1, .java.source-java .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.java.source-java  {font-family:monospace;}
+.java.source-java .imp {font-weight: bold; color: red;}
+.java.source-java li, .java.source-java .li1 {font-weight: normal; vertical-align:top;}
+.java.source-java .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.java.source-java .li2 {font-weight: bold; vertical-align:top;}
+.java.source-java .kw1 {color: #000000; font-weight: bold;}
+.java.source-java .kw2 {color: #000066; font-weight: bold;}
+.java.source-java .kw3 {color: #003399;}
+.java.source-java .kw4 {color: #000066; font-weight: bold;}
+.java.source-java .co1 {color: #666666; font-style: italic;}
+.java.source-java .co2 {color: #006699;}
+.java.source-java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java.source-java .coMULTI {color: #666666; font-style: italic;}
+.java.source-java .es0 {color: #000099; font-weight: bold;}
+.java.source-java .br0 {color: #009900;}
+.java.source-java .sy0 {color: #339933;}
+.java.source-java .st0 {color: #0000ff;}
+.java.source-java .nu0 {color: #cc66cc;}
+.java.source-java .me1 {color: #006633;}
+.java.source-java .me2 {color: #006633;}
+.java.source-java .ln-xtra, .java.source-java li.ln-xtra, .java.source-java div.ln-xtra {background-color: #ffc;}
+.java.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style><script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures_Trees skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures/Trees</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikibooks, open books for an open world</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <strong class="selflink">Trees</strong> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+<p><br /></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Trees"><span class="tocnumber">1</span> <span class="toctext">Trees</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Traversal"><span class="tocnumber">1.1</span> <span class="toctext">Traversal</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Sample_implementations_for_Tree_Traversal"><span class="tocnumber">1.2</span> <span class="toctext">Sample implementations for Tree Traversal</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Examples_of_Tree_Traversals"><span class="tocnumber">1.3</span> <span class="toctext">Examples of Tree Traversals</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Balancing"><span class="tocnumber">1.4</span> <span class="toctext">Balancing</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Binary_Search_Trees"><span class="tocnumber">1.5</span> <span class="toctext">Binary Search Trees</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Terms"><span class="tocnumber">1.5.1</span> <span class="toctext">Terms</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Searching_through_a_binary_search_tree"><span class="tocnumber">1.5.2</span> <span class="toctext">Searching through a binary search tree</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="#Example"><span class="tocnumber">1.5.2.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="#Adding_an_item_to_a_binary_search_tree"><span class="tocnumber">1.5.3</span> <span class="toctext">Adding an item to a binary search tree</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Deleting_an_item_from_a_binary_search_tree"><span class="tocnumber">1.5.4</span> <span class="toctext">Deleting an item from a binary search tree</span></a>
+<ul>
+<li class="toclevel-4 tocsection-12"><a href="#Case_1:_The_node_you_want_to_delete_is_a_leaf"><span class="tocnumber">1.5.4.1</span> <span class="toctext">Case 1: The node you want to delete is a leaf</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Case_2:_The_node_you_want_to_delete_has_one_child"><span class="tocnumber">1.5.4.2</span> <span class="toctext">Case 2: The node you want to delete has one child</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#Case_3:_The_node_you_want_to_delete_has_two_children"><span class="tocnumber">1.5.4.3</span> <span class="toctext">Case 3: The node you want to delete has two children</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="#Case_1:_The_successor_is_the_right_child_of_the_node_being_deleted"><span class="tocnumber">1.5.4.4</span> <span class="toctext">Case 1: The successor is the right child of the node being deleted</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="#Case_2:_The_successor_isn.27t_the_right_child_of_the_node_being_deleted"><span class="tocnumber">1.5.4.5</span> <span class="toctext">Case 2: The successor isn't the right child of the node being deleted</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#Node_deletion"><span class="tocnumber">1.5.4.6</span> <span class="toctext">Node deletion</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#red-black_trees"><span class="tocnumber">1.6</span> <span class="toctext">red-black trees</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#B_Trees"><span class="tocnumber">1.7</span> <span class="toctext">B Trees</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Executive_Summary"><span class="tocnumber">1.7.1</span> <span class="toctext">Executive Summary</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#A_B_tree_java_example"><span class="tocnumber">1.7.2</span> <span class="toctext">A B tree java example</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#A_B.2B_tree_java_example"><span class="tocnumber">1.7.3</span> <span class="toctext">A B+ tree java example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#References"><span class="tocnumber">2</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#External_Links"><span class="tocnumber">3</span> <span class="toctext">External Links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Trees">Trees</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=1" title="Edit section: Trees">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <b>tree</b> is a non-empty set one element of which is designated the root of the tree while the remaining elements are partitioned into non-empty sets each of which is a subtree of the root.</p>
+<p>Tree nodes have many useful properties. The <b>depth</b> of a node is the length of the path (or the number of edges) from the root to that node. The <b>height</b> of a node is the longest path from that node to its leaves. The height of a tree is the height of the root. A <b>leaf node</b> has no children -- its only path is up to its parent.</p>
+<p>See the <a href="/wiki/Data_Structures/Tree_Axioms" title="Data Structures/Tree Axioms">axiomatic development of trees</a> and its consequences for more information.</p>
+<p>Types of trees:</p>
+<p><b>Binary:</b> Each node has zero, one, or two children. This assertion makes many tree operations simple and efficient.</p>
+<p><b>Binary Search:</b> A binary tree where any left child node has a value less than its parent node and any right child node has a value greater than or equal to that of its parent node.</p>
+<h3><span class="mw-headline" id="Traversal">Traversal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=2" title="Edit section: Traversal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Many problems require we visit the nodes of a tree in a systematic way: tasks such as counting how many nodes exist or finding the maximum element. Three different methods are possible for binary trees: <i>preorder</i>, <i>postorder</i>, and <i>in-order</i>, which all do the same three things: recursively traverse both the left and right subtrees and visit the current node. The difference is when the algorithm visits the current node:</p>
+<p><b>preorder</b>: Current node, left subtree, right subtree (DLR)</p>
+<p><b>postorder</b>: Left subtree, right subtree, current node (LRD)</p>
+<p><b>in-order</b>: Left subtree, current node, right subtree (LDR)</p>
+<p><b>levelorder</b>: Level by level, from left to right, starting from the root node.</p>
+<p>* Visit means performing some operation involving the current node of a tree, like incrementing a counter or checking if the value of the current node is greater than any other recorded.</p>
+<h3><span class="mw-headline" id="Sample_implementations_for_Tree_Traversal">Sample implementations for Tree Traversal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=3" title="Edit section: Sample implementations for Tree Traversal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>
+<b>preorder</b>(node)
+  visit(node)
+  <b>if</b> node.left  ≠ <b>null then</b> preorder(node.left)
+  <b>if</b> node.right ≠ <b>null then</b> preorder(node.right)
+</pre>
+<pre>
+<b>inorder</b>(node)
+  <b>if</b> node.left  ≠ <b>null then</b> inorder(node.left)
+  visit(node)
+  <b>if</b> node.right ≠ <b>null then</b> inorder(node.right)
+</pre>
+<pre>
+<b>postorder</b>(node)
+  <b>if</b> node.left  ≠ <b>null then</b> postorder(node.left)
+  <b>if</b> node.right ≠ <b>null then</b> postorder(node.right)
+  visit(node)
+</pre>
+<pre>
+<b>levelorder</b>(root)
+  queue&lt;node&gt; q
+  q.push(root)
+  <b>while</b> not q.empty <b>do</b>
+     node = q.pop
+     visit(node)
+     <b>if</b> node.left  ≠ <b>null then</b> q.push(node.left)
+     <b>if</b> node.right ≠ <b>null then</b> q.push(node.right)
+</pre>
+<p>For an algorithm that is less taxing on the stack, see Threaded Trees.</p>
+<h3><span class="mw-headline" id="Examples_of_Tree_Traversals">Examples of Tree Traversals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=4" title="Edit section: Examples of Tree Traversals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/File:Bstreesample.jpg" class="image"><img alt="Bstreesample.jpg" src="//upload.wikimedia.org/wikipedia/commons/1/10/Bstreesample.jpg" width="342" height="153" /></a></p>
+<pre>
+<b>preorder:</b> 50, 30, 20, 40, 90, 100
+<b>inorder:</b> 20, 30, 40, 50, 90, 100
+<b>postorder:</b> 20, 40, 30, 100, 90, 50
+<b>levelorder:</b> 50, 30, 90, 20, 40, 100
+</pre>
+<h3><span class="mw-headline" id="Balancing">Balancing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=5" title="Edit section: Balancing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When entries that are already <i>sorted</i> are stored in a tree, all new records will go the same route, and the tree will look more like a list (such a tree is called a degenerate tree). Therefore the tree needs balancing routines, making sure that under all branches are an equal number of records. This will keep searching in the tree at optimal speed. Specifically, if a tree with <i>n</i> nodes is a degenerate tree, the longest path through the tree will be n nodes; if it is a balanced tree, the longest path will be <i>log n</i> nodes.</p>
+<p><a href="/wiki/Algorithms/Left_rotation" title="Algorithms/Left rotation">Algorithms/Left_rotation</a>: This shows how balancing is applied to establish a priority heap invariant in a <a href="//en.wikipedia.org/wiki/Treap" class="extiw" title="w:Treap">Treap</a>, a data structure which has the queueing performance of a heap, and the key lookup performance of a tree. A balancing operation can change the tree structure while maintaining another order, which is binary tree sort order. The binary tree order is left to right, with left nodes' keys less than right nodes' keys, whereas the priority order is up and down, with higher nodes' priorities greater than lower nodes' priorities. Alternatively, the priority can be viewed as another ordering key, except that finding a specific key is more involved.</p>
+<p>The balancing operation can move nodes up and down a tree without affecting the left right ordering.</p>
+<p><b><a href="//en.wikipedia.org/wiki/AVL_tree" class="extiw" title="w:AVL tree">AVL</a>:</b> A balanced binary search tree according to the following specification: the heights of the two child subtrees of any node differ by at most one.</p>
+<p><b><a href="//en.wikipedia.org/wiki/Red_black_tree" class="extiw" title="w:Red black tree">Red-Black Tree</a>:</b> A balanced binary search tree using a balancing algorithm based on colors assigned to a node, and the colors of nearby nodes.</p>
+<p><b><a href="//en.wikipedia.org/wiki/AA_tree" class="extiw" title="w:AA tree">AA Tree</a>:</b> A balanced tree, in fact a more restrictive variation of a red-black tree.</p>
+<h3><span class="mw-headline" id="Binary_Search_Trees">Binary Search Trees</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=6" title="Edit section: Binary Search Trees">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A typical binary search tree looks like this:</p>
+<p><a href="/wiki/File:Bstreesample.jpg" class="image"><img alt="Bstreesample.jpg" src="//upload.wikimedia.org/wikipedia/commons/1/10/Bstreesample.jpg" width="342" height="153" /></a></p>
+<h4><span class="mw-headline" id="Terms">Terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=7" title="Edit section: Terms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><b>Node</b> Any item that is stored in the tree. <b>Root</b> The top item in the tree. (50 in the tree above) <b>Child</b> Node(s) under the current node. (20 and 40 are children of 30 in the tree above) <b>Parent</b> The node directly above the current node. (90 is the parent of 100 in the tree above) <b>Leaf</b> A node which has no children. (20 is a leaf in the tree above)</p>
+<h4><span class="mw-headline" id="Searching_through_a_binary_search_tree">Searching through a binary search tree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=8" title="Edit section: Searching through a binary search tree">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To search for an item in a binary tree:</p>
+<ol>
+<li>Start at the root node</li>
+<li>If the item that you are searching for is less than the root node, move to the left child of the root node, if the item that you are searching for is more than the root node, move to the right child of the root node and if it is equal to the root node, then you have found the item that you are looking for.</li>
+<li>Now check to see if the item that you are searching for is equal to, less than or more than the new node that you are on. Again if the item that you are searching for is less than the current node, move to the left child, and if the item that you are searching for is greater than the current node, move to the right child.</li>
+<li>Repeat this process until you find the item that you are looking for or until the node doesn't have a child on the correct branch, in which case the tree doesn't contain the item which you are looking for.</li>
+</ol>
+<h5><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=9" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><a href="/wiki/File:Bstreesearchexample.jpg" class="image"><img alt="Bstreesearchexample.jpg" src="//upload.wikimedia.org/wikipedia/commons/f/fa/Bstreesearchexample.jpg" width="342" height="153" /></a></p>
+<p><b>For example, to find the node 40...</b></p>
+<ol>
+<li>The root node is 50, which is greater than 40, so you go to 50's left child.</li>
+<li>50's left child is 30, which is less than 40, so you next go to 30's right child.</li>
+<li>30's right child is 40, so you have found the item that you are looking for&#160;:)</li>
+</ol>
+<h4><span class="mw-headline" id="Adding_an_item_to_a_binary_search_tree">Adding an item to a binary search tree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=10" title="Edit section: Adding an item to a binary search tree">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ol>
+<li>To add an item, you first must search through the tree to find the position that you should put it in. You do this following the steps above.</li>
+<li>When you reach a node which doesn't contain a child on the correct branch, add the new node there.</li>
+</ol>
+<p><br /></p>
+<p><b>For example, to add the node 25...</b></p>
+<ol>
+<li>The root node is 50, which is greater than 25, so you go to 50's left child.</li>
+<li>50's left child is 30, which is greater than 25, so you go to 30's left child.</li>
+<li>30's left child is 20, which is less than 25, so you go to 20's right child.</li>
+<li>20's right child doesn't exist, so you add 25 there&#160;:)</li>
+</ol>
+<h4><span class="mw-headline" id="Deleting_an_item_from_a_binary_search_tree">Deleting an item from a binary search tree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=11" title="Edit section: Deleting an item from a binary search tree">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><i>It is assumed that you have already found the node that you want to delete, using the search technique described above.</i></p>
+<h5><span class="mw-headline" id="Case_1:_The_node_you_want_to_delete_is_a_leaf">Case 1: The node you want to delete is a leaf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=12" title="Edit section: Case 1: The node you want to delete is a leaf">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><a href="/wiki/File:Bstreedeleteleafexample.jpg" class="image"><img alt="Bstreedeleteleafexample.jpg" src="//upload.wikimedia.org/wikipedia/commons/6/6c/Bstreedeleteleafexample.jpg" width="342" height="153" /></a></p>
+<p><b>For example, to delete 40...</b></p>
+<ul>
+<li>Simply delete the node!</li>
+</ul>
+<h5><span class="mw-headline" id="Case_2:_The_node_you_want_to_delete_has_one_child">Case 2: The node you want to delete has one child</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=13" title="Edit section: Case 2: The node you want to delete has one child">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ol>
+<li>Directly connect the child of the node that you want to delete, to the parent of the node that you want to delete.</li>
+</ol>
+<p><a href="/wiki/File:Bstreedeleteonechildexample.jpg" class="image"><img alt="Bstreedeleteonechildexample.jpg" src="//upload.wikimedia.org/wikipedia/commons/6/6a/Bstreedeleteonechildexample.jpg" width="701" height="153" /></a></p>
+<p><b>For example, to delete 90...</b></p>
+<ul>
+<li>Delete 90, then make 100 the child node of 50.</li>
+</ul>
+<h5><span class="mw-headline" id="Case_3:_The_node_you_want_to_delete_has_two_children">Case 3: The node you want to delete has two children</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=14" title="Edit section: Case 3: The node you want to delete has two children">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>To delete a node, you first have to find the child node, called the "successor" or the "replacing node", that will replace the deleted node. This can be done in one of two ways, which are essentially a mirror image of each other.</p>
+<ol>
+<li>Find the left-most node in the right subtree of the node being deleted. After you have found the node you want to delete, go to its right node, then for every node under that, go to its left node until the node has no left node; that node will be the successor.</li>
+<li>Find the right-most node in the left subtree of the node being deleted. After you have found the node you want to delete, go to its left node, then for every node under that, go to its right node until the node has no right node; that node will be the successor.</li>
+</ol>
+<p>The following examples use the first algorithm, that is, the successor is the left-most node in the right subtree of the node to be deleted.</p>
+<p><a href="/wiki/File:Bstreefindsuccessorexample.jpg" class="image"><img alt="Bstreefindsuccessorexample.jpg" src="//upload.wikimedia.org/wikibooks/en/c/ce/Bstreefindsuccessorexample.jpg" width="283" height="267" /></a></p>
+<p><b>For example, to delete 30</b></p>
+<ol>
+<li>The right node of the node which is being deleted is 40.</li>
+<li>(From now on, we continually go to the left node until there isn't another one...) The first left node of 40, is 35.</li>
+<li>35 has no left node, therefore 35 is the successor!</li>
+</ol>
+<h5><span class="mw-headline" id="Case_1:_The_successor_is_the_right_child_of_the_node_being_deleted">Case 1: The successor is the right child of the node being deleted</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=15" title="Edit section: Case 1: The successor is the right child of the node being deleted">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ol>
+<li>Directly move the child to the right of the node being deleted into the position of the node being deleted.</li>
+<li>As the new node has no left children, you can connect the deleted node's left subtree's root as it's left child.</li>
+</ol>
+<p><a href="/wiki/File:Bstreedeleterightchildexample.jpg" class="image"><img alt="Bstreedeleterightchildexample.jpg" src="//upload.wikimedia.org/wikibooks/en/b/b4/Bstreedeleterightchildexample.jpg" width="634" height="210" /></a></p>
+<p><b>For example, to delete 30</b></p>
+<ol>
+<li>Move 40 up to where 30 was.</li>
+<li>20 now becomes 40's left child.</li>
+</ol>
+<h5><span class="mw-headline" id="Case_2:_The_successor_isn.27t_the_right_child_of_the_node_being_deleted">Case 2: The successor isn't the right child of the node being deleted</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=16" title="Edit section: Case 2: The successor isn't the right child of the node being deleted">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p><i>This is best shown with an example</i></p>
+<p><a href="/wiki/File:Bstreedeletenotrightchildexample.jpg" class="image"><img alt="Bstreedeletenotrightchildexample.jpg" src="//upload.wikimedia.org/wikipedia/commons/1/15/Bstreedeletenotrightchildexample.jpg" width="632" height="255" /></a></p>
+<p><b>To delete 30...</b></p>
+<ol>
+<li>Move the successor into the place where the deleted node was and make it inherit both of its children. So 35 moves to where 30 was and 20 and 40 become its children.</li>
+<li>Move the successor's (35's) right subtree (if it exists) to where the successor was. So 37 becomes the left child of 40.</li>
+</ol>
+<h5><span class="mw-headline" id="Node_deletion">Node deletion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=17" title="Edit section: Node deletion">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>In general, remember that a node's left subtree's right-most node is the closest node on the left, and the right subtree's left-most node is the closest node on the right, and either one of these can be chosen to replace the deleted node. The only complication is when the replacing node (i.e., the successor) has a child subtree on the same side as the successor's side of the deleted node; in that case, the easiest thing to do is to always move the same-side subtree of the successor into the position vacated by the successor (i.e., the child of the successor's parent) even if the subtree is empty.</p>
+<h3><span class="mw-headline" id="red-black_trees">red-black trees</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=18" title="Edit section: red-black trees">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A red black tree is a self-balancing tree structure that uses a color attribute , and can be modelled as 2-3-4 tree , which is a sub-class of B tree (below). A black node with one red node can be seen as linked together as a 3-node , and a black node with 2 red child nodes can be seen as a 4-node.</p>
+<p>4-nodes are <b>split</b> , producing a two node, and the middle node made red, which turns a parent of the middle node which has no red child from a 2-node to a 3-node, and turns a parent with one red child into a 4-node (but this doesn't occur with always left red nodes).</p>
+<p>A in-line arrangement of two red nodes, is <b>rotated</b> into a parent with two red children, a 4-node, which is later <b>split</b>, as described before.</p>
+<pre>
+      A  <small>right rotate</small>            <small>'split 4-node'</small>   |<small>red</small>
+  <small>red</small> / \    --&gt;        B           ---&gt;    B
+    B               <small>red</small>/ \<small>red</small>               / \
+<small>red</small> / \               C   A               C   A
+  C   D                 /                   /
+                       D                   D
+</pre>
+<p>An optimization mentioned by Sedgewick is that all right inserted red nodes are left rotated to become left red nodes, so that only inline left red nodes ever have to be rotated right before splitting. AA-trees (above) by Arne Anderson , described in a paper in 1993 , seem an earlier exposition of the simplification, however he suggested right-leaning 'red marking' instead of left leaning , as suggested by Sedgewick, but AA trees seem to have precedence over left leaning red black trees. It would be quite a shock if the Linux CFS scheduler was described in the future as 'AA based'.</p>
+<p>In summary, red-black trees are a way of detecting two insertions into the same side, and levelling out the tree before things get worse . Two left sided insertions will be rotated, and the two right sided insertions, would look like two left sided insertions after left rotation to remove right leaning red nodes. Two balanced insertions for the same parent could result in a 4-node split without rotation, so the question arises as to whether a red black tree could be attacked with serial insertions of one sided triads of a &lt; P &lt; b , and then the next triad's P' &lt; a.</p>
+<p>Python illustrative code follows</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+RED <span class="sy0">=</span> <span class="nu0">1</span>
+BLACK <span class="sy0">=</span> <span class="nu0">0</span>
+<span class="kw1">class</span> Node:
+  <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> k<span class="sy0">,</span> v<span class="br0">)</span>:
+   <span class="co1"># all newly inserted node's are RED </span>
+   <span class="kw2">self</span>.<span class="me1">color</span> <span class="sy0">=</span> RED
+   <span class="kw2">self</span>.<span class="me1">k</span> <span class="sy0">=</span> k
+   <span class="kw2">self</span>.<span class="me1">v</span> <span class="sy0">=</span> v
+   <span class="kw2">self</span>.<span class="me1">left</span> <span class="sy0">=</span> <span class="kw2">None</span>
+   <span class="kw2">self</span>.<span class="me1">right</span> <span class="sy0">=</span> <span class="kw2">None</span>
+ 
+<span class="kw1">class</span> RBTree:
+  <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:
+    <span class="kw2">self</span>.<span class="me1">root</span> <span class="sy0">=</span> <span class="kw2">None</span>
+ 
+  <span class="kw1">def</span> insert<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> k<span class="sy0">,</span> v<span class="br0">)</span> :
+    <span class="kw2">self</span>.<span class="me1">root</span> <span class="sy0">=</span> <span class="kw2">self</span>._insert<span class="br0">(</span><span class="kw2">self</span>.<span class="me1">root</span><span class="sy0">,</span> k<span class="sy0">,</span>v<span class="br0">)</span>
+ 
+  <span class="kw1">def</span> _insert<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span>  n <span class="sy0">,</span> k<span class="sy0">,</span> v<span class="br0">)</span>:
+        <span class="kw1">if</span> n <span class="kw1">is</span> <span class="kw2">None</span>:
+                <span class="kw1">return</span> Node<span class="br0">(</span>k<span class="sy0">,</span>v<span class="br0">)</span>
+        <span class="kw1">if</span> k <span class="sy0">&lt;</span> n.<span class="me1">k</span> :
+                n.<span class="me1">left</span> <span class="sy0">=</span> <span class="kw2">self</span>._insert<span class="br0">(</span>n.<span class="me1">left</span><span class="sy0">,</span> k <span class="sy0">,</span> v<span class="br0">)</span>
+        <span class="kw1">elif</span> k <span class="sy0">&gt;</span> n.<span class="me1">k</span> :
+                n.<span class="me1">right</span> <span class="sy0">=</span> <span class="kw2">self</span>._insert<span class="br0">(</span>n.<span class="me1">right</span><span class="sy0">,</span> k<span class="sy0">,</span> v<span class="br0">)</span>
+                <span class="kw1">if</span> n.<span class="me1">right</span>.<span class="me1">color</span> <span class="kw1">is</span> RED:
+                        <span class="co1">#always on the left red's</span>
+                        <span class="co1">#left rotate</span>
+                        tmp <span class="sy0">=</span> n.<span class="me1">right</span>
+                        n.<span class="me1">right</span> <span class="sy0">=</span> tmp.<span class="me1">left</span>
+                        tmp.<span class="me1">left</span> <span class="sy0">=</span> n
+                        n <span class="sy0">=</span> tmp
+ 
+                        <span class="co1">#color rotation is actually a swap</span>
+                        tmpcolor <span class="sy0">=</span> n.<span class="me1">color</span>
+                        n.<span class="me1">color</span> <span class="sy0">=</span> n.<span class="me1">left</span>.<span class="me1">color</span>
+                        n.<span class="me1">left</span>.<span class="me1">color</span> <span class="sy0">=</span> tmpcolor
+ 
+        <span class="kw1">if</span> n.<span class="me1">left</span> <span class="sy0">&lt;&gt;</span> <span class="kw2">None</span> <span class="kw1">and</span> n.<span class="me1">left</span>.<span class="me1">left</span> <span class="sy0">&lt;&gt;</span> <span class="kw2">None</span> <span class="kw1">and</span> n.<span class="me1">left</span>.<span class="me1">left</span>.<span class="me1">color</span> <span class="sy0">==</span> RED <span class="kw1">and</span> n.<span class="me1">left</span>.<span class="me1">color</span> <span class="sy0">==</span> RED:
+                <span class="co1"># right rotate in-line reds</span>
+                <span class="kw1">print</span> <span class="st0">"right rotate"</span>
+                tmp <span class="sy0">=</span> n.<span class="me1">left</span>
+                n.<span class="me1">left</span> <span class="sy0">=</span> tmp.<span class="me1">right</span>
+                tmp.<span class="me1">right</span> <span class="sy0">=</span> n
+                n <span class="sy0">=</span> tmp
+ 
+                <span class="co1">#color rotation is actually a swap</span>
+                tmpcolor <span class="sy0">=</span> n.<span class="me1">color</span>
+                n.<span class="me1">color</span> <span class="sy0">=</span> n.<span class="me1">right</span>.<span class="me1">color</span>
+                n.<span class="me1">right</span>.<span class="me1">color</span> <span class="sy0">=</span> tmpcolor
+ 
+                <span class="kw1">if</span> n.<span class="me1">left</span> <span class="sy0">&lt;&gt;</span> <span class="kw2">None</span>: <span class="kw1">print</span> n.<span class="me1">left</span>.<span class="me1">color</span><span class="sy0">,</span> n.<span class="me1">color</span><span class="sy0">,</span> n.<span class="me1">right</span>.<span class="me1">color</span>
+ 
+        <span class="co1"># no need to test, because after right rotation, will need to split 3-node , as right rotation has brought red left grandchild to</span>
+        <span class="co1">#become left red child, and left red child is now red right child</span>
+        <span class="co1">#so there are two red children.</span>
+ 
+        <span class="co1">#if n.left &lt;&gt; None and n.right &lt;&gt; None and n.left.color == RED and n.right.color == RED:</span>
+                <span class="kw1">print</span> <span class="st0">"split"</span>
+                n.<span class="me1">color</span> <span class="sy0">=</span> RED
+                n.<span class="me1">left</span>.<span class="me1">color</span> <span class="sy0">=</span> BLACK
+                n.<span class="me1">right</span>.<span class="me1">color</span> <span class="sy0">=</span> BLACK
+ 
+        <span class="kw1">return</span> n
+ 
+  <span class="kw1">def</span> find<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> k<span class="br0">)</span>:
+        <span class="kw1">return</span> <span class="kw2">self</span>._find_rb<span class="br0">(</span>k<span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">root</span><span class="br0">)</span>
+ 
+  <span class="kw1">def</span> _find_rb<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> k<span class="sy0">,</span> n<span class="br0">)</span>:
+        <span class="kw1">if</span> n <span class="kw1">is</span> <span class="kw2">None</span>:
+                <span class="kw1">return</span> <span class="kw2">None</span>
+        <span class="kw1">if</span> k <span class="sy0">&lt;</span> n.<span class="me1">k</span>:
+                <span class="kw1">return</span> <span class="kw2">self</span>._find_rb<span class="br0">(</span> k<span class="sy0">,</span> n.<span class="me1">left</span><span class="br0">)</span>
+        <span class="kw1">if</span> k <span class="sy0">&gt;</span> n. <span class="me1">k</span>:
+                <span class="kw1">return</span> <span class="kw2">self</span>._find_rb<span class="br0">(</span> k<span class="sy0">,</span> n.<span class="me1">right</span><span class="br0">)</span>
+        <span class="kw1">return</span> n.<span class="me1">v</span>
+ 
+  <span class="kw1">def</span> inorder<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:
+        <span class="kw2">self</span>.<span class="me1">inorder_visit</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">root</span><span class="sy0">,</span> <span class="st0">"O"</span><span class="br0">)</span>
+ 
+  <span class="kw1">def</span> inorder_visit<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> node<span class="sy0">,</span>label<span class="sy0">=</span><span class="st0">""</span><span class="br0">)</span>:
+        <span class="kw1">if</span> node <span class="kw1">is</span> <span class="kw2">None</span>: <span class="kw1">return</span>
+        <span class="kw2">self</span>.<span class="me1">inorder_visit</span><span class="br0">(</span>node.<span class="me1">left</span><span class="sy0">,</span> label+<span class="st0">"/L"</span><span class="br0">)</span>
+        <span class="kw1">print</span> label<span class="sy0">,</span> <span class="st0">"val="</span><span class="sy0">,</span> node.<span class="me1">v</span>
+        <span class="kw2">self</span>.<span class="me1">inorder_visit</span><span class="br0">(</span>node.<span class="me1">right</span><span class="sy0">,</span> label+<span class="st0">"/R"</span><span class="br0">)</span>
+ 
+ 
+<span class="kw1">def</span> test1<span class="br0">(</span>N<span class="br0">)</span>:
+        t <span class="sy0">=</span> RBTree<span class="br0">(</span><span class="br0">)</span>    
+        <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span>N<span class="br0">)</span>:
+          t.<span class="me1">insert</span><span class="br0">(</span>i<span class="sy0">,</span>i<span class="br0">)</span>
+ 
+        l <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>          
+        t.<span class="me1">inorder</span><span class="br0">(</span><span class="br0">)</span>
+        <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span>N<span class="br0">)</span>:
+          x <span class="sy0">=</span>t.<span class="me1">find</span><span class="br0">(</span>i<span class="br0">)</span>
+          <span class="kw1">if</span> x <span class="sy0">&lt;&gt;</span> <span class="kw2">None</span>:
+                  l.<span class="me1">append</span><span class="br0">(</span><span class="br0">(</span>x<span class="sy0">,</span> i<span class="br0">)</span> <span class="br0">)</span>
+        <span class="kw1">print</span> <span class="st0">"found"</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>l<span class="br0">)</span> 
+ 
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">"__main__"</span>:
+        <span class="kw1">import</span> <span class="kw3">random</span>
+        test1<span class="br0">(</span><span class="nu0">100000</span><span class="br0">)</span>
+        test1<span class="br0">(</span><span class="nu0">1000</span><span class="br0">)</span>
+        test1<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span>
+        test1<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="B_Trees">B Trees</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=19" title="Edit section: B Trees">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h5><span class="mw-headline" id="Executive_Summary">Executive Summary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=20" title="Edit section: Executive Summary">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li>Whereas binary trees have nodes that have two children, with the left child and all of its descendants less than the "value" of the node, and the right child and all of its children more than the "value" of the node, a B-tree is a generalization of this.</li>
+<li>The generalization is that instead of one value, the node has a list of values, and the list is of size n ( n &gt; 2 ). n is chosen to optimize storage , so that a node corresponds in size to a block for instance. This is in the days before ssd drives, but searching binary nodes stored on ssd ram would still be slower than searching ssd ram for a block of values, loading into normal ram and cpu cache, and searching the loaded list.</li>
+<li>At the start of the list, the left child of the first element of the list has a value less than the first element , and so do all its children. To the right of the first element, is a child which has values more than the first element's value, as do all of its children, but also less than the value of the second element. Induction can be used , and this holds so for the child between element 1 and 2, 2 and 3, ... so on until n-1 and nth node.</li>
+<li>To insert into a non-full B tree node, is to do a insertion into a sorted list.</li>
+<li>In a B+ tree, insertions can only be done in leaf nodes, and non-leaf nodes hold copies of a demarcating value between adjacent child nodes e.g. the left most value of an element's right child's list of nodes.</li>
+<li>Whenever a list becomes full e.g. there are n nodes, the node is "split", and this means making two new nodes, and passing the demarcating value upto the parent. (written by armchair wa-r who has never implemented a database.&#160;:P beat you to it).</li>
+</ul>
+<p>B Trees were described originally as generalizations of binary search trees , where a binary tree is a 2-node B-Tree, the 2 standing for two children, with 2-1 = 1 key separating the 2 children. Hence a 3-node has 2 values separating 3 children, and a N node has N children separated by N-1 keys.</p>
+<p>A classical B-Tree can have N-node internal nodes, and empty 2-nodes as leaf nodes, or more conveniently, the children can either be a value or a pointer to the next N-node, so it is a union.</p>
+<p>The main idea with B-trees is that one starts with a root N-node , which is able to hold N-1 entries, but on the Nth entry, the number of keys for the node is exhausted, and the node can be split into two half sized N/2 sized N nodes, separated by a single key K, which is equal to the right node's leftmost key, so any entry with key K2 equal or greater than K goes in the right node, and anything less than K goes in the left. When the root node is split, a new root node is created with one key, and a left child and a right child. Since there are N children but only N-1 entries, the leftmost child is stored as a separate pointer. If the leftmost pointer splits, then the left half becomes the new leftmost pointer, and the right half and separating key is inserted into the front of the entries.</p>
+<p>An alternative is the B+ tree which is the most commonly used in database systems, because only values are stored in leaf nodes, whereas internal nodes only store keys and pointers to other nodes, putting a limit on the size of the datum value as the size of a pointer. This often allows internal nodes with more entries able to fit a certain block size, e.g. 4K is a common physical disc block size. Hence , if a B+ tree internal node is aligned to a physical disc block, then the main rate limiting factor of reading a block of a large index from disc because it isn't cached in a memory list of blocks is reduced to one block read.</p>
+<p>A B+ tree has bigger internal nodes, so is more wider and shorter in theory than an equivalent B tree which must fit all nodes within a given physical block size, hence overall it is a faster index due to greater fan out and less height to reach keys on average.</p>
+<p>Apparently, this fan out is so important, compression can also be applied to the blocks to increase the number of entries fitting within a given underlying layer's block size (the underlying layer is often a filesystem block).</p>
+<p>Most database systems use the B+ tree algorithm, including postgresql, mysql, derbydb, firebird, many Xbase index types, etc.</p>
+<p>Many filesystems also use a B+ tree to manage their block layout (e.g. xfs, NTFS, etc).</p>
+<p>Transwiki has a java implementation of a B+ Tree which uses traditional arrays as key list and value list.</p>
+<p>Below is an example of a B Tree with test driver, and a B+ tree with a test driver. The memory / disc management is not included, but a usable hacked example can be found at <a href="/wiki/Data_Structures/Trees/Hashing_Memory_Checking_Example" title="Data Structures/Trees/Hashing Memory Checking Example">Hashing Memory Checking Example</a>.</p>
+<p>This B+ tree implementation was written out of the B Tree , and the difference from the transwiki B+ tree is that it tries to use the semantics of SortedMap and SortedSet already present in the standard Java collections library.</p>
+<p>Hence , the flat leaf block list of this B+ implementation can't contain blocks that don't contain any data, because the ordering depends on the first key of the entries, so a leaf block needs to be created with its first entry.</p>
+<h4><span class="mw-headline" id="A_B_tree_java_example">A B tree java example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=21" title="Edit section: A B tree java example">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+<span class="kw1">package</span> <span class="co2">btreemap</span><span class="sy0">;</span>
+ 
+<span class="kw1">import</span> <span class="co2">java.util.ArrayList</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Collection</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Collections</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Comparator</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.List</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Map</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Set</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.SortedMap</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.TreeMap</span><span class="sy0">;</span>
+ 
+<span class="co3">/** can't work without setting a comparator */</span>
+<span class="kw1">public</span> <span class="kw1">class</span> BTreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="kw1">implements</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+ 
+        <span class="kw1">private</span> <span class="kw1">static</span> <span class="kw1">final</span> <span class="kw4">int</span> NODE_SIZE <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>
+ 
+ 
+ 
+        @Override
+        <span class="kw1">public</span> Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+ 
+                <span class="kw1">return</span> comparator<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        Comparator<span class="sy0">&lt;</span> <span class="sy0">?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> defaultComparator <span class="sy0">=</span> <span class="kw1">new</span>
+        Comparator<span class="sy0">&lt;</span>  K<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                @Override
+                <span class="kw1">public</span> <span class="kw4">int</span> compare<span class="br0">(</span>K o1, K o2<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="co1">// TODO Auto-generated method stub</span>
+                        <span class="kw3">Comparable</span> c1 <span class="sy0">=</span> <span class="br0">(</span><span class="kw3">Comparable</span><span class="br0">)</span>o1<span class="sy0">;</span>
+                        <span class="kw3">Comparable</span> c2 <span class="sy0">=</span> <span class="br0">(</span><span class="kw3">Comparable</span><span class="br0">)</span>o2<span class="sy0">;</span>
+                        <span class="kw1">return</span> c1.<span class="me1">compareTo</span><span class="br0">(</span>c2<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span><span class="sy0">;</span>
+        Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator <span class="sy0">=</span> defaultComparator<span class="sy0">;</span>
+        BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> root <span class="sy0">=</span> <span class="kw1">new</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>NODE_SIZE, comparator<span class="br0">)</span><span class="sy0">;</span>
+        <span class="co3">/**
+         * 
+         * @param comparator
+         *            - this is mandatory for the tree to work
+         */</span>
+        <span class="kw1">public</span> <span class="kw4">void</span> setComparator<span class="br0">(</span>Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">this</span>.<span class="me1">comparator</span> <span class="sy0">=</span> comparator<span class="sy0">;</span>
+                root <span class="sy0">=</span> <span class="kw1">new</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>NODE_SIZE, comparator<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="co3">/**
+         * 
+         *  
+         * 
+         * @param &lt;K&gt;
+         * @param &lt;V&gt;
+         *            the entry is associated with a right child block.
+         * 
+         */</span>
+        <span class="kw1">static</span> <span class="kw1">class</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                K k<span class="sy0">;</span>
+                V v<span class="sy0">;</span>
+                BTBlock left<span class="sy0">;</span>
+ 
+                BlockEntry<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                <span class="br0">}</span>
+ 
+                BlockEntry<span class="br0">(</span>K k, V v<span class="br0">)</span> <span class="br0">{</span>
+                        left <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">k</span> <span class="sy0">=</span> k<span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">v</span> <span class="sy0">=</span> v<span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+ 
+        <span class="co3">/**
+         * 
+         *  - this represents the result of splitting a full block into
+         *         a left block, and a right block, and a median key, the right
+         *         block and the median key held in a BlockEntry structure as above.
+         * @param &lt;K&gt;
+         * @param &lt;V&gt;
+         * @param &lt;V&gt;g
+         */</span>
+        <span class="kw1">static</span> <span class="kw1">class</span> SplitRootEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> right<span class="sy0">;</span>
+                BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> entry<span class="sy0">;</span>
+ 
+                SplitRootEntry<span class="br0">(</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> entry, BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> right<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">right</span> <span class="sy0">=</span> right<span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">entry</span> <span class="sy0">=</span> entry<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                SplitRootEntry<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">super</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+ 
+        <span class="co3">/**
+         * this is used to return a result of a possible split , during recursive
+         * calling.
+         * 
+         *  
+         * 
+         * @param &lt;K&gt;
+         * @param &lt;V&gt;
+         */</span>
+        <span class="kw1">static</span> <span class="kw1">class</span> resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+ 
+                <span class="co3">/**
+                 * null , if there is no split.
+                 */</span>
+                SplitRootEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> splitNode<span class="sy0">;</span>
+                V v<span class="sy0">;</span>
+ 
+                resultAndSplit<span class="br0">(</span>V v<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">v</span> <span class="sy0">=</span> v<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                resultAndSplit<span class="br0">(</span>SplitRootEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> entry, V v<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">v</span> <span class="sy0">=</span> v<span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">splitNode</span> <span class="sy0">=</span> entry<span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+ 
+        <span class="co3">/**
+         * used to represent the insertion point after searching a block if compare
+         * is zero, then a match was found, and pos is the insertion entry if
+         * compare &lt; 0 and pos == 0 , then the search ended up less than the
+         * leftmost entry else compare &gt; 0 , and the search will be to the immediate
+         * right of pos.
+         * 
+         *  
+         * 
+         */</span>
+        <span class="kw1">static</span> <span class="kw1">class</span> PosAndCompare <span class="br0">{</span>
+                <span class="kw4">int</span> pos <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+                <span class="kw4">int</span> compare <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">static</span> <span class="kw1">class</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                List<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> entries<span class="sy0">;</span>
+                BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> rightBlock <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+                <span class="kw1">private</span> <span class="kw4">int</span> maxSz <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+ 
+                Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator<span class="sy0">;</span>
+ 
+                Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> comparator<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> BTBlock<span class="br0">(</span><span class="kw4">int</span> size, Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> c<span class="br0">)</span> <span class="br0">{</span>
+                        entries <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        maxSz <span class="sy0">=</span> size<span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">comparator</span> <span class="sy0">=</span> c<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="co3">/**
+                 * PosAndCompare usage: if compare is zero, then a match was found, and
+                 * pos is the insertion entry if compare &lt; 0 and pos == 0 , then the
+                 * search ended up less than the leftmost entry else compare &gt; 0 , and
+                 * the search will be to the immediate right of pos.
+                 * 
+                 *  
+                 * 
+                 */</span>
+                <span class="co1">// private void blockSearch(K k, PosAndCompare pc) {</span>
+                <span class="co1">// for (int i = 0; i &lt; entries.size(); ++i) {</span>
+                <span class="co1">// pc.compare = comparator.compare(k, entries.get(i).k);</span>
+                <span class="co1">// if (pc.compare == 0) {</span>
+                <span class="co1">// pc.pos = i;</span>
+                <span class="co1">// return;</span>
+                <span class="co1">// }</span>
+                <span class="co1">// if (pc.compare &lt; 0 &amp;&amp; i == 0) {</span>
+                <span class="co1">// pc.pos = 0;</span>
+                <span class="co1">// return;</span>
+                <span class="co1">// }</span>
+                <span class="co1">//</span>
+                <span class="co1">// if (pc.compare &lt; 0) {</span>
+                <span class="co1">// pc.pos = i - 1;</span>
+                <span class="co1">// pc.compare = 1;</span>
+                <span class="co1">// return;</span>
+                <span class="co1">// }</span>
+                <span class="co1">//</span>
+                <span class="co1">// }</span>
+                <span class="co1">// pc.pos = entries.size() - 1;</span>
+                <span class="co1">// pc.compare = 1;</span>
+                <span class="co1">//</span>
+                <span class="co1">// // binary search, it's hard to get it right !</span>
+                <span class="co1">// // int left = 0;</span>
+                <span class="co1">// // int right = entries.size();</span>
+                <span class="co1">// //</span>
+                <span class="co1">// // while (left &lt;= right &amp;&amp; left &lt; entries.size()) {</span>
+                <span class="co1">// // // pc.pos = (right - left) / 2 + left;</span>
+                <span class="co1">// // pc.pos = (left + right) / 2;</span>
+                <span class="co1">// // pc.compare = comparator().compare(k, entries.get(pc.pos).k);</span>
+                <span class="co1">// // if (pc.compare &lt; 0) {</span>
+                <span class="co1">// // right = pc.pos - 1;</span>
+                <span class="co1">// // } else if (pc.compare &gt; 0) {</span>
+                <span class="co1">// // left = pc.pos + 1;</span>
+                <span class="co1">// // } else {</span>
+                <span class="co1">// // return;</span>
+                <span class="co1">// // }</span>
+                <span class="co1">// // }</span>
+                <span class="co1">// //</span>
+                <span class="co1">// // BlockEntry&lt;K, V&gt; e = new BlockEntry&lt;K, V&gt;(k, null);</span>
+                <span class="co1">// // pc.pos = Collections.binarySearch(entries, e, cmp);</span>
+                <span class="co1">//</span>
+                <span class="co1">// }</span>
+ 
+                Comparator<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> cmp <span class="sy0">=</span> <span class="kw1">new</span> Comparator<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                        @Override
+                        <span class="kw1">public</span> <span class="kw4">int</span> compare<span class="br0">(</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> o1, BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> o2<span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// TODO Auto-generated method stub</span>
+                                <span class="kw1">return</span> comparator.<span class="me1">compare</span><span class="br0">(</span>o1.<span class="me1">k</span>, o2.<span class="me1">k</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="br0">}</span>
+                <span class="br0">}</span><span class="sy0">;</span>
+ 
+                resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> put<span class="br0">(</span>K k, V v<span class="br0">)</span> <span class="br0">{</span>
+                        V v2<span class="sy0">;</span>
+                        <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span>
+                                entries.<span class="me1">add</span><span class="br0">(</span><span class="kw1">new</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">return</span> <span class="kw1">new</span> resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>v<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+ 
+                                <span class="co1">// PosAndCompare pc = new PosAndCompare();</span>
+                                BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">=</span> <span class="kw1">new</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw4">int</span> res <span class="sy0">=</span> <span class="kw3">Collections</span>.<span class="me1">binarySearch</span><span class="br0">(</span>entries, e, cmp<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw4">int</span> index <span class="sy0">=</span> <span class="sy0">-</span>res <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+                                <span class="co1">// blockSearch(k, pc);</span>
+ 
+                                <span class="co1">// a match</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>res <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span>
+                                        v2 <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>res<span class="br0">)</span>.<span class="me1">v</span><span class="sy0">;</span>
+                                        entries.<span class="me1">get</span><span class="br0">(</span>res<span class="br0">)</span>.<span class="me1">v</span> <span class="sy0">=</span> v<span class="sy0">;</span>
+                                        <span class="kw1">return</span> <span class="kw1">new</span> resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>v2<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="br0">}</span>
+ 
+                                <span class="co1">// follow leftBlock if search is to left of first entry</span>
+ 
+                                <span class="kw1">if</span> <span class="br0">(</span>index <span class="sy0">==</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> rightBlock <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                                        resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> result <span class="sy0">=</span> rightBlock.<span class="me1">put</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="kw1">if</span> <span class="br0">(</span>result.<span class="me1">splitNode</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                                rightBlock <span class="sy0">=</span> result.<span class="me1">splitNode</span>.<span class="me1">right</span><span class="sy0">;</span>
+                                                entries.<span class="me1">add</span><span class="br0">(</span>result.<span class="me1">splitNode</span>.<span class="me1">entry</span><span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="br0">}</span>
+                                <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>index <span class="sy0">==</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> rightBlock <span class="sy0">==</span> <span class="kw2">null</span>
+                                                <span class="sy0">&amp;&amp;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">==</span> maxSz<span class="br0">)</span> <span class="br0">{</span>
+                                        rightBlock <span class="sy0">=</span> <span class="kw1">new</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me1">maxSz</span>, comparator<span class="br0">)</span><span class="sy0">;</span>
+                                        resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> result <span class="sy0">=</span> rightBlock.<span class="me1">put</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="sy0">;</span>
+ 
+                                <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>index <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span>
+                                                <span class="sy0">&amp;&amp;</span> entries.<span class="me1">get</span><span class="br0">(</span>index<span class="br0">)</span>.<span class="me1">left</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                        <span class="co1">// follow right block if it exists</span>
+                                        resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> result <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>index<span class="br0">)</span>.<span class="me1">left</span>.<span class="me1">put</span><span class="br0">(</span>
+                                                        k, v<span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="kw1">if</span> <span class="br0">(</span>result.<span class="me1">splitNode</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                                entries.<span class="me1">get</span><span class="br0">(</span>index<span class="br0">)</span>.<span class="me1">left</span> <span class="sy0">=</span> result.<span class="me1">splitNode</span>.<span class="me1">right</span><span class="sy0">;</span>
+                                                <span class="co1">// add to the left</span>
+                                                entries.<span class="me1">add</span><span class="br0">(</span>index, result.<span class="me1">splitNode</span>.<span class="me1">entry</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                        <span class="br0">}</span>
+ 
+                                <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+                                        <span class="co1">// add to the left</span>
+                                        entries.<span class="me1">add</span><span class="br0">(</span>index, e<span class="br0">)</span><span class="sy0">;</span>
+ 
+                                <span class="br0">}</span>
+ 
+                                <span class="co1">// check if overflowed block , split if it has.</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&gt;</span> maxSz<span class="br0">)</span> <span class="br0">{</span>
+                                        <span class="kw4">int</span> mid <span class="sy0">=</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span>
+ 
+                                        <span class="co1">// copy right half to new entries list.</span>
+                                        List<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> leftEntries <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> mid<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                                                leftEntries.<span class="me1">add</span><span class="br0">(</span>entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="br0">}</span>
+ 
+                                        BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> centreEntry <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>mid<span class="br0">)</span><span class="sy0">;</span>
+ 
+                                        BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> leftBlock <span class="sy0">=</span> <span class="kw1">new</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>maxSz,
+                                                        comparator<span class="br0">)</span><span class="sy0">;</span>
+ 
+                                        leftBlock.<span class="me1">entries</span> <span class="sy0">=</span> leftEntries<span class="sy0">;</span>
+ 
+                                        <span class="co1">// the median entry's left block is the new left block's</span>
+                                        <span class="co1">// leftmost block</span>
+                                        leftBlock.<span class="me1">rightBlock</span> <span class="sy0">=</span> centreEntry.<span class="me1">left</span><span class="sy0">;</span>
+                                        <span class="co1">// the new right block becomes the right block</span>
+                                        centreEntry.<span class="me1">left</span> <span class="sy0">=</span> leftBlock<span class="sy0">;</span>
+ 
+                                        <span class="co1">// reduce the old block's entries into its left half of</span>
+                                        <span class="co1">// entries.</span>
+                                        ArrayList<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> newEntries <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> mid <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span>
+                                                newEntries.<span class="me1">add</span><span class="br0">(</span>entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="kw1">this</span>.<span class="me1">entries</span> <span class="sy0">=</span> newEntries<span class="sy0">;</span>
+                                        <span class="co1">// create a return object, with the reduced old block as the</span>
+                                        <span class="co1">// left block</span>
+                                        <span class="co1">// and the median entry with the new right block attached</span>
+ 
+                                        SplitRootEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> split <span class="sy0">=</span> <span class="kw1">new</span> SplitRootEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>
+                                                        centreEntry, <span class="kw1">this</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                        <span class="co1">// the keyed value didn't exist before , so null</span>
+                                        <span class="kw1">return</span> <span class="kw1">new</span> resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>split, <span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                <span class="br0">}</span>
+                                <span class="kw1">return</span> <span class="kw1">new</span> resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>v<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                <span class="br0">}</span>
+ 
+                V get<span class="br0">(</span>K k<span class="br0">)</span> <span class="br0">{</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span>
+                                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+ 
+                        BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">=</span> <span class="kw1">new</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>k, <span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> res <span class="sy0">=</span> <span class="kw3">Collections</span>.<span class="me1">binarySearch</span><span class="br0">(</span>entries, e, cmp<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> index <span class="sy0">=</span> <span class="sy0">-</span>res <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>res <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw1">return</span> entries.<span class="me1">get</span><span class="br0">(</span>res<span class="br0">)</span>.<span class="me1">v</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>index <span class="sy0">==</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> rightBlock <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw1">return</span> rightBlock.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>index <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span>
+                                        <span class="sy0">&amp;&amp;</span> entries.<span class="me1">get</span><span class="br0">(</span>index<span class="br0">)</span>.<span class="me1">left</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw1">return</span> <span class="br0">(</span>V<span class="br0">)</span> entries.<span class="me1">get</span><span class="br0">(</span>index<span class="br0">)</span>.<span class="me1">left</span>.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span> <span class="kw1">else</span>
+                                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw4">void</span> getRange<span class="br0">(</span><span class="kw3">SortedMap</span> map, K k1, K k2<span class="br0">)</span> <span class="br0">{</span>
+                        BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">=</span> <span class="kw1">new</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>k1, <span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> res <span class="sy0">=</span> <span class="kw3">Collections</span>.<span class="me1">binarySearch</span><span class="br0">(</span>entries, e, cmp<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> index <span class="sy0">=</span> <span class="sy0">-</span>res <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+                        BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e2 <span class="sy0">=</span> <span class="kw1">new</span> BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>k2, <span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> res2 <span class="sy0">=</span> <span class="kw3">Collections</span>.<span class="me1">binarySearch</span><span class="br0">(</span>entries, e2, cmp<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> index2 <span class="sy0">=</span> <span class="sy0">-</span>res2 <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+ 
+                        <span class="kw4">int</span> from <span class="sy0">=</span> res <span class="sy0">&gt;=</span> <span class="nu0">0</span> <span class="sy0">?</span> res <span class="sy0">:</span> index<span class="sy0">;</span>
+                        <span class="kw4">int</span> to <span class="sy0">=</span> res2 <span class="sy0">&gt;=</span> <span class="nu0">0</span> <span class="sy0">?</span> res2 <span class="sy0">:</span> index2<span class="sy0">;</span>
+ 
+                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> from<span class="sy0">;</span> i <span class="sy0">&lt;=</span> to<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+ 
+                                <span class="kw1">if</span> <span class="br0">(</span>i <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> <span class="br0">(</span>i <span class="sy0">&gt;</span> from <span class="sy0">||</span> res <span class="sy0">&lt;</span> <span class="nu0">0</span><span class="br0">)</span>
+                                                <span class="sy0">&amp;&amp;</span> entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">left</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                        entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">left</span>.<span class="me1">getRange</span><span class="br0">(</span>map, k1, k2<span class="br0">)</span><span class="sy0">;</span>
+                                        <span class="co1">// if (pc2.pos == pc.pos)</span>
+                                        <span class="co1">// break;</span>
+                                <span class="br0">}</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>i <span class="sy0">&lt;</span> to <span class="sy0">||</span> res2 <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">)</span>
+                                        map.<span class="me1">put</span><span class="br0">(</span>entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">k</span>, entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">v</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                <span class="kw1">if</span> <span class="br0">(</span>i <span class="sy0">==</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> rightBlock <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                        rightBlock.<span class="me1">getRange</span><span class="br0">(</span>map, k1, k2<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="br0">}</span>
+ 
+                        <span class="br0">}</span>
+ 
+                <span class="br0">}</span>
+ 
+                K headKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">if</span> <span class="br0">(</span>rightBlock <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw1">return</span> rightBlock.<span class="me1">headKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        <span class="kw1">return</span> entries.<span class="me1">get</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span>.<span class="me1">k</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                K tailKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw4">int</span> i <span class="sy0">=</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+                        <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">left</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw1">return</span> <span class="br0">(</span>K<span class="br0">)</span> entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">left</span>.<span class="me1">tailKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        <span class="kw1">return</span> entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>.<span class="me1">k</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw4">void</span> show<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span>
+                        showTabs<span class="br0">(</span>n<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                                BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"#"</span> <span class="sy0">+</span> i <span class="sy0">+</span> <span class="st0">":("</span> <span class="sy0">+</span> e.<span class="me1">k</span> <span class="sy0">+</span> <span class="st0">":"</span> <span class="sy0">+</span> e.<span class="me1">v</span> <span class="sy0">+</span> <span class="st0">")  "</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        showTabs<span class="br0">(</span>n<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>rightBlock <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Left Block<span class="es0">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+                                rightBlock.<span class="me1">show</span><span class="br0">(</span>n <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+                                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"No Left Block"</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                                BlockEntry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+                                showTabs<span class="br0">(</span>n<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>e.<span class="me1">left</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"block right of #"</span> <span class="sy0">+</span> i<span class="br0">)</span><span class="sy0">;</span>
+                                        e.<span class="me1">left</span>.<span class="me1">show</span><span class="br0">(</span>n <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+                                <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+                                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"No block right of #"</span> <span class="sy0">+</span> i<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="br0">}</span>
+                        <span class="br0">}</span>
+                        showTabs<span class="br0">(</span>n<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"End of Block Info<span class="es0">\n</span><span class="es0">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">private</span> <span class="kw4">void</span> showTabs<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="co1">// TODO Auto-generated method stub</span>
+                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> n<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"  "</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                <span class="br0">}</span>
+ 
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> subMap<span class="br0">(</span>K fromKey, K toKey<span class="br0">)</span> <span class="br0">{</span>
+                TreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> map <span class="sy0">=</span> <span class="kw1">new</span> TreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                root.<span class="me1">getRange</span><span class="br0">(</span>map, fromKey, toKey<span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">return</span> map<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> headMap<span class="br0">(</span>K toKey<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> subMap<span class="br0">(</span>root.<span class="me1">headKey</span><span class="br0">(</span><span class="br0">)</span>, toKey<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span><span class="sy0">;</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> tailMap<span class="br0">(</span>K fromKey<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> subMap<span class="br0">(</span>fromKey, root.<span class="me1">tailKey</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> K firstKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> root.<span class="me1">headKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> K lastKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> root.<span class="me1">tailKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">int</span> size<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> isEmpty<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> containsKey<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> get<span class="br0">(</span>key<span class="br0">)</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> containsValue<span class="br0">(</span><span class="kw3">Object</span> value<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V get<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> root.<span class="me1">get</span><span class="br0">(</span><span class="br0">(</span>K<span class="br0">)</span> key<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V put<span class="br0">(</span>K key, V value<span class="br0">)</span> <span class="br0">{</span>
+                resultAndSplit<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">=</span> root.<span class="me1">put</span><span class="br0">(</span>key, value<span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">if</span> <span class="br0">(</span>b.<span class="me1">splitNode</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                        root <span class="sy0">=</span> <span class="kw1">new</span> BTBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>root.<span class="me1">maxSz</span>, root.<span class="me1">comparator</span><span class="br0">)</span><span class="sy0">;</span>
+                        root.<span class="me1">rightBlock</span> <span class="sy0">=</span> b.<span class="me1">splitNode</span>.<span class="me1">right</span><span class="sy0">;</span>
+                        root.<span class="me1">entries</span>.<span class="me1">add</span><span class="br0">(</span>b.<span class="me1">splitNode</span>.<span class="me1">entry</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw1">return</span> b.<span class="me1">v</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V remove<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">void</span> putAll<span class="br0">(</span>Map<span class="sy0">&lt;?</span> <span class="kw1">extends</span> K, <span class="sy0">?</span> <span class="kw1">extends</span> V<span class="sy0">&gt;</span> m<span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+ 
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">void</span> clear<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+ 
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Set<span class="sy0">&lt;</span>K<span class="sy0">&gt;</span> keySet<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Collection<span class="sy0">&lt;</span>V<span class="sy0">&gt;</span> values<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Set<span class="sy0">&lt;</span>java.<span class="me1">util</span>.<span class="kw3">Map</span>.<span class="me1">Entry</span><span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> entrySet<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+<span class="br0">}</span>
+ 
+<span class="kw1">package</span> <span class="co2">btreemap</span><span class="sy0">;</span>
+ 
+<span class="kw1">import</span> <span class="co2">java.util.ArrayList</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Comparator</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.List</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Random</span><span class="sy0">;</span>
+ 
+<span class="kw1">public</span> <span class="kw1">class</span> TestBtree <span class="br0">{</span>
+ 
+        <span class="kw1">private</span> <span class="kw1">static</span> <span class="kw1">final</span> <span class="kw4">int</span> N <span class="sy0">=</span> <span class="nu0">50000</span><span class="sy0">;</span>
+ 
+        <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">(</span><span class="kw3">String</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span> <span class="br0">{</span>
+                BTreeMap<span class="sy0">&lt;</span><span class="kw3">Integer</span>, Integer<span class="sy0">&gt;</span> map <span class="sy0">=</span> <span class="kw1">new</span> BTreeMap<span class="sy0">&lt;</span><span class="kw3">Integer</span> , Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw3">Random</span> r <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw3">Random</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> t <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                Comparator<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> comparator <span class="sy0">=</span> <span class="kw1">new</span> Comparator<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                        @Override
+                        <span class="kw1">public</span> <span class="kw4">int</span> compare<span class="br0">(</span><span class="kw3">Integer</span> o1, <span class="kw3">Integer</span> o2<span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// TODO Auto-generated method stub</span>
+                                <span class="kw1">return</span> o1.<span class="me1">intValue</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> o2.<span class="me1">intValue</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                <span class="br0">}</span><span class="sy0">;</span>
+                map.<span class="me1">setComparator</span><span class="br0">(</span>comparator<span class="br0">)</span><span class="sy0">;</span>
+                List<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> testVals <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span><span class="nu0">0</span> <span class="sy0">;</span> i <span class="sy0">&lt;</span> N <span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                        testVals.<span class="me1">add</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i <span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw4">int</span> x <span class="sy0">=</span> r.<span class="me1">nextInt</span><span class="br0">(</span>testVals.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                         x <span class="sy0">=</span> testVals.<span class="me1">remove</span><span class="br0">(</span>x<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="co1">//int x=i;</span>
+                        t.<span class="me1">add</span><span class="br0">(</span>x<span class="br0">)</span><span class="sy0">;</span>
+                        map.<span class="me1">put</span><span class="br0">(</span>x, x<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"output "</span> <span class="sy0">+</span> N <span class="sy0">+</span> <span class="st0">" vals"</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                map.<span class="me1">root</span>.<span class="me1">show</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw4">int</span> x <span class="sy0">=</span> t.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span> x <span class="sy0">!=</span> map.<span class="me1">get</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span> 
+                                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Expecting "</span> <span class="sy0">+</span> x <span class="sy0">+</span> <span class="st0">" got "</span> <span class="sy0">+</span> map.<span class="me1">get</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+ 
+                <span class="br0">}</span>
+                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Checked "</span> <span class="sy0">+</span> N <span class="sy0">+</span> <span class="st0">" entries"</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="A_B.2B_tree_java_example">A B+ tree java example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=22" title="Edit section: A B+ tree java example">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Experiments include timing the run ( e.g. time java -cp . btreemap.BPlusTreeTest1 ) , using an external blocksize + 1 sized leaf block size, so that this is basically the underlying entries TreeMap only , vs , say, 400 internal node size, and 200 external node size . Other experiments include using a SkipListMap instead of a TreeMap.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+<span class="kw1">package</span> <span class="co2">btreemap</span><span class="sy0">;</span>
+ 
+<span class="kw1">import</span> <span class="co2">java.util.Collection</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Comparator</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Map</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Set</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.SortedMap</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.SortedSet</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.TreeMap</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.TreeSet</span><span class="sy0">;</span>
+<span class="co3">/**
+ * a B+ tree, where leaf blocks contain key-value pairs and 
+ * internal blocks have keyed entries pointing to other internal blocks
+ * or leaf blocks whose keys are greater than or equal to the associated key.
+ * 
+ * @author syan
+ *
+ * @param &lt;K&gt; key type implements Comparable
+ * @param &lt;V&gt; value type
+ */</span>
+<span class="kw1">public</span> <span class="kw1">class</span> BPlusTreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="kw1">implements</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+ 
+        <span class="kw1">private</span> <span class="kw4">int</span> maxInternalBlockSize<span class="sy0">;</span>
+        BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> root<span class="sy0">;</span>
+        <span class="kw1">private</span> <span class="kw4">int</span> maxExternalSize<span class="sy0">;</span>
+ 
+        BPlusTreeMap<span class="br0">(</span><span class="kw4">int</span> maxInternalSize, <span class="kw4">int</span> maxExternalSize<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">this</span>.<span class="me1">maxInternalBlockSize</span> <span class="sy0">=</span> maxInternalSize<span class="sy0">;</span>
+                <span class="kw1">this</span>.<span class="me1">maxExternalSize</span> <span class="sy0">=</span> maxExternalSize<span class="sy0">;</span>
+ 
+        <span class="br0">}</span>
+ 
+        <span class="kw1">static</span> <span class="kw1">class</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                V v<span class="sy0">;</span>
+                K k<span class="sy0">;</span>
+                BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> left, right<span class="sy0">;</span>
+                <span class="kw4">boolean</span> split<span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw4">boolean</span> isSplit<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> split<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> <span class="kw4">void</span> setSplit<span class="br0">(</span><span class="kw4">boolean</span> split<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">split</span> <span class="sy0">=</span> split<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="br0">(</span>V value<span class="br0">)</span> <span class="br0">{</span>
+                        v <span class="sy0">=</span> value<span class="sy0">;</span>
+                        setSplit<span class="br0">(</span><span class="kw2">false</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="br0">(</span>BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> left2,
+                                BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> bPlusBlock<span class="br0">)</span> <span class="br0">{</span>
+                        left <span class="sy0">=</span> left2<span class="sy0">;</span>
+                        right <span class="sy0">=</span> bPlusBlock<span class="sy0">;</span>
+                        k <span class="sy0">=</span> right.<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        setSplit<span class="br0">(</span><span class="kw2">true</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="co1">// System.err.printf("\n\n** split occured %s**\n\n", bPlusBlock</span>
+                        <span class="co1">// .getClass().getSimpleName());</span>
+                <span class="br0">}</span>
+ 
+        <span class="br0">}</span>
+ 
+        <span class="kw1">static</span> <span class="kw1">abstract</span> <span class="kw1">class</span> BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                <span class="kw1">public</span> <span class="kw1">abstract</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> put<span class="br0">(</span>K k, V v<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">abstract</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> splitBlock<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw1">abstract</span> V get<span class="br0">(</span>K k<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw1">abstract</span> <span class="kw4">boolean</span> isEmpty<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw1">abstract</span> K firstKey<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        <span class="br0">}</span>
+ 
+        SortedSet<span class="sy0">&lt;</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> blockList <span class="sy0">=</span> getLeafBlockSet<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        SortedSet<span class="sy0">&lt;</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> getLeafBlockSet<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// return new ConcurrentSkipListSet&lt;BPlusLeafBlock&lt;K, V&gt;&gt;();</span>
+                <span class="kw1">return</span> <span class="kw1">new</span> TreeSet<span class="sy0">&lt;</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">static</span> <span class="kw1">class</span> BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="kw1">extends</span> BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="kw1">implements</span>
+                        Comparable<span class="sy0">&lt;</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> <span class="br0">{</span>
+                SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> entries <span class="sy0">=</span> getEntryCollection<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">static</span> <span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> getEntryCollection<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> <span class="kw1">new</span> TreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw4">int</span> maxSize<span class="sy0">;</span>
+                <span class="kw1">private</span> BPlusTreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> owner<span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw4">boolean</span> isEmpty<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> entries.<span class="me1">isEmpty</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> BPlusLeafBlock<span class="br0">(</span>BPlusTreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> bPlusTreeMap,
+                                SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> rightEntries<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">owner</span> <span class="sy0">=</span> bPlusTreeMap<span class="sy0">;</span>
+                        maxSize <span class="sy0">=</span> owner.<span class="me1">maxExternalSize</span><span class="sy0">;</span>
+                        entries <span class="sy0">=</span> rightEntries<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> put<span class="br0">(</span>K k, V v<span class="br0">)</span> <span class="br0">{</span>
+                        V v2 <span class="sy0">=</span> entries.<span class="me1">put</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&gt;=</span> maxSize<span class="br0">)</span>
+                                <span class="kw1">return</span> splitBlock<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">else</span>
+                                <span class="kw1">return</span> <span class="kw1">new</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>v2<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> splitBlock<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                        SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> leftEntries <span class="sy0">=</span> getEntryCollection<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> rightEntries <span class="sy0">=</span> getEntryCollection<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">for</span> <span class="br0">(</span>Entry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">:</span> entries.<span class="me1">entrySet</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// System.out.println(this.getClass().getSimpleName() +</span>
+                                <span class="co1">// " split entry " + e.getKey());</span>
+                                <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">++</span>i <span class="sy0">&lt;=</span> maxSize <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">)</span>
+                                        leftEntries.<span class="me1">put</span><span class="br0">(</span>e.<span class="me1">getKey</span><span class="br0">(</span><span class="br0">)</span>, e.<span class="me1">getValue</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">else</span>
+                                        rightEntries.<span class="me1">put</span><span class="br0">(</span>e.<span class="me1">getKey</span><span class="br0">(</span><span class="br0">)</span>, e.<span class="me1">getValue</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> right <span class="sy0">=</span> createBlock<span class="br0">(</span>rightEntries<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="co1">// System.out.println("finished block split");</span>
+                        <span class="co1">// System.out.println("\nleft block");</span>
+                        <span class="co1">// for (K ik : leftEntries.keySet()) {</span>
+                        <span class="co1">// System.out.print(ik + " ");</span>
+                        <span class="co1">// }</span>
+                        <span class="co1">// System.out.println("\nright block");</span>
+                        <span class="co1">// for (K ik : right.entries.keySet()) {</span>
+                        <span class="co1">// System.out.print(ik + " ");</span>
+                        <span class="co1">// }</span>
+                        <span class="co1">// System.out.println("\n");</span>
+                        <span class="kw1">this</span>.<span class="me1">entries</span> <span class="sy0">=</span> leftEntries<span class="sy0">;</span>
+ 
+                        <span class="kw1">return</span> <span class="kw1">new</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="kw1">this</span>, right<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">private</span> BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> createBlock<span class="br0">(</span>SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> rightEntries<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> owner.<span class="me1">createLeafBlock</span><span class="br0">(</span>rightEntries<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                @Override
+                <span class="kw1">public</span> V get<span class="br0">(</span>K k<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> entries.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                @Override
+                <span class="kw1">public</span> <span class="kw4">int</span> compareTo<span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> o<span class="br0">)</span> <span class="br0">{</span>
+ 
+                        <span class="kw1">return</span> <span class="br0">(</span><span class="br0">(</span>Comparable<span class="sy0">&lt;</span>K<span class="sy0">&gt;</span><span class="br0">)</span> entries.<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>.<span class="me1">compareTo</span><span class="br0">(</span>o.<span class="me1">entries</span>
+                                        .<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                @Override
+                <span class="kw1">public</span> K firstKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> entries.<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+        <span class="br0">}</span>
+ 
+ 
+        <span class="kw1">static</span> <span class="kw1">class</span> BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="kw1">extends</span> BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> <span class="br0">{</span>
+                SortedMap<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> entries <span class="sy0">=</span> createInternalBlockEntries<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw4">int</span> maxSize<span class="sy0">;</span>
+ 
+                <span class="kw1">private</span> BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> left<span class="sy0">;</span>
+ 
+                <span class="kw1">public</span> <span class="kw4">boolean</span> isEmpty<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> entries.<span class="me1">isEmpty</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> BPlusBranchBlock<span class="br0">(</span><span class="kw4">int</span> maxSize2<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">this</span>.<span class="me1">maxSize</span> <span class="sy0">=</span> maxSize2<span class="sy0">;</span>
+ 
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> put<span class="br0">(</span>K k, V v<span class="br0">)</span> <span class="br0">{</span>
+                        BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">=</span> getBlock<span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> sv <span class="sy0">=</span> b.<span class="me1">put</span><span class="br0">(</span>k, v<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">if</span> <span class="br0">(</span>sv.<span class="me1">isSplit</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                                entries.<span class="me1">put</span><span class="br0">(</span>sv.<span class="me1">k</span>, sv.<span class="me1">right</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                <span class="kw1">if</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&gt;=</span> maxSize<span class="br0">)</span>
+                                        sv <span class="sy0">=</span> splitBlock<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">else</span>
+                                        sv <span class="sy0">=</span> <span class="kw1">new</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                        <span class="kw1">return</span> sv<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> getBlock<span class="br0">(</span>K k<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">assert</span> <span class="br0">(</span>entries.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+                        BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">if</span> <span class="br0">(</span>b <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// headMap returns less than k</span>
+                                SortedMap<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> head <span class="sy0">=</span> entries.<span class="me1">headMap</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>head.<span class="me1">isEmpty</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                                        b <span class="sy0">=</span> left<span class="sy0">;</span>
+ 
+                                        <span class="co1">// System.out.println("for key " + k</span>
+                                        <span class="co1">// + " getting from leftmost block");</span>
+                                        <span class="co1">// showEntries();</span>
+ 
+                                <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+                                        b <span class="sy0">=</span> entries.<span class="me1">get</span><span class="br0">(</span>head.<span class="me1">lastKey</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                                        <span class="co1">// System.out.println("for key " + k</span>
+                                        <span class="co1">// + " getting from block with key " + head.lastKey());</span>
+                                        <span class="co1">// showEntries();</span>
+                                <span class="br0">}</span>
+                        <span class="br0">}</span>
+                        <span class="kw1">assert</span> <span class="br0">(</span>b <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">return</span> b<span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">public</span> <span class="kw4">void</span> showEntries<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"entries = "</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">for</span> <span class="br0">(</span>K k <span class="sy0">:</span> entries.<span class="me1">keySet</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span>k <span class="sy0">+</span> <span class="st0">" "</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+ 
+                <span class="kw1">public</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> splitBlock<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                        Set<span class="sy0">&lt;</span>Entry<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;&gt;</span> ee <span class="sy0">=</span> entries.<span class="me1">entrySet</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+                        BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> right <span class="sy0">=</span> <span class="kw1">new</span> BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>maxSize<span class="br0">)</span><span class="sy0">;</span>
+                        SortedMap<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> leftEntries <span class="sy0">=</span> createInternalBlockEntries<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">for</span> <span class="br0">(</span>Entry<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> e <span class="sy0">:</span> ee<span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// System.out.print("split check " + e.getKey() + ":"</span>
+                                <span class="co1">// );</span>
+                                <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">++</span>i <span class="sy0">&lt;=</span> maxSize <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">)</span>
+                                        leftEntries.<span class="me1">put</span><span class="br0">(</span>e.<span class="me1">getKey</span><span class="br0">(</span><span class="br0">)</span>, e.<span class="me1">getValue</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">else</span>
+                                        right.<span class="me1">entries</span>.<span class="me1">put</span><span class="br0">(</span>e.<span class="me1">getKey</span><span class="br0">(</span><span class="br0">)</span>, e.<span class="me1">getValue</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="br0">}</span>
+                        <span class="co1">// System.out.println("\n");</span>
+                        <span class="kw1">this</span>.<span class="me1">entries</span> <span class="sy0">=</span> leftEntries<span class="sy0">;</span>
+ 
+                        <span class="kw1">return</span> <span class="kw1">new</span> SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="kw1">this</span>, right<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">private</span> SortedMap<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> createInternalBlockEntries<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> <span class="kw1">new</span> TreeMap<span class="sy0">&lt;</span>K, BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                @Override
+                <span class="kw1">public</span> V get<span class="br0">(</span>K k<span class="br0">)</span> <span class="br0">{</span>
+                        BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">=</span> getBlock<span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="kw1">return</span> b.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                @Override
+                <span class="kw1">public</span> K firstKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw1">return</span> entries.<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> subMap<span class="br0">(</span>K fromKey, K toKey<span class="br0">)</span> <span class="br0">{</span>
+                TreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> map <span class="sy0">=</span> <span class="kw1">new</span> TreeMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b1 <span class="sy0">=</span> getLeafBlock<span class="br0">(</span>fromKey<span class="br0">)</span><span class="sy0">;</span>
+ 
+                BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b2 <span class="sy0">=</span> getLeafBlock<span class="br0">(</span>toKey<span class="br0">)</span><span class="sy0">;</span>
+ 
+                SortedSet<span class="sy0">&lt;</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> range <span class="sy0">=</span> blockList.<span class="me1">subSet</span><span class="br0">(</span>b1, b2<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">for</span> <span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">:</span> range<span class="br0">)</span> <span class="br0">{</span>
+                        SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> m <span class="sy0">=</span> b.<span class="me1">entries</span>.<span class="me1">subMap</span><span class="br0">(</span>fromKey, toKey<span class="br0">)</span><span class="sy0">;</span>
+                        map.<span class="me1">putAll</span><span class="br0">(</span>m<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">return</span> map<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">private</span> BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> getLeafBlock<span class="br0">(</span>K key<span class="br0">)</span> <span class="br0">{</span>
+                BPlusAnyBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b1<span class="sy0">;</span>
+                b1 <span class="sy0">=</span> root<span class="sy0">;</span>
+                <span class="kw1">while</span> <span class="br0">(</span>b1 <span class="kw1">instanceof</span> BPlusBranchBlock<span class="sy0">&lt;?</span>, <span class="sy0">?&gt;</span><span class="br0">)</span> <span class="br0">{</span>
+                        b1 <span class="sy0">=</span> <span class="br0">(</span><span class="br0">(</span>BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">)</span> b1<span class="br0">)</span>.<span class="me1">getBlock</span><span class="br0">(</span>key<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="br0">}</span>
+                <span class="kw1">return</span> <span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">)</span> b1<span class="sy0">;</span>
+ 
+        <span class="br0">}</span>
+ 
+        <span class="kw1">public</span> BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> createLeafBlock<span class="br0">(</span>SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> rightEntries<span class="br0">)</span> <span class="br0">{</span>
+                BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">=</span> <span class="kw1">new</span> BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span><span class="kw1">this</span>, rightEntries<span class="br0">)</span><span class="sy0">;</span>
+                blockList.<span class="me1">add</span><span class="br0">(</span>b<span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">return</span> b<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> headMap<span class="br0">(</span>K toKey<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> subMap<span class="br0">(</span>firstKey<span class="br0">(</span><span class="br0">)</span>, toKey<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span><span class="sy0">;</span>
+ 
+        @Override
+        <span class="kw1">public</span> SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> tailMap<span class="br0">(</span>K fromKey<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> subMap<span class="br0">(</span>fromKey, lastKey<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> K firstKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> blockList.<span class="me1">first</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">entries</span>.<span class="me1">firstKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> K lastKey<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> blockList.<span class="me1">last</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">entries</span>.<span class="me1">lastKey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">int</span> size<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span> getLongSize<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">private</span> <span class="kw4">long</span> getLongSize<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw4">long</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+                <span class="kw1">for</span> <span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">:</span> blockList<span class="br0">)</span> <span class="br0">{</span>
+                        i <span class="sy0">+=</span> b.<span class="me1">entries</span>.<span class="me1">size</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw1">return</span> i<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> isEmpty<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> root.<span class="me1">isEmpty</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> containsKey<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> get<span class="br0">(</span>key<span class="br0">)</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">boolean</span> containsValue<span class="br0">(</span><span class="kw3">Object</span> value<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V get<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> <span class="br0">(</span>V<span class="br0">)</span> root.<span class="me1">get</span><span class="br0">(</span><span class="br0">(</span>K<span class="br0">)</span> key<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V put<span class="br0">(</span>K key, V value<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">if</span> <span class="br0">(</span>root <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">)</span> <span class="br0">{</span>
+                        SortedMap<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> entries <span class="sy0">=</span> BPlusLeafBlock.<span class="me1">getEntryCollection</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        entries.<span class="me1">put</span><span class="br0">(</span>key, value<span class="br0">)</span><span class="sy0">;</span>
+                        root <span class="sy0">=</span> createLeafBlock<span class="br0">(</span>entries<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                SplitOrValue<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> result <span class="sy0">=</span> root.<span class="me1">put</span><span class="br0">(</span>key, value<span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">if</span> <span class="br0">(</span>result.<span class="me1">isSplit</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                        BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> root <span class="sy0">=</span> <span class="kw1">new</span> BPlusBranchBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span><span class="br0">(</span>
+                                        maxInternalBlockSize<span class="br0">)</span><span class="sy0">;</span>
+                        root.<span class="me1">left</span> <span class="sy0">=</span> result.<span class="me1">left</span><span class="sy0">;</span>
+                        root.<span class="me1">entries</span>.<span class="me1">put</span><span class="br0">(</span>result.<span class="me1">k</span>, result.<span class="me1">right</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">this</span>.<span class="me1">root</span> <span class="sy0">=</span> root<span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw1">return</span> result.<span class="me1">v</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> V remove<span class="br0">(</span><span class="kw3">Object</span> key<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">void</span> putAll<span class="br0">(</span>Map<span class="sy0">&lt;?</span> <span class="kw1">extends</span> K, <span class="sy0">?</span> <span class="kw1">extends</span> V<span class="sy0">&gt;</span> m<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">for</span> <span class="br0">(</span>K k <span class="sy0">:</span> m.<span class="me1">keySet</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                        put<span class="br0">(</span>k, m.<span class="me1">get</span><span class="br0">(</span>k<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> <span class="kw4">void</span> clear<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Set<span class="sy0">&lt;</span>K<span class="sy0">&gt;</span> keySet<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                TreeSet<span class="sy0">&lt;</span>K<span class="sy0">&gt;</span> kk <span class="sy0">=</span> <span class="kw1">new</span> TreeSet<span class="sy0">&lt;</span>K<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">for</span> <span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">:</span> blockList<span class="br0">)</span> <span class="br0">{</span>
+                        kk.<span class="me1">addAll</span><span class="br0">(</span>b.<span class="me1">entries</span>.<span class="me1">keySet</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw1">return</span> kk<span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Collection<span class="sy0">&lt;</span>V<span class="sy0">&gt;</span> values<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Set<span class="sy0">&lt;</span>java.<span class="me1">util</span>.<span class="kw3">Map</span>.<span class="me1">Entry</span><span class="sy0">&lt;</span>K, V<span class="sy0">&gt;&gt;</span> entrySet<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        @Override
+        <span class="kw1">public</span> Comparator<span class="sy0">&lt;?</span> <span class="kw1">super</span> K<span class="sy0">&gt;</span> comparator<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">// TODO Auto-generated method stub</span>
+                <span class="kw1">return</span> <span class="kw2">null</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">public</span> <span class="kw4">void</span> showLeaves<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                <span class="kw1">for</span> <span class="br0">(</span>BPlusLeafBlock<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> b <span class="sy0">:</span> blockList<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Block"</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">for</span> <span class="br0">(</span>Entry<span class="sy0">&lt;</span>K, V<span class="sy0">&gt;</span> e <span class="sy0">:</span> b.<span class="me1">entries</span>.<span class="me1">entrySet</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                                <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span>e.<span class="me1">getKey</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">+</span> <span class="st0">":"</span> <span class="sy0">+</span> e.<span class="me1">getValue</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">+</span> <span class="st0">"  "</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+                        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+ 
+<span class="kw1">package</span> <span class="co2">btreemap</span><span class="sy0">;</span>
+ 
+<span class="kw1">import</span> <span class="co2">java.util.ArrayList</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Comparator</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.List</span><span class="sy0">;</span>
+<span class="kw1">import</span> <span class="co2">java.util.Random</span><span class="sy0">;</span>
+ 
+<span class="co3">/** driver program to test B+ tree */</span>
+ 
+<span class="kw1">public</span> <span class="kw1">class</span> BPlusTreeTest1 <span class="br0">{</span>
+ 
+        <span class="kw1">private</span> <span class="kw1">static</span> <span class="kw1">final</span> <span class="kw4">int</span> N <span class="sy0">=</span> <span class="nu0">1200000</span><span class="sy0">;</span>
+ 
+        <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">(</span><span class="kw3">String</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span> <span class="br0">{</span>
+                BPlusTreeMap<span class="sy0">&lt;</span><span class="kw3">Integer</span>, Integer<span class="sy0">&gt;</span> map <span class="sy0">=</span> <span class="kw1">new</span> BPlusTreeMap<span class="sy0">&lt;</span><span class="kw3">Integer</span>, Integer<span class="sy0">&gt;</span><span class="br0">(</span>
+                                <span class="nu0">400</span>,  <span class="nu0">200</span> <span class="br0">)</span><span class="sy0">;</span><span class="co1">// 5000002);</span>
+                <span class="kw3">Random</span> r <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw3">Random</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> t <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                Comparator<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> comparator <span class="sy0">=</span> <span class="kw1">new</span> Comparator<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+                        @Override
+                        <span class="kw1">public</span> <span class="kw4">int</span> compare<span class="br0">(</span><span class="kw3">Integer</span> o1, <span class="kw3">Integer</span> o2<span class="br0">)</span> <span class="br0">{</span>
+                                <span class="co1">// TODO Auto-generated method stub</span>
+                                <span class="kw1">return</span> o1.<span class="me1">intValue</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> o2.<span class="me1">intValue</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="br0">}</span>
+ 
+                <span class="br0">}</span><span class="sy0">;</span>
+ 
+                List<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> testVals <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                        testVals.<span class="me1">add</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+ 
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw4">int</span> x <span class="sy0">=</span> r.<span class="me1">nextInt</span><span class="br0">(</span>N<span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw4">int</span> z <span class="sy0">=</span> testVals.<span class="me1">set</span><span class="br0">(</span>x, testVals.<span class="me1">get</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                        testVals.<span class="me1">set</span><span class="br0">(</span><span class="nu0">0</span>, z<span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="br0">}</span>
+ 
+                <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+                        map.<span class="me1">put</span><span class="br0">(</span>testVals.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span>, testVals.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                        showProgress<span class="br0">(</span><span class="st0">"put"</span>, testVals, i<span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+                <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"output "</span> <span class="sy0">+</span> N <span class="sy0">+</span> <span class="st0">" vals"</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                <span class="kw1">try</span> <span class="br0">{</span>
+                        <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> N<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span> <span class="br0">{</span>
+ 
+                                showProgress<span class="br0">(</span><span class="st0">"get"</span>, testVals, i<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw4">int</span> x <span class="sy0">=</span> testVals.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+                                <span class="kw1">if</span> <span class="br0">(</span>x <span class="sy0">!=</span> map.<span class="me1">get</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span>
+                                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Expecting "</span> <span class="sy0">+</span> x <span class="sy0">+</span> <span class="st0">" got "</span> <span class="sy0">+</span> map.<span class="me1">get</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+                        <span class="br0">}</span>
+                        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"<span class="es0">\n</span>Checked "</span> <span class="sy0">+</span> N <span class="sy0">+</span> <span class="st0">" entries"</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span> <span class="kw1">catch</span> <span class="br0">(</span><span class="kw3">Exception</span> e<span class="br0">)</span> <span class="br0">{</span>
+                        <span class="co1">// TODO: handle exception</span>
+                        e.<span class="me1">printStackTrace</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                        map.<span class="me1">showLeaves</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+ 
+        <span class="kw1">private</span> <span class="kw1">static</span> <span class="kw4">void</span> showProgress<span class="br0">(</span><span class="kw3">String</span> label, List<span class="sy0">&lt;</span>Integer<span class="sy0">&gt;</span> testVals, <span class="kw4">int</span> i<span class="br0">)</span> <span class="br0">{</span>
+                <span class="kw1">if</span> <span class="br0">(</span>i <span class="sy0">%</span> <span class="br0">(</span>N <span class="sy0">/</span> <span class="nu0">1000</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span>
+                        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"%s %d:%d; "</span>, label, i, testVals.<span class="me1">get</span><span class="br0">(</span>i<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+                        <span class="kw1">if</span> <span class="br0">(</span>i <span class="sy0">%</span> <span class="br0">(</span>N <span class="sy0">/</span> <span class="nu0">10100</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span>
+                                <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+                <span class="br0">}</span>
+        <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=23" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>William Ford and William Tapp. <i>Data Structures with <b>C++</b> using <b>STL.</b></i> 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2002.</li>
+</ul>
+<h2><span class="mw-headline" id="External_Links">External Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit&amp;section=24" title="Edit section: External Links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://faculty.salisbury.edu/~ealu/COSC320/Present/chapter_10.ppt">Presentation of Iterative Tree Traversals</a></li>
+</ul>
+<p><a rel="nofollow" class="external text" href="http://www.studiesinn.com/learn/Programming-Languages/Data-Structure-Theory/Trees-.html">Data Structure Trees</a></p>
+<div style="width:60%; margin:0.5em auto; text-align:center; border:1px solid #003365; background:#E8FFE8; font-size:95%; white-space:nowrap;">
+<p><b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b><br />
+<a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Introduction</a> - <a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Asymptotic Notation</a> - <a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Arrays</a> - <a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">List Structures &amp; Iterators</a><br />
+<a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Stacks &amp; Queues</a> - <strong class="selflink">Trees</strong> - <a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Min &amp; Max Heaps</a> - <a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Graphs</a><br />
+<a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Hash Tables</a> - <a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Sets</a> - <a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Tradeoffs</a></p>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1166
+CPU time usage: 0.436 seconds
+Real time usage: 0.490 seconds
+Preprocessor visited node count: 155/1000000
+Preprocessor generated node count: 644/1500000
+Post‐expand include size: 1654/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:20095-0!*!0!!en!4!* and timestamp 20131124014932
+ -->
+<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures/Trees&amp;oldid=2584356">http://en.wikibooks.org/w/index.php?title=Data_Structures/Trees&amp;oldid=2584356</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FTrees&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures%2FTrees" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures/Trees"  title="View the content page [c]" accesskey="c">Book</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures/Trees"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures/Trees" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures/Trees&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+	<h3 id='p-Navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
+			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
+			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
+			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
+			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+	<h3 id='p-Community-label'>Community</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
+			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
+			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
+			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
+			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
+			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures/Trees" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures/Trees" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures/Trees&amp;oldid=2584356" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Data_Structures/Trees&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures%2FTrees&amp;id=2584356" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>In other languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+	<h3 id='p-Sister_projects-label'>Sister projects</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures%2FTrees">Create a collection</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures%2FTrees&amp;oldid=2584356&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Data_Structures/Trees&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 November 2013, at 01:49.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures/Trees" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
+<script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
+<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1113 in 0.109 secs. -->
+	</body>
+</html>

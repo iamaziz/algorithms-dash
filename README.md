@@ -11,6 +11,6 @@ To use them,
  * you can either download the generated documentation folders and open them with dash, or
  * copy and run the python file, it will generate the entire docset for you.
 
- ** Screenshots **
+ ## Screenshots
  ![Aglorithms-wikibook docset](/screenshots/algorithms-wikibook.png)
  ![Data Structures-wikibook docset](/screenshots/datastructures-wikibook.png)

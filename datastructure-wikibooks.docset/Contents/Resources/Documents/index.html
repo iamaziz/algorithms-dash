@@ -1,312 +1,620 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="client-nojs">
 <head>
-<meta charset="UTF-8" /><title>Data Structures - Wikibooks, open books for an open world</title>
-<meta name="generator" content="MediaWiki 1.23wmf7" />
-<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Data_Structures&amp;action=edit" />
-<link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures&amp;action=edit" />
-<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
-<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
-<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
-<link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures" />
-<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
-<meta name="ResourceLoaderDynamicStyles" content="" />
-<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
-<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
-/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+    <meta charset="UTF-8"/>
+    <title>Data Structures - Wikibooks, open books for an open world</title>
+    <meta name="generator" content="MediaWiki 1.23wmf7"/>
+    <link rel="alternate" type="application/x-wiki" title="Edit"
+          href="/w/index.php?title=Data_Structures&amp;action=edit"/>
+    <link rel="edit" title="Edit" href="/w/index.php?title=Data_Structures&amp;action=edit"/>
+    <link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php"
+          title="Wikibooks (en)"/>
+    <link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd"/>
+    <link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+    <link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed"
+          href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+    <link rel="canonical" href="http://en.wikibooks.org/wiki/Data_Structures"/>
+    <link rel="stylesheet"
+          href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*"/>
+    <meta name="ResourceLoaderDynamicStyles" content=""/>
+    <link rel="stylesheet"
+          href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*"/>
+    <style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+        /* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */
+    </style>
 
-<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
-<script>if(window.mw){
+    <script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+    <script>if(window.mw){
 mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Structures","wgTitle":"Data Structures","wgCurRevisionId":1914348,"wgRevisionId":1914348,"wgArticleId":10282,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Books with print version","Data Structures","Algorithms and data structures","Algorithms and data structures/all books","Computer science/all books","Computing/all books","Books by subject/all books","Mathematical logic/all books","Pure mathematics/all books","Mathematics/all books","Alphabetical/D","Half-finished books","Books by completion status/all books"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Structures","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":["en-us","en","hi"],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":1914348,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
-}</script><script>if(window.mw){
+}
+    </script>
+    <script>if(window.mw){
 mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
 "watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
 "en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
 /* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
-}</script>
-<script>if(window.mw){
+}
+    </script>
+    <script>if(window.mw){
 mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
-}</script>
-<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+}
+    </script>
+    <script src="//bits.wikimedia.org/geoiplookup"></script>
+    <link rel="dns-prefetch" href="//meta.wikimedia.org"/>
+    <!--[if lt IE 7]>
+    <style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]-->
+</head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Structures skin-vector action-view vector-animateLayout">
-		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div id="mw-js-message" style="display:none;"></div>
-						<div id="siteNotice"><!-- CentralNotice --></div>
-						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures</span></h1>
-			<div id="bodyContent">
-								<div id="siteSub">From Wikibooks, open books for an open world</div>
-								<div id="contentSub"></div>
-												<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
-				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="center">
-<div class="floatnone"><a href="/wiki/File:ComputerScienceDataStructuresCoverArt.png" class="image"><img alt="ComputerScienceDataStructuresCoverArt.png" src="//upload.wikimedia.org/wikipedia/commons/2/2b/ComputerScienceDataStructuresCoverArt.png" width="542" height="132" /></a></div>
-</div>
-<p>This book is about the creation and analysis of efficient data structures. It covers:</p>
-<ul>
-<li>the primitive <b>node</b> structure;</li>
-<li><b>asymptotic notation</b> for mathematically discussing performance characteristics;</li>
-<li>built-in <b>arrays</b>;</li>
-<li><b>list structures</b> built from either nodes or arrays;</li>
-<li><b>iterators</b> as an abstract model of enumerating the items in a sequence;</li>
-<li><b>stacks</b> and <b>queues</b> for computing with last-in/first-out and first-in/first-out orderings;</li>
-<li>binary and general <b>tree</b> structures for searching or representing hierarchical relationships;</li>
-<li>min and max <b>heaps</b> for representing ordering based on priorities;</li>
-<li><b>graph</b> structures for representing more general relationships between data elements;</li>
-<li><b>hash tables</b> for the efficient retrieval of strings and other objects; and finally</li>
-<li><b>trade-offs</b> between the structures, and strategies for picking the most appropriate ones.</li>
-</ul>
-<p>To understand the material in this book you should be comfortable enough in a programming language to be able to work with and write your own variables, arithmetic expressions, if-else conditions, loops, subroutines (also known as functions), pointers (also known as references or object handles), structures (also known as records or classes), simple input and output, and simple recursion.</p>
-<p>Because many different languages approach the construction of data structures differently, we use pseudo-code so that you can translate the code into your own language.</p>
-<h2><span class="mw-headline" id="Table_of_Chapters">Table of Chapters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=1" title="Edit section: Table of Chapters">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<table class="plainlinks noprint messagebox growth" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
-<tr style="vertical-align:middle;">
-<td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img alt="Printer.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/40px-Printer.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/60px-Printer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/80px-Printer.svg.png 2x" /></td>
-<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
-<p>A <i><b><a href="/wiki/Data_Structures/All_Chapters" title="Data Structures/All Chapters">printable version</a></b></i> of Data Structures is available. <small>(<a class="external text" href="//en.wikibooks.org/w/index.php?title=Data_Structures/All_Chapters&amp;action=edit">edit it</a>)</small></p>
-</td>
-</tr>
-</table>
-<table width="50%">
-<tr>
-<td style="background-color: #FFFeff; border: solid 1px #FFC92E; padding: 1em;" valign="top">
-<ul>
-<li><a href="/wiki/Data_Structures/About_the_Book" title="Data Structures/About the Book">About the Book</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="100% developed&#160; as of Jul 7, 2009"><img alt="100% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Introduction" title="Data Structures/Introduction">Chapter 1: Introduction</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="100% developed&#160; as of Jul 7, 2009"><img alt="100% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Asymptotic_Notation" title="Data Structures/Asymptotic Notation">Chapter 2: Asymptotic Notation</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jul 7, 2009"><img alt="50% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Arrays" title="Data Structures/Arrays">Chapter 3: Arrays</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jul 7, 2009"><img alt="50% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/List_Structures" title="Data Structures/List Structures">Chapter 4: List Structures and Iterators</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Stacks_and_Queues" title="Data Structures/Stacks and Queues">Chapter 5: Stacks and Queues</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jul 7, 2009"><img alt="50% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Trees" title="Data Structures/Trees">Chapter 6: Trees</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="0% developed&#160; as of Jul 7, 2009"><img alt="0% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/9px-00%25.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/14px-00%25.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/18px-00%25.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Min_and_Max_Heaps" title="Data Structures/Min and Max Heaps">Chapter 7: Min and Max Heaps</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Graphs" title="Data Structures/Graphs">Chapter 8: Graphs</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Hash_Tables" title="Data Structures/Hash Tables">Chapter 9: Hash Tables</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Sets" title="Data Structures/Sets">Chapter 10: Sets</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Data_Structures/Tradeoffs" title="Data Structures/Tradeoffs">Chapter 11: Tradeoffs</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jul 7, 2009"><img alt="25% developed&#160; as of Jul 7, 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></li>
-</ul>
-</td>
-</tr>
-</table>
-<h2><span class="mw-headline" id="Why_a_book_on_Data_Structures.3F">Why a book on Data Structures?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=2" title="Edit section: Why a book on Data Structures?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>A <a href="/wiki/Wikibooks:What_is_Wikibooks%3F" title="Wikibooks:What is Wikibooks?" class="mw-redirect">Wikibook</a> is an undertaking similar to an open-source software project: A contributor creates content for the project to help others, for personal enrichment, or to accomplish something for the contributor's own work (e.g., lecture preparation).</p>
-<p>An open book, just like an open program, requires time to complete, but it can benefit greatly from even modest contributions from readers. For example you can fix "bugs" in the text (where the bug might be typographic, expository, technical, aesthetic or otherwise) in order to make a better book. If you find an opportunity to fix a bug, simply click on "edit", make your changes, and click on save. Other contributors may review your changes to be sure they are appropriate for the book. If you are unsure, you can visit the discussion page and ask there. Use common sense.</p>
-<p>If you would like to make bigger contributions, you can take a look at the sections or chapters that are too short or otherwise need more work and start writing! Be sure to skim the rest of the book first in order to avoid duplication of content. Additionally, you should read the <a href="/wiki/Algorithms/Guidelines_for_Contributors" title="Algorithms/Guidelines for Contributors">Guidelines for Contributors</a> page for consistency tips and advice.</p>
-<p>Note that you don't need to contribute everything at once. You can add the template "{{TODO|description of what remains to be done}}", to pages and perhaps someone else will finish those parts for you.</p>
-<p>This book is intentionally kept narrow-in-focus in order to make contributions easier (because then the end-goal is clearer). This book is part one of a series of three computer science textbooks on algorithms, continuing on to the techniques of algorithms in <i><a href="/wiki/Algorithms" title="Algorithms">Algorithms</a></i> and ending with <i><a href="/wiki/Advanced_Data_Structures_and_Algorithms" title="Advanced Data Structures and Algorithms">Advanced Data Structures and Algorithms</a></i>. If you would like to contribute a topic not already listed in any of the three books try putting it in the <i>Advanced</i> book, which is more eclectic in nature. Or, if you think the topic is fundamental, you can go to either the <a href="/wiki/Talk:Algorithms" title="Talk:Algorithms">Algorithms</a> or the <a href="/wiki/Talk:Data_Structures" title="Talk:Data Structures">Data Structures</a> discussion page and make a proposal.</p>
-<p>Additionally, implementations of the data structures (in either Ada, C, C#, Perl, Python, Java, Ruby, or Scheme) as an appendix are welcome.</p>
-<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<table>
-<tr>
-<td valign="top" width="15%">[Aho]</td>
-<td>Alfred V. Aho, Jeffrey D. Ullman, John E. Hopcroft. <i>Data Structures and Algorithms</i>. Addison Wesley, 1983.</td>
-</tr>
-<tr>
-<td valign="top">[CLRS]</td>
-<td>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. <i>Introduction to Algorithms</i>. McGraw-Hill, 2001.</td>
-</tr>
-<tr>
-<td valign="top">[Knuth]</td>
-<td>Donald E. Knuth. <i>The Art of Computer Programming, Volumes 1-3</i>. Addison-Wesley Professional, 1998.</td>
-<td></td>
-</tr>
-<tr>
-<td valign="top">[Kishor]</td>
-<td>S.B. Kishor <i>Data Structures, Edition 3</i>. Das Ganu Prakashan, Nagpur, 2008.</td>
-</tr>
-</table>
-<p>Additionally, as an online reference to the scope of algorithms today: <a rel="nofollow" class="external text" href="http://www.nist.gov/dads/">Dictionary of Algorithms</a></p>
-<div class="metadata topicon" id="status-icon"><a href="/wiki/Help:Development_stages" title="50% developed"><img alt="50% developed" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/24px-50_percents.svg.png" width="24" height="24" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/36px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/48px-50_percents.svg.png 2x" /></a></div>
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+    <a id="top"></a>
+
+    <div id="mw-js-message" style="display:none;"></div>
+    <div id="siteNotice"><!-- CentralNotice --></div>
+    <h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Data Structures</span></h1>
+
+    <div id="bodyContent">
+        <div id="siteSub">From Wikibooks, open books for an open world</div>
+        <div id="contentSub"></div>
+        <div id="jump-to-nav" class="mw-jump">
+            Jump to: <a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a>
+        </div>
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+            <p>This book is about the creation and analysis of efficient data structures. It covers:</p>
+            <ul>
+                <li>the primitive <b>node</b> structure;</li>
+                <li><b>asymptotic notation</b> for mathematically discussing performance characteristics;</li>
+                <li>built-in <b>arrays</b>;</li>
+                <li><b>list structures</b> built from either nodes or arrays;</li>
+                <li><b>iterators</b> as an abstract model of enumerating the items in a sequence;</li>
+                <li><b>stacks</b> and <b>queues</b> for computing with last-in/first-out and first-in/first-out
+                    orderings;
+                </li>
+                <li>binary and general <b>tree</b> structures for searching or representing hierarchical relationships;
+                </li>
+                <li>min and max <b>heaps</b> for representing ordering based on priorities;</li>
+                <li><b>graph</b> structures for representing more general relationships between data elements;</li>
+                <li><b>hash tables</b> for the efficient retrieval of strings and other objects; and finally</li>
+                <li><b>trade-offs</b> between the structures, and strategies for picking the most appropriate ones.</li>
+            </ul>
+            <p>To understand the material in this book you should be comfortable enough in a programming language to be
+                able to work with and write your own variables, arithmetic expressions, if-else conditions, loops,
+                subroutines (also known as functions), pointers (also known as references or object handles), structures
+                (also known as records or classes), simple input and output, and simple recursion.</p>
+
+            <p>Because many different languages approach the construction of data structures differently, we use
+                pseudo-code so that you can translate the code into your own language.</p>
+
+            <h2><span class="mw-headline" id="Table_of_Chapters">Table of Chapters</span><span
+                    class="mw-editsection"><span class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=1"
+                    title="Edit section: Table of Chapters">edit</a><span class="mw-editsection-bracket">]</span></span>
+            </h2>
+            <table class="plainlinks noprint messagebox growth"
+                   style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
+                <tr style="vertical-align:middle;">
+                    <td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img
+                            alt="Printer.svg"
+                            src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/40px-Printer.svg.png"
+                            width="40" height="40"
+                            srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/60px-Printer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/80px-Printer.svg.png 2x"/>
+                    </td>
+                    <td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
+                        <p>A <i><b><a href="wiki/Data_Structures/All_Chapters.html" title="Data Structures/All Chapters">printable
+                            version</a></b></i> of Data Structures is available.
+                            <small>(<a class="external text"
+                                       href="//en.wikibooks.org/w/index.php?title=Data_Structures/All_Chapters&amp;action=edit">edit
+                                it</a>)
+                            </small>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table width="50%">
+                <tr>
+                    <td style="background-color: #FFFeff; border: solid 1px #FFC92E; padding: 1em;" valign="top">
+                        <ul>
+                            <li><a href="wiki/Data_Structures/About_the_Book.html" title="Data Structures/About the Book">About
+                                the Book</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                      title="100% developed&#160; as of Jul 7, 2009"><img
+                                    alt="100% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Introduction.html" title="Data Structures/Introduction">Chapter
+                                1: Introduction</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                             title="100% developed&#160; as of Jul 7, 2009"><img
+                                    alt="100% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Asymptotic_Notation.html"
+                                   title="Data Structures/Asymptotic Notation">Chapter 2: Asymptotic Notation</a> <span
+                                    class="noprint"><a href="/wiki/Help:Development_stages"
+                                                       title="50% developed&#160; as of Jul 7, 2009"><img
+                                    alt="50% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Arrays.html" title="Data Structures/Arrays">Chapter 3:
+                                Arrays</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                    title="50% developed&#160; as of Jul 7, 2009"><img
+                                    alt="50% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/List_Structures.html" title="Data Structures/List Structures">Chapter
+                                4: List Structures and Iterators</a> <span class="noprint"><a
+                                    href="/wiki/Help:Development_stages"
+                                    title="25% developed&#160; as of Jul 7, 2009"><img
+                                    alt="25% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Stacks_and_Queues.html"
+                                   title="Data Structures/Stacks and Queues">Chapter 5: Stacks and Queues</a> <span
+                                    class="noprint"><a href="/wiki/Help:Development_stages"
+                                                       title="50% developed&#160; as of Jul 7, 2009"><img
+                                    alt="50% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Trees.html" title="Data Structures/Trees">Chapter 6: Trees</a>
+                                <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                         title="0% developed&#160; as of Jul 7, 2009"><img
+                                        alt="0% developed&#160; as of Jul 7, 2009"
+                                        src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/9px-00%25.svg.png"
+                                        width="9" height="9"
+                                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/14px-00%25.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/18px-00%25.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Min_and_Max_Heaps.html"
+                                   title="Data Structures/Min and Max Heaps">Chapter 7: Min and Max Heaps</a> <span
+                                    class="noprint"><a href="/wiki/Help:Development_stages"
+                                                       title="25% developed&#160; as of Jul 7, 2009"><img
+                                    alt="25% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Graphs.html" title="Data Structures/Graphs">Chapter 8:
+                                Graphs</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                    title="25% developed&#160; as of Jul 7, 2009"><img
+                                    alt="25% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Hash_Tables.html" title="Data Structures/Hash Tables">Chapter
+                                9: Hash Tables</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                            title="25% developed&#160; as of Jul 7, 2009"><img
+                                    alt="25% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Sets.html" title="Data Structures/Sets">Chapter 10: Sets</a>
+                                <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                         title="25% developed&#160; as of Jul 7, 2009"><img
+                                        alt="25% developed&#160; as of Jul 7, 2009"
+                                        src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                        width="9" height="9"
+                                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Data_Structures/Tradeoffs.html" title="Data Structures/Tradeoffs">Chapter 11:
+                                Tradeoffs</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                       title="25% developed&#160; as of Jul 7, 2009"><img
+                                    alt="25% developed&#160; as of Jul 7, 2009"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <h2><span class="mw-headline"
+                      id="Why_a_book_on_Data_Structures.3F">Why a book on Data Structures?</span><span
+                    class="mw-editsection"><span class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=2"
+                    title="Edit section: Why a book on Data Structures?">edit</a><span
+                    class="mw-editsection-bracket">]</span></span></h2>
+
+            <p>A <a href="/wiki/Wikibooks:What_is_Wikibooks%3F" title="Wikibooks:What is Wikibooks?"
+                    class="mw-redirect">Wikibook</a> is an undertaking similar to an open-source software project: A
+                contributor creates content for the project to help others, for personal enrichment, or to accomplish
+                something for the contributor's own work (e.g., lecture preparation).</p>
+
+            <p>An open book, just like an open program, requires time to complete, but it can benefit greatly from even
+                modest contributions from readers. For example you can fix "bugs" in the text (where the bug might be
+                typographic, expository, technical, aesthetic or otherwise) in order to make a better book. If you find
+                an opportunity to fix a bug, simply click on "edit", make your changes, and click on save. Other
+                contributors may review your changes to be sure they are appropriate for the book. If you are unsure,
+                you can visit the discussion page and ask there. Use common sense.</p>
+
+            <p>If you would like to make bigger contributions, you can take a look at the sections or chapters that are
+                too short or otherwise need more work and start writing! Be sure to skim the rest of the book first in
+                order to avoid duplication of content. Additionally, you should read the <a
+                        href="/wiki/Algorithms/Guidelines_for_Contributors"
+                        title="Algorithms/Guidelines for Contributors">Guidelines for Contributors</a> page for
+                consistency tips and advice.</p>
+
+            <p>Note that you don't need to contribute everything at once. You can add the template "{{TODO|description
+                of what remains to be done}}", to pages and perhaps someone else will finish those parts for you.</p>
+
+            <p>This book is intentionally kept narrow-in-focus in order to make contributions easier (because then the
+                end-goal is clearer). This book is part one of a series of three computer science textbooks on
+                algorithms, continuing on to the techniques of algorithms in <i><a href="/wiki/Algorithms"
+                                                                                   title="Algorithms">Algorithms</a></i>
+                and ending with <i><a href="/wiki/Advanced_Data_Structures_and_Algorithms"
+                                      title="Advanced Data Structures and Algorithms">Advanced Data Structures and
+                    Algorithms</a></i>. If you would like to contribute a topic not already listed in any of the three
+                books try putting it in the <i>Advanced</i> book, which is more eclectic in nature. Or, if you think the
+                topic is fundamental, you can go to either the <a href="/wiki/Talk:Algorithms" title="Talk:Algorithms">Algorithms</a>
+                or the <a href="/wiki/Talk:Data_Structures" title="Talk:Data Structures">Data Structures</a> discussion
+                page and make a proposal.</p>
+
+            <p>Additionally, implementations of the data structures (in either Ada, C, C#, Perl, Python, Java, Ruby, or
+                Scheme) as an appendix are welcome.</p>
+
+            <h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Data_Structures&amp;action=edit&amp;section=3"
+                    title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+            <table>
+                <tr>
+                    <td valign="top" width="15%">[Aho]</td>
+                    <td>Alfred V. Aho, Jeffrey D. Ullman, John E. Hopcroft. <i>Data Structures and Algorithms</i>.
+                        Addison Wesley, 1983.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[CLRS]</td>
+                    <td>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. <i>Introduction to
+                        Algorithms</i>. McGraw-Hill, 2001.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[Knuth]</td>
+                    <td>Donald E. Knuth. <i>The Art of Computer Programming, Volumes 1-3</i>. Addison-Wesley
+                        Professional, 1998.
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td valign="top">[Kishor]</td>
+                    <td>S.B. Kishor <i>Data Structures, Edition 3</i>. Das Ganu Prakashan, Nagpur, 2008.</td>
+                </tr>
+            </table>
+            <p>Additionally, as an online reference to the scope of algorithms today: <a rel="nofollow"
+                                                                                         class="external text"
+                                                                                         href="http://www.nist.gov/dads/">Dictionary
+                of Algorithms</a></p>
+
+            <div class="metadata topicon" id="status-icon"><a href="/wiki/Help:Development_stages"
+                                                              title="50% developed"><img alt="50% developed"
+                                                                                         src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/24px-50_percents.svg.png"
+                                                                                         width="24" height="24"
+                                                                                         srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/36px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/48px-50_percents.svg.png 2x"/></a>
+            </div>
 
 
-<!-- 
-NewPP limit report
-Parsed by mw1089
-CPU time usage: 0.416 seconds
-Real time usage: 0.491 seconds
-Preprocessor visited node count: 1831/1000000
-Preprocessor generated node count: 6866/1500000
-Postexpand include size: 30966/2048000 bytes
-Template argument size: 3428/2048000 bytes
-Highest expansion depth: 31/40
-Expensive parser function count: 1/500
--->
+            <!--
+            NewPP limit report
+            Parsed by mw1089
+            CPU time usage: 0.416 seconds
+            Real time usage: 0.491 seconds
+            Preprocessor visited node count: 1831/1000000
+            Preprocessor generated node count: 6866/1500000
+            Postexpand include size: 30966/2048000 bytes
+            Template argument size: 3428/2048000 bytes
+            Highest expansion depth: 31/40
+            Expensive parser function count: 1/500
+            -->
 
-<!-- Saved in parser cache with key enwikibooks:pcache:idhash:10282-0!*!0!!*!4!* and timestamp 20131219232210
- -->
-<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
-				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures&amp;oldid=1914348">http://en.wikibooks.org/w/index.php?title=Data_Structures&amp;oldid=1914348</a>"				</div>
-												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Subjects</a>: <ul><li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a></li><li><a href="/wiki/Category:Algorithms_and_data_structures" title="Category:Algorithms and data structures">Algorithms and data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Books_with_print_version" title="Category:Books with print version">Books with print version</a></li><li><a href="/wiki/Category:Algorithms_and_data_structures/all_books" title="Category:Algorithms and data structures/all books">Algorithms and data structures/all books</a></li><li><a href="/wiki/Category:Computer_science/all_books" title="Category:Computer science/all books">Computer science/all books</a></li><li><a href="/wiki/Category:Computing/all_books" title="Category:Computing/all books">Computing/all books</a></li><li><a href="/wiki/Category:Books_by_subject/all_books" title="Category:Books by subject/all books">Books by subject/all books</a></li><li><a href="/wiki/Category:Mathematical_logic/all_books" title="Category:Mathematical logic/all books">Mathematical logic/all books</a></li><li><a href="/wiki/Category:Pure_mathematics/all_books" title="Category:Pure mathematics/all books">Pure mathematics/all books</a></li><li><a href="/wiki/Category:Mathematics/all_books" title="Category:Mathematics/all books">Mathematics/all books</a></li><li><a href="/wiki/Category:Alphabetical/D" title="Category:Alphabetical/D">Alphabetical/D</a></li><li><a href="/wiki/Category:Half-finished_books" title="Category:Half-finished books">Half-finished books</a></li><li><a href="/wiki/Category:Books_by_completion_status/all_books" title="Category:Books by completion status/all books">Books by completion status/all books</a></li></ul></div></div>												<div class="visualClear"></div>
-							</div>
-		</div>
-		<div id="mw-navigation">
-			<h2>Navigation menu</h2>
-			<div id="mw-head">
-				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
-	<h3 id="p-personal-label">Personal tools</h3>
-	<ul>
-<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+            <!-- Saved in parser cache with key enwikibooks:pcache:idhash:10282-0!*!0!!*!4!* and timestamp 20131219232210
+             -->
+            <noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title=""
+                           width="1" height="1" style="border: none; position: absolute;"/></noscript>
+        </div>
+        <div class="printfooter">
+            Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Data_Structures&amp;oldid=1914348">http://en.wikibooks.org/w/index.php?title=Data_Structures&amp;oldid=1914348</a>"
+        </div>
+        <div id='catlinks' class='catlinks'>
+            <div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories"
+                                                                       title="Special:Categories">Subjects</a>:
+                <ul>
+                    <li><a href="/wiki/Category:Data_Structures" title="Category:Data Structures">Data Structures</a>
+                    </li>
+                    <li><a href="/wiki/Category:Algorithms_and_data_structures"
+                           title="Category:Algorithms and data structures">Algorithms and data structures</a></li>
+                </ul>
+            </div>
+            <div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories:
+                <ul>
+                    <li><a href="/wiki/Category:Books_with_print_version" title="Category:Books with print version">Books
+                        with print version</a></li>
+                    <li><a href="/wiki/Category:Algorithms_and_data_structures/all_books"
+                           title="Category:Algorithms and data structures/all books">Algorithms and data structures/all
+                        books</a></li>
+                    <li><a href="/wiki/Category:Computer_science/all_books" title="Category:Computer science/all books">Computer
+                        science/all books</a></li>
+                    <li><a href="/wiki/Category:Computing/all_books" title="Category:Computing/all books">Computing/all
+                        books</a></li>
+                    <li><a href="/wiki/Category:Books_by_subject/all_books" title="Category:Books by subject/all books">Books
+                        by subject/all books</a></li>
+                    <li><a href="/wiki/Category:Mathematical_logic/all_books"
+                           title="Category:Mathematical logic/all books">Mathematical logic/all books</a></li>
+                    <li><a href="/wiki/Category:Pure_mathematics/all_books" title="Category:Pure mathematics/all books">Pure
+                        mathematics/all books</a></li>
+                    <li><a href="/wiki/Category:Mathematics/all_books" title="Category:Mathematics/all books">Mathematics/all
+                        books</a></li>
+                    <li><a href="/wiki/Category:Alphabetical/D" title="Category:Alphabetical/D">Alphabetical/D</a></li>
+                    <li><a href="/wiki/Category:Half-finished_books" title="Category:Half-finished books">Half-finished
+                        books</a></li>
+                    <li><a href="/wiki/Category:Books_by_completion_status/all_books"
+                           title="Category:Books by completion status/all books">Books by completion status/all
+                        books</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="visualClear"></div>
+    </div>
 </div>
-				<div id="left-navigation">
-					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
-	<h3 id="p-namespaces-label">Namespaces</h3>
-	<ul>
-					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures"  title="View the content page [c]" accesskey="c">Book</a></span></li>
-					<li  id="ca-talk"><span><a href="/wiki/Talk:Data_Structures"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
-			</ul>
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+
+    <div id="mw-head">
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+            <h3 id="p-personal-label">Personal tools</h3>
+            <ul>
+                <li id="pt-createaccount"><a
+                        href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures&amp;type=signup">Create
+                    account</a></li>
+                <li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Data+Structures"
+                                     title="You are encouraged to log in; however, it is not mandatory [o]"
+                                     accesskey="o">Log in</a></li>
+            </ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+                <h3 id="p-namespaces-label">Namespaces</h3>
+                <ul>
+                    <li id="ca-nstab-main" class="selected"><span><a href="/wiki/Data_Structures"
+                                                                     title="View the content page [c]" accesskey="c">Book</a></span>
+                    </li>
+                    <li id="ca-talk"><span><a href="/wiki/Talk:Data_Structures"
+                                              title="Discussion about the content page [t]" accesskey="t">Discussion</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+                <h3 id="mw-vector-current-variant">
+                </h3>
+
+                <h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+
+                <div class="menu">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+                <h3 id="p-views-label">Views</h3>
+                <ul>
+                    <li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures">Read</a></span></li>
+                    <li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures&amp;action=edit"
+                                              title="You can edit this page. Please use the preview button before saving [e]"
+                                              accesskey="e">Edit</a></span></li>
+                    <li id="ca-history" class="collapsible"><span><a
+                            href="/w/index.php?title=Data_Structures&amp;action=history"
+                            title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+                </ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+                <h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+
+                <div class="menu">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div id="p-search" role="search">
+                <h3><label for="searchInput">Search</label></h3>
+
+                <form action="/w/index.php" id="searchform">
+                    <div id="simpleSearch">
+                        <input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f"
+                               id="searchInput"/>
+                        <button type="submit" name="button" title="Search the pages for this text" id="searchButton">
+                            <img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4"
+                                 alt="Search" width="12" height="13"/></button>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="mw-panel">
+        <div id="p-logo" role="banner"><a
+                style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"
+                title="Visit the main page"></a></div>
+        <div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
+            <h3 id='p-Navigation-label'>Navigation</h3>
+
+            <div class="body">
+                <ul>
+                    <li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main
+                        Page</a></li>
+                    <li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a>
+                    </li>
+                    <li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office"
+                                         title="Check out what Wikibooks has to offer">Browse</a></li>
+                    <li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents"
+                                           title="Learn recipes from around the world">Cookbook</a></li>
+                    <li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
+                    <li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured
+                        books</a></li>
+                    <li id="n-recentchanges"><a href="/wiki/Special:RecentChanges"
+                                                title="A list of recent changes in the wiki [r]" accesskey="r">Recent
+                        changes</a></li>
+                    <li id="n-sitesupport"><a
+                            href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en"
+                            title="Support Wikibooks">Donations</a></li>
+                    <li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
+            <h3 id='p-Community-label'>Community</h3>
+
+            <div class="body">
+                <ul>
+                    <li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room"
+                                               title="Discuss Wikibooks-related questions and concerns with others">Reading
+                        room</a></li>
+                    <li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal"
+                                         title="Find your way around the Wikibooks community">Community portal</a></li>
+                    <li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board"
+                                                title="Important community news">Bulletin Board</a></li>
+                    <li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance"
+                                              title="Frequent tasks that you can help with">Help out!</a></li>
+                    <li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines"
+                                                          title="Pages detailing important rules and procedures">Policies
+                        and guidelines</a></li>
+                    <li id="n-contact"><a href="/wiki/Wikibooks:Contact_us"
+                                          title="Alternative methods of communication">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+            <h3 id='p-tb-label'>Tools</h3>
+
+            <div class="body">
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures"
+                                                title="A list of all wiki pages that link here [j]" accesskey="j">What
+                        links here</a></li>
+                    <li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures"
+                                                      title="Recent changes in pages linked from this page [k]"
+                                                      accesskey="k">Related changes</a></li>
+                    <li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard"
+                                         title="Upload files [u]" accesskey="u">Upload file</a></li>
+                    <li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]"
+                                               accesskey="q">Special pages</a></li>
+                    <li id="t-permalink"><a href="/w/index.php?title=Data_Structures&amp;oldid=1914348"
+                                            title="Permanent link to this revision of the page">Permanent link</a></li>
+                    <li id="t-info"><a href="/w/index.php?title=Data_Structures&amp;action=info">Page information</a>
+                    </li>
+                    <li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures&amp;id=1914348"
+                                       title="Information on how to cite this page">Cite this page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+            <h3 id='p-lang-label'>In other languages</h3>
+
+            <div class="body">
+                <ul>
+                    <li class="interlanguage-link interwiki-pl"><a href="//pl.wikibooks.org/wiki/Struktury_danych"
+                                                                   title="Struktury danych  Polish" lang="pl"
+                                                                   hreflang="pl">Polski</a></li>
+                    <li class="uls-p-lang-dummy"><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
+            <h3 id='p-Sister_projects-label'>Sister projects</h3>
+
+            <div class="body">
+                <ul>
+                    <li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+                    <li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a>
+                    </li>
+                    <li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+                    <li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+                    <li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+                    <li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+                    <li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+                    <li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
+                    <li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+            <h3 id='p-coll-print_export-label'>Print/export</h3>
+
+            <div class="body">
+                <ul>
+                    <li id="coll-create_a_book"><a
+                            href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures">Create
+                        a collection</a></li>
+                    <li id="coll-download-as-rl"><a
+                            href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures&amp;oldid=1914348&amp;writer=rl">Download
+                        as PDF</a></li>
+                    <li id="t-print"><a href="/w/index.php?title=Data_Structures&amp;printable=yes"
+                                        title="Printable version of this page [p]" accesskey="p">Printable version</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
-	<h3 id="mw-vector-current-variant">
-		</h3>
-	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
-	<div class="menu">
-		<ul>
-					</ul>
-	</div>
+<div id="footer" role="contentinfo">
+    <ul id="footer-info">
+        <li id="footer-info-lastmod"> This page was last modified on 18 August 2010, at 05:13.</li>
+        <li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution/Share-Alike License</a>; additional terms may apply. By using this site, you agree to
+            the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a
+                    href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+    </ul>
+    <ul id="footer-places">
+        <li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy"
+                                          title="wikimedia:Privacy policy">Privacy policy</a></li>
+        <li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a>
+        </li>
+        <li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer"
+                                             title="Wikibooks:General disclaimer">Disclaimers</a></li>
+        <li id="footer-places-developers"><a class="external"
+                                             href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a>
+        </li>
+        <li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures"
+                                             class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+    </ul>
+    <ul id="footer-icons" class="noprint">
+        <li id="footer-copyrightico">
+            <a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88"
+                                                      height="31" alt="Wikimedia Foundation"/></a>
+        </li>
+        <li id="footer-poweredbyico">
+            <a href="//www.mediawiki.org/"><img
+                    src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png"
+                    alt="Powered by MediaWiki" width="88" height="31"/></a>
+        </li>
+    </ul>
+    <div style="clear:both"></div>
 </div>
-				</div>
-				<div id="right-navigation">
-					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
-	<h3 id="p-views-label">Views</h3>
-	<ul>
-					<li id="ca-view" class="selected"><span><a href="/wiki/Data_Structures" >Read</a></span></li>
-					<li id="ca-edit"><span><a href="/w/index.php?title=Data_Structures&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
-					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Data_Structures&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
-			</ul>
-</div>
-<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
-	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
-	<div class="menu">
-		<ul>
-					</ul>
-	</div>
-</div>
-<div id="p-search" role="search">
-	<h3><label for="searchInput">Search</label></h3>
-	<form action="/w/index.php" id="searchform">
-				<div id="simpleSearch">
-						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
-		</div>
-	</form>
-</div>
-				</div>
-			</div>
-			<div id="mw-panel">
-					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
-				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
-	<h3 id='p-Navigation-label'>Navigation</h3>
-	<div class="body">
-		<ul>
-			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
-			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
-			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
-			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
-			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
-			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
-			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
-			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
-	<h3 id='p-Community-label'>Community</h3>
-	<div class="body">
-		<ul>
-			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
-			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
-			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
-			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
-			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
-			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
-	<h3 id='p-tb-label'>Tools</h3>
-	<div class="body">
-		<ul>
-			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Data_Structures" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Data_Structures" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
-			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
-			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-			<li id="t-permalink"><a href="/w/index.php?title=Data_Structures&amp;oldid=1914348" title="Permanent link to this revision of the page">Permanent link</a></li>
-			<li id="t-info"><a href="/w/index.php?title=Data_Structures&amp;action=info">Page information</a></li>
-<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Data_Structures&amp;id=1914348" title="Information on how to cite this page">Cite this page</a></li>		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
-	<h3 id='p-lang-label'>In other languages</h3>
-	<div class="body">
-		<ul>
-			<li class="interlanguage-link interwiki-pl"><a href="//pl.wikibooks.org/wiki/Struktury_danych" title="Struktury danych  Polish" lang="pl" hreflang="pl">Polski</a></li>
-			<li class="uls-p-lang-dummy"><a href="#"></a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
-	<h3 id='p-Sister_projects-label'>Sister projects</h3>
-	<div class="body">
-		<ul>
-			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
-			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
-			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
-			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
-			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
-			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
-			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
-			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
-			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
-	<h3 id='p-coll-print_export-label'>Print/export</h3>
-	<div class="body">
-		<ul>
-			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Data+Structures">Create a collection</a></li>
-			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Data+Structures&amp;oldid=1914348&amp;writer=rl">Download as PDF</a></li>
-			<li id="t-print"><a href="/w/index.php?title=Data_Structures&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-		</ul>
-	</div>
-</div>
-			</div>
-		</div>
-		<div id="footer" role="contentinfo">
-							<ul id="footer-info">
-											<li id="footer-info-lastmod"> This page was last modified on 18 August 2010, at 05:13.</li>
-											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
-									</ul>
-							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
-											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
-											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Data_Structures" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
-									</ul>
-										<ul id="footer-icons" class="noprint">
-					<li id="footer-copyrightico">
-						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
-					</li>
-					<li id="footer-poweredbyico">
-						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
-					</li>
-				</ul>
-						<div style="clear:both"></div>
-		</div>
-		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script>
+<script>if(window.mw){
 mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
-}</script>
+}
+</script>
 <script>if(window.mw){
 mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
-}</script>
+}
+</script>
 <script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
 <script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
 <script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
 <!-- Served by mw1180 in 0.135 secs. -->
-	</body>
+</body>
 </html>

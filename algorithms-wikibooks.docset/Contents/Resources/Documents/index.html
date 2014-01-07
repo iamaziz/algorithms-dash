@@ -1,384 +1,452 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="client-nojs">
 <head>
-<meta charset="UTF-8" /><title>Algorithms - Wikibooks, open books for an open world</title>
-<meta name="generator" content="MediaWiki 1.23wmf7" />
-<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms&amp;action=edit" />
-<link rel="edit" title="Edit" href="/w/index.php?title=Algorithms&amp;action=edit" />
-<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd" />
-<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
-<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
-<link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms" />
-<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
-<meta name="ResourceLoaderDynamicStyles" content="" />
-<link rel="stylesheet" href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
-<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
-/* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */</style>
+    <meta charset="UTF-8"/>
+    <title>Algorithms - Wikibooks, open books for an open world</title>
+    <meta name="generator" content="MediaWiki 1.23wmf7"/>
+    <link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=Algorithms&amp;action=edit"/>
+    <link rel="edit" title="Edit" href="/w/index.php?title=Algorithms&amp;action=edit"/>
+    <link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikibooks.ico"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php"
+          title="Wikibooks (en)"/>
+    <link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd"/>
+    <link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+    <link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed"
+          href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+    <link rel="canonical" href="http://en.wikibooks.org/wiki/Algorithms"/>
+    <link rel="stylesheet"
+          href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.extlinks%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*"/>
+    <meta name="ResourceLoaderDynamicStyles" content=""/>
+    <link rel="stylesheet"
+          href="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*"/>
+    <style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+        /* cache key: enwikibooks:resourceloader:filter:minify-css:7:4969bf752d40e7c60e4c1bc8e4153549 */
+    </style>
 
-<script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
-<script>if(window.mw){
+    <script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+    <script>if(window.mw){
 mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algorithms","wgTitle":"Algorithms","wgCurRevisionId":2580724,"wgRevisionId":2580724,"wgArticleId":12310,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Featured books","Books with PDF version","Books with print version","Algorithms","Algorithms and data structures","Algorithms and data structures/all books","Computer science/all books","Computing/all books","Books by subject/all books","Mathematical logic/all books","Pure mathematics/all books","Mathematics/all books","Alphabetical/A","Completed books","Books by completion status/all books"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Algorithms","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgULSAcceptLanguageList":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":2580724,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikibooks"});
-}</script><script>if(window.mw){
+}
+    </script>
+    <script>if(window.mw){
 mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,
 "watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":0,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"uls-preferences":"","language":
 "en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":true,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":true,"searchNs113":false,"searchNs828":false,"searchNs829":false,"gadget-extlinks":1,"gadget-commons-file":1,"gadget-toolboxcompat":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
 /* cache key: enwikibooks:resourceloader:filter:minify-js:7:654df7e16c6905f951b4f215c0323024 */
-}</script>
-<script>if(window.mw){
+}
+    </script>
+    <script>if(window.mw){
 mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
-}</script>
-<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+}
+    </script>
+    <script src="//bits.wikimedia.org/geoiplookup"></script>
+    <link rel="dns-prefetch" href="//meta.wikimedia.org"/>
+    <!--[if lt IE 7]>
+    <style type="text/css">body{behavior:url("/w/static-1.23wmf7/skins/vector/csshover.min.htc")}</style><![endif]-->
+</head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Algorithms skin-vector action-view vector-animateLayout">
-		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div id="mw-js-message" style="display:none;"></div>
-						<div id="siteNotice"><!-- CentralNotice --></div>
-						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms</span></h1>
-			<div id="bodyContent">
-								<div id="siteSub">From Wikibooks, open books for an open world</div>
-								<div id="contentSub"><div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint"><img class="flaggedrevs-icon" src="//bits.wikimedia.org/static-1.23wmf7/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Unreviewed changes are displayed on this page" title="Unreviewed changes are displayed on this page" />The <a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Algorithms">checked</a> on <i>11 November 2013</i>. There are <a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724&amp;diff=cur&amp;diffonly=0">template/file changes</a> awaiting review.</div>
-</div>
-												<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
-				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-notice" style="">
-<tr>
-<td class="mbox-image">
-<div style="width: 52px;"><img alt="Featured book en.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Featured_book_en.svg/50px-Featured_book_en.svg.png" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Featured_book_en.svg/75px-Featured_book_en.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Featured_book_en.svg/100px-Featured_book_en.svg.png 2x" /></div>
-</td>
-<td class="mbox-text" style=""><i>Algorithms</i> is a <a href="/wiki/Wikibooks:Featured_books" title="Wikibooks:Featured books">featured book</a> on Wikibooks because it contains substantial content, it is well-formatted, and the Wikibooks community <a href="/wiki/Wikibooks:Featured_books/Nominations/Addition/Algorithms" title="Wikibooks:Featured books/Nominations/Addition/Algorithms">has decided</a> to feature it on the <a href="/wiki/Main_Page" title="Main Page">main page</a> or in other places. Please continue to improve it and thanks for the great work so far! You can edit its <a href="/wiki/Template:Goodbook/Algorithms" title="Template:Goodbook/Algorithms">advertisement template</a>.</td>
-</tr>
-</table>
-<p><br /></p>
-<center><a href="/wiki/File:AlgorithmsTitleImage.png" class="image"><img alt="AlgorithmsTitleImage.png" src="//upload.wikimedia.org/wikipedia/commons/3/32/AlgorithmsTitleImage.png" width="551" height="128" /></a></center>
-<table class="plainlinks noprint messagebox growth" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
-<tr style="vertical-align:middle;">
-<td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img alt="Gnome-mime-application-pdf.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gnome-mime-application-pdf.svg/40px-Gnome-mime-application-pdf.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gnome-mime-application-pdf.svg/60px-Gnome-mime-application-pdf.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gnome-mime-application-pdf.svg/80px-Gnome-mime-application-pdf.svg.png 2x" /></td>
-<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
-<p>A <i><b><a href="//upload.wikimedia.org/wikipedia/commons/8/81/Algorithms.pdf" class="internal" title="Algorithms.pdf">PDF version</a></b></i> is available. <small>(<a href="/wiki/File:Algorithms.pdf" title="File:Algorithms.pdf">info</a>)</small></p>
-</td>
-</tr>
-</table>
-<table class="plainlinks noprint messagebox growth" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
-<tr style="vertical-align:middle;">
-<td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img alt="Printer.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/40px-Printer.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/60px-Printer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Printer.svg/80px-Printer.svg.png 2x" /></td>
-<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
-<p>A <i><b><a href="/wiki/Algorithms/Print_version" title="Algorithms/Print version">printable version</a></b></i> of Algorithms is available. <small>(<a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms/Print_version&amp;action=edit">edit it</a>)</small></p>
-</td>
-</tr>
-</table>
-<table class="plainlinks noprint messagebox notice" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">
-<tr style="vertical-align:middle;">
-<td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;"><img alt="Warning icon WikiBooks.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Warning_icon_WikiBooks.svg/40px-Warning_icon_WikiBooks.svg.png" width="40" height="33" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Warning_icon_WikiBooks.svg/60px-Warning_icon_WikiBooks.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Warning_icon_WikiBooks.svg/80px-Warning_icon_WikiBooks.svg.png 2x" /></td>
-<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
-<p>This book requires that you first read&#160;<b><a href="/wiki/Data_Structures" title="Data Structures">Data Structures</a></b>.</p>
-</td>
-</tr>
-</table>
-<p></p>
-<div id="toc" class="toc">
-<div id="toctitle">
-<h2>Contents</h2>
-</div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Preamble"><span class="tocnumber">1</span> <span class="toctext">Preamble</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Table_of_Chapters"><span class="tocnumber">2</span> <span class="toctext">Table of Chapters</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Why_a_Wikibook_on_Algorithms.3F"><span class="tocnumber">3</span> <span class="toctext">Why a Wikibook on Algorithms?</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Further_Reading"><span class="tocnumber">4</span> <span class="toctext">Further Reading</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Sources"><span class="tocnumber">5</span> <span class="toctext">Sources</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Contributors"><span class="tocnumber">7</span> <span class="toctext">Contributors</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
-</ul>
-</div>
-<p></p>
-<h2><span class="mw-headline" id="Preamble">Preamble</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=1" title="Edit section: Preamble">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This book aims to be an accessible introduction into the design and analysis of efficient algorithms. Throughout the book we will introduce only the most basic techniques and describe the rigorous mathematical methods needed to analyze them.</p>
-<p>The topics covered include:</p>
-<ul>
-<li>The <b>divide and conquer</b> technique.</li>
-<li>The use of <b>randomization</b> in algorithms.</li>
-<li>The general, but typically inefficient, <b>backtracking</b> technique.</li>
-<li><b>Dynamic programming</b> as an efficient optimization for some backtracking algorithms.</li>
-<li><b>Greedy algorithms</b> as an optimization of other kinds of backtracking algorithms.</li>
-<li><b>Hill-climbing</b> techniques, including network flow.</li>
-</ul>
-<p>The goal of the book is to show you how you can methodically apply different techniques to your own algorithms to make them more efficient. While this book mostly highlights general techniques, some well-known algorithms are also looked at in depth. This book is written so it can be read from "cover to cover" in the length of a semester, where sections marked with a <code>*</code> may be skipped.</p>
-<p>This book is a tutorial on techniques and is not a reference. For references we highly recommend the tomes by [Knuth] and [CLRS]. Additionally, sometimes the best insights come from the primary sources themselves (e.g. [Hoare]).</p>
-<h2><span class="mw-headline" id="Table_of_Chapters">Table of Chapters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=2" title="Edit section: Table of Chapters">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<table style="width:100%;">
-<tr>
-<td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top">
-<ol>
-<li><a href="/wiki/Algorithms/Introduction" title="Algorithms/Introduction">Introduction</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="100% developed&#160; as of Jan 15, 2005"><img alt="100% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Mathematical_Background" title="Algorithms/Mathematical Background">Mathematical Background</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Divide_and_Conquer" title="Algorithms/Divide and Conquer">Divide and Conquer</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="75% developed&#160; as of Jan 15, 2005"><img alt="75% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/9px-75_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/14px-75_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/18px-75_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Randomization" title="Algorithms/Randomization">Randomization</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Backtracking" title="Algorithms/Backtracking">Backtracking</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Dynamic_Programming" title="Algorithms/Dynamic Programming">Dynamic Programming</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Greedy_Algorithms" title="Algorithms/Greedy Algorithms">Greedy Algorithms</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Hill_Climbing" title="Algorithms/Hill Climbing">Hill Climbing</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img alt="50% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Unweighted_Graph_Algorithms" title="Algorithms/Unweighted Graph Algorithms">Unweighted Graph Algorithms</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="0% developed&#160; as of Dec 24, 2007"><img alt="0% developed&#160; as of Dec 24, 2007" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/9px-00%25.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/14px-00%25.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/18px-00%25.svg.png 2x" /></a></span></li>
-<li><a href="/wiki/Algorithms/Distance_approximations" title="Algorithms/Distance approximations">Distance approximations</a></li>
-</ol>
-<dl>
-<dd><a href="/wiki/Algorithms/Ada_Implementation" title="Algorithms/Ada Implementation">Appendix A: Ada Implementation</a> <span class="noprint"><a href="/wiki/Help:Development_stages" title="25% developed&#160; as of Jan 15, 2005"><img alt="25% developed&#160; as of Jan 15, 2005" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png" width="9" height="9" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x" /></a></span></dd>
-</dl>
-<p><br />
-There is also an <a href="/wiki/Algorithms/Print_version" title="Algorithms/Print version">all chapters</a> view for printing.</p>
-</td>
-</tr>
-</table>
-<h2><span class="mw-headline" id="Why_a_Wikibook_on_Algorithms.3F">Why a Wikibook on Algorithms?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=3" title="Edit section: Why a Wikibook on Algorithms?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>A <a href="//en.wikipedia.org/wiki/wikibook" class="extiw" title="w:wikibook">wikibook</a> is an undertaking similar to an open-source software project: A contributor creates content for the project to help others, for personal enrichment, or to accomplish something for the contributor's own work (e.g., lecture preparation).</p>
-<p>An open book, just like an open program, requires time to complete, but it can benefit greatly from even modest contributions from readers. For example you can fix "bugs" in the text (where the bug might be typographic, expository, technical, aesthetic or otherwise) in order to make a better book. If you find an opportunity to fix a bug, simply click on "edit", make your changes, and click on save. Other contributors may review your changes to be sure they are appropriate for the book. If you are unsure, you can visit the discussion page and ask there. Use common sense.</p>
-<p>If you would like to make bigger contributions, you can take a look at the sections or chapters that are too short or otherwise need more work and start writing! Be sure to skim the rest of the book first in order to avoid duplication of content. Additionally, you should read the <a href="/wiki/Algorithms/Guidelines_for_Contributors" title="Algorithms/Guidelines for Contributors">Guidelines for Contributors</a> page for consistency tips and advice.</p>
-<p>Note that you don't need to contribute everything at once. You can mark sections as "TODO," with a description of what remains to be done, and perhaps someone else will finish those parts for you. Once all TODO items are finished, we'll have reached our First Edition!</p>
-<p>This book is intentionally kept narrow-in-focus in order to make contributions easier (because then the end-goal is clearer). This book is part two of a series of three computer science textbooks on algorithms, starting with <i><a href="/wiki/Computer_Science:Data_Structures" title="Computer Science:Data Structures" class="mw-redirect">Data Structures</a></i> and ending with <i><a href="/wiki/Advanced_Data_Structures_and_Algorithms" title="Advanced Data Structures and Algorithms">Advanced Data Structures and Algorithms</a></i>. If you would like to contribute a topic not already listed in any of the three books try putting it in the <i>Advanced</i> book, which is more eclectic in nature. Or, if you think the topic is fundamental, you can go to either the <a href="/wiki/Talk:Algorithms" title="Talk:Algorithms">Algorithms discussion page</a> or the <a href="/wiki/Talk:Data_Structures" title="Talk:Data Structures">Data Structures discussion page</a> and make a proposal.</p>
-<p>Additionally, implementations of the algorithms as an appendix are welcome.</p>
-<h2><span class="mw-headline" id="Further_Reading">Further Reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=4" title="Edit section: Further Reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The following books list <strong class="selflink">Algorithms</strong> as a prerequisite:</p>
-<p><br /></p>
-<h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=5" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The following sources are used with permission from the original authors. Some of the sources have been edited (sometimes heavily) from the initial versions, and thus all mistakes are our own.</p>
-<table>
-<tr>
-<td valign="top" width="15%">[Impagliazzo]</td>
-<td>Russell Impagliazzo. Lecture notes from algorithms courses 101 (Spring 2004; undergraduate), and 202 (Spring 2004, Fall 2004; graduate). University of California, San Diego. Used almost everywhere.</td>
-</tr>
-<tr>
-<td valign="top">[Lippert]</td>
-<td>Eric Lippert. "Recursion and Dynamic Programming," from Fabulous Adventures In Coding. 21 July 2004. Used with permission. <a rel="nofollow" class="external free" href="http://blogs.msdn.com/b/ericlippert/archive/2004/07/21/recursion-and-dynamic-programming.aspx">http://blogs.msdn.com/b/ericlippert/archive/2004/07/21/recursion-and-dynamic-programming.aspx</a> Used in the backtracking and dynamic programming chapters.</td>
-</tr>
-<tr>
-<td valign="top">[Wikipedia]</td>
-<td>Wikipedia, the free encyclopedia. <a class="external free" href="http://www.wikipedia.org">http://www.wikipedia.org</a>. Quoted/appropriated pervasively.</td>
-</tr>
-</table>
-<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The authors highly recommend the following reference materials.</p>
-<table>
-<tr>
-<td valign="top" width="15%">[Aho]</td>
-<td>Alfred V. Aho, Jeffrey D. Ullman, John E. Hopcroft. <i>Data Structures and Algorithms</i>. Addison Wesley, 1983.</td>
-</tr>
-<tr>
-<td valign="top">[CLRS]</td>
-<td>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. <i>Introduction to Algorithms</i>. McGraw-Hill, 2001.</td>
-</tr>
-<tr>
-<td valign="top">[Hoare]</td>
-<td>C. A. R. Hoare. "Algorithm 63: Partition", "Algorithm 64: Quicksort", "Algorithm 65: Find", from Communications of the ACM. Volume 4, Issue 7 (July 1961). Page 321. ISSN:0001-0782. <a rel="nofollow" class="external free" href="http://doi.acm.org/10.1145/366622.366642">http://doi.acm.org/10.1145/366622.366642</a>.</td>
-</tr>
-<tr>
-<td valign="top">[Knuth]</td>
-<td>Donald E. Knuth. <i>The Art of Computer Programming, Volumes 1-3</i>. Addison-Wesley Professional, 1998.</td>
-</tr>
-</table>
-<h2><span class="mw-headline" id="Contributors">Contributors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=7" title="Edit section: Contributors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><a href="/wiki/User:Mshonle" title="User:Mshonle">Macneil Shonle</a> A large portion of my contributions here come from lectures made by [Impagliazzo] at UCSD. I like this project because it gives me a chance to explain algorithms in the way that I finally understood them</p>
-<p><a href="/wiki/User:Waxmop" title="User:Waxmop">Matthew Wilson</a> I typed in an outline after finishing a graduate algorithms course. M. Shonle has taken this textbook and really made it something great.</p>
-<p><a href="/wiki/User:Krischik" title="User:Krischik">Martin Krischik</a> I supplied the Ada examples for the algorithms. You never know if an algorithm works until you have actually implemented it.</p>
-<p><i>See also the <a href="#Sources">Sources</a> list for contributions used with permission.</i></p>
-<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<ul>
-<li><a rel="nofollow" class="external text" href="http://www.algorito.com/"><i>Algorito, a free open source algorithm collection in various languages</i></a></li>
-<li><a rel="nofollow" class="external text" href="http://www.cs.berkeley.edu/~vazirani/algorithms/all.pdf"><i>Algorithms</i> by S. Dasgupta, C.H. Papadimitriou, and U.V. Vazirani</a></li>
-<li><a rel="nofollow" class="external text" href="http://videolectures.net/mit6046jf05_introduction_algorithms/"><i>Introduction to Algorithms</i> by C.E. Leiserson</a>
-<div class="metadata topicon" id="status-icon"><a href="/wiki/Help:Development_stages" title="100% developed"><img alt="100% developed" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/24px-100_percents.svg.png" width="24" height="24" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/36px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/48px-100_percents.svg.png 2x" /></a></div>
-</li>
-</ul>
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+    <a id="top"></a>
+
+    <div id="mw-js-message" style="display:none;"></div>
+    <div id="siteNotice"><!-- CentralNotice --></div>
+    <h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Algorithms</span></h1>
+
+    <div id="bodyContent">
+        <div id="siteSub">From Wikibooks, open books for an open world</div>
+        <div id="contentSub">
+            <div id="mw-fr-revisiontag" class="flaggedrevs_basic plainlinks noprint">The
+                <a class="external text" href="//en.wikibooks.org/w/index.php?title=Algorithms&amp;stable=1">latest
+                    reviewed version</a> was <a class="external text"
+                                                href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Algorithms">checked</a>
+                on <i>11 November 2013</i>. There are <a class="external text"
+                                                         href="//en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724&amp;diff=cur&amp;diffonly=0">template/file
+                    changes</a> awaiting review.
+            </div>
+        </div>
+
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+            <table class="metadata plainlinks ambox ambox-notice" style="">
+                <tr>
+
+                    <td class="mbox-text" style=""><i>Algorithms</i> is a <a href="/wiki/Wikibooks:Featured_books"
+                                                                             title="Wikibooks:Featured books">featured
+                        book</a> on Wikibooks because it contains substantial content, it is well-formatted, and the
+                        Wikibooks community <a href="/wiki/Wikibooks:Featured_books/Nominations/Addition/Algorithms"
+                                               title="Wikibooks:Featured books/Nominations/Addition/Algorithms">has
+                            decided</a> to feature it on the <a href="/wiki/Main_Page" title="Main Page">main page</a>
+                        or in other places. Please continue to improve it and thanks for the great work so far! You can
+                        edit its <a href="/wiki/Template:Goodbook/Algorithms" title="Template:Goodbook/Algorithms">advertisement
+                            template</a>.
+                    </td>
+                </tr>
+            </table>
 
 
-<!-- 
-NewPP limit report
-Parsed by mw1079
-CPU time usage: 0.536 seconds
-Real time usage: 0.635 seconds
-Preprocessor visited node count: 2073/1000000
-Preprocessor generated node count: 8828/1500000
-Postexpand include size: 36744/2048000 bytes
-Template argument size: 4800/2048000 bytes
-Highest expansion depth: 31/40
-Expensive parser function count: 6/500
--->
+            <div id="toc" class="toc">
+                <div id="toctitle">
+                    <h2>Contents</h2>
+                </div>
+                <ul>
+                    <li class="toclevel-1 tocsection-1"><a href="#Preamble"><span class="tocnumber">1</span> <span
+                            class="toctext">Preamble</span></a></li>
+                    <li class="toclevel-1 tocsection-2"><a href="#Table_of_Chapters"><span class="tocnumber">2</span>
+                        <span class="toctext">Table of Chapters</span></a></li>
+                    <li class="toclevel-1 tocsection-3"><a href="#Why_a_Wikibook_on_Algorithms.3F"><span
+                            class="tocnumber">3</span> <span class="toctext">Why a Wikibook on Algorithms?</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-4"><a href="#Further_Reading"><span class="tocnumber">4</span>
+                        <span class="toctext">Further Reading</span></a></li>
+                    <li class="toclevel-1 tocsection-5"><a href="#Sources"><span class="tocnumber">5</span> <span
+                            class="toctext">Sources</span></a></li>
+                    <li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span
+                            class="toctext">References</span></a></li>
+                    <li class="toclevel-1 tocsection-7"><a href="#Contributors"><span class="tocnumber">7</span> <span
+                            class="toctext">Contributors</span></a></li>
+                    <li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span
+                            class="toctext">External links</span></a></li>
+                </ul>
+            </div>
+            <p></p>
 
-<!-- Saved in parser cache with key enwikibooks:pcache:idhash:12310-0!*!0!!en!4!* and timestamp 20131221074647
- -->
-<noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
-				Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724">http://en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724</a>"				</div>
-												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Subjects</a>: <ul><li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li><li><a href="/wiki/Category:Algorithms_and_data_structures" title="Category:Algorithms and data structures">Algorithms and data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Featured_books" title="Category:Featured books">Featured books</a></li><li><a href="/wiki/Category:Books_with_PDF_version" title="Category:Books with PDF version">Books with PDF version</a></li><li><a href="/wiki/Category:Books_with_print_version" title="Category:Books with print version">Books with print version</a></li><li><a href="/wiki/Category:Algorithms_and_data_structures/all_books" title="Category:Algorithms and data structures/all books">Algorithms and data structures/all books</a></li><li><a href="/wiki/Category:Computer_science/all_books" title="Category:Computer science/all books">Computer science/all books</a></li><li><a href="/wiki/Category:Computing/all_books" title="Category:Computing/all books">Computing/all books</a></li><li><a href="/wiki/Category:Books_by_subject/all_books" title="Category:Books by subject/all books">Books by subject/all books</a></li><li><a href="/wiki/Category:Mathematical_logic/all_books" title="Category:Mathematical logic/all books">Mathematical logic/all books</a></li><li><a href="/wiki/Category:Pure_mathematics/all_books" title="Category:Pure mathematics/all books">Pure mathematics/all books</a></li><li><a href="/wiki/Category:Mathematics/all_books" title="Category:Mathematics/all books">Mathematics/all books</a></li><li><a href="/wiki/Category:Alphabetical/A" title="Category:Alphabetical/A">Alphabetical/A</a></li><li><a href="/wiki/Category:Completed_books" title="Category:Completed books">Completed books</a></li><li><a href="/wiki/Category:Books_by_completion_status/all_books" title="Category:Books by completion status/all books">Books by completion status/all books</a></li></ul></div></div>												<div class="visualClear"></div>
-							</div>
-		</div>
-		<div id="mw-navigation">
-			<h2>Navigation menu</h2>
-			<div id="mw-head">
-				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
-	<h3 id="p-personal-label">Personal tools</h3>
-	<ul>
-<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Algorithms" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+            <h2><span class="mw-headline" id="Preamble">Preamble</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=1" title="Edit section: Preamble">edit</a><span
+                    class="mw-editsection-bracket">]</span></span></h2>
+
+            <p>This book aims to be an accessible introduction into the design and analysis of efficient algorithms.
+                Throughout the book we will introduce only the most basic techniques and describe the rigorous
+                mathematical methods needed to analyze them.</p>
+
+            <p>The topics covered include:</p>
+            <ul>
+                <li>The <b>divide and conquer</b> technique.</li>
+                <li>The use of <b>randomization</b> in algorithms.</li>
+                <li>The general, but typically inefficient, <b>backtracking</b> technique.</li>
+                <li><b>Dynamic programming</b> as an efficient optimization for some backtracking algorithms.</li>
+                <li><b>Greedy algorithms</b> as an optimization of other kinds of backtracking algorithms.</li>
+                <li><b>Hill-climbing</b> techniques, including network flow.</li>
+            </ul>
+            <p>The goal of the book is to show you how you can methodically apply different techniques to your own
+                algorithms to make them more efficient. While this book mostly highlights general techniques, some
+                well-known algorithms are also looked at in depth. This book is written so it can be read from "cover to
+                cover" in the length of a semester, where sections marked with a <code>*</code> may be skipped.</p>
+
+            <p>This book is a tutorial on techniques and is not a reference. For references we highly recommend the
+                tomes by [Knuth] and [CLRS]. Additionally, sometimes the best insights come from the primary sources
+                themselves (e.g. [Hoare]).</p>
+
+            <h2><span class="mw-headline" id="Table_of_Chapters">Table of Chapters</span><span
+                    class="mw-editsection"><span class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=2"
+                    title="Edit section: Table of Chapters">edit</a><span class="mw-editsection-bracket">]</span></span>
+            </h2>
+            <table style="width:100%;">
+                <tr>
+                    <td style="background-color: #FFFFEE; border: solid 1px #FFC92E; padding: 1em;" valign="top">
+                        <ol>
+                            <li><a href="wiki/Algorithms/Introduction.html" title="Algorithms/Introduction">Introduction</a>
+                                <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                         title="100% developed&#160; as of Jan 15, 2005"><img
+                                        alt="100% developed&#160; as of Jan 15, 2005"
+                                        src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/9px-100_percents.svg.png"
+                                        width="9" height="9"
+                                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/14px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/18px-100_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Mathematical_Background.html"
+                                   title="Algorithms/Mathematical Background">Mathematical Background</a> <span
+                                    class="noprint"><a href="/wiki/Help:Development_stages"
+                                                       title="50% developed&#160; as of Jan 15, 2005"><img
+                                    alt="50% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Divide_and_Conquer.html" title="Algorithms/Divide and Conquer">Divide
+                                and Conquer</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                         title="75% developed&#160; as of Jan 15, 2005"><img
+                                    alt="75% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/9px-75_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/14px-75_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/75_percents.svg/18px-75_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Randomization.html"
+                                   title="Algorithms/Randomization">Randomization</a> <span class="noprint"><a
+                                    href="/wiki/Help:Development_stages" title="50% developed&#160; as of Jan 15, 2005"><img
+                                    alt="50% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Backtracking.html" title="Algorithms/Backtracking">Backtracking</a>
+                                <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                         title="50% developed&#160; as of Jan 15, 2005"><img
+                                        alt="50% developed&#160; as of Jan 15, 2005"
+                                        src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                        width="9" height="9"
+                                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Dynamic_Programming.html" title="Algorithms/Dynamic Programming">Dynamic
+                                Programming</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                         title="50% developed&#160; as of Jan 15, 2005"><img
+                                    alt="50% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Greedy_Algorithms.html" title="Algorithms/Greedy Algorithms">Greedy
+                                Algorithms</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                        title="50% developed&#160; as of Jan 15, 2005"><img
+                                    alt="50% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Hill_Climbing.html" title="Algorithms/Hill Climbing">Hill
+                                Climbing</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                      title="50% developed&#160; as of Jan 15, 2005"><img
+                                    alt="50% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/9px-50_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/14px-50_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/62/50_percents.svg/18px-50_percents.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Unweighted_Graph_Algorithms.html"
+                                   title="Algorithms/Unweighted Graph Algorithms">Unweighted Graph Algorithms</a> <span
+                                    class="noprint"><a href="/wiki/Help:Development_stages"
+                                                       title="0% developed&#160; as of Dec 24, 2007"><img
+                                    alt="0% developed&#160; as of Dec 24, 2007"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/9px-00%25.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/14px-00%25.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/00%25.svg/18px-00%25.svg.png 2x"/></a></span>
+                            </li>
+                            <li><a href="wiki/Algorithms/Distance_approximations.html"
+                                   title="Algorithms/Distance approximations">Distance approximations</a></li>
+                        </ol>
+                        <dl>
+                            <dd><a href="wiki/Algorithms/Ada_Implementation.html" title="Algorithms/Ada Implementation">Appendix
+                                A: Ada Implementation</a> <span class="noprint"><a href="/wiki/Help:Development_stages"
+                                                                                   title="25% developed&#160; as of Jan 15, 2005"><img
+                                    alt="25% developed&#160; as of Jan 15, 2005"
+                                    src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/9px-25_percents.svg.png"
+                                    width="9" height="9"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/14px-25_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/25_percents.svg/18px-25_percents.svg.png 2x"/></a></span>
+                            </dd>
+                        </dl>
+                        <p><br/>
+                            There is also an <a href="wiki/Algorithms/Print_version.html" title="Algorithms/Print version">all
+                                chapters</a> view for printing.</p>
+                    </td>
+                </tr>
+            </table>
+            <h2><span class="mw-headline" id="Why_a_Wikibook_on_Algorithms.3F">Why a Wikibook on Algorithms?</span><span
+                    class="mw-editsection"><span class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=3"
+                    title="Edit section: Why a Wikibook on Algorithms?">edit</a><span
+                    class="mw-editsection-bracket">]</span></span></h2>
+
+            <p>A <a href="//en.wikipedia.org/wiki/wikibook" class="extiw" title="w:wikibook">wikibook</a> is an
+                undertaking similar to an open-source software project: A contributor creates content for the project to
+                help others, for personal enrichment, or to accomplish something for the contributor's own work (e.g.,
+                lecture preparation).</p>
+
+            <p>An open book, just like an open program, requires time to complete, but it can benefit greatly from even
+                modest contributions from readers. For example you can fix "bugs" in the text (where the bug might be
+                typographic, expository, technical, aesthetic or otherwise) in order to make a better book. If you find
+                an opportunity to fix a bug, simply click on "edit", make your changes, and click on save. Other
+                contributors may review your changes to be sure they are appropriate for the book. If you are unsure,
+                you can visit the discussion page and ask there. Use common sense.</p>
+
+            <p>If you would like to make bigger contributions, you can take a look at the sections or chapters that are
+                too short or otherwise need more work and start writing! Be sure to skim the rest of the book first in
+                order to avoid duplication of content. Additionally, you should read the <a
+                        href="wiki/Algorithms/Guidelines_for_Contributors.html"
+                        title="Algorithms/Guidelines for Contributors">Guidelines for Contributors</a> page for
+                consistency tips and advice.</p>
+
+            <p>Note that you don't need to contribute everything at once. You can mark sections as "TODO," with a
+                description of what remains to be done, and perhaps someone else will finish those parts for you. Once
+                all TODO items are finished, we'll have reached our First Edition!</p>
+
+            <p>This book is intentionally kept narrow-in-focus in order to make contributions easier (because then the
+                end-goal is clearer). This book is part two of a series of three computer science textbooks on
+                algorithms, starting with <i><a href="/wiki/Computer_Science:Data_Structures"
+                                                title="Computer Science:Data Structures" class="mw-redirect">Data
+                    Structures</a></i> and ending with <i><a href="/wiki/Advanced_Data_Structures_and_Algorithms"
+                                                             title="Advanced Data Structures and Algorithms">Advanced
+                    Data Structures and Algorithms</a></i>. If you would like to contribute a topic not already listed
+                in any of the three books try putting it in the <i>Advanced</i> book, which is more eclectic in nature.
+                Or, if you think the topic is fundamental, you can go to either the <a href="/wiki/Talk:Algorithms"
+                                                                                       title="Talk:Algorithms">Algorithms
+                    discussion page</a> or the <a href="/wiki/Talk:Data_Structures" title="Talk:Data Structures">Data
+                    Structures discussion page</a> and make a proposal.</p>
+
+            <p>Additionally, implementations of the algorithms as an appendix are welcome.</p>
+
+            <h2><span class="mw-headline" id="Further_Reading">Further Reading</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=4"
+                    title="Edit section: Further Reading">edit</a><span class="mw-editsection-bracket">]</span></span>
+            </h2>
+
+            <p>The following books list <strong class="selflink">Algorithms</strong> as a prerequisite:</p>
+
+            <p><br/></p>
+
+            <h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=5" title="Edit section: Sources">edit</a><span
+                    class="mw-editsection-bracket">]</span></span></h2>
+
+            <p>The following sources are used with permission from the original authors. Some of the sources have been
+                edited (sometimes heavily) from the initial versions, and thus all mistakes are our own.</p>
+            <table>
+                <tr>
+                    <td valign="top" width="15%">[Impagliazzo]</td>
+                    <td>Russell Impagliazzo. Lecture notes from algorithms courses 101 (Spring 2004; undergraduate), and
+                        202 (Spring 2004, Fall 2004; graduate). University of California, San Diego. Used almost
+                        everywhere.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[Lippert]</td>
+                    <td>Eric Lippert. "Recursion and Dynamic Programming," from Fabulous Adventures In Coding. 21 July
+                        2004. Used with permission. <a rel="nofollow" class="external free"
+                                                       href="http://blogs.msdn.com/b/ericlippert/archive/2004/07/21/recursion-and-dynamic-programming.aspx">http://blogs.msdn.com/b/ericlippert/archive/2004/07/21/recursion-and-dynamic-programming.aspx</a>
+                        Used in the backtracking and dynamic programming chapters.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[Wikipedia]</td>
+                    <td>Wikipedia, the free encyclopedia. <a class="external free" href="http://www.wikipedia.org">http://www.wikipedia.org</a>.
+                        Quoted/appropriated pervasively.
+                    </td>
+                </tr>
+            </table>
+            <h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span
+                    class="mw-editsection-bracket">]</span></span></h2>
+
+            <p>The authors highly recommend the following reference materials.</p>
+            <table>
+                <tr>
+                    <td valign="top" width="15%">[Aho]</td>
+                    <td>Alfred V. Aho, Jeffrey D. Ullman, John E. Hopcroft. <i>Data Structures and Algorithms</i>.
+                        Addison Wesley, 1983.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[CLRS]</td>
+                    <td>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. <i>Introduction to
+                        Algorithms</i>. McGraw-Hill, 2001.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[Hoare]</td>
+                    <td>C. A. R. Hoare. "Algorithm 63: Partition", "Algorithm 64: Quicksort", "Algorithm 65: Find", from
+                        Communications of the ACM. Volume 4, Issue 7 (July 1961). Page 321. ISSN:0001-0782. <a
+                                rel="nofollow" class="external free" href="http://doi.acm.org/10.1145/366622.366642">http://doi.acm.org/10.1145/366622.366642</a>.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">[Knuth]</td>
+                    <td>Donald E. Knuth. <i>The Art of Computer Programming, Volumes 1-3</i>. Addison-Wesley
+                        Professional, 1998.
+                    </td>
+                </tr>
+            </table>
+            <h2><span class="mw-headline" id="Contributors">Contributors</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=7"
+                    title="Edit section: Contributors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+            <p><a href="/wiki/User:Mshonle" title="User:Mshonle">Macneil Shonle</a> A large portion of my contributions
+                here come from lectures made by [Impagliazzo] at UCSD. I like this project because it gives me a chance
+                to explain algorithms in the way that I finally understood them</p>
+
+            <p><a href="/wiki/User:Waxmop" title="User:Waxmop">Matthew Wilson</a> I typed in an outline after finishing
+                a graduate algorithms course. M. Shonle has taken this textbook and really made it something great.</p>
+
+            <p><a href="/wiki/User:Krischik" title="User:Krischik">Martin Krischik</a> I supplied the Ada examples for
+                the algorithms. You never know if an algorithm works until you have actually implemented it.</p>
+
+            <p><i>See also the <a href="#Sources">Sources</a> list for contributions used with permission.</i></p>
+
+            <h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket">[</span><a
+                    href="/w/index.php?title=Algorithms&amp;action=edit&amp;section=8"
+                    title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span>
+            </h2>
+            <ul>
+                <li><a rel="nofollow" class="external text" href="http://www.algorito.com/"><i>Algorito, a free open
+                    source algorithm collection in various languages</i></a></li>
+                <li><a rel="nofollow" class="external text"
+                       href="http://www.cs.berkeley.edu/~vazirani/algorithms/all.pdf"><i>Algorithms</i> by S. Dasgupta,
+                    C.H. Papadimitriou, and U.V. Vazirani</a></li>
+                <li><a rel="nofollow" class="external text"
+                       href="http://videolectures.net/mit6046jf05_introduction_algorithms/"><i>Introduction to
+                    Algorithms</i> by C.E. Leiserson</a>
+
+                    <div class="metadata topicon" id="status-icon"><a href="/wiki/Help:Development_stages"
+                                                                      title="100% developed"><img alt="100% developed"
+                                                                                                  src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/24px-100_percents.svg.png"
+                                                                                                  width="24" height="24"
+                                                                                                  srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/36px-100_percents.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/100_percents.svg/48px-100_percents.svg.png 2x"/></a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <!--
+            NewPP limit report
+            Parsed by mw1079
+            CPU time usage: 0.536 seconds
+            Real time usage: 0.635 seconds
+            Preprocessor visited node count: 2073/1000000
+            Preprocessor generated node count: 8828/1500000
+            Postexpand include size: 36744/2048000 bytes
+            Template argument size: 4800/2048000 bytes
+            Highest expansion depth: 31/40
+            Expensive parser function count: 6/500
+            -->
+
+            <!-- Saved in parser cache with key enwikibooks:pcache:idhash:12310-0!*!0!!en!4!* and timestamp 20131221074647
+             -->
+            <noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title=""
+                           width="1" height="1" style="border: none; position: absolute;"/></noscript>
+        </div>
+        <div class="printfooter">
+            Retrieved from "<a href="http://en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724">http://en.wikibooks.org/w/index.php?title=Algorithms&amp;oldid=2580724</a>"
+        </div>
+        <div id='catlinks' class='catlinks'>
+            <div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories"
+                                                                       title="Special:Categories">Subjects</a>:
+                <ul>
+                    <li><a href="/wiki/Category:Algorithms" title="Category:Algorithms">Algorithms</a></li>
+                    <li><a href="/wiki/Category:Algorithms_and_data_structures"
+                           title="Category:Algorithms and data structures">Algorithms and data structures</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="visualClear"></div>
+    </div>
 </div>
-				<div id="left-navigation">
-					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
-	<h3 id="p-namespaces-label">Namespaces</h3>
-	<ul>
-					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algorithms"  title="View the content page [c]" accesskey="c">Book</a></span></li>
-					<li  id="ca-talk"><span><a href="/wiki/Talk:Algorithms"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
-			</ul>
-</div>
-<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
-	<h3 id="mw-vector-current-variant">
-		</h3>
-	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
-	<div class="menu">
-		<ul>
-					</ul>
-	</div>
-</div>
-				</div>
-				<div id="right-navigation">
-					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
-	<h3 id="p-views-label">Views</h3>
-	<ul>
-					<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=Algorithms&amp;stable=1" >Read</a></span></li>
-					<li id="ca-current" class="collapsible collapsible selected"><span><a href="/w/index.php?title=Algorithms&amp;stable=0&amp;redirect=no"  title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li>
-					<li id="ca-edit"><span><a href="/w/index.php?title=Algorithms&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
-					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algorithms&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
-			</ul>
-</div>
-<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
-	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
-	<div class="menu">
-		<ul>
-					</ul>
-	</div>
-</div>
-<div id="p-search" role="search">
-	<h3><label for="searchInput">Search</label></h3>
-	<form action="/w/index.php" id="searchform">
-				<div id="simpleSearch">
-						<input name="search" placeholder="Search" title="Search Wikibooks [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
-		</div>
-	</form>
-</div>
-				</div>
-			</div>
-			<div id="mw-panel">
-					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
-				<div class="portal" role="navigation" id='p-Navigation' aria-labelledby='p-Navigation-label'>
-	<h3 id='p-Navigation-label'>Navigation</h3>
-	<div class="body">
-		<ul>
-			<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
-			<li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li>
-			<li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li>
-			<li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li>
-			<li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li>
-			<li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li>
-			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li>
-			<li id="n-randomrootpage"><a href="/wiki/Special:Randomrootpage">Random book</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-Community' aria-labelledby='p-Community-label'>
-	<h3 id='p-Community-label'>Community</h3>
-	<div class="body">
-		<ul>
-			<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li>
-			<li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li>
-			<li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li>
-			<li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li>
-			<li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li>
-			<li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
-	<h3 id='p-tb-label'>Tools</h3>
-	<div class="body">
-		<ul>
-			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Algorithms" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Algorithms" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
-			<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
-			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-			<li id="t-permalink"><a href="/w/index.php?title=Algorithms&amp;oldid=2580724" title="Permanent link to this revision of the page">Permanent link</a></li>
-			<li id="t-info"><a href="/w/index.php?title=Algorithms&amp;action=info">Page information</a></li>
-<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Algorithms&amp;id=2580724" title="Information on how to cite this page">Cite this page</a></li>		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
-	<h3 id='p-lang-label'>In other languages</h3>
-	<div class="body">
-		<ul>
-			<li class="interlanguage-link interwiki-es"><a href="//es.wikibooks.org/wiki/Algoritmia" title="Algoritmia  Spanish" lang="es" hreflang="es">Espaol</a></li>
-			<li class="uls-p-lang-dummy"><a href="#"></a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-Sister_projects' aria-labelledby='p-Sister_projects-label'>
-	<h3 id='p-Sister_projects-label'>Sister projects</h3>
-	<div class="body">
-		<ul>
-			<li id="n-Wikipedia"><a href="//en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
-			<li id="n-Wikiversity"><a href="//en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
-			<li id="n-Wiktionary"><a href="//en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
-			<li id="n-Wikiquote"><a href="//en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
-			<li id="n-Wikisource"><a href="//en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
-			<li id="n-Wikinews"><a href="//en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
-			<li id="n-Wikivoyage"><a href="//en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
-			<li id="n-Commons"><a href="//commons.wikimedia.org/wiki/Main_Page">Commons</a></li>
-			<li id="n-Wikidata"><a href="//www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
-		</ul>
-	</div>
-</div>
-<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
-	<h3 id='p-coll-print_export-label'>Print/export</h3>
-	<div class="body">
-		<ul>
-			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Algorithms">Create a collection</a></li>
-			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Algorithms&amp;oldid=2580724&amp;writer=rl">Download as PDF</a></li>
-			<li id="t-print"><a href="/w/index.php?title=Algorithms&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-		</ul>
-	</div>
-</div>
-			</div>
-		</div>
-		<div id="footer" role="contentinfo">
-							<ul id="footer-info">
-											<li id="footer-info-lastmod"> This page was last modified on 11 November 2013, at 11:50.</li>
-											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
-									</ul>
-							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
-											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
-											<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/wiki/Algorithms" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
-									</ul>
-										<ul id="footer-icons" class="noprint">
-					<li id="footer-copyrightico">
-						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
-					</li>
-					<li id="footer-poweredbyico">
-						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf7/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
-					</li>
-				</ul>
-						<div style="clear:both"></div>
-		</div>
-		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+
+<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script>
+<script>if(window.mw){
 mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
-}</script>
+}
+</script>
 <script>if(window.mw){
 mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.extlinks","mw.MwEmbedSupport.style","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","ext.flaggedRevs.advanced","skins.vector.collapsibleNav"],null,true);
-}</script>
+}
+</script>
 <script src="/w/index.php?title=MediaWiki:Gadget-commons-file.js&amp;action=raw&amp;ctype=text/javascript&amp;2172780"></script>
 <script src="/w/index.php?title=MediaWiki:Gadget-toolboxcompat.js&amp;action=raw&amp;ctype=text/javascript&amp;2161931"></script>
 <script src="//bits.wikimedia.org/en.wikibooks.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
 <!-- Served by mw1030 in 0.189 secs. -->
-	</body>
+</body>
 </html>
